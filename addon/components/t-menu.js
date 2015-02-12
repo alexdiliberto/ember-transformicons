@@ -14,30 +14,37 @@ var menuTypeTable = {
   'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
 };
 
-//TODO: Update component tagName wrapper
-export default Component.extend({
-  /**
-    Public: Optionally passed in parameter
-  */
-  type: null,
+/**
+  Transformicon Menu component.
 
+  Available types:
+    * butterfly
+    * minus
+    * x-cross
+    * arrow-up
+    * arrow-360-left
+    * arrow-left
+
+  Examples:
+
+    ```hbs
+      {{t-menu}}
+      {{t-menu type='minus'}}
+    ```
+
+  @class TMenuComponent
+  @extends Ember.Component
+*/
+export default Component.extend({
+  tagName: 'button',
+
+  attributeBindings: ['type', 'aria-label'],
+  type: 'button',
+  'aria-label': 'toggle menu',
+
+  classNames: ['tcon'],
+  classNameBindings: ['menuType'],
   menuType: computed('type', function() {
     return menuTypeTable[get(this, 'type')] || menuTypeTable[defaultType];
   })
 });
-
-// export default Ember.Component.extend({
-//   tagName: 'button',
-
-//   classNames: ['poop'],
-//   classNameBindings: ['option'],
-//   option: function() {
-//     return 'tcon-menu--xbutterfly';
-//     //type
-//     //return isMenuType[type] || 'tcon-menu--xbutterfly';
-//   }.property(),
-
-//   attributeBindings: ['type', 'aria-label'],
-//   type: 'button',
-//   'aria-label': 'toggle menu'
-// });

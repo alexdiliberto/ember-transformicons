@@ -1,4 +1,2 @@
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-});
+import TVideo from 'ember-cli-transformicons/components/t-video';
+export default TVideo;

@@ -10,12 +10,32 @@ var gridTypeTable = {
   'collapse': 'tcon-grid--collapse'
 };
 
-export default Component.extend({
-  /**
-    Public: Optionally passed in parameter
-  */
-  type: null,
+/**
+  Transformicon Grid component.
 
+  Available types:
+    * rearrange
+    * collapse
+
+  Examples:
+
+    ```hbs
+      {{t-grid}}
+      {{t-grid type='collapse'}}
+    ```
+
+  @class TGridComponent
+  @extends Ember.Component
+*/
+export default Component.extend({
+  tagName: 'button',
+
+  attributeBindings: ['type', 'aria-label'],
+  type: 'button',
+  'aria-label': 'toggle grid',
+
+  classNames: ['tcon', 'tcon-grid'],
+  classNameBindings: ['gridType'],
   gridType: computed('type', function() {
     return gridTypeTable[get(this, 'type')] || gridTypeTable[defaultType];
   })

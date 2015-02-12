@@ -1,4 +1,2 @@
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-});
+import TMail from 'ember-cli-transformicons/components/t-mail';
+export default TMail;

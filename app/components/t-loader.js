@@ -1,4 +1,2 @@
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-});
+import TLoader from 'ember-cli-transformicons/components/t-loader';
+export default TLoader;
