@@ -1,4 +1,6 @@
-# Ember-cli-transformicons
+# ember-cli-transformicons
+
+**This plugin is still in development. Please do not use it in your applications quite yet. Thanks!**
 
 This README outlines the details of collaborating on this Ember addon.
 
