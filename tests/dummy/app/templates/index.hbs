@@ -1,18 +1,28 @@
 <h2>Menu</h2>
-
+<h3>type</h3>
 <code>\{{t-menu}}</code> {{t-menu}}
-<code>\{{t-menu type="butterfly"}}</code> {{t-menu type="butterfly"}}
-<code>\{{t-menu type="minus"}}</code> {{t-menu type="minus"}}
-<code>\{{t-menu type="x-cross"}}</code> {{t-menu type="x-cross"}}
-<code>\{{t-menu type="arrow-up"}}</code> {{t-menu type="arrow-up"}}
-<code>\{{t-menu type="arrow-360-left"}}</code> {{t-menu type="arrow-360-left"}}
-<code>\{{t-menu type="arrow-left"}}</code> {{t-menu type="arrow-left"}}
+<code>\{{t-menu a="butterfly"}}</code> {{t-menu a="butterfly"}}
+<code>\{{t-menu a="minus"}}</code> {{t-menu a="minus"}}
+<code>\{{t-menu a="x-cross"}}</code> {{t-menu a="x-cross"}}
+<code>\{{t-menu a="arrow-up"}}</code> {{t-menu a="arrow-up"}}
+<code>\{{t-menu a="arrow-360-left"}}</code> {{t-menu a="arrow-360-left"}}
+<code>\{{t-menu a="arrow-left"}}</code> {{t-menu a="arrow-left"}}
+<code>\{{t-menu a="some_random_typo"}}</code> {{t-menu a="some_random_typo"}}
+
+<h3>is-open</h3>
+<code>\{{t-menu is-open=true}}</code> {{t-menu is-open=true}}
+
+<h3>action</h3>
+<code>\{{t-menu is-open=isOpen action="updateControllerProperty"}}</code> {{t-menu is-open=isOpen action="updateControllerProperty"}}
+<p>isOpen = {{isOpen}}</p>
+
 
 <h2>Grid</h2>
 
 <code>\{{t-grid}}</code> {{t-grid}}
 <code>\{{t-grid type="rearrange"}}</code> {{t-grid type="rearrange"}}
 <code>\{{t-grid type="collapse"}}</code> {{t-grid type="collapse"}}
+
 
 <h2>Add/Remove</h2>
 
@@ -22,13 +32,16 @@
 <code>\{{t-plus type="minus-fold"}}</code> {{t-plus type="minus-fold"}}
 <code>\{{t-plus type="circle"}}</code> {{t-plus type="circle"}}
 
+
 <h2>Mail</h2>
 
 <code style="padding-bottom: 15px; display: inline-block;">\{{t-mail}}</code> {{t-mail}}
 
+
 <h2>Video</h2>
 
 <code>\{{t-video}}</code> {{t-video}}
+
 
 <h2>Loader</h2>
 
