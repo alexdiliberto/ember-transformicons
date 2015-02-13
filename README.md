@@ -21,18 +21,35 @@ ember install:addon ember-cli-transformicons
 npm install ember-cli-transformicons --save
 ```
 ## Usage
-Usage is very simple. Add the transformicon you want from within your `template`.
+Usage is very simple. Add the transformicon you want from within your any template in your application.
 
-`type` is an optional parameter. If you do not provide a specific type for an icon category, then the default type will simply be provided for you.
+Global optional parameters:
+  * `animation` string - Set the menu animation type. If you do not provide a specific type for an icon category, then a default type will simply be provided for you.
+  * `a` string - Shorthand alias for `animation`
 
 ### Menu
+Menu optional parameters:
+  * `is-open` boolean - Set initial open menu state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indication wether the current state is open or closed.
+
+**animation**
 ```handlebars
-{{t-menu type="butterfly"}}
-{{t-menu type="minus"}}
-{{t-menu type="x-cross"}}
-{{t-menu type="arrow-up"}}
-{{t-menu type="arrow-360-left"}}
-{{t-menu type="arrow-left"}}
+{{t-menu}}
+{{t-menu animation='butterfly'}}
+{{t-menu a='minus'}}
+{{t-menu a='x-cross'}}
+{{t-menu a='arrow-up'}}
+{{t-menu a='arrow-360-left'}}
+{{t-menu a='arrow-left'}}
+```
+**is-open**
+```handlebars
+{{t-menu is-open=true}}
+{{t-menu is-open=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-menu action="someControllerAction"}}
 ```
 
 ### Grid
@@ -71,9 +88,11 @@ Any help is welcome and absolutely appreciated!
 
 ## Backlog
 
-- [ ] Modularize components/Refactor
 - [ ] Add proper action/event handling for the hosting application
+- [ ] Modularize components/Refactor
 - [ ] Add/Update transformicons
+- [ ] Documentation
+- [ ] Add JSCS
 
 ## Installation
 
