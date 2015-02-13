@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   isGridOpen: false,
   isAdded: false,
   hasUnreadMail: true,
+  isVideoPlaying: false,
   actions: {
     updateMenuControllerProperty: function(isOpen) {
       this.set('isMenuOpen', isOpen);
@@ -17,6 +18,9 @@ export default Ember.Controller.extend({
     },
     updateMailControllerProperty: function(isOpen) {
       this.set('hasUnreadMail', isOpen);
+    },
+    updateVideoControllerProperty: function(isPlaying) {
+      this.set('isVideoPlaying', isPlaying);
     }
   }
 });

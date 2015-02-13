@@ -17,10 +17,10 @@ var animationTypeTable = Ember.Object.create({
   Transformicon Add/Remove component.
 
   PUBLIC - Optional parameters:
-    * `animation` string - Set the menu animation type.
+    * `animation` string - Set the add/remove animation type.
     * `a` string - Shorthand alias for `animation`.
-    * `is-added` boolean - Set initial open menu state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indication wether the current state is pending add or pending remove.
+    * `is-added` boolean - Set initial open add/remove state.
+    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add or pending remove.
 
   Available `animation` types:
     * minus

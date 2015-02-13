@@ -22,7 +22,7 @@ var animationTypeTable = Ember.Object.create({
     * `animation` string - Set the menu animation type.
     * `a` string - Shorthand alias for `animation`.
     * `is-open` boolean - Set initial open menu state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indication wether the current state is open or closed.
+    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
   Available `animation` types:
     * butterfly
