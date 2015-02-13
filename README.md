@@ -35,12 +35,12 @@ Menu optional parameters:
 **animation**
 ```handlebars
 {{t-menu}}
-{{t-menu animation='butterfly'}}
-{{t-menu a='minus'}}
-{{t-menu a='x-cross'}}
-{{t-menu a='arrow-up'}}
-{{t-menu a='arrow-360-left'}}
-{{t-menu a='arrow-left'}}
+{{t-menu animation="butterfly"}}
+{{t-menu a="minus"}}
+{{t-menu a="x-cross"}}
+{{t-menu a="arrow-up"}}
+{{t-menu a="arrow-360-left"}}
+{{t-menu a="arrow-left"}}
 ```
 **is-open**
 ```handlebars
@@ -53,17 +53,39 @@ Menu optional parameters:
 ```
 
 ### Grid
+**animation**
 ```handlebars
-{{t-grid type="rearrange"}}
-{{t-grid type="collapse"}}
+{{t-grid}}
+{{t-grid animation="rearrange"}}
+{{t-grid a="collapse"}}
+```
+**is-open**
+```handlebars
+{{t-grid is-open=true}}
+{{t-grid is-open=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-grid action="someControllerAction"}}
 ```
 
 ### Add/Remove
+**animation**
 ```handlebars
-{{t-plus type="minus"}}
-{{t-plus type="check"}}
-{{t-plus type="minus-fold"}}
-{{t-plus type="circle"}}
+{{t-plus}}
+{{t-plus animation="minus"}}
+{{t-plus a="check"}}
+{{t-plus a="minus-fold"}}
+{{t-plus a="circle"}}
+```
+**is-added**
+```handlebars
+{{t-plus is-added=true}}
+{{t-plus is-added=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-plus action="someControllerAction"}}
 ```
 
 ### Mail
