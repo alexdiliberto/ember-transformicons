@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isOpen: false,
+  isMenuOpen: false,
+  isGridOpen: false,
   actions: {
-    updateControllerProperty: function(isOpen) {
-      this.set('isOpen', isOpen);
+    updateMenuControllerProperty: function(isOpen) {
+      this.set('isMenuOpen', isOpen);
+    },
+    updateGridControllerProperty: function(isOpen) {
+      this.set('isGridOpen', isOpen);
     }
   }
 });

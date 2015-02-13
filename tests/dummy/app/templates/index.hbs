@@ -13,24 +13,31 @@
 <code>\{{t-menu is-open=true}}</code> {{t-menu is-open=true}}
 
 <h3>action</h3>
-<code>\{{t-menu is-open=isOpen action="updateControllerProperty"}}</code> {{t-menu is-open=isOpen action="updateControllerProperty"}}
-<p>isOpen = {{isOpen}}</p>
+<code>\{{t-menu is-open=isMenuOpen action="updateMenuControllerProperty"}}</code> {{t-menu is-open=isMenuOpen action="updateMenuControllerProperty"}}
+<p>isMenuOpen = {{isMenuOpen}}</p>
 
 
 <h2>Grid</h2>
-
+<h3>animation</h3>
 <code>\{{t-grid}}</code> {{t-grid}}
-<code>\{{t-grid type="rearrange"}}</code> {{t-grid type="rearrange"}}
-<code>\{{t-grid type="collapse"}}</code> {{t-grid type="collapse"}}
+<code>\{{t-grid a="rearrange"}}</code> {{t-grid a="rearrange"}}
+<code>\{{t-grid a="collapse"}}</code> {{t-grid a="collapse"}}
+
+<h3>is-open</h3>
+<code>\{{t-grid is-open=true}}</code> {{t-grid is-open=true}}
+
+<h3>action</h3>
+<code>\{{t-grid is-open=isGridOpen action="updateGridControllerProperty"}}</code> {{t-grid is-open=isGridOpen action="updateGridControllerProperty"}}
+<p>isGridOpen = {{isGridOpen}}</p>
 
 
 <h2>Add/Remove</h2>
 
 <code>\{{t-plus}}</code> {{t-plus}}
-<code>\{{t-plus type="minus"}}</code> {{t-plus type="minus"}}
-<code>\{{t-plus type="check"}}</code> {{t-plus type="check"}}
-<code>\{{t-plus type="minus-fold"}}</code> {{t-plus type="minus-fold"}}
-<code>\{{t-plus type="circle"}}</code> {{t-plus type="circle"}}
+<code>\{{t-plus a="minus"}}</code> {{t-plus a="minus"}}
+<code>\{{t-plus a="check"}}</code> {{t-plus a="check"}}
+<code>\{{t-plus a="minus-fold"}}</code> {{t-plus a="minus-fold"}}
+<code>\{{t-plus a="circle"}}</code> {{t-plus a="circle"}}
 
 
 <h2>Mail</h2>

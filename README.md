@@ -82,7 +82,7 @@ Menu optional parameters:
 ```
 
 ## Contributing
-**Please contribute!** This section outlines the details of collaborating on this Ember addon. You can help code, design, update documentation, fix typos, raise issues and much more. 
+**Please contribute!** This section outlines the details of collaborating on this Ember addon. You can help code, design, update documentation, fix typos, raise issues and much more.
 
 Any help is welcome and absolutely appreciated!
 
@@ -90,6 +90,7 @@ Any help is welcome and absolutely appreciated!
 
 - [ ] Add proper action/event handling for the hosting application
 - [ ] Modularize components/Refactor
+- [ ] Extract common components into base class/Mixin
 - [ ] Add/Update transformicons
 - [ ] Documentation
 - [ ] Add JSCS
