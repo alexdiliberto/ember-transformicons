@@ -148,9 +148,9 @@ Any help is welcome and absolutely appreciated!
 - [x] Add proper action/event handling for the hosting application
 - [ ] Modularize components/Refactor
 - [ ] Extract common components into base class/Mixin
-- [ ] Add/Update transformicons
-- [ ] Improve documentation
-- [ ] Add JSCS
+- [ ] Add/Update/Improve transformicons
+- [ ] Update documentation
+- [ ] Add Tests
 
 ## Installation
 
