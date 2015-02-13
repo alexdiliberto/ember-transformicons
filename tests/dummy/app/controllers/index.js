@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   isMenuOpen: false,
   isGridOpen: false,
   isAdded: false,
+  hasUnreadMail: true,
   actions: {
     updateMenuControllerProperty: function(isOpen) {
       this.set('isMenuOpen', isOpen);
@@ -13,6 +14,9 @@ export default Ember.Controller.extend({
     },
     updateAddRemoveControllerProperty: function(isAdded) {
       this.set('isAdded', isAdded);
+    },
+    updateMailControllerProperty: function(isOpen) {
+      this.set('hasUnreadMail', isOpen);
     }
   }
 });
