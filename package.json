@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-transformicons",
   "version": "0.0.2",
-  "description": "Transformicons for Ember CLI",
+  "description": "Transformicons addon for your Ember CLI project",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,10 +15,13 @@
     "type": "git",
     "url": "https://github.com/alexdiliberto/ember-cli-transformicons"
   },
+  "bugs": {
+    "url": "https://github.com/alexdiliberto/ember-cli-transformicons/issues"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "Alex DiLiberto",
+  "author": "Alex DiLiberto <npm@alexdiliberto.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -42,7 +45,9 @@
     "ember",
     "ember-cli",
     "transformicon",
+    "navicon",
     "icon",
+    "transform",
     "animation"
   ],
   "ember-addon": {
