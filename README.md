@@ -20,6 +20,7 @@ ember install:addon ember-cli-transformicons
 ```shell
 npm install ember-cli-transformicons --save
 ```
+
 ## Usage
 Usage is very simple. Add the transformicon you want from within your any template in your application.
 
@@ -53,6 +54,10 @@ Menu optional parameters:
 ```
 
 ### Grid
+Grid optional parameters:
+  * `is-open` boolean - Set initial open grid state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+
 **animation**
 ```handlebars
 {{t-grid}}
@@ -70,6 +75,10 @@ Menu optional parameters:
 ```
 
 ### Add/Remove
+Add/Remove optional parameters:
+  * `is-added` boolean - Set initial open add/remove state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add or pending remove.
+
 **animation**
 ```handlebars
 {{t-plus}}
@@ -89,13 +98,39 @@ Menu optional parameters:
 ```
 
 ### Mail
+Mail optional parameters:
+  * `is-open` boolean - Set initial open mail state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+
 ```handlebars
 {{t-mail}}
 ```
+**is-open**
+```handlebars
+{{t-mail is-open=false}}
+{{t-mail is-open=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-mail action="someControllerAction"}}
+```
 
 ### Video
+Video optional parameters:
+  * `is-playing` boolean - Set initial playing state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
+
 ```handlebars
 {{t-video}}
+```
+**is-playing**
+```handlebars
+{{t-video is-playing=true}}
+{{t-video is-playing=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-video action="someControllerAction"}}
 ```
 
 ### Loader
@@ -110,11 +145,11 @@ Any help is welcome and absolutely appreciated!
 
 ## Backlog
 
-- [ ] Add proper action/event handling for the hosting application
+- [x] Add proper action/event handling for the hosting application
 - [ ] Modularize components/Refactor
 - [ ] Extract common components into base class/Mixin
 - [ ] Add/Update transformicons
-- [ ] Documentation
+- [ ] Improve documentation
 - [ ] Add JSCS
 
 ## Installation
