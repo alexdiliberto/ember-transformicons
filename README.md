@@ -145,9 +145,7 @@ Any help is welcome and absolutely appreciated!
 
 ## Backlog
 
-- [ ] Modularize components/Refactor
 - [ ] Add/Update/Improve transformicons
-- [ ] Update documentation
 - [ ] Tests
 
 ## Installation
