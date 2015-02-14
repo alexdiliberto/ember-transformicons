@@ -1,9 +1,9 @@
 import Ember from 'ember';
+import BaseTransformicon from './base-transformicon';
 
 var get                = Ember.get;
 var computed           = Ember.computed;
-var Component          = Ember.Component;
-var transformClass     = 'tcon-transform';
+var alias              = computed.alias;
 
 /**
   Transformicon Video component.
@@ -22,26 +22,19 @@ var transformClass     = 'tcon-transform';
     ```
 
   @class TVideoComponent
-  @extends Ember.Component
+  @extends BaseTransformiconComponent
 */
-export default Component.extend({
-  tagName: 'button',
-
-  attributeBindings: ['type', 'role', 'aria-label'],
-  type: 'button',
-  role: 'button',
+export default BaseTransformicon.extend({
+  role: alias('type'),
   'aria-label': 'play video',
 
-  classNames: ['tcon', 'tcon-vid--play'],
+  classNames: ['tcon-vid--play'],
   classNameBindings: ['isPlaying'],
   isPlaying: computed('is-playing', function() {
-    return get(this, 'is-playing') ? transformClass : false;
+    return get(this, 'is-playing') ? get(this, 'transformClass') : false;
   }),
 
-  click: function() {
-    this.toggleProperty('is-playing');
-    this.sendAction('action', get(this, 'is-playing'));
-  },
+  initialState: 'is-playing',
 
   /**
     PUBLIC

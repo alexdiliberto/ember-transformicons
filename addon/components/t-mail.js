@@ -1,9 +1,9 @@
 import Ember from 'ember';
+import BaseTransformicon from './base-transformicon';
 
 var get                = Ember.get;
 var computed           = Ember.computed;
-var Component          = Ember.Component;
-var transformClass     = 'tcon-transform';
+var alias              = computed.alias;
 
 /**
   Transformicon Mail component.
@@ -22,26 +22,17 @@ var transformClass     = 'tcon-transform';
     ```
 
   @class TMailComponent
-  @extends Ember.Component
+  @extends BaseTransformiconComponent
 */
-export default Component.extend({
-  tagName: 'button',
-
-  attributeBindings: ['type', 'role', 'aria-label'],
-  type: 'button',
-  role: 'button',
+export default BaseTransformicon.extend({
+  role: alias('type'),
   'aria-label': 'open mailbox',
 
-  classNames: ['tcon', 'tcon-mail--envelope'],
+  classNames: ['tcon-mail--envelope'],
   classNameBindings: ['isOpen'],
   isOpen: computed('is-open', function() {
-    return get(this, 'is-open') ? false : transformClass;
+    return get(this, 'is-open') ? false : get(this, 'transformClass');
   }),
-
-  click: function() {
-    this.toggleProperty('is-open');
-    this.sendAction('action', get(this, 'is-open'));
-  },
 
   /**
     PUBLIC

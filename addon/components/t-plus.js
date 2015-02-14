@@ -1,10 +1,9 @@
 import Ember from 'ember';
+import BaseTransformicon from './base-transformicon';
 
 var get                = Ember.get;
 var computed           = Ember.computed;
 var alias              = computed.alias;
-var Component          = Ember.Component;
-var transformClass     = 'tcon-transform';
 var defaultAnimation   = 'minus';
 var animationTypeTable = Ember.Object.create({
   'minus': 'tcon-plus tcon-plus--minus',
@@ -40,29 +39,21 @@ var animationTypeTable = Ember.Object.create({
     ```
 
   @class TPlusComponent
-  @extends Ember.Component
+  @extends BaseTransformiconComponent
 */
-export default Component.extend({
-  tagName: 'button',
-
-  attributeBindings: ['type', 'aria-label'],
-  type: 'button',
+export default BaseTransformicon.extend({
   'aria-label': 'add item',
 
-  classNames: ['tcon'],
   classNameBindings: ['animationType', 'isOpen'],
   animationType: computed('animation', function() {
     var anim = get(this, 'animation');
     return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
   }),
   isOpen: computed('is-added', function() {
-    return get(this, 'is-added') ? transformClass : false;
+    return get(this, 'is-added') ? get(this, 'transformClass') : false;
   }),
 
-  click: function() {
-    this.toggleProperty('is-added');
-    this.sendAction('action', get(this, 'is-added'));
-  },
+  initialState: 'is-added',
 
   /**
     PUBLIC

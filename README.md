@@ -145,12 +145,10 @@ Any help is welcome and absolutely appreciated!
 
 ## Backlog
 
-- [x] Add proper action/event handling for the hosting application
 - [ ] Modularize components/Refactor
-- [ ] Extract common components into base class/Mixin
 - [ ] Add/Update/Improve transformicons
 - [ ] Update documentation
-- [ ] Add Tests
+- [ ] Tests
 
 ## Installation
 

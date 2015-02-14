@@ -1,10 +1,9 @@
 import Ember from 'ember';
+import BaseTransformicon from './base-transformicon';
 
 var get                = Ember.get;
 var computed           = Ember.computed;
 var alias              = computed.alias;
-var Component          = Ember.Component;
-var transformClass     = 'tcon-transform';
 var defaultAnimation   = 'rearrange';
 var animationTypeTable = Ember.Object.create({
   'rearrange': 'tcon-grid--rearrange',
@@ -36,29 +35,20 @@ var animationTypeTable = Ember.Object.create({
     ```
 
   @class TGridComponent
-  @extends Ember.Component
+  @extends BaseTransformiconComponent
 */
-export default Component.extend({
-  tagName: 'button',
-
-  attributeBindings: ['type', 'aria-label'],
-  type: 'button',
+export default BaseTransformicon.extend({
   'aria-label': 'toggle grid',
 
-  classNames: ['tcon', 'tcon-grid'],
+  classNames: ['tcon-grid'],
   classNameBindings: ['animationType', 'isOpen'],
   animationType: computed('animation', function() {
     var anim = get(this, 'animation');
     return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
   }),
   isOpen: computed('is-open', function() {
-    return get(this, 'is-open') ? transformClass : false;
+    return get(this, 'is-open') ? get(this, 'transformClass') : false;
   }),
-
-  click: function() {
-    this.toggleProperty('is-open');
-    this.sendAction('action', get(this, 'is-open'));
-  },
 
   /**
     PUBLIC
