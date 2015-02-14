@@ -44,19 +44,31 @@ var animationTypeTable = Ember.Object.create({
 export default BaseTransformicon.extend({
   'aria-label': 'add item',
 
-  classNameBindings: ['animationType', 'isOpen'],
+  classNameBindings: ['animationType', 'isAdded'],
+  /**
+    Get the CSS classname corresponding to the component's current animation type.
+
+    @property animationType
+    @type String
+  */
   animationType: computed('animation', function() {
     var anim = get(this, 'animation');
     return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
   }),
-  isOpen: computed('is-added', function() {
+  /**
+    Get the classname representing the `added` toggled state for the add/remove icon. This classname is stored in the `BaseTransformiconComponent`.
+
+    @property isAdded
+    @type String|Boolean
+  */
+  isAdded: computed('is-added', function() {
     return get(this, 'is-added') ? get(this, 'transformClass') : false;
   }),
 
   initialState: 'is-added',
 
   /**
-    PUBLIC
+    PUBLIC COMPONENT PROPERTIES
    */
   animation: defaultAnimation,
   a: alias('animation'),

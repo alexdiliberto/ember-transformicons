@@ -30,12 +30,18 @@ export default BaseTransformicon.extend({
 
   classNames: ['tcon-mail--envelope'],
   classNameBindings: ['isOpen'],
+  /**
+    Get the classname representing the `open` toggled state for the mail icon. This classname is stored in the `BaseTransformiconComponent`.
+
+    @property isOpen
+    @type String|Boolean
+  */
   isOpen: computed('is-open', function() {
     return get(this, 'is-open') ? false : get(this, 'transformClass');
   }),
 
   /**
-    PUBLIC
+    PUBLIC COMPONENT PROPERTIES
    */
   'is-open': true
 });

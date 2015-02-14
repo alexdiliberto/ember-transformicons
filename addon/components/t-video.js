@@ -30,6 +30,12 @@ export default BaseTransformicon.extend({
 
   classNames: ['tcon-vid--play'],
   classNameBindings: ['isPlaying'],
+  /**
+    Get the classname representing the `playing` toggled state for the video icon. This classname is stored in the `BaseTransformiconComponent`.
+
+    @property isPlaying
+    @type String|Boolean
+  */
   isPlaying: computed('is-playing', function() {
     return get(this, 'is-playing') ? get(this, 'transformClass') : false;
   }),
@@ -37,7 +43,7 @@ export default BaseTransformicon.extend({
   initialState: 'is-playing',
 
   /**
-    PUBLIC
+    PUBLIC COMPONENT PROPERTIES
    */
   'is-playing': false
 });

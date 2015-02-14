@@ -42,16 +42,28 @@ export default BaseTransformicon.extend({
 
   classNames: ['tcon-grid'],
   classNameBindings: ['animationType', 'isOpen'],
+  /**
+    Get the CSS classname corresponding to the component's current animation type.
+
+    @property animationType
+    @type String
+  */
   animationType: computed('animation', function() {
     var anim = get(this, 'animation');
     return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
   }),
+  /**
+    Get the classname representing the `open` toggled state for the grid icon. This classname is stored in the `BaseTransformiconComponent`.
+
+    @property isOpen
+    @type String|Boolean
+  */
   isOpen: computed('is-open', function() {
     return get(this, 'is-open') ? get(this, 'transformClass') : false;
   }),
 
   /**
-    PUBLIC
+    PUBLIC COMPONENT PROPERTIES
    */
   animation: defaultAnimation,
   a: alias('animation'),
