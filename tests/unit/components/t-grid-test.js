@@ -2,7 +2,7 @@ import {
   moduleForComponent,
   test
 } from 'ember-qunit';
-import { arrayContains } from 'dummy/tests/helpers/common';
+import { arrayContains } from '../../helpers/common';
 
 var component;
 
