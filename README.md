@@ -146,7 +146,7 @@ Any help is welcome and absolutely appreciated!
 ## Backlog
 
 - [ ] Add/Update/Improve transformicons
-- [ ] Tests
+- [ ] More tests
 
 ## Installation
 
