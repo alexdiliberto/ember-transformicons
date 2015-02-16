@@ -18,7 +18,7 @@ module('Acceptance: TPlus', {
 test('Toggle the default {{t-plus}} component', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/add-remove');
 
   var $defaultAddRemove = find('#plus-default');
 
@@ -32,7 +32,7 @@ test('Toggle the default {{t-plus}} component', function(assert) {
 test('Verify default {{t-plus}} component has correct template', function(assert) {
   assert.expect(1);
 
-  visit('/');
+  visit('/add-remove');
 
   var $defaultAddRemove = find('#plus-default');
 

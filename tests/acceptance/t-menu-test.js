@@ -18,7 +18,7 @@ module('Acceptance: TMenu', {
 test('Toggle the default {{t-menu}} component', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/menu');
 
   var $defaultMenu = find('#menu-default');
 
@@ -32,7 +32,7 @@ test('Toggle the default {{t-menu}} component', function(assert) {
 test('Verify default {{t-menu}} component has correct template', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/menu');
 
   var $defaultMenu = find('#menu-default');
 

@@ -18,7 +18,7 @@ module('Acceptance: TLoader', {
 test('Verify default {{t-loader}} component has correct template', function(assert) {
   assert.expect(1);
 
-  visit('/');
+  visit('/loader');
 
   var $defaultLoader = find('#loader-default');
 

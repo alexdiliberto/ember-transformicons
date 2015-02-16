@@ -18,7 +18,7 @@ module('Acceptance: TGrid', {
 test('Toggle the default {{t-grid}} component', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/grid');
 
   var $defaultGrid = find('#grid-default');
 
@@ -32,7 +32,7 @@ test('Toggle the default {{t-grid}} component', function(assert) {
 test('Verify default {{t-grid}} component has correct template', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/grid');
 
   var $defaultGrid = find('#grid-default');
 

@@ -18,7 +18,7 @@ module('Acceptance: TMail', {
 test('Toggle the default {{t-mail}} component', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/mail');
 
   var $defaultMail = find('#mail-default');
 
@@ -32,7 +32,7 @@ test('Toggle the default {{t-mail}} component', function(assert) {
 test('Verify default {{t-mail}} component has correct template', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/mail');
 
   var $defaultMail = find('#mail-default');
 

@@ -18,7 +18,7 @@ module('Acceptance: TVideo', {
 test('Toggle the default {{t-video}} component', function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/video');
 
   var $defaultVideo = find('#video-default');
 
@@ -32,7 +32,7 @@ test('Toggle the default {{t-video}} component', function(assert) {
 test('Verify default {{t-video}} component has correct template', function(assert) {
   assert.expect(1);
 
-  visit('/');
+  visit('/video');
 
   var $defaultVideo = find('#video-default');
 
