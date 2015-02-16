@@ -172,8 +172,16 @@ Any help is welcome and absolutely appreciated!
 
 * `ember build`
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+## Update Demo App
 
+```shell
+ember build --environment=production
+git checkout gh-pages
+cp -R dist/* .
+git add . && git commit
+```
+
+For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
 
 [npm-url]: https://www.npmjs.com/package/ember-cli-transformicons
