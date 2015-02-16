@@ -1,0 +1,76 @@
+<h2>Menu</h2>
+<h3>animation</h3>
+<code>\{{t-menu}}</code> {{t-menu id="menu-default"}}
+<code>\{{t-menu a="butterfly"}}</code> {{t-menu a="butterfly"}}
+<code>\{{t-menu a="minus"}}</code> {{t-menu a="minus"}}
+<code>\{{t-menu a="x-cross"}}</code> {{t-menu a="x-cross"}}
+<code>\{{t-menu a="arrow-up"}}</code> {{t-menu a="arrow-up"}}
+<code>\{{t-menu a="arrow-360-left"}}</code> {{t-menu a="arrow-360-left"}}
+<code>\{{t-menu a="arrow-left"}}</code> {{t-menu a="arrow-left"}}
+<code>\{{t-menu a="some_random_typo"}}</code> {{t-menu a="some_random_typo"}}
+
+<h3>is-open</h3>
+<code>\{{t-menu is-open=true}}</code> {{t-menu is-open=true}}
+
+<h3>action</h3>
+<code>\{{t-menu is-open=isMenuOpen action="updateMenuControllerProperty"}}</code> {{t-menu is-open=isMenuOpen action="updateMenuControllerProperty"}}
+<p>isMenuOpen = {{isMenuOpen}}</p>
+
+
+<h2>Grid</h2>
+<h3>animation</h3>
+<code>\{{t-grid}}</code> {{t-grid id="grid-default"}}
+<code>\{{t-grid a="rearrange"}}</code> {{t-grid a="rearrange"}}
+<code>\{{t-grid a="collapse"}}</code> {{t-grid a="collapse"}}
+<code>\{{t-grid a="some_random_typo"}}</code> {{t-grid a="some_random_typo"}}
+
+<h3>is-open</h3>
+<code>\{{t-grid is-open=true}}</code> {{t-grid is-open=true}}
+
+<h3>action</h3>
+<code>\{{t-grid is-open=isGridOpen action="updateGridControllerProperty"}}</code> {{t-grid is-open=isGridOpen action="updateGridControllerProperty"}}
+<p>isGridOpen = {{isGridOpen}}</p>
+
+
+<h2>Add/Remove</h2>
+<h3>animation</h3>
+<code>\{{t-plus}}</code> {{t-plus id="plus-default"}}
+<code>\{{t-plus a="minus"}}</code> {{t-plus a="minus"}}
+<code>\{{t-plus a="check"}}</code> {{t-plus a="check"}}
+<code>\{{t-plus a="minus-fold"}}</code> {{t-plus a="minus-fold"}}
+<code>\{{t-plus a="circle"}}</code> {{t-plus a="circle"}}
+<code>\{{t-plus a="some_random_typo"}}</code> {{t-plus a="some_random_typo"}}
+
+<h3>is-added</h3>
+<code>\{{t-plus is-added=true}}</code> {{t-plus is-added=true}}
+
+<h3>action</h3>
+<code>\{{t-plus is-added=isAdded action="updateAddRemoveControllerProperty"}}</code> {{t-plus is-added=isAdded action="updateAddRemoveControllerProperty"}}
+<p>isAdded = {{isAdded}}</p>
+
+
+<h2>Mail</h2>
+<code style="padding-bottom: 15px; display: inline-block;">\{{t-mail}}</code> {{t-mail id="mail-default"}}
+
+<h3>is-open</h3>
+<code style="padding-bottom: 15px; display: inline-block;">\{{t-mail is-open=false}}</code> {{t-mail is-open=false}}
+
+<h3>action</h3>
+<code style="padding-bottom: 15px; display: inline-block;">\{{t-mail is-open=hasUnreadMail action="updateMailControllerProperty"}}</code> {{t-mail is-open=hasUnreadMail action="updateMailControllerProperty"}}
+<p>hasUnreadMail = {{hasUnreadMail}}</p>
+
+
+<h2>Video</h2>
+<code>\{{t-video}}</code> {{t-video id="video-default"}}
+
+<h3>is-playing</h3>
+<code>\{{t-video is-playing=true}}</code> {{t-video is-playing=true}}
+
+<h3>action</h3>
+<code>\{{t-video is-playing=isVideoPlaying action="updateVideoControllerProperty"}}</code> {{t-video is-playing=isVideoPlaying action="updateVideoControllerProperty"}}
+<p>isVideoPlaying = {{isVideoPlaying}}</p>
+
+
+<h2>Loader</h2>
+
+<code>\{{t-loader}}</code> {{t-loader id="loader-default"}}
