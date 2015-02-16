@@ -8,6 +8,10 @@
 
 This README outlines the details of collaborating on this Ember addon.
 
+## Demo
+
+Check out the [demo][gh-pages-demo]
+
 ## Installation
 Install the addon with Ember CLI directly
 
@@ -179,3 +183,4 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 [github-release-svg]: https://img.shields.io/github/release/alexdiliberto/ember-cli-transformicons.svg
 [travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
 [travis-url]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons
+[gh-pages-demo]: http://alexdiliberto.com/ember-cli-transformicons
