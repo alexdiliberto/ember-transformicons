@@ -47,7 +47,7 @@ test('it creates a grid transformicon with `is-open=true`', function(assert) {
   assert.ok(arrayContains(transformClass, component.get('classNames')));
 });
 
-test('it creates a grid transformicon with a non-default animation `a=collapse`', function(assert) {
+test('it creates a grid transformicon with a non-default animation `a="collapse"`', function(assert) {
   assert.expect(4);
 
   /**
