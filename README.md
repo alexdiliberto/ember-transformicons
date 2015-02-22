@@ -1,5 +1,7 @@
 # ember-cli-transformicons
 
+[![Join the chat at https://gitter.im/alexdiliberto/ember-cli-transformicons](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexdiliberto/ember-cli-transformicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm badge][npm-badge-png]][npm-url]
 
 [![github release versions][github-release-svg]][github-release-url]
