@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Gitter chat information and badge
 - Initial `CHANGELOG.md`
+- Update `broccoli-sass` to v0.4.0
 
 
 ## [0.1.2] - 2015-02-16
