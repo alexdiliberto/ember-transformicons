@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+- EmberCLI v0.2.0
 - Gitter chat information and badge
 - Initial `CHANGELOG.md`
 - Update `broccoli-sass` to v0.4.0
@@ -30,7 +31,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.0] - 2015-02-13
 ### Added
-- EmberCLI v0.15.0
+- EmberCLI v0.1.15
 - Proper event handling for the hosting application (`is-open`, `is-added`, and `is-playing` properties)
 - Improve testing
 - Improve component specific documentation
