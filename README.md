@@ -151,7 +151,7 @@ Any help is welcome and absolutely appreciated!
 - [ ] Add/Update/Improve transformicons
 - [ ] More tests
 - [ ] Allow dynamic transformicon sizes
-- 
+
 ## Installation
 
 * `git clone` this repository
@@ -179,6 +179,11 @@ ember build --environment=production
 git checkout gh-pages
 cp -R dist/* .
 git add . && git commit
+
+# Some Cleanup Items:
+#  Don't forget to update the index.html <title>Demo App | ember-cli-transformicons</title>
+#  Don't forget to remove any old Javascript/CSS files from the `assets/` directory
+#  Don't forget to update <base href="/ember-cli-transformicons/" />
 ```
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
