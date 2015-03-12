@@ -1,12 +1,9 @@
 # ember-cli-transformicons
 
-[![Join the chat at https://gitter.im/alexdiliberto/ember-cli-transformicons](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexdiliberto/ember-cli-transformicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![npm badge][npm-badge-png]][npm-url]
-
 [![github release versions][github-release-svg]][github-release-url]
 [![npm downloads per month][npm-dm-badge-svg]][npm-url]
 [![build status][travis-badge]][travis-url]
+[![Join the chat at https://gitter.im/alexdiliberto/ember-cli-transformicons](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexdiliberto/ember-cli-transformicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This README outlines the details of collaborating on this Ember addon.
 
@@ -21,7 +18,7 @@ Install the addon with Ember CLI directly
 ember install:addon ember-cli-transformicons
 ```
 
-*OR* You may install via `npm`:
+*OR* you may install via `npm`:
 
 ```shell
 npm install ember-cli-transformicons --save
@@ -153,7 +150,8 @@ Any help is welcome and absolutely appreciated!
 
 - [ ] Add/Update/Improve transformicons
 - [ ] More tests
-
+- [ ] Allow dynamic transformicon sizes
+- 
 ## Installation
 
 * `git clone` this repository
@@ -189,7 +187,6 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 [npm-url]: https://www.npmjs.com/package/ember-cli-transformicons
 [github-release-url]: https://github.com/alexdiliberto/ember-cli-transformicons/releases
 [npm-dm-badge-svg]: https://img.shields.io/npm/dm/ember-cli-transformicons.svg
-[npm-badge-png]: https://nodei.co/npm/ember-cli-transformicons.png?downloads=true&stars=true
 [github-release-svg]: https://img.shields.io/github/release/alexdiliberto/ember-cli-transformicons.svg
 [travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
 [travis-url]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons
