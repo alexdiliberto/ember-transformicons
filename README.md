@@ -3,6 +3,7 @@
 [![github release versions][github-release-svg]][github-release-url]
 [![npm downloads per month][npm-dm-badge-svg]][npm-url]
 [![build status][travis-badge]][travis-url]
+[![devDependency Status](https://david-dm.org/alexdiliberto/ember-cli-transformicons/dev-status.svg)](https://david-dm.org/alexdiliberto/ember-cli-transformicons#info=devDependencies)
 [![Join the chat at https://gitter.im/alexdiliberto/ember-cli-transformicons](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexdiliberto/ember-cli-transformicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This README outlines the details of collaborating on this Ember addon.
