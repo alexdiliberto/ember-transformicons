@@ -78,27 +78,44 @@ Grid optional parameters:
 {{t-grid action="someControllerAction"}}
 ```
 
-### Add/Remove
-Add/Remove optional parameters:
-  * `is-added` boolean - Set initial open add/remove state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add or pending remove.
+### Add
+Add optional parameters:
+  * `is-added` boolean - Set initial open add state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
 **animation**
 ```handlebars
-{{t-plus}}
-{{t-plus animation="minus"}}
-{{t-plus a="check"}}
-{{t-plus a="minus-fold"}}
-{{t-plus a="circle"}}
+{{t-add}}
+{{t-add animation="minus"}}
+{{t-add a="check"}}
 ```
 **is-added**
 ```handlebars
-{{t-plus is-added=true}}
-{{t-plus is-added=someBoundProperty}}
+{{t-add is-added=true}}
+{{t-add is-added=someBoundProperty}}
 ```
 **action**
 ```handlebars
-{{t-plus action="someControllerAction"}}
+{{t-add action="someControllerAction"}}
+```
+
+### Remove
+Remove optional parameters:
+  * `is-removed` boolean - Set initial open removed state.
+  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
+
+**animation**
+```handlebars
+{{t-remove}}
+```
+**is-removed**
+```handlebars
+{{t-remove is-removed=true}}
+{{t-remove is-removed=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-remove action="someControllerAction"}}
 ```
 
 ### Mail

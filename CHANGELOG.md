@@ -22,6 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
  - {{t-plus}} naming convention and replacing with {{t-add}} and {{t-remove}}
+ - {{t-plus a="minus-fold"}} and {{t-plus a="circle"}} animations
 
 
 ## [0.1.3] - 2015-03-11
