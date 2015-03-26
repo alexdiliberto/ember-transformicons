@@ -3,7 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
- - Nothing...
+### Added
+ - `README.md` David DM badge
+ - EmberCLI v0.2.1
+ - NPM dependency cleanup
+ - Content Security Policy fix for inline styles in the dummy application
+
 
 ## [0.1.3] - 2015-03-11
 ### Added
