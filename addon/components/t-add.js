@@ -6,44 +6,41 @@ var computed           = Ember.computed;
 var alias              = computed.alias;
 var defaultAnimation   = 'minus';
 var animationTypeTable = Ember.Object.create({
-  'minus': 'tcon-plus tcon-plus--minus',
-  'check': 'tcon-plus tcon-plus--check',
-  'minus-fold': 'tcon-plus--minusfold',
-  'circle': 'tcon-plus--circle'
+  'minus': 'tcon-plus--minus',
+  'check': 'tcon-plus--check'
 });
 
 /**
-  Transformicon Add/Remove component.
+  Transformicon Add component.
 
   PUBLIC - Optional parameters:
-    * `animation` string - Set the add/remove animation type.
+    * `animation` string - Set the add animation type.
     * `a` string - Shorthand alias for `animation`.
-    * `is-added` boolean - Set initial open add/remove state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add or pending remove.
+    * `is-added` boolean - Set initial open added state.
+    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
   Available `animation` types:
     * minus
     * check
-    * minus-fold
-    * circle
 
   Examples:
 
     ```hbs
       {{! These are functionally equivalent}}
 
-      {{t-plus}}
-      {{t-plus a='minus'}}
-      {{t-plus animation='minus'}}
-      {{t-plus is-added=false animation='minus'}}
+      {{t-add}}
+      {{t-add a='minus'}}
+      {{t-add animation='minus'}}
+      {{t-add is-added=false animation='minus'}}
     ```
 
-  @class TPlusComponent
+  @class TAddComponent
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
   'aria-label': 'add item',
 
+  classNames: ['tcon-plus'],
   classNameBindings: ['animationType', 'isAdded'],
   /**
     Get the CSS classname corresponding to the component's current animation type.
@@ -56,7 +53,7 @@ export default BaseTransformicon.extend({
     return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
   }),
   /**
-    Get the classname representing the `added` toggled state for the add/remove icon. This classname is stored in the `BaseTransformiconComponent`.
+    Get the classname representing the `added` toggled state for the add icon. This classname is stored in the `BaseTransformiconComponent`.
 
     @property isAdded
     @type String|Boolean

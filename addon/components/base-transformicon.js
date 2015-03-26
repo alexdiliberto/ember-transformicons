@@ -34,6 +34,7 @@ export default Component.extend({
 
       * `is-open`
       * `is-added`
+      * `is-removed`
       * `is-playing`
 
     @property initialState

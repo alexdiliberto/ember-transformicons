@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   isAdded: false,
 
   actions: {
-    updateAddRemoveControllerProperty: function(isAdded) {
+    updateAddControllerProperty: function(isAdded) {
       this.set('isAdded', isAdded);
     }
   }

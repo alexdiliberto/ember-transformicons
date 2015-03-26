@@ -4,7 +4,7 @@ import {
 } from 'ember-qunit';
 import { arrayContains } from '../../helpers/common';
 
-moduleForComponent('t-plus', {});
+moduleForComponent('t-add', {});
 
 test('it renders', function(assert) {
   assert.expect(2);
@@ -18,26 +18,26 @@ test('it renders', function(assert) {
   assert.equal(component._state, 'inDOM');
 });
 
-test('it creates a add/remove transformicon with defaults', function(assert) {
+test('it creates an add transformicon with defaults', function(assert) {
   assert.expect(4);
 
   /**
-    {{t-plus}}
+    {{t-add}}
   */
   var component = this.subject();
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-added'), false);
   assert.equal(component.get('animation'), 'minus');
-  assert.equal(component.get('animationType'), 'tcon-plus tcon-plus--minus');
+  assert.equal(component.get('animationType'), 'tcon-plus--minus');
   assert.ok(!arrayContains(transformClass, component.get('classNames')));
 });
 
-test('it creates a add/remove transformicon with `is-added=true`', function(assert) {
+test('it creates an add transformicon with `is-added=true`', function(assert) {
   assert.expect(2);
 
   /**
-    {{t-plus is-added=true}}
+    {{t-add is-added=true}}
   */
   var component = this.subject({ 'is-added': true });
   var transformClass = component.get('transformClass');
@@ -46,17 +46,17 @@ test('it creates a add/remove transformicon with `is-added=true`', function(asse
   assert.ok(arrayContains(transformClass, component.get('classNames')));
 });
 
-test('it creates a add/remove transformicon with a non-default animation `a="minus-fold"`', function(assert) {
+test('it creates an add transformicon with a non-default animation `a="check"`', function(assert) {
   assert.expect(4);
 
   /**
-    {{t-plus a='minus-fold'}}
+    {{t-add a='check'}}
   */
-  var component = this.subject({ a: 'minus-fold' });
+  var component = this.subject({ a: 'check' });
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-added'), false);
-  assert.equal(component.get('animation'), 'minus-fold');
-  assert.equal(component.get('animationType'), 'tcon-plus--minusfold');
+  assert.equal(component.get('animation'), 'check');
+  assert.equal(component.get('animationType'), 'tcon-plus--check');
   assert.ok(!arrayContains(transformClass, component.get('classNames')));
 });
