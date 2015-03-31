@@ -1,11 +1,11 @@
-# ember-cli-transformicons
+# ember-cli-transformicons [![ember addon][ember-addon-badge]][ember-addon-url]
+
+[![build status][travis-badge]][travis-url]
+[![dependency status][david-dm-dependencies]][david-dm-dependencies-url]
+[![dev-dependency status][david-dm-dev-dependencies]][david-dm-dev-dependencies-url]
 
 [![github release versions][github-release-svg]][github-release-url]
 [![npm downloads per month][npm-dm-badge-svg]][npm-url]
-[![build status][travis-badge]][travis-url]
-[![dependency status][david-dm-dependencies]](david-dm-dependencies-url)
-[![dev-dependency status][david-dm-dev-dependencies]][david-dm-dev-dependencies-url]
-[![ember addon][ember-addon-badge]]()
 
 This README outlines the details of collaborating on this Ember addon.
 
