@@ -184,6 +184,7 @@ Any help is welcome and absolutely appreciated!
 
 ## Running Tests
 
+* `ember try:testall`
 * `ember test`
 * `ember test --server`
 

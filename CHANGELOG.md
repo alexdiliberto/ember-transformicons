@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
  - EmberCLI v0.2.2
+ - `ember-try` for testing against multiple Ember versions
+ - `README.md` Ember Addon badge
 
 ### Fixed
  - Allow proper async testing
