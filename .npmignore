@@ -11,3 +11,6 @@ tmp/
 bower.json
 Brocfile.js
 testem.json
+
+/*.sublime-workspace
+/*.sublime-project
