@@ -1,10 +1,11 @@
-# ember-cli-transformicons
+# ember-cli-transformicons [![ember addon][ember-addon-badge]][ember-addon-url]
+
+[![build status][travis-badge]][travis-url]
+[![dependency status][david-dm-dependencies]][david-dm-dependencies-url]
+[![dev-dependency status][david-dm-dev-dependencies]][david-dm-dev-dependencies-url]
 
 [![github release versions][github-release-svg]][github-release-url]
 [![npm downloads per month][npm-dm-badge-svg]][npm-url]
-[![build status][travis-badge]][travis-url]
-[![devDependency Status](https://david-dm.org/alexdiliberto/ember-cli-transformicons/dev-status.svg)](https://david-dm.org/alexdiliberto/ember-cli-transformicons#info=devDependencies)
-[![Join the chat at https://gitter.im/alexdiliberto/ember-cli-transformicons](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexdiliberto/ember-cli-transformicons?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This README outlines the details of collaborating on this Ember addon.
 
@@ -207,10 +208,22 @@ git add . && git commit
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
 
-[npm-url]: https://www.npmjs.com/package/ember-cli-transformicons
-[github-release-url]: https://github.com/alexdiliberto/ember-cli-transformicons/releases
-[npm-dm-badge-svg]: https://img.shields.io/npm/dm/ember-cli-transformicons.svg
+
 [github-release-svg]: https://img.shields.io/github/release/alexdiliberto/ember-cli-transformicons.svg
-[travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
+[github-release-url]: https://github.com/alexdiliberto/ember-cli-transformicons/releases
+
+[npm-dm-badge-svg]: https://img.shields.io/npm/dm/ember-cli-transformicons.svg
+[npm-url]: https://www.npmjs.com/package/ember-cli-transformicons
+
 [travis-url]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons
+[travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
+
+[david-dm-dependencies]: https://david-dm.org/alexdiliberto/ember-cli-transformicons.svg
+[david-dm-dependencies-url]: https://david-dm.org/alexdiliberto/ember-cli-transformicons
+[david-dm-dev-dependencies]: https://david-dm.org/alexdiliberto/ember-cli-transformicons/dev-status.svg
+[david-dm-dev-dependencies-url]: https://david-dm.org/alexdiliberto/ember-cli-transformicons#info=devDependencies
+
+[ember-addon-badge]: https://s3.amazonaws.com/images.jebbit.com/ember/badge.svg
+[ember-addon-url]: http://www.emberaddons.com
+
 [gh-pages-demo]: http://alexdiliberto.com/ember-cli-transformicons
