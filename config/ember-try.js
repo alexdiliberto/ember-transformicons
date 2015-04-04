@@ -7,9 +7,12 @@ module.exports = {
       }
     },
     {
-      name: "Ember 1.12.0-beta.1",
+      name: "Ember Beta",
       dependencies: {
-        "ember": "1.12.0-beta.1"
+        'ember': 'components/ember#beta'
+      },
+      resolutions: {
+        'ember': 'beta'
       }
     }
   ]

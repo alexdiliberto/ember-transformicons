@@ -11,6 +11,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
  - Allow proper async testing
 
+### Updated
+ - `package.json` dependencies: `broccoli-sass` and `ember-try`
+
 
 ## [0.2.0] - 2015-03-25
 ### Added
