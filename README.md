@@ -14,16 +14,9 @@ This README outlines the details of collaborating on this Ember addon.
 Check out the [demo][gh-pages-demo]
 
 ## Installation
-Install the addon with Ember CLI directly
 
 ```shell
 ember install:addon ember-cli-transformicons
-```
-
-*OR* you may install via `npm`:
-
-```shell
-npm install ember-cli-transformicons --save
 ```
 
 ## Usage
