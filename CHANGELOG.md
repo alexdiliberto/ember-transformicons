@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
  - Ember v1.11.1
- - EmberCLI v0.2.2
+ - EmberCLI v0.2.3
  - `package.json` dependencies: `broccoli-sass` and `ember-try`
  - `ember-try` config now references latest Release and Beta versions
 
