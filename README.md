@@ -16,7 +16,7 @@ Check out the [demo][gh-pages-demo]
 ## Installation
 
 ```shell
-ember install:addon ember-cli-transformicons
+ember install ember-cli-transformicons
 ```
 
 ## Usage
