@@ -1,2 +1,1 @@
-import TMail from 'ember-cli-transformicons/components/t-mail';
-export default TMail;
+export { default } from 'ember-cli-transformicons/components/t-mail';

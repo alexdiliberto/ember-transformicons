@@ -1,2 +1,1 @@
-import TLoader from 'ember-cli-transformicons/components/t-loader';
-export default TLoader;
+export { default } from 'ember-cli-transformicons/components/t-loader';

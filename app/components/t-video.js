@@ -1,2 +1,1 @@
-import TVideo from 'ember-cli-transformicons/components/t-video';
-export default TVideo;
+export { default } from 'ember-cli-transformicons/components/t-video';

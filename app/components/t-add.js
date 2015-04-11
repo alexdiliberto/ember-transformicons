@@ -1,2 +1,1 @@
-import TAdd from 'ember-cli-transformicons/components/t-add';
-export default TAdd;
+export { default } from 'ember-cli-transformicons/components/t-add';

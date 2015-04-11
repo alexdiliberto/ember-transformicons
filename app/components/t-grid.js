@@ -1,2 +1,1 @@
-import TGrid from 'ember-cli-transformicons/components/t-grid';
-export default TGrid;
+export { default } from 'ember-cli-transformicons/components/t-grid';

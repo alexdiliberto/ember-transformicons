@@ -1,2 +1,1 @@
-import TRemove from 'ember-cli-transformicons/components/t-remove';
-export default TRemove;
+export { default } from 'ember-cli-transformicons/components/t-remove';
