@@ -1,9 +1,9 @@
 import Ember from 'ember';
 import BaseTransformicon from './base-transformicon';
 
-var get                = Ember.get;
-var computed           = Ember.computed;
-var alias              = computed.alias;
+const get                = Ember.get;
+const computed           = Ember.computed;
+const alias              = computed.alias;
 
 /**
   Transformicon Video component.

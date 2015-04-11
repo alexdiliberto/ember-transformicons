@@ -1,11 +1,11 @@
 import Ember from 'ember';
 import BaseTransformicon from './base-transformicon';
 
-var get                = Ember.get;
-var computed           = Ember.computed;
-var alias              = computed.alias;
-var defaultAnimation   = 'rearrange';
-var animationTypeTable = Ember.Object.create({
+const get                = Ember.get;
+const computed           = Ember.computed;
+const alias              = computed.alias;
+const defaultAnimation   = 'rearrange';
+const animationTypeTable = Ember.Object.create({
   'rearrange': 'tcon-grid--rearrange',
   'collapse':  'tcon-grid--collapse'
 });
@@ -49,7 +49,7 @@ export default BaseTransformicon.extend({
     @type String
   */
   animationType: computed('animation', function() {
-    var anim = get(this, 'animation');
+    const anim = get(this, 'animation');
     return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
   }),
   /**

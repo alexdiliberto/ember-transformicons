@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var Component = Ember.Component;
+const Component = Ember.Component;
 
 /**
   Transformicon Loader component.

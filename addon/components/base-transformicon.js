@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
-var get                = Ember.get;
-var Component          = Ember.Component;
+const get                = Ember.get;
+const Component          = Ember.Component;
 
 /**
   Transformicon Base component.
@@ -51,8 +51,8 @@ export default Component.extend({
 
     @method click
   */
-  click: function() {
-    var initState = get(this, 'initialState');
+  click() {
+    const initState = get(this, 'initialState');
     this.toggleProperty(initState);
     this.sendAction('action', !!initState);
   },

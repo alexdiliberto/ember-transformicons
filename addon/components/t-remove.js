@@ -1,8 +1,8 @@
 import Ember from 'ember';
 import BaseTransformicon from './base-transformicon';
 
-var get                = Ember.get;
-var computed           = Ember.computed;
+const get                = Ember.get;
+const computed           = Ember.computed;
 
 /**
   Transformicon Remove component.
