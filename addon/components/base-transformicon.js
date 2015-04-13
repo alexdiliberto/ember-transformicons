@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
-const get                = Ember.get;
-const Component          = Ember.Component;
+const {
+  get,
+  Component
+} = Ember;
 
 /**
   Transformicon Base component.

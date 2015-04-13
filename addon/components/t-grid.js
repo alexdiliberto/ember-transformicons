@@ -1,9 +1,11 @@
 import Ember from 'ember';
 import BaseTransformicon from './base-transformicon';
 
-const get                = Ember.get;
-const computed           = Ember.computed;
-const alias              = computed.alias;
+const {
+  get,
+  computed,
+  computed: { alias }
+} = Ember;
 const defaultAnimation   = 'rearrange';
 const animationTypeTable = Ember.Object.create({
   'rearrange': 'tcon-grid--rearrange',

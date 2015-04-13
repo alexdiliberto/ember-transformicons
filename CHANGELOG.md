@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - EmberCLI v0.2.3
  - `package.json` dependencies: `broccoli-sass` and `ember-try`
  - `ember-try` config now references latest Release and Beta versions
+ - Updating some modules to use ES6
 
 
 ## [0.2.0] - 2015-03-25

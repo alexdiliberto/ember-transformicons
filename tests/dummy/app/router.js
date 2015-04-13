@@ -5,7 +5,7 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-export default Router.map(function() {
+Router.map(function() {
   this.route('menu');
   this.route('grid');
   this.route('add');
@@ -14,3 +14,5 @@ export default Router.map(function() {
   this.route('video');
   this.route('loader');
 });
+
+export default Router;
