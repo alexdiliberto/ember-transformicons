@@ -101,6 +101,11 @@ Remove optional parameters:
 **animation**
 ```handlebars
 {{t-remove}}
+{{t-remove animation="check"}}
+{{t-remove a="chevron-left"}}
+{{t-remove a="chevron-right"}}
+{{t-remove a="chevron-down"}}
+{{t-remove a="chevron-up"}}
 ```
 **is-removed**
 ```handlebars

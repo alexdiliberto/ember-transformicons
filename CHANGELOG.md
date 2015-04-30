@@ -3,10 +3,14 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+No unreleased changes.
+
+## [0.3.0] - 2015-04-30
 ### Added
  - `ember-try` for testing against multiple Ember versions
  - `README.md` Ember Addon badge
  - `inch.json` for Inch CI
+ - More {{t-remove}} animations
 
 ### Changed
  - Switching `broccoli-sass` for `ember-cli-sass` (https://github.com/ember-cli/ember-cli/pull/3850)
@@ -101,7 +105,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]: https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.2.0...HEAD
+[unreleased]: https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.0...HEAD
+[0.3.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.2.0...v0.3.0
 [0.2.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.3...v0.2.0
 [0.1.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.2...v0.1.3
 [0.1.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.1...v0.1.2
