@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
-No unreleased changes.
+ - EmberCLI v0.2.7
 
 ## [0.3.0] - 2015-04-30
 ### Added
