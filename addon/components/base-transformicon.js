@@ -56,6 +56,6 @@ export default Component.extend({
   click() {
     const initState = get(this, 'initialState');
     this.toggleProperty(initState);
-    this.sendAction('action', !!initState);
+    this.sendAction('action', get(this, initState));
   },
 });
