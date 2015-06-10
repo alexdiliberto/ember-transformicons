@@ -28,8 +28,8 @@ test('it creates a remove transformicon with defaults', function(assert) {
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-removed'), false);
-  assert.ok(arrayContains('tcon-remove--check', component.get('classNames')));
-  assert.ok(!arrayContains(transformClass, component.get('classNames')));
+  assert.ok(arrayContains('tcon-remove--check', this.$().attr('class')));
+  assert.ok(!arrayContains(transformClass, this.$().attr('class')));
 });
 
 test('it creates a remove transformicon with `is-removed=true`', function(assert) {
@@ -42,5 +42,5 @@ test('it creates a remove transformicon with `is-removed=true`', function(assert
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-removed'), true);
-  assert.ok(arrayContains(transformClass, component.get('classNames')));
+  assert.ok(arrayContains(transformClass, this.$().attr('class')));
 });

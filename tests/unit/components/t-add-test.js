@@ -43,7 +43,7 @@ test('it creates an add transformicon with `is-added=true`', function(assert) {
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-added'), true);
-  assert.ok(arrayContains(transformClass, component.get('classNames')));
+  assert.ok(arrayContains(transformClass, this.$().attr('class')));
 });
 
 test('it creates an add transformicon with a non-default animation `a="check"`', function(assert) {

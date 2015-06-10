@@ -42,5 +42,5 @@ test('it creates a video transformicon with `is-playing=true`', function(assert)
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-playing'), true);
-  assert.ok(arrayContains(transformClass, component.get('classNames')));
+  assert.ok(arrayContains(transformClass, this.$().attr('class')));
 });

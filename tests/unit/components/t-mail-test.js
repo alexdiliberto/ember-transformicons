@@ -42,5 +42,5 @@ test('it creates a mail transformicon with `is-open=false`', function(assert) {
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-open'), false);
-  assert.ok(arrayContains(transformClass, component.get('classNames')));
+  assert.ok(arrayContains(transformClass, this.$().attr('class')));
 });

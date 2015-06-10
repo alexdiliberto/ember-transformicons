@@ -43,7 +43,7 @@ test('it creates a menu transformicon with `is-open=true`', function(assert) {
   var transformClass = component.get('transformClass');
   this.render();
   assert.equal(component.get('is-open'), true);
-  assert.ok(arrayContains(transformClass, component.get('classNames')));
+  assert.ok(arrayContains(transformClass, this.$().attr('class')));
 });
 
 test('it creates a menu transformicon with a non-default animation `a="arrow-360-left"`', function(assert) {
