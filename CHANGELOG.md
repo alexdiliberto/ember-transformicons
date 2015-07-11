@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
  - Bugfix for click action handling
 ### Updated
- - EmberCLI v0.2.7
+ - EmberCLI v1.13.1
 
 
 ## [0.3.0] - 2015-04-30
