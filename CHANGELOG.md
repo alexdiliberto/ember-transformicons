@@ -3,7 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
-Nothing
+### Updated
+ - Updating to "Integration" style unit tests
+ - Ember v1.13.5
+
 
 ## [0.3.2] - 2015-07-10
 ### Fixed
