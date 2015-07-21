@@ -1,10 +1,10 @@
 import { module, test } from 'qunit';
-import startApp from '../helpers/start-app';
+import startApp from '../../tests/helpers/start-app';
 import { run } from '../helpers/common';
 
 var application;
 
-module('Acceptance: TVideo', {
+module('Acceptance | t video', {
   beforeEach: function() {
     application = startApp();
   },

@@ -1,10 +1,10 @@
 import { module, test } from 'qunit';
-import startApp from '../helpers/start-app';
+import startApp from '../../tests/helpers/start-app';
 import { run } from '../helpers/common';
 
 var application;
 
-module('Acceptance: TLoader', {
+module('Acceptance | t loader', {
   beforeEach: function() {
     application = startApp();
   },
