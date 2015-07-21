@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Fixed
+ - `ember-qunit` bugfix for testing against Ember v2.0
+
 ### Updated
  - Updating to "Integration" style unit tests
  - Ember v1.13.5
