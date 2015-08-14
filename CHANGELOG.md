@@ -8,8 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
  - Updating to "Integration" style unit tests
- - Ember/Ember CLI v1.13.6
- - Depedencies: `ember-qunit`, `ember-cli-qunit`, `ember-try`
+ - Ember v2.0.0/Ember CLI v1.13.8
+ - Ember v2.0.0 depedencies
 
 
 ## [0.3.2] - 2015-07-10
