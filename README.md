@@ -21,7 +21,7 @@ ember install ember-cli-transformicons
 ```
 
 ## Usage
-Usage is very simple. Add the transformicon you want from within your any template in your application.
+Add the transformicon you want to any template in your application.
 
 Global optional parameters:
   * `animation` string - Set the menu animation type. If you do not provide a specific type for an icon category, then a default type will simply be provided for you.
@@ -30,7 +30,7 @@ Global optional parameters:
 ### Menu
 Menu optional parameters:
   * `is-open` boolean - Set initial open menu state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indication wether the current state is open or closed.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indication wether the current state is open or closed.
 
 **animation**
 ```handlebars
@@ -55,7 +55,7 @@ Menu optional parameters:
 ### Grid
 Grid optional parameters:
   * `is-open` boolean - Set initial open grid state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 **animation**
 ```handlebars
@@ -76,7 +76,7 @@ Grid optional parameters:
 ### Add
 Add optional parameters:
   * `is-added` boolean - Set initial open add state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
 **animation**
 ```handlebars
@@ -97,7 +97,7 @@ Add optional parameters:
 ### Remove
 Remove optional parameters:
   * `is-removed` boolean - Set initial open removed state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
 
 **animation**
 ```handlebars
@@ -121,7 +121,7 @@ Remove optional parameters:
 ### Mail
 Mail optional parameters:
   * `is-open` boolean - Set initial open mail state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 ```handlebars
 {{t-mail}}
@@ -139,7 +139,7 @@ Mail optional parameters:
 ### Video
 Video optional parameters:
   * `is-playing` boolean - Set initial playing state.
-  * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
 
 ```handlebars
 {{t-video}}
