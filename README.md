@@ -194,15 +194,14 @@ Any help is welcome and absolutely appreciated!
 ## Update Demo App
 
 ```shell
-ember build --environment=production
+ember b -prod
 git checkout gh-pages
+rm -rf assets/
 cp -R dist/* .
 git add . && git commit
 
 # Some Cleanup Items:
-#  Don't forget to update the index.html <title>Demo App | ember-cli-transformicons</title>
-#  Don't forget to remove any old Javascript/CSS files from the `assets/` directory
-#  Don't forget to update <base href="/ember-cli-transformicons/" />
+#  Don't forget to update the index.html <!-- v[rel-ver] --><title>Demo App | ember-cli-transformicons</title>
 ```
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
