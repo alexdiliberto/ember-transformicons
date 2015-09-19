@@ -2,9 +2,11 @@
 
 [![build status][travis-badge]][travis-url]
 [![github release versions][github-release-svg]][github-release-url]
+[![code climate][code-climate-svg]][code-climate-url]
+[![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
+
 [![dependency status][david-dm-dependencies]][david-dm-dependencies-url]
 [![dev-dependency status][david-dm-dev-dependencies]][david-dm-dev-dependencies-url]
-[![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
 
 This README outlines the details of collaborating on this Ember addon.
 
@@ -223,5 +225,8 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 
 [ember-observer-score-svg]: http://emberobserver.com/badges/ember-cli-transformicons.svg
 [ember-observer-score-url]: http://emberobserver.com/addons/ember-cli-transformicons
+
+[code-climate-svg]: https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons/badges/gpa.svg
+[code-climate-url]: https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons
 
 [gh-pages-demo]: http://alexdiliberto.com/ember-cli-transformicons

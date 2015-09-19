@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+ - `.codeclimate.yml` config file
+ - Code Climate badge
+
 ### Fixed
  - `ember-qunit` bugfix for testing against Ember v2.0
 
