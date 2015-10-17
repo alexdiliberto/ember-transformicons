@@ -1,17 +1,30 @@
-<h2>Menu</h2>
-<h3>animation</h3>
-<code>\{{t-menu}}</code> {{t-menu id="menu-default"}}
-<code>\{{t-menu a="butterfly"}}</code> {{t-menu a="butterfly"}}
-<code>\{{t-menu a="minus"}}</code> {{t-menu a="minus"}}
-<code>\{{t-menu a="x-cross"}}</code> {{t-menu a="x-cross"}}
-<code>\{{t-menu a="arrow-up"}}</code> {{t-menu a="arrow-up"}}
-<code>\{{t-menu a="arrow-360-left"}}</code> {{t-menu a="arrow-360-left"}}
-<code>\{{t-menu a="arrow-left"}}</code> {{t-menu a="arrow-left"}}
-<code>\{{t-menu a="typo"}}</code> {{t-menu a="typo"}}
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Menu</h2>
+    <h3>animation</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <code>\{{t-menu}}</code> {{t-menu id="menu-default"}}
+    <code>\{{t-menu a="butterfly"}}</code> {{t-menu a="butterfly"}}
+    <code>\{{t-menu a="minus"}}</code> {{t-menu a="minus"}}
+    <code>\{{t-menu a="x-cross"}}</code> {{t-menu a="x-cross"}}
+  </div>
+  <div class="col-xs-6">
+    <code>\{{t-menu a="arrow-up"}}</code> {{t-menu a="arrow-up"}}
+    <code>\{{t-menu a="arrow-360-left"}}</code> {{t-menu a="arrow-360-left"}}
+    <code>\{{t-menu a="arrow-left"}}</code> {{t-menu a="arrow-left"}}
+    <code>\{{t-menu a="typo"}}</code> {{t-menu a="typo"}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>is-open</h3>
+    <code>\{{t-menu is-open=true}}</code> {{t-menu is-open=true}}
 
-<h3>is-open</h3>
-<code>\{{t-menu is-open=true}}</code> {{t-menu is-open=true}}
-
-<h3>action</h3>
-<code>\{{t-menu is-open=isMenuOpen action=(action "updateMenuControllerProperty")}}</code> {{t-menu is-open=isMenuOpen action=(action "updateMenuControllerProperty")}}
-<p>isMenuOpen = {{isMenuOpen}}</p>
+    <h3>action</h3>
+    <code>\{{t-menu is-open=isMenuOpen action=(action "updateMenuControllerProperty")}}</code> {{t-menu is-open=isMenuOpen action=(action "updateMenuControllerProperty")}}
+    <p>isMenuOpen = {{isMenuOpen}}</p>
+  </div>
+</div>

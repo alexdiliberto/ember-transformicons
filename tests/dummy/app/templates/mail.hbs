@@ -1,9 +1,15 @@
-<h2>Mail</h2>
-<code class="mail">\{{t-mail}}</code> {{t-mail id="mail-default"}}
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Mail</h2>
 
-<h3>is-open</h3>
-<code class="mail">\{{t-mail is-open=false}}</code> {{t-mail is-open=false}}
+    <h3>animation</h3>
+    <code class="mail">\{{t-mail}}</code> {{t-mail id="mail-default"}}
 
-<h3>action</h3>
-<code class="mail">\{{t-mail is-open=hasUnreadMail action=(action "updateMailControllerProperty")}}</code> {{t-mail is-open=hasUnreadMail action=(action "updateMailControllerProperty")}}
-<p>hasUnreadMail = {{hasUnreadMail}}</p>
+    <h3>is-open</h3>
+    <code class="mail">\{{t-mail is-open=false}}</code> {{t-mail is-open=false}}
+
+    <h3>action</h3>
+    <code class="mail">\{{t-mail is-open=hasUnreadMail action=(action "updateMailControllerProperty")}}</code> {{t-mail is-open=hasUnreadMail action=(action "updateMailControllerProperty")}}
+    <p>hasUnreadMail = {{hasUnreadMail}}</p>
+  </div>
+</div>

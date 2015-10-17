@@ -9,7 +9,8 @@
     "ember-qunit-notifications": "0.1.0",
     "jquery": "^2.1.4",
     "loader.js": "ember-cli/loader.js#3.3.0",
-    "qunit": "~1.19.0"
+    "qunit": "~1.19.0",
+    "bootstrap": "~3.3.5"
   },
   "resolutions": {
     "ember": "2.1.0"

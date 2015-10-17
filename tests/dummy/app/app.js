@@ -5,6 +5,10 @@ import config from './config/environment';
 
 var App;
 
+Ember.LinkComponent.reopen({
+  attributeBindings: ['role']
+});
+
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 App = Ember.Application.extend({

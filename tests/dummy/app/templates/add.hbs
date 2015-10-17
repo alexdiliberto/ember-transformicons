@@ -1,13 +1,26 @@
-<h2>Add</h2>
-<h3>animation</h3>
-<code>\{{t-add}}</code> {{t-add id="add-default"}}
-<code>\{{t-add a="minus"}}</code> {{t-add a="minus"}}
-<code>\{{t-add a="check"}}</code> {{t-add a="check"}}
-<code>\{{t-add a="typo"}}</code> {{t-add a="typo"}}
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Add</h2>
+    <h3>animation</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <code>\{{t-add}}</code> {{t-add id="add-default"}}
+    <code>\{{t-add a="minus"}}</code> {{t-add a="minus"}}
+  </div>
+  <div class="col-xs-6">
+    <code>\{{t-add a="check"}}</code> {{t-add a="check"}}
+    <code>\{{t-add a="typo"}}</code> {{t-add a="typo"}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>is-added</h3>
+    <code>\{{t-add is-added=true}}</code> {{t-add is-added=true}}
 
-<h3>is-added</h3>
-<code>\{{t-add is-added=true}}</code> {{t-add is-added=true}}
-
-<h3>action</h3>
-<code>\{{t-add is-added=isAdded action=(action "updateAddControllerProperty")}}</code> {{t-add is-added=isAdded action=(action "updateAddControllerProperty")}}
-<p>isAdded = {{isAdded}}</p>
+    <h3>action</h3>
+    <code>\{{t-add is-added=isAdded action=(action "updateAddControllerProperty")}}</code> {{t-add is-added=isAdded action=(action "updateAddControllerProperty")}}
+    <p>isAdded = {{isAdded}}</p>
+  </div>
+</div>

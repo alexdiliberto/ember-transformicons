@@ -1,13 +1,20 @@
-<h1 id="title">ember-cli-transformicons</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>ember-cli-transformicons</h1>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <nav class="btn-group" role="group">
+        {{link-to 'Menu' 'menu' class="btn btn-default" role="button"}}
+        {{link-to 'Grid' 'grid' class="btn btn-default" role="button"}}
+        {{link-to 'Add' 'add' class="btn btn-default" role="button"}}
+        {{link-to 'Remove' 'remove' class="btn btn-default" role="button"}}
+        {{link-to 'Mail' 'mail' class="btn btn-default" role="button"}}
+        {{link-to 'Video' 'video' class="btn btn-default" role="button"}}
+        {{link-to 'Loader' 'loader' class="btn btn-default" role="button"}}
+      </nav>
+    </div>
+  </div>
 
-<nav class="site-nav">
-  {{link-to 'Menu' 'menu'}}
-  {{link-to 'Grid' 'grid'}}
-  {{link-to 'Add' 'add'}}
-  {{link-to 'Remove' 'remove'}}
-  {{link-to 'Mail' 'mail'}}
-  {{link-to 'Video' 'video'}}
-  {{link-to 'Loader' 'loader'}}
-</nav>
-
-{{outlet}}
+  {{outlet}}
+</div>
