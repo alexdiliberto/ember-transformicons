@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
- - Nothing!
+ - demo.gif to the README
 
 
 ## [v0.5.0] - 2015-10-17
