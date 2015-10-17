@@ -1,27 +1,24 @@
 # ember-cli-transformicons [![ember addon][ember-addon-badge]][ember-addon-url]
 
-[![build status][travis-badge]][travis-url]
-[![github release versions][github-release-svg]][github-release-url]
-[![code climate][code-climate-svg]][code-climate-url]
+[![npm version][npm-version-svg]][npm-version-url]
 [![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
+[![build status][travis-badge]][travis-url]
+[![code climate][code-climate-svg]][code-climate-url]
 
-[![dependency status][david-dm-dependencies]][david-dm-dependencies-url]
-[![dev-dependency status][david-dm-dev-dependencies]][david-dm-dev-dependencies-url]
+Transformicons for Ember
 
-This README outlines the details of collaborating on this Ember addon.
+[Demo][gh-pages-demo]
 
-## Demo
-
-Check out the [demo][gh-pages-demo]
+![ember-cli-transformicons demo gif][demo-gif]
 
 ## Installation
 
-```shell
+```sh
 ember install ember-cli-transformicons
 ```
 
 ## Usage
-Add the transformicon you want to any template in your application.
+Add your favorite transformicon component to any template in your application.
 
 Global optional parameters:
   * `animation` string - Set the menu animation type. If you do not provide a specific type for an icon category, then a default type will simply be provided for you.
@@ -207,17 +204,11 @@ git add . && git commit
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
 
-
-[github-release-svg]: https://img.shields.io/github/release/alexdiliberto/ember-cli-transformicons.svg
-[github-release-url]: https://github.com/alexdiliberto/ember-cli-transformicons/releases
+[npm-version-svg]: https://badge.fury.io/js/ember-cli-transformicons.svg
+[npm-version-url]: https://www.npmjs.com/package/ember-cli-transformicons
 
 [travis-url]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons
 [travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
-
-[david-dm-dependencies]: https://david-dm.org/alexdiliberto/ember-cli-transformicons.svg
-[david-dm-dependencies-url]: https://david-dm.org/alexdiliberto/ember-cli-transformicons
-[david-dm-dev-dependencies]: https://david-dm.org/alexdiliberto/ember-cli-transformicons/dev-status.svg
-[david-dm-dev-dependencies-url]: https://david-dm.org/alexdiliberto/ember-cli-transformicons#info=devDependencies
 
 [ember-addon-badge]: https://s3.amazonaws.com/images.jebbit.com/ember/badge.svg
 [ember-addon-url]: http://www.emberaddons.com
@@ -229,3 +220,5 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 [code-climate-url]: https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons
 
 [gh-pages-demo]: http://alexdiliberto.com/ember-cli-transformicons
+
+[demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-cli-transformicons/master/demo.gif
