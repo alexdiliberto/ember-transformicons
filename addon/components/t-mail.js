@@ -3,9 +3,11 @@ import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed,
-  computed: { alias }
+  computed
 } = Ember;
+const {
+  alias
+} = computed;
 
 /**
   Transformicon Mail component.

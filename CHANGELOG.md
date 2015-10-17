@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
  - `README.md` "Update Demo App" instructions
  - `package.json` and `bower.json` dependencies
- 
+
 
 ## [0.4.0] - 2015-09-19
 ### Added

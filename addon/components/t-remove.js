@@ -3,9 +3,11 @@ import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed,
-  computed: { alias }
+  computed
 } = Ember;
+const {
+  alias
+} = computed;
 const defaultAnimation   = 'check';
 const animationTypeTable = Ember.Object.create({
   'check':         'tcon-remove--check',

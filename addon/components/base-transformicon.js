@@ -46,16 +46,16 @@ export default Component.extend({
   initialState: 'is-open',
 
   /**
-    This click handler does two things after getting the transformicons initital state name.
+    This click handler does two things after retrieving the transformicons initital state property name.
 
-    It will toggle the state of the transformicon.
-    It will also send a boolean action up to the consuming application when the transformicon is clicked. This action is returned with 1 parameter indicating if the current icon state is open/closed | added/removed | playing/stopped.
+    - It will toggle the state of the transformicon.
+    - It will also send a boolean action up to the consuming application when the transformicon is clicked. This action is returned with 1 parameter indicating if the current icon state is open/closed | added/removed | playing/stopped.
 
     @method click
   */
   click() {
-    const initState = get(this, 'initialState');
-    this.toggleProperty(initState);
-    this.sendAction('action', get(this, initState));
+    const initStateProp = get(this, 'initialState');
+    this.toggleProperty(initStateProp);
+    this.sendAction('action', get(this, initStateProp));
   },
 });
