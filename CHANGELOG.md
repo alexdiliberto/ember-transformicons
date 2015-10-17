@@ -7,14 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Nothing!
 
 
-## [0.5.0] - 2015-10-17
+## [v0.5.0] - 2015-10-17
 ### Updated
  - `README.md` "Update Demo App" instructions
  - `package.json` and `bower.json` dependencies
  - Demo app now uses Bootstrap
 
 
-## [0.4.0] - 2015-09-19
+## [v0.4.0] - 2015-09-19
 ### Added
  - `.codeclimate.yml` config file
  - Code Climate badge
@@ -28,7 +28,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Ember v2.0.0 depedencies
 
 
-## [0.3.2] - 2015-07-10
+## [v0.3.2] - 2015-07-10
 ### Fixed
  - Bugfix for click action handling
 
@@ -36,7 +36,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - EmberCLI v1.13.1
 
 
-## [0.3.0] - 2015-04-30
+## [v0.3.0] - 2015-04-30
 ### Added
  - `ember-try` for testing against multiple Ember versions
  - `README.md` Ember Addon badge
@@ -57,7 +57,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Updating code to user more ES6
 
 
-## [0.2.0] - 2015-03-25
+## [v0.2.0] - 2015-03-25
 ### Added
  - `README.md` David DM badge
  - NPM dependency cleanup
@@ -76,7 +76,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - {{t-plus a="minus-fold"}} and {{t-plus a="circle"}} animations
 
 
-## [0.1.3] - 2015-03-11
+## [v0.1.3] - 2015-03-11
 ### Added
  - Gitter chat information and badge
  - Initial `CHANGELOG.md`
@@ -85,7 +85,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
  - EmberCLI v0.2.0
 
-## [0.1.2] - 2015-02-16
+## [v0.1.2] - 2015-02-16
 ### Added
  - Minify CSS with `broccoli-sass`
  - Demo page using `gh-pages` branch and `ember-cli-github-pages`
@@ -94,7 +94,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Break up demo into individual routes for each component
 
 
-## [0.1.1] - 2015-02-15
+## [v0.1.1] - 2015-02-15
 ### Added
  - Basic acceptance tests
  - More unit tests
@@ -104,7 +104,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Modularize components
 
 
-## [0.1.0] - 2015-02-13
+## [v0.1.0] - 2015-02-13
 ### Added
  - Proper event handling for the hosting application (`is-open`, `is-added`, and `is-playing` properties)
  - Improve testing
@@ -120,7 +120,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - `transformicons.js` and simply integrating the library as click handlers on the individual components
 
 
-## [0.0.2] - 2015-02-12
+## [v0.0.2] - 2015-02-12
 ### Added
  - Customize `README.md` with project specific documentation
  - Basic YUI style documentation
@@ -130,20 +130,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Transformicons now have a more composable structure
 
 
-## 0.0.1 - 2015-02-11
+## v0.0.1 - 2015-02-11
 ### Added
  - Basic EmberCLI project structure
  - Initial transformicons
 
 
-[unreleased]: https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.5.0...HEAD
-[0.5.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.4.0...0.5.0
-[0.4.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.2...v0.4.0
-[0.3.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.0...v0.3.2
-[0.3.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.2.0...v0.3.0
-[0.2.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.3...v0.2.0
-[0.1.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.2...v0.1.3
-[0.1.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.1...v0.1.2
-[0.1.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.0...v0.1.1
-[0.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.0.2...v0.1.0
-[0.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.0.1...v0.0.2
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.5.0...HEAD
+[v0.5.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.4.0...v0.5.0
+[v0.4.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.2...v0.4.0
+[v0.3.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.0...v0.3.2
+[v0.3.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.2.0...v0.3.0
+[v0.2.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.3...v0.2.0
+[v0.1.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.2...v0.1.3
+[v0.1.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.1...v0.1.2
+[v0.1.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.0...v0.1.1
+[v0.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.0.2...v0.1.0
+[v0.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.0.1...v0.0.2
