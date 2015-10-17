@@ -167,30 +167,31 @@ Any help is welcome and absolutely appreciated!
 - [ ] More tests
 - [ ] Allow dynamic transformicon sizes
 
-## Installation
+## Development
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+### Setup
 
-## Running
+```sh
+git clone git@github.com:alexdiliberto/ember-cli-transformicons.git
+cd ember-cli-transformicons
+bower i && npm i
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Server
 
-## Running Tests
+```sh
+ember s
+```
 
-* `ember try:testall`
-* `ember test`
-* `ember test --server`
+## Test Suite
 
-## Building
-
-* `ember build`
+```sh
+ember try:testall
+```
 
 ## Update Demo App
 
-```shell
+```sh
 ember b -prod
 git checkout gh-pages
 rm -rf assets/
@@ -198,7 +199,9 @@ cp -R dist/* .
 git add . && git commit
 
 # Some Cleanup Items:
-#  Don't forget to update the index.html <!-- v[rel-ver] --><title>Demo App | ember-cli-transformicons</title>
+# - Don't forget to update the `index.html`:
+#     <!-- v[rel-ver] -->
+#     <title>Demo App | ember-cli-transformicons</title>
 ```
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

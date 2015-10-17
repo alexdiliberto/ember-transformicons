@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
  - demo.gif to the README
 
+### Updated
+ - README instructions
+
 
 ## [v0.5.0] - 2015-10-17
 ### Updated
