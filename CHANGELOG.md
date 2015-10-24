@@ -4,10 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+ - N/A
+
+
+## [v0.6.0] - 2015-10-24
+### Added
  - demo.gif to the README
+ - Form transformicon `{{t-form}}`
+ - From transformicon tests
 
 ### Updated
  - README instructions
+ - Acceptance test suite to use `this.application` property
 
 
 ## [v0.5.0] - 2015-10-17
@@ -139,7 +147,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.5.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.6.0...HEAD
+[v0.6.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.5.0...v0.6.0
 [v0.5.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.4.0...v0.5.0
 [v0.4.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.2...v0.4.0
 [v0.3.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.0...v0.3.2

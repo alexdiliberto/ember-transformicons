@@ -2,15 +2,13 @@ import { module, test } from 'qunit';
 import startApp from '../../tests/helpers/start-app';
 import { run } from '../helpers/common';
 
-var application;
-
 module('Acceptance | t menu', {
   beforeEach: function() {
-    application = startApp();
+    this.application = startApp();
   },
 
   afterEach: function() {
-    run(application, 'destroy');
+    run(this.application, 'destroy');
   }
 });
 
