@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('add');
   this.route('remove');
   this.route('mail');
+  this.route('form');
   this.route('video');
   this.route('loader');
 });
