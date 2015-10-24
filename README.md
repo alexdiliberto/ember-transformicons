@@ -133,6 +133,24 @@ Mail optional parameters:
 {{t-mail action="someControllerAction"}}
 ```
 
+### Form
+Form optional parameters:
+  * `is-searching` boolean - Set initial searching state.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
+
+```handlebars
+{{t-form}}
+```
+**is-searching**
+```handlebars
+{{t-form is-searching=false}}
+{{t-form is-searching=someBoundProperty}}
+```
+**action**
+```handlebars
+{{t-form action="someControllerAction"}}
+```
+
 ### Video
 Video optional parameters:
   * `is-playing` boolean - Set initial playing state.

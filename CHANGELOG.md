@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - demo.gif to the README
  - Form transformicon `{{t-form}}`
  - From transformicon tests
+ - Form transformicon README docs
 
 ### Updated
  - README instructions
