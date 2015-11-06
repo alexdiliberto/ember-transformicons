@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
  - `bower.json` and `package.json` dependencies
 
+### Removed
+ - Empty `app.scss` hack
+
 
 ## [v0.6.0] - 2015-10-24
 ### Added
