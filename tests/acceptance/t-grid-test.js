@@ -1,16 +1,7 @@
-import { module, test } from 'qunit';
-import startApp from '../../tests/helpers/start-app';
-import { run } from '../helpers/common';
+import { test } from 'qunit';
+import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 
-module('Acceptance | t grid', {
-  beforeEach: function() {
-    this.application = startApp();
-  },
-
-  afterEach: function() {
-    run(this.application, 'destroy');
-  }
-});
+moduleForAcceptance('Acceptance | t grid');
 
 test('visiting /grid', function(assert) {
   assert.expect(1);
