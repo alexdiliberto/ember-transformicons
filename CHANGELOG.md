@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Updated
  - `bower.json` and `package.json` dependencies
- - Ember CLI v1.13.12
+ - Ember CLI v1.13.13
  - Acceptance tests to use `moduleForAcceptance`
 
 ### Removed
