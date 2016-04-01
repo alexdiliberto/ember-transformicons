@@ -222,7 +222,7 @@ git add . && git commit
 #     <title>Demo App | ember-cli-transformicons</title>
 ```
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
 
 [npm-version-svg]: https://badge.fury.io/js/ember-cli-transformicons.svg
