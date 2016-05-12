@@ -1,4 +1,4 @@
-# ember-cli-transformicons [![ember addon][ember-addon-badge]][ember-addon-url]
+# ember-cli-transformicons
 
 [![npm version][npm-version-svg]][npm-version-url]
 [![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
@@ -230,9 +230,6 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 [travis-url]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons
 [travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
-
-[ember-addon-badge]: https://s3.amazonaws.com/images.jebbit.com/ember/badge.svg
-[ember-addon-url]: http://www.emberaddons.com
 
 [ember-observer-score-svg]: http://emberobserver.com/badges/ember-cli-transformicons.svg
 [ember-observer-score-url]: http://emberobserver.com/addons/ember-cli-transformicons
