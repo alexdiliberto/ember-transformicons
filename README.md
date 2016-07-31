@@ -21,13 +21,12 @@ ember install ember-cli-transformicons
 Add your favorite transformicon component to any template in your application.
 
 Global optional parameters:
-  * `animation` string - Set the menu animation type. If you do not provide a specific type for an icon category, then a default type will simply be provided for you.
-  * `a` string - Shorthand alias for `animation`
+  * `animation` string - Set the menu animation type. If you do not provide a specific type for an icon category, then a default type will simply be provided for you. Aliases: `a`
 
 ### Menu
 Menu optional parameters:
   * `is-open` boolean - Set initial open menu state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indication wether the current state is open or closed.
+  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 **animation**
 ```handlebars
@@ -46,7 +45,7 @@ Menu optional parameters:
 ```
 **action**
 ```handlebars
-{{t-menu action="someControllerAction"}}
+{{t-menu action=(action "someControllerAction")}}
 ```
 
 ### Grid
@@ -67,7 +66,7 @@ Grid optional parameters:
 ```
 **action**
 ```handlebars
-{{t-grid action="someControllerAction"}}
+{{t-grid action=(action "someControllerAction")}}
 ```
 
 ### Add
@@ -88,7 +87,7 @@ Add optional parameters:
 ```
 **action**
 ```handlebars
-{{t-add action="someControllerAction"}}
+{{t-add action=(action "someControllerAction")}}
 ```
 
 ### Remove
@@ -112,7 +111,7 @@ Remove optional parameters:
 ```
 **action**
 ```handlebars
-{{t-remove action="someControllerAction"}}
+{{t-remove action=(action "someControllerAction")}}
 ```
 
 ### Mail
@@ -130,7 +129,7 @@ Mail optional parameters:
 ```
 **action**
 ```handlebars
-{{t-mail action="someControllerAction"}}
+{{t-mail action=(action "someControllerAction")}}
 ```
 
 ### Form
@@ -148,7 +147,7 @@ Form optional parameters:
 ```
 **action**
 ```handlebars
-{{t-form action="someControllerAction"}}
+{{t-form action=(action "someControllerAction")}}
 ```
 
 ### Video
@@ -166,7 +165,7 @@ Video optional parameters:
 ```
 **action**
 ```handlebars
-{{t-video action="someControllerAction"}}
+{{t-video action=(action "someControllerAction")}}
 ```
 
 ### Loader
