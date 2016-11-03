@@ -9,6 +9,7 @@ module.exports = {
 
     app.import('vendor/transformicons/transformicons.css');
   },
+
   isDevelopingAddon: function isDevelopingAddon() {
     return true;
   }
