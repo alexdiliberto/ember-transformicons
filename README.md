@@ -209,11 +209,12 @@ ember try:testall
 ## Update Demo App
 
 ```sh
-ember b -prod
 git checkout gh-pages
 rm -rf assets/
-cp -R dist/* .
-git add . && git commit
+
+git checkout master
+ember github-pages:commit --message "Release v<release_num>"
+git push origin gh-pages:gh-pages
 
 # Some Cleanup Items:
 # - Don't forget to update the `index.html`:
