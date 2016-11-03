@@ -222,7 +222,7 @@ git push origin gh-pages:gh-pages
 #     <title>Demo App | ember-cli-transformicons</title>
 ```
 
-### Release
+## Release
 
 ```sh
 # First, Don't forget to update CHANGELOG.md
