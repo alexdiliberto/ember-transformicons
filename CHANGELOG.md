@@ -3,13 +3,17 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+ - "demoURL" to package.json
+
 ### Updated
  - `bower.json` and `package.json` dependencies
- - Ember CLI v1.13.13
+ - Ember CLI v2.9.1
  - Acceptance tests to use `moduleForAcceptance`
 
 ### Removed
  - Empty `app.scss` hack
+ - Old "Ember Addon" Badge
 
 
 ## [v0.6.0] - 2015-10-24
