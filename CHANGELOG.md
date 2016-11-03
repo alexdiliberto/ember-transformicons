@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+ - `Release` section to the README
+
+
+## [v0.7.0] - 2016-11-02
+### Added
  - "demoURL" to package.json
 
 ### Updated
@@ -157,7 +162,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.6.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.7.0...HEAD
+[v0.7.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.6.0...v0.7.0
 [v0.6.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.5.0...v0.6.0
 [v0.5.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.4.0...v0.5.0
 [v0.4.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.2...v0.4.0
