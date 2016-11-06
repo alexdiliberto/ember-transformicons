@@ -4,13 +4,20 @@
 module.exports = {
   name: 'ember-cli-transformicons',
 
-  included: function included(app) {
-    this._super.included(app);
+  included: function(app) {
+    this._super.included.apply(this, arguments);
 
-    app.import('vendor/transformicons/transformicons.css');
+    if (!process.env.EMBER_CLI_FASTBOOT) {
+      // see: https://github.com/ember-cli/ember-cli/issues/3718
+      if (typeof app.import !== 'function' && app.app) {
+        app = app.app;
+      }
+
+      app.import('vendor/transformicons/transformicons.css');
+    }
   },
 
-  isDevelopingAddon: function isDevelopingAddon() {
+  isDevelopingAddon: function() {
     return true;
   }
 };

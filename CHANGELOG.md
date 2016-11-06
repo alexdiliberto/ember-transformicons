@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
  - `Release` section to the README
+ - Fastboot support
+ - Nested addon support
 
 
 ## [v0.7.0] - 2016-11-02
