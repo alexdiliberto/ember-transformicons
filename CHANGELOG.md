@@ -7,7 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - `Release` section to the README
  - Fastboot support
  - Nested addon support
-
+ - New Transformicon: `{{t-scroll}}`
+ 
 
 ## [v0.7.0] - 2016-11-02
 ### Added

@@ -114,6 +114,11 @@ Remove optional parameters:
 {{t-remove action=(action "someControllerAction")}}
 ```
 
+### Scroll Indicator
+```handlebars
+{{t-scroll}}
+```
+
 ### Mail
 Mail optional parameters:
   * `is-open` boolean - Set initial open mail state.

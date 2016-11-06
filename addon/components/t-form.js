@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-form';
 import BaseTransformicon from './base-transformicon';
 
 const {
@@ -26,6 +27,8 @@ const {
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
+  layout,
+  
   'aria-label': 'toggle search',
 
   classNames: ['tcon-search--xcross'],

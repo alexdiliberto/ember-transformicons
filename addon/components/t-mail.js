@@ -1,13 +1,12 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-mail';
 import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed
+  computed,
+  computed: { alias }
 } = Ember;
-const {
-  alias
-} = computed;
 
 /**
   Transformicon Mail component.
@@ -29,6 +28,8 @@ const {
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
+  layout,
+
   role: alias('type'),
   'aria-label': 'open mailbox',
 

@@ -1,13 +1,12 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-menu';
 import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed
+  computed,
+  computed: { alias }
 } = Ember;
-const {
-  alias
-} = computed;
 const defaultAnimation   = 'butterfly';
 const animationTypeTable = Ember.Object.create({
   'butterfly':      'tcon-menu--xbutterfly',
@@ -50,6 +49,8 @@ const animationTypeTable = Ember.Object.create({
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
+  layout,
+
   'aria-label': 'toggle menu',
 
   classNameBindings: ['animationType', 'isOpen'],

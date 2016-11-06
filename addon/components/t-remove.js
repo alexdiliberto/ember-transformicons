@@ -1,13 +1,12 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-remove';
 import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed
+  computed,
+  computed: { alias }
 } = Ember;
-const {
-  alias
-} = computed;
 const defaultAnimation   = 'check';
 const animationTypeTable = Ember.Object.create({
   'check':         'tcon-remove--check',
@@ -48,6 +47,8 @@ const animationTypeTable = Ember.Object.create({
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
+  layout,
+  
   'aria-label': 'remove item',
 
   classNames: ['tcon-remove'],

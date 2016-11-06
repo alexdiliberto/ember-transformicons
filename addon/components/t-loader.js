@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-loader';
 
 const {
   Component
@@ -17,6 +18,8 @@ const {
   @extends Ember.Component
 */
 export default Component.extend({
+  layout,
+
   tagName: 'span',
 
   attributeBindings: ['aria-label'],

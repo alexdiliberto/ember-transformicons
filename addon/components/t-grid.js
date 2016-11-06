@@ -1,13 +1,12 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-grid';
 import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed
+  computed,
+  computed: { alias }
 } = Ember;
-const {
-  alias
-} = computed;
 const defaultAnimation   = 'rearrange';
 const animationTypeTable = Ember.Object.create({
   'rearrange': 'tcon-grid--rearrange',
@@ -42,6 +41,8 @@ const animationTypeTable = Ember.Object.create({
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
+  layout,
+
   'aria-label': 'toggle grid',
 
   classNames: ['tcon-grid'],

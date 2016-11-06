@@ -1,13 +1,12 @@
 import Ember from 'ember';
+import layout from '../templates/components/t-add';
 import BaseTransformicon from './base-transformicon';
 
 const {
   get,
-  computed
+  computed,
+  computed: { alias }
 } = Ember;
-const {
-  alias
-} = computed;
 const defaultAnimation   = 'minus';
 const animationTypeTable = Ember.Object.create({
   'minus': 'tcon-plus--minus',
@@ -42,6 +41,8 @@ const animationTypeTable = Ember.Object.create({
   @extends BaseTransformiconComponent
 */
 export default BaseTransformicon.extend({
+  layout,
+
   'aria-label': 'add item',
 
   classNames: ['tcon-plus'],
