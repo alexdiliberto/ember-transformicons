@@ -220,7 +220,10 @@ ember s
 ## Test Suite
 
 ```sh
-ember try:testall
+npm run test # ember try:each
+npm run addon-tests # node_modules/mocha/bin/mocha addon-tests/*-test.js
+
+npm run test-all # ember try:each && node_modules/mocha/bin/mocha addon-tests/*-test.js
 ```
 
 ## Update Demo App
@@ -228,6 +231,7 @@ ember try:testall
 ```sh
 git checkout gh-pages
 rm -rf assets/
+git commit
 
 git checkout master
 ember github-pages:commit --message "Release v<release_num>"
