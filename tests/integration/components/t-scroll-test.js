@@ -37,6 +37,6 @@ test('it creates a scroll indicator transformicon with defaults', function(asser
   assert.equal(compSpan.attr('aria-label'), 'scroll');
   assert.equal(compSpan.attr('aria-hidden'), 'true');
   assert.ok(compSpan.hasClass('tcon-indicator'));
-  assert.ok(compSpan.find('svg').hasClass('tcon-svgchevron'));
+  assert.ok(compSpan.find('svg')[0].classList.contains('tcon-svgchevron')); // jQuery `.hasClass()` method has issues when used on <svg> elemments - SEE: https://github.com/jquery/jquery/issues/2199
   assert.equal(compSpan.find('path').length, 3);
 });
