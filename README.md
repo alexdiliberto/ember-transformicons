@@ -17,6 +17,18 @@ Transformicons for Ember
 ember install ember-cli-transformicons
 ```
 
+## Transformicon Components
+
+* [`t-menu`](#menu)
+* [`t-grid`](#grid)
+* [`t-add`](#add)
+* [`t-remove`](#remove)
+* [`t-scroll`](#scroll)
+* [`t-mail`](#mail)
+* [`t-form`](#form)
+* [`t-video`](#video)
+* [`t-loader`](#loader)
+
 ## Usage
 Add your favorite transformicon component to any template in your application.
 
@@ -114,7 +126,7 @@ Remove optional parameters:
 {{t-remove action=(action "someControllerAction")}}
 ```
 
-### Scroll Indicator
+### Scroll
 ```handlebars
 {{t-scroll}}
 ```
