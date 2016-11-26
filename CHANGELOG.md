@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
  - Test suite to simulate running this addon inside the context of a consuming Ember app using [ember-cli-addon-tests](https://github.com/tomdale/ember-cli-addon-tests)
-
+ - `yarn.lock` file
+ 
 
 ## [v0.8.0] - 2016-11-11
 ### Added
