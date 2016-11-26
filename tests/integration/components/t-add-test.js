@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { percySnapshot } from 'ember-percy';
 
 /*
  * {{t-add animation="minus"}}
@@ -32,6 +33,7 @@ test('it creates an add transformicon with defaults', function(assert) {
   assert.expect(5);
 
   this.render(hbs`{{t-add}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -46,6 +48,7 @@ test('it creates an add transformicon with `is-added=true`', function(assert) {
   assert.expect(1);
 
   this.render(hbs`{{t-add is-added=true}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -56,6 +59,7 @@ test('it creates an add transformicon with a non-default animation `a="check"`',
   assert.expect(1);
 
   this.render(hbs`{{t-add a="check"}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
