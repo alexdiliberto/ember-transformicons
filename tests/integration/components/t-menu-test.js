@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { percySnapshot } from 'ember-percy';
 
 /*
  * {{t-menu animation="butterfly"}}
@@ -32,6 +33,7 @@ test('it creates a menu transformicon with defaults', function(assert) {
   assert.expect(4);
 
   this.render(hbs`{{t-menu}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -45,7 +47,8 @@ test('it creates a menu transformicon with `is-open=true`', function(assert) {
   assert.expect(1);
 
   this.render(hbs`{{t-menu is-open=true}}`);
-
+  percySnapshot(assert);
+  
   const compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));

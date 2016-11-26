@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { percySnapshot } from 'ember-percy';
 
 /*
  * {{t-video animation="collapse"}}
@@ -32,6 +33,7 @@ test('it creates a video transformicon with defaults', function(assert) {
   assert.expect(5);
 
   this.render(hbs`{{t-video}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -46,7 +48,8 @@ test('it creates a video transformicon with `is-playing=true`', function(assert)
   assert.expect(1);
 
   this.render(hbs`{{t-video is-playing=true}}`);
-
+  percySnapshot(assert);
+  
   const compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));

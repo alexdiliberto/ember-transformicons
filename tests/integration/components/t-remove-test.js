@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { percySnapshot } from 'ember-percy';
 
 /*
  * {{t-remove animation="collapse"}}
@@ -32,6 +33,7 @@ test('it creates a remove transformicon with defaults', function(assert) {
   assert.expect(4);
 
   this.render(hbs`{{t-remove}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -45,6 +47,7 @@ test('it creates a remove transformicon with `is-removed=true`', function(assert
   assert.expect(1);
 
   this.render(hbs`{{t-remove is-removed=true}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 

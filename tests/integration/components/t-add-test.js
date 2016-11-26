@@ -59,7 +59,6 @@ test('it creates an add transformicon with a non-default animation `a="check"`',
   assert.expect(1);
 
   this.render(hbs`{{t-add a="check"}}`);
-  percySnapshot(assert);
 
   const compButton = this.$('button');
 

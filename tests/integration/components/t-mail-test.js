@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { percySnapshot } from 'ember-percy';
 
 /*
  * {{t-mail}}
@@ -32,6 +33,7 @@ test('it creates a mail transformicon with defaults', function(assert) {
   assert.expect(5);
 
   this.render(hbs`{{t-mail}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -46,6 +48,7 @@ test('it creates a mail transformicon with `is-open=false`', function(assert) {
   assert.expect(1);
 
   this.render(hbs`{{t-mail is-open=false}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 

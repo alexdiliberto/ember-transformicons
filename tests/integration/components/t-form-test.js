@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { percySnapshot } from 'ember-percy';
 
 /*
  * {{t-form}}
@@ -32,6 +33,7 @@ test('it creates a form transformicon with defaults', function(assert) {
   assert.expect(4);
 
   this.render(hbs`{{t-form}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
@@ -45,6 +47,7 @@ test('it creates a form transformicon with `is-searching=true`', function(assert
   assert.expect(1);
 
   this.render(hbs`{{t-form is-searching=true}}`);
+  percySnapshot(assert);
 
   const compButton = this.$('button');
 
