@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+const {
+  Controller
+} = Ember;
+
+export default Controller.extend({
   hasUnreadMail: true,
 
   actions: {
-    updateMailControllerProperty: function(isOpen) {
+    updateMailControllerProperty(isOpen) {
       this.set('hasUnreadMail', isOpen);
     }
   }

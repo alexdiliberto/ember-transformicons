@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+const {
+  Controller
+} = Ember;
+
+export default Controller.extend({
   isGridOpen: false,
 
   actions: {
-    updateGridControllerProperty: function(isOpen) {
+    updateGridControllerProperty(isOpen) {
       this.set('isGridOpen', isOpen);
     }
   }

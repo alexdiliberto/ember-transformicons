@@ -33,7 +33,7 @@ test('it creates a loader transformicon with defaults', function(assert) {
 
   this.render(hbs`{{t-loader}}`);
 
-  const compSpan = this.$('span');
+  let compSpan = this.$('span');
 
   assert.equal(compSpan.attr('aria-label'), 'loading');
   assert.ok(compSpan.hasClass('tcon-loader--spinner360'));

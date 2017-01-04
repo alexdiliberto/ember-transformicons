@@ -35,7 +35,7 @@ test('it creates a menu transformicon with defaults', function(assert) {
   this.render(hbs`{{t-menu}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('type'), 'button');
   assert.equal(compButton.attr('aria-label'), 'toggle menu');
@@ -48,8 +48,8 @@ test('it creates a menu transformicon with `is-open=true`', function(assert) {
 
   this.render(hbs`{{t-menu is-open=true}}`);
   percySnapshot(assert);
-  
-  const compButton = this.$('button');
+
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });
@@ -59,7 +59,7 @@ test('it creates a menu transformicon with a non-default animation `a="butterfly
 
   this.render(hbs`{{t-menu a="arrow-360-left"}}`);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-menu--arrow'));
   assert.ok(compButton.hasClass('tcon-menu--arrow360left'));

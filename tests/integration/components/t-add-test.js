@@ -35,7 +35,7 @@ test('it creates an add transformicon with defaults', function(assert) {
   this.render(hbs`{{t-add}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('type'), 'button');
   assert.equal(compButton.attr('aria-label'), 'add item');
@@ -50,7 +50,7 @@ test('it creates an add transformicon with `is-added=true`', function(assert) {
   this.render(hbs`{{t-add is-added=true}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });
@@ -60,7 +60,7 @@ test('it creates an add transformicon with a non-default animation `a="check"`',
 
   this.render(hbs`{{t-add a="check"}}`);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-plus--check'));
 });

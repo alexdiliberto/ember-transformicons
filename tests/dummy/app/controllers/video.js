@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+const {
+  Controller
+} = Ember;
+
+export default Controller.extend({
   isVideoPlaying: false,
 
   actions: {
-    updateVideoControllerProperty: function(isPlaying) {
+    updateVideoControllerProperty(isPlaying) {
       this.set('isVideoPlaying', isPlaying);
     }
   }

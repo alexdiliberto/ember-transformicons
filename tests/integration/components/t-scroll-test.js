@@ -32,7 +32,7 @@ test('it creates a scroll indicator transformicon with defaults', function(asser
   assert.expect(5);
 
   this.render(hbs`{{t-scroll}}`);
-  const compSpan = this.$('span');
+  let compSpan = this.$('span');
 
   assert.equal(compSpan.attr('aria-label'), 'scroll');
   assert.equal(compSpan.attr('aria-hidden'), 'true');

@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+const {
+  Controller
+} = Ember;
+
+export default Controller.extend({
   isRemoved: false,
 
   actions: {
-    updateRemoveControllerProperty: function(isRemoved) {
+    updateRemoveControllerProperty(isRemoved) {
       this.set('isRemoved', isRemoved);
     }
   }

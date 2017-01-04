@@ -35,7 +35,7 @@ test('it creates a grid transformicon with defaults', function(assert) {
   this.render(hbs`{{t-grid}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('type'), 'button');
   assert.equal(compButton.attr('aria-label'), 'toggle grid');
@@ -49,8 +49,8 @@ test('it creates a grid transformicon with `is-open=true`', function(assert) {
 
   this.render(hbs`{{t-grid is-open=true}}`);
   percySnapshot(assert);
-  
-  const compButton = this.$('button');
+
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });
@@ -60,7 +60,7 @@ test('it creates a grid transformicon with a non-default animation `a="collapse"
 
   this.render(hbs`{{t-grid a="collapse"}}`);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-grid--collapse'));
 });

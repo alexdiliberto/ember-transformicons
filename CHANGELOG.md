@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
- - ...
+ - ember-cli-eslint
+ - eslint-plugin-ember-suave
 
 
 ## [v0.8.1] - 2017-01-03

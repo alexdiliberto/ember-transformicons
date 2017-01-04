@@ -35,7 +35,7 @@ test('it creates a remove transformicon with defaults', function(assert) {
   this.render(hbs`{{t-remove}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('type'), 'button');
   assert.equal(compButton.attr('aria-label'), 'remove item');
@@ -49,7 +49,7 @@ test('it creates a remove transformicon with `is-removed=true`', function(assert
   this.render(hbs`{{t-remove is-removed=true}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });
@@ -59,7 +59,7 @@ test('it creates a remove transformicon with a non-default animation `a="chevron
 
   this.render(hbs`{{t-remove a="chevron-right"}}`);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-remove--chevron-right'));
 });

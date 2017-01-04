@@ -35,7 +35,7 @@ test('it creates a form transformicon with defaults', function(assert) {
   this.render(hbs`{{t-form}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('type'), 'button');
   assert.equal(compButton.attr('aria-label'), 'toggle search');
@@ -49,7 +49,7 @@ test('it creates a form transformicon with `is-searching=true`', function(assert
   this.render(hbs`{{t-form is-searching=true}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });

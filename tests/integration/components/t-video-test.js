@@ -35,7 +35,7 @@ test('it creates a video transformicon with defaults', function(assert) {
   this.render(hbs`{{t-video}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('role'), 'button');
   assert.equal(compButton.attr('type'), 'button');
@@ -49,8 +49,8 @@ test('it creates a video transformicon with `is-playing=true`', function(assert)
 
   this.render(hbs`{{t-video is-playing=true}}`);
   percySnapshot(assert);
-  
-  const compButton = this.$('button');
+
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });

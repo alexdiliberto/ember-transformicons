@@ -35,7 +35,7 @@ test('it creates a mail transformicon with defaults', function(assert) {
   this.render(hbs`{{t-mail}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.equal(compButton.attr('role'), 'button');
   assert.equal(compButton.attr('type'), 'button');
@@ -50,7 +50,7 @@ test('it creates a mail transformicon with `is-open=false`', function(assert) {
   this.render(hbs`{{t-mail is-open=false}}`);
   percySnapshot(assert);
 
-  const compButton = this.$('button');
+  let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
 });
