@@ -5,10 +5,11 @@ import BaseTransformicon from './base-transformicon';
 const {
   get,
   computed,
-  computed: { alias }
+  computed: { alias },
+  Object: EmberObject
 } = Ember;
 const defaultAnimation   = 'rearrange';
-const animationTypeTable = Ember.Object.create({
+const animationTypeTable = EmberObject.create({
   'rearrange': 'tcon-grid--rearrange',
   'collapse':  'tcon-grid--collapse'
 });
@@ -53,9 +54,11 @@ export default BaseTransformicon.extend({
     @property animationType
     @type String
   */
-  animationType: computed('animation', function() {
-    const anim = get(this, 'animation');
-    return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+  animationType: computed('animation', {
+    get() {
+      const anim = get(this, 'animation');
+      return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+    }
   }),
   /**
     Get the classname representing the `open` toggled state for the grid icon. This classname is stored in the `BaseTransformiconComponent`.
@@ -63,8 +66,10 @@ export default BaseTransformicon.extend({
     @property isOpen
     @type String|Boolean
   */
-  isOpen: computed('is-open', function() {
-    return get(this, 'is-open') ? get(this, 'transformClass') : false;
+  isOpen: computed('is-open', {
+    get() {
+      return get(this, 'is-open') ? get(this, 'transformClass') : false;
+    }
   }),
 
   /**

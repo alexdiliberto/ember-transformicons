@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 const {
-  Controller
+  Controller,
+  set
 } = Ember;
 
 export default Controller.extend({
@@ -9,7 +10,7 @@ export default Controller.extend({
 
   actions: {
     updateRemoveControllerProperty(isRemoved) {
-      this.set('isRemoved', isRemoved);
+      set(this, 'isRemoved', isRemoved);
     }
   }
 });

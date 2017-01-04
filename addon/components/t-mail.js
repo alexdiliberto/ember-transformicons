@@ -41,8 +41,10 @@ export default BaseTransformicon.extend({
     @property isOpen
     @type String|Boolean
   */
-  isOpen: computed('is-open', function() {
-    return get(this, 'is-open') ? false : get(this, 'transformClass');
+  isOpen: computed('is-open', {
+    get() {
+      return get(this, 'is-open') ? false : get(this, 'transformClass');
+    }
   }),
 
   /**

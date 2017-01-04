@@ -5,10 +5,11 @@ import BaseTransformicon from './base-transformicon';
 const {
   get,
   computed,
-  computed: { alias }
+  computed: { alias },
+  Object: EmberObject
 } = Ember;
 const defaultAnimation   = 'check';
-const animationTypeTable = Ember.Object.create({
+const animationTypeTable = EmberObject.create({
   'check':         'tcon-remove--check',
   'chevron-left':  'tcon-remove--chevron-left',
   'chevron-right': 'tcon-remove--chevron-right',
@@ -48,7 +49,7 @@ const animationTypeTable = Ember.Object.create({
 */
 export default BaseTransformicon.extend({
   layout,
-  
+
   'aria-label': 'remove item',
 
   classNames: ['tcon-remove'],
@@ -59,9 +60,11 @@ export default BaseTransformicon.extend({
     @property animationType
     @type String
   */
-  animationType: computed('animation', function() {
-    const anim = get(this, 'animation');
-    return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+  animationType: computed('animation', {
+    get() {
+      const anim = get(this, 'animation');
+      return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+    }
   }),
   /**
     Get the classname representing the `remove` toggled state for the remove icon. This classname is stored in the `BaseTransformiconComponent`.
@@ -69,8 +72,10 @@ export default BaseTransformicon.extend({
     @property isRemoved
     @type String|Boolean
   */
-  isRemoved: computed('is-removed', function() {
-    return get(this, 'is-removed') ? get(this, 'transformClass') : false;
+  isRemoved: computed('is-removed', {
+    get() {
+      return get(this, 'is-removed') ? get(this, 'transformClass') : false;
+    }
   }),
 
   initialState: 'is-removed',

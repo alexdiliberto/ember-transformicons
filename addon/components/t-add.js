@@ -5,10 +5,11 @@ import BaseTransformicon from './base-transformicon';
 const {
   get,
   computed,
-  computed: { alias }
+  computed: { alias },
+  Object: EmberObject
 } = Ember;
 const defaultAnimation   = 'minus';
-const animationTypeTable = Ember.Object.create({
+const animationTypeTable = EmberObject.create({
   'minus': 'tcon-plus--minus',
   'check': 'tcon-plus--check'
 });
@@ -53,9 +54,11 @@ export default BaseTransformicon.extend({
     @property animationType
     @type String
   */
-  animationType: computed('animation', function() {
-    const anim = get(this, 'animation');
-    return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+  animationType: computed('animation', {
+    get() {
+      const anim = get(this, 'animation');
+      return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+    }
   }),
   /**
     Get the classname representing the `added` toggled state for the add icon. This classname is stored in the `BaseTransformiconComponent`.
@@ -63,8 +66,10 @@ export default BaseTransformicon.extend({
     @property isAdded
     @type String|Boolean
   */
-  isAdded: computed('is-added', function() {
-    return get(this, 'is-added') ? get(this, 'transformClass') : false;
+  isAdded: computed('is-added', {
+    get() {
+      return get(this, 'is-added') ? get(this, 'transformClass') : false;
+    }
   }),
 
   initialState: 'is-added',

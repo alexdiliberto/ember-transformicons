@@ -28,7 +28,7 @@ const {
 */
 export default BaseTransformicon.extend({
   layout,
-  
+
   'aria-label': 'toggle search',
 
   classNames: ['tcon-search--xcross'],
@@ -39,8 +39,10 @@ export default BaseTransformicon.extend({
     @property isSearching
     @type String|Boolean
   */
-  isSearching: computed('is-searching', function() {
-    return get(this, 'is-searching') ? get(this, 'transformClass') : false;
+  isSearching: computed('is-searching', {
+    get() {
+      return get(this, 'is-searching') ? get(this, 'transformClass') : false;
+    }
   }),
 
   initialState: 'is-searching',

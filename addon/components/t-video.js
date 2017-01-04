@@ -41,8 +41,10 @@ export default BaseTransformicon.extend({
     @property isPlaying
     @type String|Boolean
   */
-  isPlaying: computed('is-playing', function() {
-    return get(this, 'is-playing') ? get(this, 'transformClass') : false;
+  isPlaying: computed('is-playing', {
+    get() {
+      return get(this, 'is-playing') ? get(this, 'transformClass') : false;
+    }
   }),
 
   initialState: 'is-playing',
