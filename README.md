@@ -257,7 +257,7 @@ ember release --major
 # v1.0.0
 ```
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 
 [npm-version-svg]: https://badge.fury.io/js/ember-cli-transformicons.svg
