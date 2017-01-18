@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - Code style updates for ember-suave
+  - Ember CLI v2.10.1
 
 
 ## [v0.8.1] - 2017-01-03
