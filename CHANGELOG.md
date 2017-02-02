@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
  - ember-cli-eslint
  - eslint-plugin-ember-suave
+ - ember-cli-anybar
 
 ### Updated
   - Code style updates for ember-suave
