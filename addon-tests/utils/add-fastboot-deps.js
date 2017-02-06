@@ -1,5 +1,5 @@
 var FASTBOOT_DEPS = {
-  'ember-cli-fastboot': '~1.0.0-beta.13'
+  'ember-cli-fastboot': '~1.0.0-beta.15'
 };
 
 function addFastbootDeps(app) {
