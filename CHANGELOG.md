@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - Code style updates for ember-suave
-  - Ember CLI v2.11.0
+  - Ember CLI v2.11.1
   - `package.json` scripts to reference a relative path
   - `package.json` dependencies
 

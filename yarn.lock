@@ -1473,9 +1473,9 @@ ember-cli-addon-tests@^0.4.2:
     symlink-or-copy "^1.1.3"
     temp "^0.8.3"
 
-ember-cli-anybar@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-anybar/-/ember-cli-anybar-0.4.1.tgz#0059859617a2db4e7a771ea4a4d87359479f3179"
+ember-cli-anybar@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-anybar/-/ember-cli-anybar-0.5.0.tgz#a9d2f08c81204a4751f5744d1a8b1b52b9bed3ee"
   dependencies:
     anybar "^2.0.1"
     capture-exit "^1.1.0"
@@ -1561,7 +1561,7 @@ ember-cli-github-pages@0.1.2:
     ember-cli-version-checker "^1.1.6"
     rsvp "^3.0.14"
 
-ember-cli-htmlbars-inline-precompile@^0.3.3:
+ember-cli-htmlbars-inline-precompile@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars-inline-precompile/-/ember-cli-htmlbars-inline-precompile-0.3.6.tgz#4095fe423f93102724c0725e4dd1a31f25e24de5"
   dependencies:
@@ -1729,9 +1729,9 @@ ember-cli-version-checker@^1.1.7, ember-cli-version-checker@^1.2.0:
   dependencies:
     semver "^5.3.0"
 
-ember-cli@2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-2.11.0.tgz#29461b1b3b1d7412b60dfc14e9399ba49ac9b707"
+ember-cli@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-2.11.1.tgz#519f93ee944e0a092e77da81027400a692c5b7d3"
   dependencies:
     amd-name-resolver "0.0.6"
     bower "^1.3.12"
@@ -1831,9 +1831,9 @@ ember-load-initializers@^0.6.0:
   dependencies:
     ember-cli-babel "^5.1.6"
 
-ember-percy@1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.2.5.tgz#e9e9e80cdcae91c423c2bd0a90cea3e9964a6b4e"
+ember-percy@1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.2.6.tgz#6cf427937f4a285a7ec3f4be81b36e495e14c32d"
   dependencies:
     body-parser "^1.15.0"
     ember-cli-babel "^5.1.5"
@@ -1860,9 +1860,9 @@ ember-router-generator@^1.0.0:
   dependencies:
     recast "^0.11.3"
 
-ember-source@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-2.11.0.tgz#fada3652feaaa5ed1fffd40c9ec68ca995801d73"
+ember-source@~2.11.0:
+  version "2.11.2"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-2.11.2.tgz#07239925dc8fc2a8377bdf43210c42093e8fc4ae"
   dependencies:
     broccoli-stew "^1.2.0"
     ember-cli-get-component-path-option "^1.0.0"
