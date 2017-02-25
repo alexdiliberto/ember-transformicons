@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-remove animation="collapse"}}
@@ -62,4 +63,18 @@ test('it creates a remove transformicon with a non-default animation `a="chevron
   let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-remove--chevron-right'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-remove id="t-remove"}}`);
+
+  let elem = find('#t-remove');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-remove');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });

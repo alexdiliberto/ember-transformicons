@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-add animation="minus"}}
@@ -63,4 +64,18 @@ test('it creates an add transformicon with a non-default animation `a="check"`',
   let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-plus--check'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-add id="t-add"}}`);
+
+  let elem = find('#t-add');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-add');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });

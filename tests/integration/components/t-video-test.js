@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-video animation="collapse"}}
@@ -53,4 +54,18 @@ test('it creates a video transformicon with `is-playing=true`', function(assert)
   let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-video id="t-video"}}`);
+
+  let elem = find('#t-video');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-video');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });

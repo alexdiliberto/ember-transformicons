@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-form}}
@@ -52,4 +53,18 @@ test('it creates a form transformicon with `is-searching=true`', function(assert
   let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-form id="t-form"}}`);
+
+  let elem = find('#t-form');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-form');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });

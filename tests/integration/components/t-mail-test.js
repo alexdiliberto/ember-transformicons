@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-mail}}
@@ -53,4 +54,18 @@ test('it creates a mail transformicon with `is-open=false`', function(assert) {
   let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-transform'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-mail id="t-mail"}}`);
+
+  let elem = find('#t-mail');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-mail');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });

@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-grid animation="collapse"}}
@@ -63,4 +64,18 @@ test('it creates a grid transformicon with a non-default animation `a="collapse"
   let compButton = this.$('button');
 
   assert.ok(compButton.hasClass('tcon-grid--collapse'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-grid id="t-grid"}}`);
+
+  let elem = find('#t-grid');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-grid');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });

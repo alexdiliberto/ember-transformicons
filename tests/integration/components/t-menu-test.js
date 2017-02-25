@@ -1,6 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
+import { click, find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-menu animation="butterfly"}}
@@ -63,4 +64,18 @@ test('it creates a menu transformicon with a non-default animation `a="butterfly
 
   assert.ok(compButton.hasClass('tcon-menu--arrow'));
   assert.ok(compButton.hasClass('tcon-menu--arrow360left'));
+});
+
+test('user can click on the transformicon', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{t-menu id="t-menu"}}`);
+
+  let elem = find('#t-menu');
+  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+
+  click('#t-menu');
+  percySnapshot(assert);
+
+  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
 });
