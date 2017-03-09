@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+ - Nothing yet...
+
+## [v0.9.0] - 2017-03-09
+### Added
  - ember-cli-eslint
  - eslint-plugin-ember-suave
  - ember-cli-anybar
@@ -195,7 +199,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.1...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...HEAD
+[v0.9.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.1...v0.9.0
 [v0.8.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.0...v0.8.1
 [v0.8.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.7.0...v0.8.0
 [v0.7.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.6.0...v0.7.0
