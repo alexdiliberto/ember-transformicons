@@ -2,8 +2,12 @@ var expect = require('chai').expect;
 var RSVP = require('rsvp');
 var request = RSVP.denodeify(require('request'));
 var AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
+var chalk = require('chalk');
+var ui = new (require('console-ui'))({
+  outputStream: process.stdout
+});
 
-describe('consuming non-fastboot app acceptance', function() {
+describe('Acceptance | consuming non-fastboot app', function() {
   this.timeout(300000);
 
   var app;
@@ -11,8 +15,10 @@ describe('consuming non-fastboot app acceptance', function() {
   before(function() {
     app = new AddonTestApp();
 
-    return app.create('non-fastboot-app', { emberVersion: 'release', fixturesPath: 'addon-tests/fixtures' })
+    ui.startProgress(chalk.green('Creating dummy app'));
+    return app.create('non-fastboot-app')
       .then(function() {
+        ui.stopProgress();
         return app.startServer();
       });
   });

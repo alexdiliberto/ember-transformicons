@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Ember CLI v2.11.1
   - `package.json` scripts to reference a relative path
   - `package.json` dependencies
+  - Addon tests fixes and cleanup
 
 
 ## [v0.8.1] - 2017-01-03
