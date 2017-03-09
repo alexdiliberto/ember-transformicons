@@ -26,6 +26,7 @@ const {
 
   @class TVideoComponent
   @extends BaseTransformiconComponent
+  @public
 */
 export default BaseTransformicon.extend({
   layout,
@@ -40,6 +41,7 @@ export default BaseTransformicon.extend({
 
     @property isPlaying
     @type String|Boolean
+    @public
   */
   isPlaying: computed('is-playing', {
     get() {
@@ -51,6 +53,8 @@ export default BaseTransformicon.extend({
 
   /**
     PUBLIC COMPONENT PROPERTIES
+
+    @public
    */
   'is-playing': false
 });

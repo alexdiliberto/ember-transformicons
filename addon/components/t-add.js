@@ -40,6 +40,7 @@ const animationTypeTable = EmberObject.create({
 
   @class TAddComponent
   @extends BaseTransformiconComponent
+  @public
 */
 export default BaseTransformicon.extend({
   layout,
@@ -53,10 +54,11 @@ export default BaseTransformicon.extend({
 
     @property animationType
     @type String
+    @public
   */
   animationType: computed('animation', {
     get() {
-      const anim = get(this, 'animation');
+      let anim = get(this, 'animation');
       return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
     }
   }),
@@ -65,6 +67,7 @@ export default BaseTransformicon.extend({
 
     @property isAdded
     @type String|Boolean
+    @public
   */
   isAdded: computed('is-added', {
     get() {
@@ -76,6 +79,8 @@ export default BaseTransformicon.extend({
 
   /**
     PUBLIC COMPONENT PROPERTIES
+
+    @public
    */
   animation: defaultAnimation,
   a: alias('animation'),

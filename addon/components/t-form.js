@@ -25,6 +25,7 @@ const {
 
   @class TFormComponent
   @extends BaseTransformiconComponent
+  @public
 */
 export default BaseTransformicon.extend({
   layout,
@@ -38,6 +39,7 @@ export default BaseTransformicon.extend({
 
     @property isSearching
     @type String|Boolean
+    @public
   */
   isSearching: computed('is-searching', {
     get() {
@@ -49,6 +51,8 @@ export default BaseTransformicon.extend({
 
   /**
     PUBLIC COMPONENT PROPERTIES
+
+    @public
    */
   'is-searching': false
 });

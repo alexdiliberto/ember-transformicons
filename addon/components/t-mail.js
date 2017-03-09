@@ -26,6 +26,7 @@ const {
 
   @class TMailComponent
   @extends BaseTransformiconComponent
+  @public
 */
 export default BaseTransformicon.extend({
   layout,
@@ -40,6 +41,7 @@ export default BaseTransformicon.extend({
 
     @property isOpen
     @type String|Boolean
+    @public
   */
   isOpen: computed('is-open', {
     get() {
@@ -49,6 +51,8 @@ export default BaseTransformicon.extend({
 
   /**
     PUBLIC COMPONENT PROPERTIES
+
+    @public
    */
   'is-open': true
 });

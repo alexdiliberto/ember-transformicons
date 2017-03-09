@@ -10,11 +10,11 @@ const {
 } = Ember;
 const defaultAnimation   = 'check';
 const animationTypeTable = EmberObject.create({
-  'check':         'tcon-remove--check',
-  'chevron-left':  'tcon-remove--chevron-left',
+  'check': 'tcon-remove--check',
+  'chevron-left': 'tcon-remove--chevron-left',
   'chevron-right': 'tcon-remove--chevron-right',
-  'chevron-down':  'tcon-remove--chevron-down',
-  'chevron-up':    'tcon-remove--chevron-up'
+  'chevron-down': 'tcon-remove--chevron-down',
+  'chevron-up': 'tcon-remove--chevron-up'
 });
 
 /**
@@ -46,6 +46,7 @@ const animationTypeTable = EmberObject.create({
 
   @class TRemoveComponent
   @extends BaseTransformiconComponent
+  @public
 */
 export default BaseTransformicon.extend({
   layout,
@@ -59,10 +60,11 @@ export default BaseTransformicon.extend({
 
     @property animationType
     @type String
+    @public
   */
   animationType: computed('animation', {
     get() {
-      const anim = get(this, 'animation');
+      let anim = get(this, 'animation');
       return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
     }
   }),
@@ -71,6 +73,7 @@ export default BaseTransformicon.extend({
 
     @property isRemoved
     @type String|Boolean
+    @public
   */
   isRemoved: computed('is-removed', {
     get() {
@@ -82,6 +85,8 @@ export default BaseTransformicon.extend({
 
   /**
     PUBLIC COMPONENT PROPERTIES
+
+    @public
    */
   animation: defaultAnimation,
   a: alias('animation'),

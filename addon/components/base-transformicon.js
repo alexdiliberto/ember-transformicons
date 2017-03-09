@@ -10,6 +10,7 @@ const {
 
   @class BaseTransformiconComponent
   @extends Ember.Component
+  @public
 */
 export default Component.extend({
   tagName: 'button',
@@ -28,6 +29,7 @@ export default Component.extend({
     @type String
     @default 'tcon-transform'
     @final
+    @public
   */
   transformClass: 'tcon-transform',
 
@@ -42,6 +44,7 @@ export default Component.extend({
     @property initialState
     @type String
     @default 'is-open'
+    @public
   */
   initialState: 'is-open',
 
@@ -52,10 +55,11 @@ export default Component.extend({
     - It will also send a boolean action up to the consuming application when the transformicon is clicked. This action is returned with 1 parameter indicating if the current icon state is open/closed | added/removed | playing/stopped.
 
     @method click
+    @public
   */
   click() {
-    const initStateProp = get(this, 'initialState');
+    let initStateProp = get(this, 'initialState');
     this.toggleProperty(initStateProp);
     this.sendAction('action', get(this, initStateProp));
-  },
+  }
 });

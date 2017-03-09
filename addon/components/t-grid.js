@@ -11,7 +11,7 @@ const {
 const defaultAnimation   = 'rearrange';
 const animationTypeTable = EmberObject.create({
   'rearrange': 'tcon-grid--rearrange',
-  'collapse':  'tcon-grid--collapse'
+  'collapse': 'tcon-grid--collapse'
 });
 
 /**
@@ -40,6 +40,7 @@ const animationTypeTable = EmberObject.create({
 
   @class TGridComponent
   @extends BaseTransformiconComponent
+  @public
 */
 export default BaseTransformicon.extend({
   layout,
@@ -53,10 +54,11 @@ export default BaseTransformicon.extend({
 
     @property animationType
     @type String
+    @public
   */
   animationType: computed('animation', {
     get() {
-      const anim = get(this, 'animation');
+      let anim = get(this, 'animation');
       return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
     }
   }),
@@ -65,6 +67,7 @@ export default BaseTransformicon.extend({
 
     @property isOpen
     @type String|Boolean
+    @public
   */
   isOpen: computed('is-open', {
     get() {
@@ -74,6 +77,8 @@ export default BaseTransformicon.extend({
 
   /**
     PUBLIC COMPONENT PROPERTIES
+
+    @public
    */
   animation: defaultAnimation,
   a: alias('animation'),
