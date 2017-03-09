@@ -30,7 +30,8 @@
     "start": "ember server",
     "test": "ember try:each",
     "addon-tests": "mocha addon-tests/*-test.js",
-    "test-all": "ember try:each && mocha addon-tests/*-test.js"
+    "test:all": "ember try:each && mocha addon-tests/*-test.js",
+    "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s"
   },
   "dependencies": {
     "ember-cli-babel": "^5.1.7",

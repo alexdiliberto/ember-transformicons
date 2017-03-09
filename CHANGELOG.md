@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - ember-cli-anybar
  - ember-cli-dependency-lint
  - ember-native-dom-helpers
+ - npm `start:inspect` script
 
 ### Updated
   - Code style updates for ember-suave
