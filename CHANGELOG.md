@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
   - `package.json` dependencies
 
+### Removed
+  - Acceptance tests
+
 
 ## [v0.9.0] - 2017-03-09
 ### Added
