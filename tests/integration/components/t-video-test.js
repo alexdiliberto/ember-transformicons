@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-video}}`);
 
-  assert.equal(this.$().text().trim(), 'play video');
+  assert.equal(find('button').textContent.trim(), 'play video');
 
   // Template block usage:
   this.render(hbs`
@@ -27,22 +27,23 @@ test('it renders', function(assert) {
     {{/t-video}}
   `);
 
-  assert.equal(this.$().text().trim(), 'play video');
+  assert.equal(find('button').textContent.trim(), 'play video');
 });
 
 test('it creates a video transformicon with defaults', function(assert) {
-  assert.expect(5);
+  assert.expect(6);
 
   this.render(hbs`{{t-video}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('role'), 'button');
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'play video');
-  assert.ok(compButton.hasClass('tcon'));
-  assert.ok(compButton.hasClass('tcon-vid--play'));
+  assert.equal(button.getAttribute('role'), 'button');
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'play video');
+  assert.ok(button.classList.contains('tcon'));
+  assert.ok(button.classList.contains('tcon-vid--play'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a video transformicon with `is-playing=true`', function(assert) {
@@ -51,9 +52,9 @@ test('it creates a video transformicon with `is-playing=true`', function(assert)
   this.render(hbs`{{t-video is-playing=true}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -61,11 +62,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-video id="t-video"}}`);
 
-  let elem = find('#t-video');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-video');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-video');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });

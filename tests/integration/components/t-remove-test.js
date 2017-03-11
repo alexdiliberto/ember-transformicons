@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-remove}}`);
 
-  assert.equal(this.$().text().trim(), 'remove item');
+  assert.equal(find('button').textContent.trim(), 'remove item');
 
   // Template block usage:
   this.render(hbs`
@@ -27,21 +27,22 @@ test('it renders', function(assert) {
     {{/t-remove}}
   `);
 
-  assert.equal(this.$().text().trim(), 'remove item');
+  assert.equal(find('button').textContent.trim(), 'remove item');
 });
 
 test('it creates a remove transformicon with defaults', function(assert) {
-  assert.expect(4);
+  assert.expect(5);
 
   this.render(hbs`{{t-remove}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'remove item');
-  assert.ok(compButton.hasClass('tcon-remove'));
-  assert.ok(compButton.hasClass('tcon-remove--check'));
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'remove item');
+  assert.ok(button.classList.contains('tcon-remove'));
+  assert.ok(button.classList.contains('tcon-remove--check'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a remove transformicon with `is-removed=true`', function(assert) {
@@ -50,9 +51,9 @@ test('it creates a remove transformicon with `is-removed=true`', function(assert
   this.render(hbs`{{t-remove is-removed=true}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a remove transformicon with a non-default animation `a="chevron-right"`', function(assert) {
@@ -60,9 +61,9 @@ test('it creates a remove transformicon with a non-default animation `a="chevron
 
   this.render(hbs`{{t-remove a="chevron-right"}}`);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-remove--chevron-right'));
+  assert.ok(button.classList.contains('tcon-remove--chevron-right'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -70,11 +71,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-remove id="t-remove"}}`);
 
-  let elem = find('#t-remove');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-remove');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-remove');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });

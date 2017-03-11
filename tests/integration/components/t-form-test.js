@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-form}}`);
 
-  assert.equal(this.$().text().trim(), 'toggle search');
+  assert.equal(find('button').textContent.trim(), 'toggle search');
 
   // Template block usage:
   this.render(hbs`
@@ -27,21 +27,22 @@ test('it renders', function(assert) {
     {{/t-form}}
   `);
 
-  assert.equal(this.$().text().trim(), 'toggle search');
+  assert.equal(find('button').textContent.trim(), 'toggle search');
 });
 
 test('it creates a form transformicon with defaults', function(assert) {
-  assert.expect(4);
+  assert.expect(5);
 
   this.render(hbs`{{t-form}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'toggle search');
-  assert.ok(compButton.hasClass('tcon'));
-  assert.ok(compButton.hasClass('tcon-search--xcross'));
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'toggle search');
+  assert.ok(button.classList.contains('tcon'));
+  assert.ok(button.classList.contains('tcon-search--xcross'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a form transformicon with `is-searching=true`', function(assert) {
@@ -50,9 +51,9 @@ test('it creates a form transformicon with `is-searching=true`', function(assert
   this.render(hbs`{{t-form is-searching=true}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -60,11 +61,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-form id="t-form"}}`);
 
-  let elem = find('#t-form');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-form');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-form');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });

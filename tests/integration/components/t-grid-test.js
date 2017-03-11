@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-grid}}`);
 
-  assert.equal(this.$().text().trim(), 'toggle grid');
+  assert.equal(find('button').textContent.trim(), 'toggle grid');
 
   // Template block usage:
   this.render(hbs`
@@ -27,22 +27,23 @@ test('it renders', function(assert) {
     {{/t-grid}}
   `);
 
-  assert.equal(this.$().text().trim(), 'toggle grid');
+  assert.equal(find('button').textContent.trim(), 'toggle grid');
 });
 
 test('it creates a grid transformicon with defaults', function(assert) {
-  assert.expect(5);
+  assert.expect(6);
 
   this.render(hbs`{{t-grid}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'toggle grid');
-  assert.ok(compButton.hasClass('tcon'));
-  assert.ok(compButton.hasClass('tcon-grid'));
-  assert.ok(compButton.hasClass('tcon-grid--rearrange'));
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'toggle grid');
+  assert.ok(button.classList.contains('tcon'));
+  assert.ok(button.classList.contains('tcon-grid'));
+  assert.ok(button.classList.contains('tcon-grid--rearrange'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a grid transformicon with `is-open=true`', function(assert) {
@@ -51,9 +52,9 @@ test('it creates a grid transformicon with `is-open=true`', function(assert) {
   this.render(hbs`{{t-grid is-open=true}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a grid transformicon with a non-default animation `a="collapse"`', function(assert) {
@@ -61,9 +62,9 @@ test('it creates a grid transformicon with a non-default animation `a="collapse"
 
   this.render(hbs`{{t-grid a="collapse"}}`);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-grid--collapse'));
+  assert.ok(button.classList.contains('tcon-grid--collapse'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -71,11 +72,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-grid id="t-grid"}}`);
 
-  let elem = find('#t-grid');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-grid');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-grid');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });

@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-mail}}`);
 
-  assert.equal(this.$().text().trim(), 'open mailbox');
+  assert.equal(find('button').textContent.trim(), 'open mailbox');
 
   // Template block usage:
   this.render(hbs`
@@ -27,22 +27,23 @@ test('it renders', function(assert) {
     {{/t-mail}}
   `);
 
-  assert.equal(this.$().text().trim(), 'open mailbox');
+  assert.equal(find('button').textContent.trim(), 'open mailbox');
 });
 
 test('it creates a mail transformicon with defaults', function(assert) {
-  assert.expect(5);
+  assert.expect(6);
 
   this.render(hbs`{{t-mail}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('role'), 'button');
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'open mailbox');
-  assert.ok(compButton.hasClass('tcon'));
-  assert.ok(compButton.hasClass('tcon-mail--envelope'));
+  assert.equal(button.getAttribute('role'), 'button');
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'open mailbox');
+  assert.ok(button.classList.contains('tcon'));
+  assert.ok(button.classList.contains('tcon-mail--envelope'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a mail transformicon with `is-open=false`', function(assert) {
@@ -51,9 +52,9 @@ test('it creates a mail transformicon with `is-open=false`', function(assert) {
   this.render(hbs`{{t-mail is-open=false}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -61,11 +62,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-mail id="t-mail"}}`);
 
-  let elem = find('#t-mail');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-mail');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-mail');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });

@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { find, findAll } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-scroll}}
@@ -16,7 +17,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-scroll}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(find('span').textContent.trim(), '');
 
   // Template block usage:
   this.render(hbs`
@@ -25,18 +26,21 @@ test('it renders', function(assert) {
     {{/t-scroll}}
   `);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(find('span').textContent.trim(), '');
 });
 
 test('it creates a scroll indicator transformicon with defaults', function(assert) {
   assert.expect(5);
 
   this.render(hbs`{{t-scroll}}`);
-  let compSpan = this.$('span');
 
-  assert.equal(compSpan.attr('aria-label'), 'scroll');
-  assert.equal(compSpan.attr('aria-hidden'), 'true');
-  assert.ok(compSpan.hasClass('tcon-indicator'));
-  assert.ok(compSpan.find('svg')[0].classList.contains('tcon-svgchevron')); // jQuery `.hasClass()` method has issues when used on <svg> elemments - SEE: https://github.com/jquery/jquery/issues/2199
-  assert.equal(compSpan.find('path').length, 3);
+  let span = find('span');
+  let svg = find('svg');
+  let path = findAll('path');
+
+  assert.equal(span.getAttribute('aria-label'), 'scroll');
+  assert.equal(span.getAttribute('aria-hidden'), 'true');
+  assert.ok(span.classList.contains('tcon-indicator'));
+  assert.ok(svg.classList.contains('tcon-svgchevron'));
+  assert.equal(path.length, 3);
 });

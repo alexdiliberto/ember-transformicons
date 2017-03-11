@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Updated
   - `package.json` dependencies
+  - Integration tests now use standard DOM instead of jQuery
 
 ### Removed
   - Acceptance tests

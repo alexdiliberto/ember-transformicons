@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-menu}}`);
 
-  assert.equal(this.$().text().trim(), 'toggle menu');
+  assert.equal(find('button').textContent.trim(), 'toggle menu');
 
   // Template block usage:
   this.render(hbs`
@@ -27,21 +27,22 @@ test('it renders', function(assert) {
     {{/t-menu}}
   `);
 
-  assert.equal(this.$().text().trim(), 'toggle menu');
+  assert.equal(find('button').textContent.trim(), 'toggle menu');
 });
 
 test('it creates a menu transformicon with defaults', function(assert) {
-  assert.expect(4);
+  assert.expect(5);
 
   this.render(hbs`{{t-menu}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'toggle menu');
-  assert.ok(compButton.hasClass('tcon'));
-  assert.ok(compButton.hasClass('tcon-menu--xbutterfly'));
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'toggle menu');
+  assert.ok(button.classList.contains('tcon'));
+  assert.ok(button.classList.contains('tcon-menu--xbutterfly'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a menu transformicon with `is-open=true`', function(assert) {
@@ -50,9 +51,9 @@ test('it creates a menu transformicon with `is-open=true`', function(assert) {
   this.render(hbs`{{t-menu is-open=true}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('it creates a menu transformicon with a non-default animation `a="butterfly"`', function(assert) {
@@ -60,10 +61,10 @@ test('it creates a menu transformicon with a non-default animation `a="butterfly
 
   this.render(hbs`{{t-menu a="arrow-360-left"}}`);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-menu--arrow'));
-  assert.ok(compButton.hasClass('tcon-menu--arrow360left'));
+  assert.ok(button.classList.contains('tcon-menu--arrow'));
+  assert.ok(button.classList.contains('tcon-menu--arrow360left'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -71,11 +72,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-menu id="t-menu"}}`);
 
-  let elem = find('#t-menu');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-menu');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-menu');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });

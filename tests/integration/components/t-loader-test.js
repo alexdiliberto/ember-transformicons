@@ -1,5 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { find } from 'ember-native-dom-helpers/test-support/helpers';
 
 /*
  * {{t-loader}}
@@ -16,7 +17,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-loader}}`);
 
-  assert.equal(this.$().text().trim(), 'loading');
+  assert.equal(find('span').textContent.trim(), 'loading');
 
   // Template block usage:
   this.render(hbs`
@@ -25,7 +26,7 @@ test('it renders', function(assert) {
     {{/t-loader}}
   `);
 
-  assert.equal(this.$().text().trim(), 'loading');
+  assert.equal(find('span').textContent.trim(), 'loading');
 });
 
 test('it creates a loader transformicon with defaults', function(assert) {
@@ -33,8 +34,8 @@ test('it creates a loader transformicon with defaults', function(assert) {
 
   this.render(hbs`{{t-loader}}`);
 
-  let compSpan = this.$('span');
+  let span = find('span');
 
-  assert.equal(compSpan.attr('aria-label'), 'loading');
-  assert.ok(compSpan.hasClass('tcon-loader--spinner360'));
+  assert.equal(span.getAttribute('aria-label'), 'loading');
+  assert.ok(span.classList.contains('tcon-loader--spinner360'));
 });

@@ -18,7 +18,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{t-add}}`);
 
-  assert.equal(this.$().text().trim(), 'add item');
+  assert.equal(find('button').textContent.trim(), 'add item');
 
   // Template block usage:
   this.render(hbs`
@@ -27,22 +27,23 @@ test('it renders', function(assert) {
     {{/t-add}}
   `);
 
-  assert.equal(this.$().text().trim(), 'add item');
+  assert.equal(find('button').textContent.trim(), 'add item');
 });
 
 test('it creates an add transformicon with defaults', function(assert) {
-  assert.expect(5);
+  assert.expect(6);
 
   this.render(hbs`{{t-add}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.equal(compButton.attr('type'), 'button');
-  assert.equal(compButton.attr('aria-label'), 'add item');
-  assert.ok(compButton.hasClass('tcon'));
-  assert.ok(compButton.hasClass('tcon-plus'));
-  assert.ok(compButton.hasClass('tcon-plus--minus'));
+  assert.equal(button.getAttribute('type'), 'button');
+  assert.equal(button.getAttribute('aria-label'), 'add item');
+  assert.ok(button.classList.contains('tcon'));
+  assert.ok(button.classList.contains('tcon-plus'));
+  assert.ok(button.classList.contains('tcon-plus--minus'));
+  assert.notOk(button.classList.contains('tcon-transform'));
 });
 
 test('it creates an add transformicon with `is-added=true`', function(assert) {
@@ -51,9 +52,9 @@ test('it creates an add transformicon with `is-added=true`', function(assert) {
   this.render(hbs`{{t-add is-added=true}}`);
   percySnapshot(assert);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-transform'));
+  assert.ok(button.classList.contains('tcon-transform'));
 });
 
 test('it creates an add transformicon with a non-default animation `a="check"`', function(assert) {
@@ -61,9 +62,9 @@ test('it creates an add transformicon with a non-default animation `a="check"`',
 
   this.render(hbs`{{t-add a="check"}}`);
 
-  let compButton = this.$('button');
+  let button = find('button');
 
-  assert.ok(compButton.hasClass('tcon-plus--check'));
+  assert.ok(button.classList.contains('tcon-plus--check'));
 });
 
 test('user can click on the transformicon', function(assert) {
@@ -71,11 +72,11 @@ test('user can click on the transformicon', function(assert) {
 
   this.render(hbs`{{t-add id="t-add"}}`);
 
-  let elem = find('#t-add');
-  assert.equal(this.$(elem).hasClass('tcon-transform'), false);
+  let button = find('#t-add');
+  assert.equal(button.classList.contains('tcon-transform'), false);
 
   click('#t-add');
   percySnapshot(assert);
 
-  assert.equal(this.$(elem).hasClass('tcon-transform'), true);
+  assert.equal(button.classList.contains('tcon-transform'), true);
 });
