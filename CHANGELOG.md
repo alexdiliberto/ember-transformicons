@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
   - `package.json` dependencies
   - Integration tests now use standard DOM instead of jQuery
+  - API uses `onclick` instead of `action` for strict closure action handling
+  - Use native Ember `ariaRole` property
+  - `package.json` dependencies
 
 ### Removed
   - Acceptance tests

@@ -21,7 +21,7 @@ const animationTypeTable = EmberObject.create({
     * `animation` string - Set the add animation type.
     * `a` string - Shorthand alias for `animation`.
     * `is-added` boolean - Set initial open added state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
+    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
   Available `animation` types:
     * minus
@@ -45,7 +45,7 @@ const animationTypeTable = EmberObject.create({
 export default BaseTransformicon.extend({
   layout,
 
-  'aria-label': 'add item',
+  label: 'add item',
 
   classNames: ['tcon-plus'],
   classNameBindings: ['animationType', 'isAdded'],
@@ -59,7 +59,7 @@ export default BaseTransformicon.extend({
   animationType: computed('animation', {
     get() {
       let anim = get(this, 'animation');
-      return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+      return get(animationTypeTable, anim) || get(animationTypeTable, defaultAnimation);
     }
   }),
   /**

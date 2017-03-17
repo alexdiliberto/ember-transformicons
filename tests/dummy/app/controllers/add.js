@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 const {
   Controller,
-  set
+  Logger
 } = Ember;
 
 export default Controller.extend({
   isAdded: false,
 
   actions: {
-    updateAddControllerProperty(isAdded) {
-      set(this, 'isAdded', isAdded);
+    updateAddAction(isAdded) {
+      Logger.info(`updateAddAction was triggered with the following arguments: isAdded=${isAdded}`);
     }
   }
 });

@@ -12,7 +12,7 @@ const {
 
   PUBLIC - Optional parameters:
     * `is-searching` boolean - Set initial searching state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
+    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
 
   Examples:
 
@@ -30,7 +30,7 @@ const {
 export default BaseTransformicon.extend({
   layout,
 
-  'aria-label': 'toggle search',
+  label: 'toggle search',
 
   classNames: ['tcon-search--xcross'],
   classNameBindings: ['isSearching'],

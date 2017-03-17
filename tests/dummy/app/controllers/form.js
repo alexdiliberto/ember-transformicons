@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 const {
   Controller,
-  set
+  Logger
 } = Ember;
 
 export default Controller.extend({
   isSearching: false,
 
   actions: {
-    updateFormControllerProperty(isSearching) {
-      set(this, 'isSearching', isSearching);
+    updateFormAction(isSearching) {
+      Logger.info(`updateFormAction was triggered with the following arguments: isSearching=${isSearching}`);
     }
   }
 });

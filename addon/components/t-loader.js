@@ -23,8 +23,8 @@ export default Component.extend({
 
   tagName: 'span',
 
-  attributeBindings: ['aria-label'],
-  'aria-label': 'loading',
+  attributeBindings: ['label:aria-label'],
+  label: 'loading',
 
   classNames: ['tcon-loader--spinner360']
 });

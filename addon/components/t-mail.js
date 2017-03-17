@@ -5,7 +5,7 @@ import BaseTransformicon from './base-transformicon';
 const {
   get,
   computed,
-  computed: { alias }
+  computed: { reads }
 } = Ember;
 
 /**
@@ -13,7 +13,7 @@ const {
 
   PUBLIC - Optional parameters:
     * `is-open` boolean - Set initial open mail state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
   Examples:
 
@@ -31,8 +31,8 @@ const {
 export default BaseTransformicon.extend({
   layout,
 
-  role: alias('type'),
-  'aria-label': 'open mailbox',
+  ariaRole: reads('type'),
+  label: 'open mailbox',
 
   classNames: ['tcon-mail--envelope'],
   classNameBindings: ['isOpen'],

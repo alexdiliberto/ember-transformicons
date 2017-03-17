@@ -38,7 +38,7 @@ Global optional parameters:
 ### Menu
 Menu optional parameters:
   * `is-open` boolean - Set initial open menu state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 **animation**
 ```handlebars
@@ -63,7 +63,7 @@ Menu optional parameters:
 ### Grid
 Grid optional parameters:
   * `is-open` boolean - Set initial open grid state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 **animation**
 ```handlebars
@@ -84,7 +84,7 @@ Grid optional parameters:
 ### Add
 Add optional parameters:
   * `is-added` boolean - Set initial open add state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
 **animation**
 ```handlebars
@@ -105,7 +105,7 @@ Add optional parameters:
 ### Remove
 Remove optional parameters:
   * `is-removed` boolean - Set initial open removed state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
 
 **animation**
 ```handlebars
@@ -134,7 +134,7 @@ Remove optional parameters:
 ### Mail
 Mail optional parameters:
   * `is-open` boolean - Set initial open mail state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 ```handlebars
 {{t-mail}}
@@ -152,7 +152,7 @@ Mail optional parameters:
 ### Form
 Form optional parameters:
   * `is-searching` boolean - Set initial searching state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
 
 ```handlebars
 {{t-form}}
@@ -170,7 +170,7 @@ Form optional parameters:
 ### Video
 Video optional parameters:
   * `is-playing` boolean - Set initial playing state.
-  * `action` string - The name of your upstream controller action to handle an icon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
+  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
 
 ```handlebars
 {{t-video}}

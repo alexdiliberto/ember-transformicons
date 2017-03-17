@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 const {
   Controller,
-  set
+  Logger
 } = Ember;
 
 export default Controller.extend({
   isVideoPlaying: false,
 
   actions: {
-    updateVideoControllerProperty(isPlaying) {
-      set(this, 'isVideoPlaying', isPlaying);
+    updateVideoAction(isPlaying) {
+      Logger.info(`updateVideoAction was triggered with the following arguments: isPlaying=${isPlaying}`);
     }
   }
 });

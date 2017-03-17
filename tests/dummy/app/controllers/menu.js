@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 const {
   Controller,
-  set
+  Logger
 } = Ember;
 
 export default Controller.extend({
   isMenuOpen: false,
 
   actions: {
-    updateMenuControllerProperty(isOpen) {
-      set(this, 'isMenuOpen', isOpen);
+    updateMenuAction(isMenuOpen) {
+      Logger.info(`updateMenuAction was triggered with the following arguments: isMenuOpen=${isMenuOpen}`);
     }
   }
 });

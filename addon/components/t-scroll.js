@@ -23,8 +23,8 @@ export default Component.extend({
 
   tagName: 'span',
 
-  attributeBindings: ['aria-label', 'aria-hidden'],
-  'aria-label': 'scroll',
+  attributeBindings: ['label:aria-label', 'aria-hidden'],
+  label: 'scroll',
   'aria-hidden': 'true',
 
   classNames: ['tcon-indicator']

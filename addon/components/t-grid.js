@@ -21,7 +21,7 @@ const animationTypeTable = EmberObject.create({
     * `animation` string - Set the grid animation type.
     * `a` string - Shorthand alias for `animation`.
     * `is-open` boolean - Set initial open grid state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
   Available `animation` types:
     * rearrange
@@ -45,7 +45,7 @@ const animationTypeTable = EmberObject.create({
 export default BaseTransformicon.extend({
   layout,
 
-  'aria-label': 'toggle grid',
+  label: 'toggle grid',
 
   classNames: ['tcon-grid'],
   classNameBindings: ['animationType', 'isOpen'],
@@ -59,7 +59,7 @@ export default BaseTransformicon.extend({
   animationType: computed('animation', {
     get() {
       let anim = get(this, 'animation');
-      return animationTypeTable.get(anim) || animationTypeTable.get(defaultAnimation);
+      return get(animationTypeTable, anim) || get(animationTypeTable, defaultAnimation);
     }
   }),
   /**

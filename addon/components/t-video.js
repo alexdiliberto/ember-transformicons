@@ -5,7 +5,7 @@ import BaseTransformicon from './base-transformicon';
 const {
   get,
   computed,
-  computed: { alias }
+  computed: { reads }
 } = Ember;
 
 /**
@@ -13,7 +13,7 @@ const {
 
   PUBLIC - Optional parameters:
     * `is-playing` boolean - Set initial playing state.
-    * `action` string - The name of your controller/route action to handle an icon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
+    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
 
   Examples:
 
@@ -31,8 +31,8 @@ const {
 export default BaseTransformicon.extend({
   layout,
 
-  role: alias('type'),
-  'aria-label': 'play video',
+  ariaRole: reads('type'),
+  label: 'play video',
 
   classNames: ['tcon-vid--play'],
   classNameBindings: ['isPlaying'],

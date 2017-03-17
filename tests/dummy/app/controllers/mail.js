@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 const {
   Controller,
-  set
+  Logger
 } = Ember;
 
 export default Controller.extend({
   hasUnreadMail: true,
 
   actions: {
-    updateMailControllerProperty(isOpen) {
-      set(this, 'hasUnreadMail', isOpen);
+    updateMailAction(isOpen) {
+      Logger.info(`updateMailAction was triggered with the following arguments: isOpen=${isOpen}`);
     }
   }
 });

@@ -2,15 +2,15 @@ import Ember from 'ember';
 
 const {
   Controller,
-  set
+  Logger
 } = Ember;
 
 export default Controller.extend({
   isRemoved: false,
 
   actions: {
-    updateRemoveControllerProperty(isRemoved) {
-      set(this, 'isRemoved', isRemoved);
+    updateRemoveAction(isRemoved) {
+      Logger.info(`updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`);
     }
   }
 });

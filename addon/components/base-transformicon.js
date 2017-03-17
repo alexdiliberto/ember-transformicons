@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 const {
   get,
+  assert,
   Component
 } = Ember;
 
@@ -15,10 +16,9 @@ const {
 export default Component.extend({
   tagName: 'button',
 
-  attributeBindings: ['type', 'role', 'aria-label'],
+  attributeBindings: ['type', 'label:aria-label'],
   type: 'button',
-  role: undefined,
-  'aria-label': undefined,
+  label: null,
 
   classNames: ['tcon'],
 
@@ -38,6 +38,7 @@ export default Component.extend({
 
       * `is-open`
       * `is-added`
+      * `is-searching`
       * `is-removed`
       * `is-playing`
 
@@ -51,15 +52,23 @@ export default Component.extend({
   /**
     This click handler does two things after retrieving the transformicons initital state property name.
 
-    - It will toggle the state of the transformicon.
-    - It will also send a boolean action up to the consuming application when the transformicon is clicked. This action is returned with 1 parameter indicating if the current icon state is open/closed | added/removed | playing/stopped.
+    - It will toggle the state of the transformicon by toggling the `initialState` property name.
+    - It will also, if necessary, call an `onclick` closure action from to the consuming application's parent controller or component when the transformicon is clicked. This action is returned with 1 parameter indicating if the current icon state is open | added | searching | removed | playing.
 
     @method click
     @public
   */
   click() {
     let initStateProp = get(this, 'initialState');
+    let onclick = get(this, 'onclick');
+
     this.toggleProperty(initStateProp);
-    this.sendAction('action', get(this, initStateProp));
+
+    if (onclick) {
+      assert(`[ember-cli-transformicons] ${this.toString()} \`onclick\` action handler must be a valid closure action`, typeof onclick === 'function');
+
+      let boolInitStateProp = get(this, initStateProp);
+      onclick(boolInitStateProp);
+    }
   }
 });
