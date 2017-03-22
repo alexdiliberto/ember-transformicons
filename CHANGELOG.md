@@ -2,7 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+
 ## [Unreleased][unreleased]
+### Added
+  - Nothing yet...
+
+
+## [v1.0.0] - 2017-03-22
 ### Added
   - Github Fork ribbon for dummy app `application.hbs`
   - Github Star button for dummy app `application.hbs`
@@ -212,7 +218,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...HEAD
+[v1.0.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...v1.0.0
 [v0.9.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.1...v0.9.0
 [v0.8.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.0...v0.8.1
 [v0.8.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.7.0...v0.8.0
