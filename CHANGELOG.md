@@ -3,12 +3,17 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+  - Github Fork ribbon for dummy app `application.hbs`
+  - Github Star button for dummy app `application.hbs`
+
 ### Updated
   - `package.json` dependencies
   - Integration tests now use standard DOM instead of jQuery
   - API uses `onclick` instead of `action` for strict closure action handling
   - Use native Ember `ariaRole` property
   - `package.json` dependencies
+  - Ember CLI v2.12.1
 
 ### Removed
   - Acceptance tests
