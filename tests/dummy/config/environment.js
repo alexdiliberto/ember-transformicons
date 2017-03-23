@@ -1,11 +1,23 @@
 /* eslint-env node */
 
+var contentSecurityPolicy =  {
+  'default-src': ["'none'"],
+  'script-src':  ["'self'"],
+  'font-src':    ["'self'"],
+  'connect-src': ["'self'"],
+  'img-src':     ["'self'", "https://camo.githubusercontent.com"],
+  'style-src':   ["'self'"],
+  'media-src':   ["'self'"],
+  'frame-src':   ["'self'", "https://ghbtns.com/github-btn.html"]
+}
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dummy',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
