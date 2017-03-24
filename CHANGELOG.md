@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
   - Content security policy whitelist
+  - Greenkeeper bot
+
+### Updated
+  - `ember-native-dom-helpers` to new import syntax
 
 
 ## [v1.0.0] - 2017-03-22
@@ -18,7 +22,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Integration tests now use standard DOM instead of jQuery
   - API uses `onclick` instead of `action` for strict closure action handling
   - Use native Ember `ariaRole` property
-  - `package.json` dependencies
   - Ember CLI v2.12.1
 
 ### Removed

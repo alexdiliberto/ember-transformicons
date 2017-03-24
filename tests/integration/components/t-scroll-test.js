@@ -1,6 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import { find, findAll } from 'ember-native-dom-helpers/test-support/helpers';
+import { find, findAll } from 'ember-native-dom-helpers';
 
 /*
  * {{t-scroll}}
