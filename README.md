@@ -1,5 +1,7 @@
 # ember-cli-transformicons
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/alexdiliberto/ember-cli-transformicons.svg)](https://greenkeeper.io/)
+
 [![npm version][npm-version-svg]][npm-version-url]
 [![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
 [![build status][travis-badge]][travis-url]
