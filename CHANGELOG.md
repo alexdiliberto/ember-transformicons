@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - `ember-native-dom-helpers` to new import syntax
+  - README docs reflect latest `onclick` API change
 
 
 ## [v1.0.0] - 2017-03-22

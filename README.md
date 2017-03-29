@@ -59,7 +59,7 @@ Menu optional parameters:
 ```
 **action**
 ```handlebars
-{{t-menu action=(action "someControllerAction")}}
+{{t-menu onclick=(action "updateMenuAction")}}
 ```
 
 ### Grid
@@ -80,7 +80,7 @@ Grid optional parameters:
 ```
 **action**
 ```handlebars
-{{t-grid action=(action "someControllerAction")}}
+{{t-grid onclick=(action "updateGridAction")}}
 ```
 
 ### Add
@@ -101,7 +101,7 @@ Add optional parameters:
 ```
 **action**
 ```handlebars
-{{t-add action=(action "someControllerAction")}}
+{{t-add onclick=(action "updateAddAction")}}
 ```
 
 ### Remove
@@ -125,7 +125,7 @@ Remove optional parameters:
 ```
 **action**
 ```handlebars
-{{t-remove action=(action "someControllerAction")}}
+{{t-remove onclick=(action "updateRemoveAction")}}
 ```
 
 ### Scroll
@@ -148,7 +148,7 @@ Mail optional parameters:
 ```
 **action**
 ```handlebars
-{{t-mail action=(action "someControllerAction")}}
+{{t-mail onclick=(action "updateMailAction")}}
 ```
 
 ### Form
@@ -166,7 +166,7 @@ Form optional parameters:
 ```
 **action**
 ```handlebars
-{{t-form action=(action "someControllerAction")}}
+{{t-form onclick=(action "updateFormAction")}}
 ```
 
 ### Video
@@ -184,7 +184,7 @@ Video optional parameters:
 ```
 **action**
 ```handlebars
-{{t-video action=(action "someControllerAction")}}
+{{t-video onclick=(action "updateVideoAction")}}
 ```
 
 ### Loader
