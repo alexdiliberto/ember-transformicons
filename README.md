@@ -31,7 +31,7 @@ ember install ember-cli-transformicons
 * [`t-video`](#video)
 * [`t-loader`](#loader)
 
-## Usage
+## API
 Add your favorite transformicon component to any template in your application.
 
 Global optional parameters:
@@ -62,6 +62,8 @@ Menu optional parameters:
 {{t-menu onclick=(action "updateMenuAction")}}
 ```
 
+**[⬆️ back to top](#api)**
+
 ### Grid
 Grid optional parameters:
   * `is-open` boolean - Set initial open grid state.
@@ -83,6 +85,8 @@ Grid optional parameters:
 {{t-grid onclick=(action "updateGridAction")}}
 ```
 
+**[⬆️ back to top](#api)**
+
 ### Add
 Add optional parameters:
   * `is-added` boolean - Set initial open add state.
@@ -103,6 +107,8 @@ Add optional parameters:
 ```handlebars
 {{t-add onclick=(action "updateAddAction")}}
 ```
+
+**[⬆️ back to top](#api)**
 
 ### Remove
 Remove optional parameters:
@@ -128,10 +134,14 @@ Remove optional parameters:
 {{t-remove onclick=(action "updateRemoveAction")}}
 ```
 
+**[⬆️ back to top](#api)**
+
 ### Scroll
 ```handlebars
 {{t-scroll}}
 ```
+
+**[⬆️ back to top](#api)**
 
 ### Mail
 Mail optional parameters:
@@ -151,6 +161,8 @@ Mail optional parameters:
 {{t-mail onclick=(action "updateMailAction")}}
 ```
 
+**[⬆️ back to top](#api)**
+
 ### Form
 Form optional parameters:
   * `is-searching` boolean - Set initial searching state.
@@ -168,6 +180,8 @@ Form optional parameters:
 ```handlebars
 {{t-form onclick=(action "updateFormAction")}}
 ```
+
+**[⬆️ back to top](#api)**
 
 ### Video
 Video optional parameters:
@@ -187,10 +201,14 @@ Video optional parameters:
 {{t-video onclick=(action "updateVideoAction")}}
 ```
 
+**[⬆️ back to top](#api)**
+
 ### Loader
 ```handlebars
 {{t-loader}}
 ```
+
+**[⬆️ back to top](#api)**
 
 ## Contributing
 **Please contribute!** This section outlines the details of collaborating on this Ember addon. You can help code, design, update documentation, fix typos, raise issues and much more.
