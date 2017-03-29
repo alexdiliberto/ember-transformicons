@@ -31,7 +31,7 @@ ember install ember-cli-transformicons
 * [`t-video`](#video)
 * [`t-loader`](#loader)
 
-## API
+## Component API
 Add your favorite transformicon component to any template in your application.
 
 Global optional parameters:
@@ -62,7 +62,7 @@ Menu optional parameters:
 {{t-menu onclick=(action "updateMenuAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Grid
 Grid optional parameters:
@@ -85,7 +85,7 @@ Grid optional parameters:
 {{t-grid onclick=(action "updateGridAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Add
 Add optional parameters:
@@ -108,7 +108,7 @@ Add optional parameters:
 {{t-add onclick=(action "updateAddAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Remove
 Remove optional parameters:
@@ -134,14 +134,14 @@ Remove optional parameters:
 {{t-remove onclick=(action "updateRemoveAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Scroll
 ```handlebars
 {{t-scroll}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Mail
 Mail optional parameters:
@@ -161,7 +161,7 @@ Mail optional parameters:
 {{t-mail onclick=(action "updateMailAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Form
 Form optional parameters:
@@ -181,7 +181,7 @@ Form optional parameters:
 {{t-form onclick=(action "updateFormAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Video
 Video optional parameters:
@@ -201,14 +201,14 @@ Video optional parameters:
 {{t-video onclick=(action "updateVideoAction")}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ### Loader
 ```handlebars
 {{t-loader}}
 ```
 
-**[⬆️ back to top](#api)**
+**[⬆️ back to top](#component-api)**
 
 ## Contributing
 **Please contribute!** This section outlines the details of collaborating on this Ember addon. You can help code, design, update documentation, fix typos, raise issues and much more.
