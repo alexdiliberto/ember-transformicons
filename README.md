@@ -241,9 +241,8 @@ ember s
 
 ```sh
 npm run test # ember try:each
-npm run addon-tests # node_modules/mocha/bin/mocha addon-tests/*-test.js
-
-npm run test-all # ember try:each && node_modules/mocha/bin/mocha addon-tests/*-test.js
+npm run addon-tests # mocha test/*-test.js
+npm run test:all # ember try:each && mocha test/*-test.js
 ```
 
 ## Update Demo App
