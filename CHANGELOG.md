@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Content security policy whitelist
   - Greenkeeper bot
   - "Back to top" links in README for API
+  - `ember-exam` addon for improved testing
 
 ### Updated
   - `ember-native-dom-helpers` to new import syntax

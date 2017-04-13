@@ -31,6 +31,7 @@
     "test": "ember try:each",
     "addon-tests": "mocha test/*-test.js",
     "test:all": "ember try:each && mocha test/*-test.js",
+    "test:iterate": "ember exam:iterate 10",
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s"
   },
   "dependencies": {
@@ -59,6 +60,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-disable-prototype-extensions": "^1.1.0",
+    "ember-exam": "^0.6.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-helpers": "0.3.9",
