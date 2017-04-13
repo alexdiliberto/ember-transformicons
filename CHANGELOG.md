@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet
+
+
+## [v1.0.1] - 2017-04-13
+### Added
   - Content security policy whitelist
   - Greenkeeper bot
   - "Back to top" links in README for API
@@ -224,7 +229,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...HEAD
+[v1.0.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...v1.0.1
 [v1.0.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...v1.0.0
 [v0.9.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.1...v0.9.0
 [v0.8.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.0...v0.8.1
