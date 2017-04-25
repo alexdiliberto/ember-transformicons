@@ -1980,7 +1980,7 @@ ember-cli-anybar@0.5.0:
     capture-exit "^1.1.0"
     ember-cli-babel "^5.1.7"
 
-ember-cli-babel@5.1.10, ember-cli-babel@^5.0.0, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7:
+ember-cli-babel@^5.0.0, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7:
   version "5.1.10"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.1.10.tgz#d403f178aab602e1337c403c5a58c0200a8969aa"
   dependencies:
@@ -2181,14 +2181,13 @@ ember-cli-release@^0.2.9:
     semver "^4.3.1"
     silent-error "^1.0.0"
 
-ember-cli-sass@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-6.1.1.tgz#75bff704bfe785df35ec4450af18a08a442c3192"
+ember-cli-sass@^6.1.2:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-6.1.3.tgz#f5224ad4406dcb2815bdaab154ba5f4def49e9df"
   dependencies:
     broccoli-funnel "^1.0.0"
     broccoli-merge-trees "^1.1.0"
     broccoli-sass-source-maps "^2.0.0"
-    ember-cli-babel "5.1.10"
     ember-cli-version-checker "^1.0.2"
     merge "^1.2.0"
 
@@ -2369,14 +2368,14 @@ ember-native-dom-helpers@0.3.9:
     broccoli-funnel "^1.1.0"
     ember-cli-babel "^6.0.0-beta.9"
 
-ember-percy@1.2.8:
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.2.8.tgz#13ddbe6c33d1054be60829460a453e4c982af6f1"
+ember-percy@1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.2.9.tgz#f9a5153a07d34a72c30cdf861a010528831387a3"
   dependencies:
     body-parser "^1.15.0"
     ember-cli-babel "^5.1.5"
     es6-promise-pool "^2.4.1"
-    percy-client "^1.3.0"
+    percy-client "^2.0.0"
     walk "^2.3.9"
 
 ember-qunit@^2.0.0-beta.1:
@@ -4708,9 +4707,9 @@ path-type@^1.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-percy-client@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/percy-client/-/percy-client-1.3.0.tgz#adca3471e976bc81ec431390eb5992d139bd8a3b"
+percy-client@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/percy-client/-/percy-client-2.0.0.tgz#3f43245beba0d97824e55a40b7fc01853508f721"
   dependencies:
     base64-js "^1.1.2"
     jssha "^2.1.0"
