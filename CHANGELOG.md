@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Updated
   - `package.json` dependencies
-  - Ember CLI v2.13.0
+  - Ember CLI v2.13.1
 
 
 ## [v1.0.1] - 2017-04-13
