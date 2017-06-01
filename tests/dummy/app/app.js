@@ -9,8 +9,6 @@ Ember.LinkComponent.reopen({
   attributeBindings: ['role']
 });
 
-Ember.MODEL_FACTORY_INJECTIONS = true;
-
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
