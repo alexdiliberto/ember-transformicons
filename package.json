@@ -36,7 +36,7 @@
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.0.0",
+    "ember-cli-babel": "^6.3.0",
     "ember-cli-htmlbars": "^2.0.1"
   },
   "devDependencies": {
