@@ -64,7 +64,7 @@
     "ember-exam": "^0.6.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
-    "ember-native-dom-helpers": "0.4.0",
+    "ember-native-dom-helpers": "0.4.1",
     "ember-percy": "1.2.11",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.0",
