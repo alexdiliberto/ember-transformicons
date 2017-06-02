@@ -1,16 +1,16 @@
-var expect = require('chai').expect;
-var RSVP = require('rsvp');
-var request = RSVP.denodeify(require('request'));
-var AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
-var chalk = require('chalk');
-var ui = new (require('console-ui'))({
+const expect = require('chai').expect;
+const RSVP = require('rsvp');
+const request = RSVP.denodeify(require('request'));
+const AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
+const chalk = require('chalk');
+const ui = new (require('console-ui'))({
   outputStream: process.stdout
 });
 
 describe('Acceptance | consuming non-fastboot app', function() {
   this.timeout(300000);
 
-  var app;
+  let app;
 
   before(function() {
     app = new AddonTestApp();
@@ -19,7 +19,9 @@ describe('Acceptance | consuming non-fastboot app', function() {
     return app.create('non-fastboot-app')
       .then(function() {
         ui.stopProgress();
-        return app.startServer();
+        return app.startServer({
+          additionalArguments: ['--port 49741']
+        });
       });
   });
 
@@ -31,16 +33,16 @@ describe('Acceptance | consuming non-fastboot app', function() {
     return request('http://localhost:49741/assets/non-fastboot-app.js')
       .then(function(response) {
         expect(response.statusCode).to.equal(200);
-        expect(response.headers["content-type"]).to.eq("application/javascript");
-        expect(response.body).to.include("non-fastboot-app/components/t-add");
-        expect(response.body).to.include("non-fastboot-app/components/t-form");
-        expect(response.body).to.include("non-fastboot-app/components/t-grid");
-        expect(response.body).to.include("non-fastboot-app/components/t-loader");
-        expect(response.body).to.include("non-fastboot-app/components/t-mail");
-        expect(response.body).to.include("non-fastboot-app/components/t-menu");
-        expect(response.body).to.include("non-fastboot-app/components/t-remove");
-        expect(response.body).to.include("non-fastboot-app/components/t-scroll");
-        expect(response.body).to.include("non-fastboot-app/components/t-video");
+        expect(response.headers['content-type']).to.eq('application/javascript; charset=UTF-8');
+        expect(response.body).to.include('non-fastboot-app/components/t-add');
+        expect(response.body).to.include('non-fastboot-app/components/t-form');
+        expect(response.body).to.include('non-fastboot-app/components/t-grid');
+        expect(response.body).to.include('non-fastboot-app/components/t-loader');
+        expect(response.body).to.include('non-fastboot-app/components/t-mail');
+        expect(response.body).to.include('non-fastboot-app/components/t-menu');
+        expect(response.body).to.include('non-fastboot-app/components/t-remove');
+        expect(response.body).to.include('non-fastboot-app/components/t-scroll');
+        expect(response.body).to.include('non-fastboot-app/components/t-video');
       });
   });
 
@@ -48,9 +50,9 @@ describe('Acceptance | consuming non-fastboot app', function() {
     return request('http://localhost:49741/assets/non-fastboot-app.js')
       .then(function(response) {
         expect(response.statusCode).to.equal(200);
-        expect(response.headers["content-type"]).to.eq("application/javascript");
-        expect(response.body).to.include("non-fastboot-app/templates/application");
-        expect(response.body).to.include("arrow-left");
+        expect(response.headers['content-type']).to.eq('application/javascript; charset=UTF-8');
+        expect(response.body).to.include('non-fastboot-app/templates/application');
+        expect(response.body).to.include('arrow-left');
       });
   });
 });

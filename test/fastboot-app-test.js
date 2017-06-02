@@ -1,16 +1,16 @@
-var expect = require('chai').expect;
-var RSVP = require('rsvp');
-var request = RSVP.denodeify(require('request'));
-var AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
-var chalk = require('chalk');
-var ui = new (require('console-ui'))({
+const expect = require('chai').expect;
+const RSVP = require('rsvp');
+const request = RSVP.denodeify(require('request'));
+const AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
+const chalk = require('chalk');
+const ui = new (require('console-ui'))({
   outputStream: process.stdout
 });
 
 describe('Acceptance | consuming fastboot app', function() {
   this.timeout(300000);
 
-  var app;
+  let app;
 
   before(function() {
     app = new AddonTestApp();
@@ -23,24 +23,9 @@ describe('Acceptance | consuming fastboot app', function() {
         return app.runEmberCommand('install', 'ember-cli-fastboot');
       })
       .then(function() {
-        /*
-         FIXME: Remove in the future. This is a temporary workaround for the following issue:
-
-            https://github.com/tomdale/ember-cli-addon-tests/issues/49
-
-         See:
-          https://github.com/simplabs/ember-simple-auth/pull/1198#issuecomment-277700447
-          https://github.com/simplabs/ember-simple-auth/pull/1198/commits/ee7cdf4688c676deb50098fa0fef1fc5a6c039c8
-          https://github.com/tomdale/ember-cli-addon-tests/issues/49#issuecomment-280636490
-        */
-        ui.stopProgress();
-        ui.startProgress(chalk.green('Running `ember build`'));
-        return app.runEmberCommand('build');
-      })
-      .then(function() {
         ui.stopProgress();
         return app.startServer({
-          command: 'fastboot'
+          additionalArguments: ['--port 49741']
         });
       });
   });
@@ -50,13 +35,22 @@ describe('Acceptance | consuming fastboot app', function() {
   });
 
   it('/ renders the `{{t-menu a="arrow-left"}}` component from `application.hbs`', function() {
-    return request('http://localhost:49741/')
+    return request({
+        url: 'http://localhost:49741',
+        headers: {
+          // We have to send the `Accept` header so the ember-cli server sees this as a request to `index.html` and sets
+          // `req.serveUrl`, that ember-cli-fastboot needs in its middleware
+          // See https://github.com/ember-cli/ember-cli/blob/86a903f/lib/tasks/server/middleware/history-support/index.js#L55
+          // and https://github.com/ember-fastboot/ember-cli-fastboot/blob/28213e0/index.js#L160
+          'Accept': 'text/html'
+        }
+      })
       .then(function(response) {
         expect(response.statusCode).to.equal(200);
-        expect(response.headers["content-type"].toLowerCase()).to.eq("text/html; charset=utf-8");
-        expect(response.body).to.contain("<h1>fastboot application template</h1>");
-        expect(response.body).to.contain("t-menu transformicon =");
-        expect(response.body).to.contain("tcon-menu--arrow tcon-menu--arrowleft");
+        expect(response.headers['content-type'].toLowerCase()).to.eq('text/html; charset=utf-8');
+        expect(response.body).to.contain('<h1>fastboot application template</h1>');
+        expect(response.body).to.contain('t-menu transformicon =');
+        expect(response.body).to.contain('tcon-menu--arrow tcon-menu--arrowleft');
       });
   });
 });
