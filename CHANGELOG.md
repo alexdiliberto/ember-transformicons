@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
   - `package.json` dependencies
   - Ember CLI v2.13.2
+  - Addon tests fixes
+  - Lock fastboot version in addon tests
 
 
 ## [v1.0.1] - 2017-04-13

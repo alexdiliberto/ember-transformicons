@@ -20,7 +20,10 @@ describe('Acceptance | consuming fastboot app', function() {
       .then(function() {
         ui.stopProgress();
         ui.startProgress(chalk.green('Running `ember install ember-cli-fastboot`'));
-        return app.runEmberCommand('install', 'ember-cli-fastboot');
+        return app.runEmberCommand(
+          'install',
+          `ember-cli-fastboot@${process.env.npm_package_devDependencies_ember_cli_fastboot}`
+        );
       })
       .then(function() {
         ui.stopProgress();
