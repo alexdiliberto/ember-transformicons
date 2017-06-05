@@ -4,8 +4,8 @@
 module.exports = {
   name: 'ember-cli-transformicons',
 
-  included: function(app) {
-    this._super.included.apply(this, arguments);
+  included(app) {
+    this._super(...arguments);
 
     // see: https://github.com/ember-cli/ember-cli/issues/3718
     if (typeof app.import !== 'function' && app.app) {
@@ -15,7 +15,7 @@ module.exports = {
     app.import('vendor/transformicons/transformicons.css');
   },
 
-  isDevelopingAddon: function() {
+  isDevelopingAddon() {
     return false;
   }
 };
