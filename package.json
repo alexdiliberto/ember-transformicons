@@ -36,7 +36,7 @@
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.3.0",
+    "ember-cli-babel": "^6.4.1",
     "ember-cli-htmlbars": "^2.0.1"
   },
   "devDependencies": {
@@ -61,7 +61,7 @@
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-disable-prototype-extensions": "^1.1.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
     "ember-exam": "^0.7.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
