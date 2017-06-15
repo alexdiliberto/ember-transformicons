@@ -2197,9 +2197,9 @@ ember-cli-htmlbars-inline-precompile@^0.4.3:
     hash-for-dep "^1.0.2"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.1.tgz#e1e333c7ef4cc546c67734996541fd94ca4423ca"
+ember-cli-htmlbars@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.2.tgz#230a9ace7c3454b3acff2768a50f963813a90c38"
   dependencies:
     broccoli-persistent-filter "^1.0.3"
     hash-for-dep "^1.0.2"
@@ -2276,20 +2276,6 @@ ember-cli-qunit@^4.0.0:
     qunit-notifications "^0.1.1"
     qunitjs "^2.0.1"
     resolve "^1.1.6"
-    silent-error "^1.0.0"
-
-ember-cli-release@^0.2.9:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/ember-cli-release/-/ember-cli-release-0.2.9.tgz#5e8de3d034c65597933748023058470ec1231adb"
-  dependencies:
-    chalk "^1.0.0"
-    git-tools "^0.1.4"
-    make-array "^0.1.2"
-    merge "^1.2.0"
-    moment-timezone "^0.3.0"
-    nopt "^3.0.3"
-    rsvp "^3.0.17"
-    semver "^4.3.1"
     silent-error "^1.0.0"
 
 ember-cli-sass@^6.2.0:
@@ -2475,9 +2461,9 @@ ember-load-initializers@^1.0.0:
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
 
-ember-native-dom-helpers@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/ember-native-dom-helpers/-/ember-native-dom-helpers-0.4.1.tgz#c4db7afa25dbe3efd84f36376f1ede2678cd7bb0"
+ember-native-dom-helpers@0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/ember-native-dom-helpers/-/ember-native-dom-helpers-0.4.2.tgz#ca985d2050795ca2f13a642e6300be59e5b962d7"
   dependencies:
     broccoli-funnel "^1.1.0"
     ember-cli-babel "^6.1.0"
@@ -3297,12 +3283,6 @@ git-repo-info@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-1.4.1.tgz#2a072823254aaf62fcf0766007d7b6651bd41943"
 
-git-tools@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/git-tools/-/git-tools-0.1.4.tgz#5e43e59443b8a5dedb39dba663da49e79f943978"
-  dependencies:
-    spawnback "~1.0.0"
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -4036,9 +4016,9 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
-loader.js@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/loader.js/-/loader.js-4.4.0.tgz#02bf55650b78afee5e9d8cf972efd484faa3b2c1"
+loader.js@4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/loader.js/-/loader.js-4.4.1.tgz#f6a4c3c296170685cb7cd7b3e7aa6d5c846c0518"
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -4289,10 +4269,6 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.1"
     yallist "^2.0.0"
 
-make-array@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/make-array/-/make-array-0.1.2.tgz#335e36ebb0c5a43154d21213a1ecaeae2a1bb3ef"
-
 makeerror@1.0.x:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/makeerror/-/makeerror-1.0.11.tgz#e01a5c9109f2af79660e4e8b9587790184f5a96c"
@@ -4489,16 +4465,6 @@ mocha@^3.4.2:
     mkdirp "0.5.1"
     supports-color "3.1.2"
 
-moment-timezone@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.3.1.tgz#3ef47856b02d53b718a10a5ec2023aa299e07bf5"
-  dependencies:
-    moment ">= 2.6.0"
-
-"moment@>= 2.6.0":
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
-
 morgan@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.8.1.tgz#f93023d3887bd27b78dfd6023cea7892ee27a4b1"
@@ -4644,7 +4610,7 @@ node-sass@^4.1.0:
     sass-graph "^2.1.1"
     stdout-stream "^1.4.0"
 
-"nopt@2 || 3", nopt@^3.0.3, nopt@^3.0.6:
+"nopt@2 || 3", nopt@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
   dependencies:
@@ -5424,7 +5390,7 @@ scss-tokenizer@^0.2.1:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
-semver@^4.3.1, semver@^4.3.6:
+semver@^4.3.6:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
 
@@ -5635,10 +5601,6 @@ spawn-sync@^1.0.15:
   dependencies:
     concat-stream "^1.4.7"
     os-shim "^0.1.2"
-
-spawnback@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/spawnback/-/spawnback-1.0.0.tgz#f73662f7e54d95367eca74d6426c677dd7ea686f"
 
 spdx-correct@~1.0.0:
   version "1.0.2"

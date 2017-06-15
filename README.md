@@ -263,20 +263,6 @@ git push origin gh-pages:gh-pages
 #     <title>Demo App | ember-cli-transformicons</title>
 ```
 
-## Release
-
-```sh
-# First, Don't forget to update CHANGELOG.md
-
-# v0.7.0
-ember release
-# v0.7.1
-ember release --minor
-# v0.8.0
-ember release --major
-# v1.0.0
-```
-
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 

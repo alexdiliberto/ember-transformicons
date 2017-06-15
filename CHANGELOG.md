@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Addon tests fixes
   - Lock fastboot version in addon tests
 
+### Removed
+  - `ember-cli-release` package
+
 
 ## [v1.0.1] - 2017-04-13
 ### Added
