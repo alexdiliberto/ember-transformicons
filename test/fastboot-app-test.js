@@ -7,6 +7,8 @@ const ui = new (require('console-ui'))({
   outputStream: process.stdout
 });
 
+const FASTBOOT_VERSION = '^1.0.0-rc.4';
+
 describe('Acceptance | consuming fastboot app', function() {
   this.timeout(300000);
 
@@ -22,7 +24,7 @@ describe('Acceptance | consuming fastboot app', function() {
         ui.startProgress(chalk.green('Running `ember install ember-cli-fastboot`'));
         return app.runEmberCommand(
           'install',
-          `ember-cli-fastboot@${process.env.npm_package_devDependencies_ember_cli_fastboot}`
+          `ember-cli-fastboot@${FASTBOOT_VERSION}`
         );
       })
       .then(function() {
