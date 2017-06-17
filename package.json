@@ -37,7 +37,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.4.1",
-    "ember-cli-htmlbars": "^2.0.2"
+    "ember-cli-htmlbars": "^2.0.2",
+    "eslint-plugin-ember": "^3.4.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -67,7 +68,6 @@
     "ember-percy": "1.2.12",
     "ember-resolver": "^4.0.0",
     "ember-source": "^2.13.3",
-    "eslint-plugin-ember-suave": "^1.0.0",
     "loader.js": "4.4.1",
     "mocha": "^3.4.2",
     "request": "^2.81.0",

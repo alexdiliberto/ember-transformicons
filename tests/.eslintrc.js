@@ -3,6 +3,6 @@ module.exports = {
     embertest: true
   },
   rules: {
-    'ember-suave/no-direct-property-access': 'off'
+    'ember/alias-model-in-controller': 'off'
   }
 };

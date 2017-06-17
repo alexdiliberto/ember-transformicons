@@ -6,6 +6,7 @@ import 'dummy/tests/helpers/percy/register-helpers';
 
 const { RSVP: { Promise } } = Ember;
 
+/* eslint-disable ember/named-functions-in-promises */
 export default function(name, options = {}) {
   module(name, {
     beforeEach() {

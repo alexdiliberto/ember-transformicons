@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
+### Added
+  - `eslint-plugin-ember` linter addon 
+
 ### Updated
   - `package.json` dependencies
   - Ember CLI v2.13.2
@@ -12,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
   - `ember-cli-release` package
+  - `eslint-plugin-ember-suave` package
 
 
 ## [v1.0.1] - 2017-04-13

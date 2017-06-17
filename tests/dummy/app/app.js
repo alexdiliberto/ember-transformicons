@@ -3,13 +3,18 @@ import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 
+const {
+  LinkComponent,
+  Application
+} = Ember;
+
 let App;
 
-Ember.LinkComponent.reopen({
+LinkComponent.reopen({
   attributeBindings: ['role']
 });
 
-App = Ember.Application.extend({
+App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver
