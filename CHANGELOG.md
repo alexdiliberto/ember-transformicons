@@ -5,7 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - `eslint-plugin-ember` linter addon 
+  - Nothing yet...
+
+
+## [v1.0.2] - 2017-06-17
+### Added
+  - `eslint-plugin-ember` linter addon
 
 ### Updated
   - `package.json` dependencies
@@ -239,7 +244,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...HEAD
+[v1.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...v1.0.2
 [v1.0.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...v1.0.1
 [v1.0.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...v1.0.0
 [v0.9.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.1...v0.9.0
