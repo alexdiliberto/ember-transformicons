@@ -33,7 +33,8 @@
     "addon-tests": "mocha test/*-test.js",
     "test:all": "ember try:each && mocha test/*-test.js",
     "test:iterate": "ember exam:iterate 10",
-    "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s"
+    "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s",
+    "build:stats": "CONCAT_STATS=true ember b"
   },
   "dependencies": {
     "ember-cli-babel": "^6.4.1",

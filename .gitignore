@@ -19,3 +19,6 @@ testem.log
 # sublime text
 /*.sublime-workspace
 /*.sublime-project
+
+# broccoli concat analyser
+/concat-stats-for

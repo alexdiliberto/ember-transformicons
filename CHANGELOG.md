@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Nothing yet...
+  - Support [`broccoli-concat-analyser`](https://github.com/stefanpenner/broccoli-concat-analyser)
 
 
 ## [v1.0.2] - 2017-06-17
