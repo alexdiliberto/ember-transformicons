@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
   - Support [`broccoli-concat-analyser`](https://github.com/stefanpenner/broccoli-concat-analyser)
-
+  - Support Node LTS v4.x Ember Apps
+  
 ### Updated
   - `package.json` dependencies
   - Ember CLI v2.14.0
