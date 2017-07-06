@@ -1,6 +1,7 @@
 /* eslint-env node */
+'use strict';
 
-var contentSecurityPolicy =  {
+const CONTENT_SECURITY_POLICY =  {
   'default-src': ["'none'"],
   'script-src':  ["'self'"],
   'font-src':    ["'self'"],
@@ -12,12 +13,12 @@ var contentSecurityPolicy =  {
 }
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
-    contentSecurityPolicy,
+    contentSecurityPolicy: CONTENT_SECURITY_POLICY,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

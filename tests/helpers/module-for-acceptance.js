@@ -4,7 +4,7 @@ import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
 import 'dummy/tests/helpers/percy/register-helpers';
 
-const { RSVP: { Promise } } = Ember;
+const { RSVP: { resolve } } = Ember;
 
 /* eslint-disable ember/named-functions-in-promises */
 export default function(name, options = {}) {
@@ -19,7 +19,7 @@ export default function(name, options = {}) {
 
     afterEach() {
       let afterEach = options.afterEach && options.afterEach.apply(this, arguments);
-      return Promise.resolve(afterEach).then(() => destroyApp(this.application));
+      return resolve(afterEach).then(() => destroyApp(this.application));
     }
   });
 }

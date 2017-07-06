@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   - Support [`broccoli-concat-analyser`](https://github.com/stefanpenner/broccoli-concat-analyser)
 
+### Updated
+  - `package.json` dependencies
+  - Ember CLI v2.14.0
+
 
 ## [v1.0.2] - 2017-06-17
 ### Added
