@@ -48,9 +48,9 @@
   dependencies:
     "@glimmer/util" "^0.22.3"
 
-"@glimmer/resolver@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@glimmer/resolver/-/resolver-0.3.0.tgz#65451a2195259ce26518715631c38dd7c144e821"
+"@glimmer/resolver@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/resolver/-/resolver-0.4.1.tgz#cd9644572c556e7e799de1cf8eff2b999cf5b878"
   dependencies:
     "@glimmer/di" "^0.2.0"
 
@@ -567,11 +567,23 @@ babel-plugin-dead-code-elimination@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-dead-code-elimination/-/babel-plugin-dead-code-elimination-1.0.2.tgz#5f7c451274dcd7cccdbfbb3e0b85dd28121f0f65"
 
-babel-plugin-debug-macros@^0.1.1, babel-plugin-debug-macros@^0.1.10:
+babel-plugin-debug-macros@^0.1.10:
   version "0.1.10"
   resolved "https://registry.yarnpkg.com/babel-plugin-debug-macros/-/babel-plugin-debug-macros-0.1.10.tgz#dd077ad6e1cc0a8f9bbc6405c561392ebfc9a01c"
   dependencies:
     semver "^5.3.0"
+
+babel-plugin-debug-macros@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/babel-plugin-debug-macros/-/babel-plugin-debug-macros-0.1.11.tgz#6c562bf561fccd406ce14ab04f42c218cf956605"
+  dependencies:
+    semver "^5.3.0"
+
+babel-plugin-ember-modules-api-polyfill@^1.4.1:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ember-modules-api-polyfill/-/babel-plugin-ember-modules-api-polyfill-1.4.2.tgz#e254f8ed0ba7cf32ea6a71c4770b3568a8577402"
+  dependencies:
+    ember-rfc176-data "^0.2.0"
 
 babel-plugin-eval@^1.0.1:
   version "1.0.1"
@@ -2110,12 +2122,45 @@ ember-cli-babel@^5.0.0, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.6, ember-cl
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.1.0, ember-cli-babel@^6.4.1:
+ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.1.0:
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.4.1.tgz#785a1c24fe3250eb0776b1ab3cee857863b44542"
   dependencies:
     amd-name-resolver "0.0.6"
     babel-plugin-debug-macros "^0.1.10"
+    babel-plugin-transform-es2015-modules-amd "^6.24.0"
+    babel-polyfill "^6.16.0"
+    babel-preset-env "^1.5.1"
+    broccoli-babel-transpiler "^6.0.0"
+    broccoli-debug "^0.6.2"
+    broccoli-funnel "^1.0.0"
+    broccoli-source "^1.1.0"
+    clone "^2.0.0"
+    ember-cli-version-checker "^2.0.0"
+
+ember-cli-babel@^6.3.0:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.5.1.tgz#37eaab592523938f8d52fc9d30bd0f56fc1c6599"
+  dependencies:
+    amd-name-resolver "0.0.6"
+    babel-plugin-debug-macros "^0.1.10"
+    babel-plugin-transform-es2015-modules-amd "^6.24.0"
+    babel-polyfill "^6.16.0"
+    babel-preset-env "^1.5.1"
+    broccoli-babel-transpiler "^6.0.0"
+    broccoli-debug "^0.6.2"
+    broccoli-funnel "^1.0.0"
+    broccoli-source "^1.1.0"
+    clone "^2.0.0"
+    ember-cli-version-checker "^2.0.0"
+
+ember-cli-babel@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.6.0.tgz#a8362bc44841bfdf89b389f3197f104d7ba526da"
+  dependencies:
+    amd-name-resolver "0.0.6"
+    babel-plugin-debug-macros "^0.1.11"
+    babel-plugin-ember-modules-api-polyfill "^1.4.1"
     babel-plugin-transform-es2015-modules-amd "^6.24.0"
     babel-polyfill "^6.16.0"
     babel-preset-env "^1.5.1"
@@ -2161,9 +2206,9 @@ ember-cli-dependency-lint@1.0.2:
     chalk "^1.1.3"
     semver "^4.3.6"
 
-ember-cli-eslint@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-eslint/-/ember-cli-eslint-4.0.0.tgz#a6805275d487b5c635b7a379dcb0a4770eb98e7a"
+ember-cli-eslint@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-eslint/-/ember-cli-eslint-4.1.0.tgz#50e43224e71849b7c03f73d5e5c4647b48993033"
   dependencies:
     broccoli-lint-eslint "^4.0.0"
     ember-cli-version-checker "^2.0.0"
@@ -2327,7 +2372,7 @@ ember-cli-valid-component-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-version-checker@^1.0.2, ember-cli-version-checker@^1.1.4, ember-cli-version-checker@^1.1.6, ember-cli-version-checker@^1.1.7, ember-cli-version-checker@^1.2.0, ember-cli-version-checker@^1.3.1:
+ember-cli-version-checker@1.3.1, ember-cli-version-checker@^1.0.2, ember-cli-version-checker@^1.1.4, ember-cli-version-checker@^1.1.6, ember-cli-version-checker@^1.1.7, ember-cli-version-checker@^1.2.0, ember-cli-version-checker@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-1.3.1.tgz#0bc2d134c830142da64bf9627a0eded10b61ae72"
   dependencies:
@@ -2482,17 +2527,21 @@ ember-qunit@^2.1.3:
   dependencies:
     ember-test-helpers "^0.6.3"
 
-ember-resolver@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/ember-resolver/-/ember-resolver-4.1.0.tgz#f02aeb2f1f2e944ed47e085412a7b84f759d11df"
+ember-resolver@^4.2.4:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/ember-resolver/-/ember-resolver-4.2.4.tgz#4a9822800a68619b481d5bb2663038bb77660097"
   dependencies:
-    "@glimmer/resolver" "^0.3.0"
-    babel-plugin-debug-macros "^0.1.1"
+    "@glimmer/resolver" "^0.4.1"
+    babel-plugin-debug-macros "^0.1.10"
     broccoli-funnel "^1.1.0"
     broccoli-merge-trees "^2.0.0"
-    ember-cli-babel "^6.0.0-beta.7"
-    ember-cli-version-checker "^1.1.6"
-    resolve "^1.3.2"
+    ember-cli-babel "^6.3.0"
+    ember-cli-version-checker "1.3.1"
+    resolve "^1.3.3"
+
+ember-rfc176-data@^0.2.0:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.2.4.tgz#f6c5e52ffb14cf66c9fed5bd70fbe68fc91982e9"
 
 ember-router-generator@^1.0.0:
   version "1.2.3"
@@ -2638,9 +2687,9 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.0, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-plugin-ember@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-3.4.1.tgz#849124656bd1e0786f85425f0b50f8b0724a8115"
+eslint-plugin-ember@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-3.5.0.tgz#04f1fa733d77abe689c9317f9e538f2292e292d3"
   dependencies:
     requireindex "^1.1.0"
     snake-case "^2.1.0"
@@ -5147,7 +5196,7 @@ resolve-from@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-1.0.1.tgz#26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226"
 
-resolve@^1.1.2, resolve@^1.1.6, resolve@^1.3.0, resolve@^1.3.2, resolve@^1.3.3:
+resolve@^1.1.2, resolve@^1.1.6, resolve@^1.3.0, resolve@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.3.3.tgz#655907c3469a8680dc2de3a275a8fdd69691f0e5"
   dependencies:
@@ -5186,6 +5235,10 @@ rimraf@~2.2.6:
 rsvp@^3.0.14, rsvp@^3.0.16, rsvp@^3.0.17, rsvp@^3.0.18, rsvp@^3.0.21, rsvp@^3.0.6, rsvp@^3.1.0, rsvp@^3.2.1, rsvp@^3.3.3, rsvp@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.5.0.tgz#a62c573a4ae4e1dfd0697ebc6242e79c681eaa34"
+
+rsvp@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-3.6.1.tgz#34f4a7ac2859f7bacc8f49789c5604f1e26ae702"
 
 rsvp@~3.2.1:
   version "3.2.1"
