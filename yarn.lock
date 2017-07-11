@@ -2554,7 +2554,7 @@ ember-resolver@^4.2.4:
     ember-cli-version-checker "1.3.1"
     resolve "^1.3.3"
 
-ember-rfc176-data@^0.2.0:
+ember-rfc176-data@^0.2.0, ember-rfc176-data@^0.2.2:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.2.4.tgz#f6c5e52ffb14cf66c9fed5bd70fbe68fc91982e9"
 
@@ -2702,10 +2702,11 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.0, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-plugin-ember@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-3.5.0.tgz#04f1fa733d77abe689c9317f9e538f2292e292d3"
+eslint-plugin-ember@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-3.6.0.tgz#09fdb9bf43da3124176af3196dcd5e8f44c14b52"
   dependencies:
+    ember-rfc176-data "^0.2.2"
     requireindex "^1.1.0"
     snake-case "^2.1.0"
 
