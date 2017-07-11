@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
+## Added
+  - Nothing yet...
+
+
+## [v1.0.3] - 2017-07-10
 ### Added
   - Support [`broccoli-concat-analyser`](https://github.com/stefanpenner/broccoli-concat-analyser)
   - Support Node LTS v4.x Ember Apps
@@ -252,7 +257,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.3...HEAD
+[v1.0.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...v1.0.3
 [v1.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...v1.0.2
 [v1.0.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...v1.0.1
 [v1.0.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...v1.0.0
