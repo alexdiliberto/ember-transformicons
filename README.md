@@ -229,7 +229,7 @@ Any help is welcome and absolutely appreciated!
 ```sh
 git clone git@github.com:alexdiliberto/ember-cli-transformicons.git
 cd ember-cli-transformicons
-bower i && npm i
+npm i
 ```
 
 ## Server
