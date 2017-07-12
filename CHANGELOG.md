@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
-## Added
-  - Nothing yet...
+### Updated
+  - CodeClimate to use Engines analysis
 
 
 ## [v1.0.3] - 2017-07-10

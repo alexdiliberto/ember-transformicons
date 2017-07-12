@@ -1,6 +1,23 @@
-languages:
-  JavaScript: true
+engines:
+  duplication:
+    enabled: true
+    exclude_paths:
+    - tests/dummy/app/controllers/**
+    - tests/integration/**
+    config:
+      languages:
+      - javascript:
+  scss-lint:
+    enabled: true
+
+ratings:
+  paths:
+  - "**.js"
+  - "**.md"
+  - "**.scss"
 
 exclude_paths:
-  - "tests/acceptance/*"
-  - "tests/integration/*"
+- "config/**"
+- "node_modules/**"
+- "vendor/**"
+- "*.lock"
