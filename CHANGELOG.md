@@ -4,11 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
+### Added
+  - Headless Chrome testing on Testem and CI
+
 ### Updated
   - CodeClimate to use Engines analysis
 
 ### Removed
   - Unused Inch CI config
+  - PhantomJS test runner
 
 
 ## [v1.0.3] - 2017-07-10
