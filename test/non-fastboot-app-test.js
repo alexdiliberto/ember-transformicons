@@ -1,9 +1,11 @@
+'use strict';
+
 const expect = require('chai').expect;
-const RSVP = require('rsvp');
-const request = RSVP.denodeify(require('request'));
+const denodeify = require('denodeify');
+const request = denodeify(require('request'));
 const AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
 const chalk = require('chalk');
-const ui = new (require('console-ui'))({
+const ui = new(require('console-ui'))({
   outputStream: process.stdout
 });
 
@@ -17,11 +19,9 @@ describe('Acceptance | consuming non-fastboot app', function() {
 
     ui.startProgress(chalk.green('Creating dummy app'));
     return app.create('non-fastboot-app')
-      .then(function() {
+      .then(() => {
         ui.stopProgress();
-        return app.startServer({
-          additionalArguments: ['--port 49741']
-        });
+        return app.startServer();
       });
   });
 
@@ -31,7 +31,7 @@ describe('Acceptance | consuming non-fastboot app', function() {
 
   it('/assets/non-fastboot-app.js includes all `ember-cli-transformicons` exported `app` modules', function() {
     return request('http://localhost:49741/assets/non-fastboot-app.js')
-      .then(function(response) {
+      .then((response) => {
         expect(response.statusCode).to.equal(200);
         expect(response.headers['content-type']).to.eq('application/javascript; charset=UTF-8');
         expect(response.body).to.include('non-fastboot-app/components/t-add');
@@ -48,7 +48,7 @@ describe('Acceptance | consuming non-fastboot app', function() {
 
   it('/assets/non-fastboot-app.js includes the `{{t-menu a="arrow-left"}}` component', function() {
     return request('http://localhost:49741/assets/non-fastboot-app.js')
-      .then(function(response) {
+      .then((response) => {
         expect(response.statusCode).to.equal(200);
         expect(response.headers['content-type']).to.eq('application/javascript; charset=UTF-8');
         expect(response.body).to.include('non-fastboot-app/templates/application');

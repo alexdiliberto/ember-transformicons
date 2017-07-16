@@ -1,13 +1,15 @@
+'use strict';
+
 const expect = require('chai').expect;
-const RSVP = require('rsvp');
-const request = RSVP.denodeify(require('request'));
+const denodeify = require('denodeify');
+const request = denodeify(require('request'));
 const AddonTestApp = require('ember-cli-addon-tests').AddonTestApp;
 const chalk = require('chalk');
-const ui = new (require('console-ui'))({
+const ui = new(require('console-ui'))({
   outputStream: process.stdout
 });
 
-const FASTBOOT_VERSION = '1.0.0-rc.5';
+const FASTBOOT_VERSION = '1.0.0-rc.6';
 
 describe('Acceptance | consuming fastboot app', function() {
   this.timeout(300000);
@@ -19,7 +21,7 @@ describe('Acceptance | consuming fastboot app', function() {
 
     ui.startProgress(chalk.green('Creating dummy app'));
     return app.create('fastboot-app')
-      .then(function() {
+      .then(() => {
         ui.stopProgress();
         ui.startProgress(chalk.green(`Running ember install ember-cli-fastboot@${FASTBOOT_VERSION}`));
         return app.runEmberCommand(
@@ -27,11 +29,8 @@ describe('Acceptance | consuming fastboot app', function() {
           `ember-cli-fastboot@${FASTBOOT_VERSION}`
         );
       })
-      .then(function() {
+      .then(() => {
         ui.stopProgress();
-        return app.startServer({
-          additionalArguments: ['--port 49741']
-        });
       });
   });
 
@@ -40,17 +39,20 @@ describe('Acceptance | consuming fastboot app', function() {
   });
 
   it('/ renders the `{{t-menu a="arrow-left"}}` component from `application.hbs`', function() {
-    return request({
-        url: 'http://localhost:49741',
-        headers: {
-          // We have to send the `Accept` header so the ember-cli server sees this as a request to `index.html` and sets
-          // `req.serveUrl`, that ember-cli-fastboot needs in its middleware
-          // See https://github.com/ember-cli/ember-cli/blob/86a903f/lib/tasks/server/middleware/history-support/index.js#L55
-          // and https://github.com/ember-fastboot/ember-cli-fastboot/blob/28213e0/index.js#L160
-          'Accept': 'text/html'
-        }
+    return app.startServer()
+      .then(() => {
+        return request({
+          url: 'http://localhost:49741',
+          headers: {
+            // We have to send the `Accept` header so the ember-cli server sees this as a request to `index.html` and sets
+            // `req.serveUrl`, that ember-cli-fastboot needs in its middleware
+            // See https://github.com/ember-cli/ember-cli/blob/86a903f/lib/tasks/server/middleware/history-support/index.js#L55
+            // and https://github.com/ember-fastboot/ember-cli-fastboot/blob/28213e0/index.js#L160
+            'Accept': 'text/html'
+          }
+        });
       })
-      .then(function(response) {
+      .then((response) => {
         expect(response.statusCode).to.equal(200);
         expect(response.headers['content-type'].toLowerCase()).to.eq('text/html; charset=utf-8');
         expect(response.body).to.contain('<h1>fastboot application template</h1>');

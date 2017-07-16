@@ -9,10 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - CodeClimate to use Engines analysis
+  - Mocha test suite
 
 ### Removed
   - Unused Inch CI config
   - PhantomJS test runner
+  - Unused `config/release.js`
 
 
 ## [v1.0.3] - 2017-07-10

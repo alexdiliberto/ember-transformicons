@@ -229,7 +229,7 @@ Any help is welcome and absolutely appreciated!
 ```sh
 git clone git@github.com:alexdiliberto/ember-cli-transformicons.git
 cd ember-cli-transformicons
-npm i
+yarn
 ```
 
 ## Server
@@ -241,9 +241,9 @@ ember s
 ## Test Suite
 
 ```sh
-npm run test # ember try:each
-npm run addon-tests # mocha test/*-test.js
-npm run test:all # ember try:each && mocha test/*-test.js
+yarn test # ember try:each
+yarn mocha # cross-env DEBUG=ember-cli-addon-tests mocha
+yarn test:all # ember try:each && mocha test/*-test.js
 ```
 
 ## Update Demo App

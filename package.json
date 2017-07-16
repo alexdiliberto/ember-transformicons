@@ -30,7 +30,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each",
-    "addon-tests": "mocha test/*-test.js",
+    "mocha": "cross-env DEBUG=ember-cli-addon-tests mocha",
     "test:all": "ember try:each && mocha test/*-test.js",
     "test:iterate": "ember exam:iterate 10",
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s",
@@ -39,16 +39,18 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.2",
-    "eslint-plugin-ember": "^3.6.0"
+    "eslint-plugin-ember": "^3.6.2"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
-    "chai": "^4.0.2",
+    "chai": "^4.1.0",
     "chalk": "^2.0.1",
+    "cross-env": "^5.0.1",
+    "denodeify": "^1.2.1",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.14.0",
-    "ember-cli-addon-tests": "~0.7.0",
+    "ember-cli-addon-tests": "^0.7.1",
     "ember-cli-anybar": "0.5.0",
     "ember-cli-content-security-policy": "0.6.1",
     "ember-cli-dependency-checker": "^2.0.0",
@@ -69,12 +71,11 @@
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-helpers": "0.5.2",
     "ember-percy": "1.2.13",
-    "ember-resolver": "^4.2.4",
-    "ember-source": "~2.14.0",
+    "ember-resolver": "^4.3.0",
+    "ember-source": "^2.14.1",
     "loader.js": "4.5.1",
     "mocha": "^3.4.2",
-    "request": "^2.81.0",
-    "rsvp": "^3.6.1"
+    "request": "^2.81.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
