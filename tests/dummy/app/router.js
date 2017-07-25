@@ -6,6 +6,7 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
+/* eslint-disable array-callback-return */
 Router.map(function() {
   this.route('menu');
   this.route('grid');

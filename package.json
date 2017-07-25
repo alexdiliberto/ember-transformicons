@@ -34,7 +34,9 @@
     "test:all": "ember try:each && mocha test/*-test.js",
     "test:iterate": "ember exam:iterate 10",
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s",
-    "build:stats": "CONCAT_STATS=true ember b"
+    "build:stats": "CONCAT_STATS=true ember b",
+    "lint": "eslint addon addon app test tests *.js",
+    "lint:fix": "eslint addon app test tests *.js --fix"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
@@ -42,6 +44,7 @@
     "eslint-plugin-ember": "^4.0.0"
   },
   "devDependencies": {
+    "@alexdiliberto/eslint-config": "^1.0.2",
     "bootstrap": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "chai": "^4.1.0",
@@ -73,6 +76,7 @@
     "ember-percy": "1.2.13",
     "ember-resolver": "^4.3.0",
     "ember-source": "^2.14.1",
+    "eslint": "^4.3.0",
     "loader.js": "4.5.1",
     "mocha": "^3.4.2",
     "request": "^2.81.0"
