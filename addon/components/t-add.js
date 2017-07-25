@@ -8,7 +8,7 @@ const {
   computed: { alias },
   Object: EmberObject
 } = Ember;
-const defaultAnimation   = 'minus';
+const defaultAnimation = 'minus';
 const animationTypeTable = EmberObject.create({
   'minus': 'tcon-plus--minus',
   'check': 'tcon-plus--check'
@@ -45,10 +45,21 @@ const animationTypeTable = EmberObject.create({
 export default BaseTransformicon.extend({
   layout,
 
-  label: 'add item',
-
   classNames: ['tcon-plus'],
   classNameBindings: ['animationType', 'isAdded'],
+
+  label: 'add item',
+  initialState: 'is-added',
+
+  /**
+    PUBLIC COMPONENT API
+
+    @public
+   */
+  animation: defaultAnimation,
+  'is-added': false,
+  a: alias('animation'),
+
   /**
     Get the CSS classname corresponding to the component's current animation type.
 
@@ -73,16 +84,5 @@ export default BaseTransformicon.extend({
     get() {
       return get(this, 'is-added') ? get(this, 'transformClass') : false;
     }
-  }),
-
-  initialState: 'is-added',
-
-  /**
-    PUBLIC COMPONENT PROPERTIES
-
-    @public
-   */
-  animation: defaultAnimation,
-  a: alias('animation'),
-  'is-added': false
+  })
 });

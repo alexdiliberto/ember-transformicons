@@ -1,16 +1,16 @@
 /* eslint-env node */
 'use strict';
 
-const CONTENT_SECURITY_POLICY =  {
+const CONTENT_SECURITY_POLICY = {
   'default-src': ["'none'"],
   'script-src':  ["'self'"],
   'font-src':    ["'self'"],
   'connect-src': ["'self'"],
-  'img-src':     ["'self'", "https://camo.githubusercontent.com"],
+  'img-src':     ["'self'", 'https://camo.githubusercontent.com'],
   'style-src':   ["'self'"],
   'media-src':   ["'self'"],
-  'frame-src':   ["'self'", "https://ghbtns.com/github-btn.html"]
-}
+  'frame-src':   ["'self'", 'https://ghbtns.com/github-btn.html']
+};
 
 module.exports = function(environment) {
   let ENV = {

@@ -31,11 +31,21 @@ const {
 export default BaseTransformicon.extend({
   layout,
 
-  ariaRole: reads('type'),
-  label: 'play video',
-
   classNames: ['tcon-vid--play'],
   classNameBindings: ['isPlaying'],
+
+  label: 'play video',
+  initialState: 'is-playing',
+
+  /**
+    PUBLIC COMPONENT API
+
+    @public
+   */
+  'is-playing': false,
+
+  ariaRole: reads('type'),
+
   /**
     Get the classname representing the `playing` toggled state for the video icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -47,14 +57,5 @@ export default BaseTransformicon.extend({
     get() {
       return get(this, 'is-playing') ? get(this, 'transformClass') : false;
     }
-  }),
-
-  initialState: 'is-playing',
-
-  /**
-    PUBLIC COMPONENT PROPERTIES
-
-    @public
-   */
-  'is-playing': false
+  })
 });

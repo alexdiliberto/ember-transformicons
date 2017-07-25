@@ -8,7 +8,7 @@ const {
   computed: { alias },
   Object: EmberObject
 } = Ember;
-const defaultAnimation   = 'check';
+const defaultAnimation = 'check';
 const animationTypeTable = EmberObject.create({
   'check': 'tcon-remove--check',
   'chevron-left': 'tcon-remove--chevron-left',
@@ -51,10 +51,21 @@ const animationTypeTable = EmberObject.create({
 export default BaseTransformicon.extend({
   layout,
 
-  label: 'remove item',
-
   classNames: ['tcon-remove'],
   classNameBindings: ['animationType', 'isRemoved'],
+
+  label: 'remove item',
+  initialState: 'is-removed',
+
+  /**
+    PUBLIC COMPONENT API
+
+    @public
+   */
+  animation: defaultAnimation,
+  'is-removed': false,
+  a: alias('animation'),
+
   /**
     Get the CSS classname corresponding to the component's current animation type.
 
@@ -79,16 +90,5 @@ export default BaseTransformicon.extend({
     get() {
       return get(this, 'is-removed') ? get(this, 'transformClass') : false;
     }
-  }),
-
-  initialState: 'is-removed',
-
-  /**
-    PUBLIC COMPONENT PROPERTIES
-
-    @public
-   */
-  animation: defaultAnimation,
-  a: alias('animation'),
-  'is-removed': false
+  })
 });

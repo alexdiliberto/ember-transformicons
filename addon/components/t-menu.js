@@ -8,7 +8,7 @@ const {
   computed: { alias },
   Object: EmberObject
 } = Ember;
-const defaultAnimation   = 'butterfly';
+const defaultAnimation = 'butterfly';
 const animationTypeTable = EmberObject.create({
   'butterfly': 'tcon-menu--xbutterfly',
   'minus': 'tcon-menu--minus',
@@ -53,9 +53,19 @@ const animationTypeTable = EmberObject.create({
 export default BaseTransformicon.extend({
   layout,
 
+  classNameBindings: ['animationType', 'isOpen'],
+
   label: 'toggle menu',
 
-  classNameBindings: ['animationType', 'isOpen'],
+  /**
+    PUBLIC COMPONENT API
+
+    @public
+   */
+  animation: defaultAnimation,
+  'is-open': false,
+  a: alias('animation'),
+
   /**
     Get the CSS classname corresponding to the component's current animation type.
 
@@ -80,14 +90,5 @@ export default BaseTransformicon.extend({
     get() {
       return get(this, 'is-open') ? get(this, 'transformClass') : false;
     }
-  }),
-
-  /**
-    PUBLIC COMPONENT PROPERTIES
-
-    @public
-   */
-  animation: defaultAnimation,
-  a: alias('animation'),
-  'is-open': false
+  })
 });

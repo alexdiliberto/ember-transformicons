@@ -30,10 +30,19 @@ const {
 export default BaseTransformicon.extend({
   layout,
 
-  label: 'toggle search',
-
   classNames: ['tcon-search--xcross'],
   classNameBindings: ['isSearching'],
+
+  label: 'toggle search',
+  initialState: 'is-searching',
+
+  /**
+    PUBLIC COMPONENT API
+
+    @public
+   */
+  'is-searching': false,
+
   /**
     Get the classname representing the `searching` toggled state for the video icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -45,14 +54,5 @@ export default BaseTransformicon.extend({
     get() {
       return get(this, 'is-searching') ? get(this, 'transformClass') : false;
     }
-  }),
-
-  initialState: 'is-searching',
-
-  /**
-    PUBLIC COMPONENT PROPERTIES
-
-    @public
-   */
-  'is-searching': false
+  })
 });

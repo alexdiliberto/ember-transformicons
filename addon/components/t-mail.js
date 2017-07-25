@@ -31,11 +31,20 @@ const {
 export default BaseTransformicon.extend({
   layout,
 
-  ariaRole: reads('type'),
-  label: 'open mailbox',
-
   classNames: ['tcon-mail--envelope'],
   classNameBindings: ['isOpen'],
+
+  label: 'open mailbox',
+
+  /**
+    PUBLIC COMPONENT API
+
+    @public
+   */
+  'is-open': true,
+
+  ariaRole: reads('type'),
+
   /**
     Get the classname representing the `open` toggled state for the mail icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -47,12 +56,5 @@ export default BaseTransformicon.extend({
     get() {
       return get(this, 'is-open') ? false : get(this, 'transformClass');
     }
-  }),
-
-  /**
-    PUBLIC COMPONENT PROPERTIES
-
-    @public
-   */
-  'is-open': true
+  })
 });

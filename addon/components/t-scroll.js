@@ -22,10 +22,9 @@ export default Component.extend({
   layout,
 
   tagName: 'span',
-
   attributeBindings: ['label:aria-label', 'aria-hidden'],
-  label: 'scroll',
-  'aria-hidden': 'true',
+  classNames: ['tcon-indicator'],
 
-  classNames: ['tcon-indicator']
+  label: 'scroll',
+  'aria-hidden': 'true'
 });
