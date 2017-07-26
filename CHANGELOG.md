@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   - Headless Chrome testing on Testem and CI
   - [`@alexdiliberto/eslint-config`](https://github.com/alexdiliberto/eslint-config) custom linting rules
+  - [`ember-open-browser`](https://github.com/jasonmit/ember-open-browser) addon
 
 ### Updated
   - CodeClimate to use Engines analysis

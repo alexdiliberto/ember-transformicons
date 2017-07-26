@@ -73,6 +73,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-helpers": "0.5.2",
+    "ember-open-browser": "^0.4.0",
     "ember-percy": "1.2.13",
     "ember-resolver": "^4.3.0",
     "ember-source": "^2.14.1",
