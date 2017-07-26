@@ -2531,9 +2531,9 @@ ember-native-dom-helpers@0.5.2:
     broccoli-funnel "^1.1.0"
     ember-cli-babel "^6.1.0"
 
-ember-open-browser@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ember-open-browser/-/ember-open-browser-0.4.0.tgz#fc0f620eb3a0e4845a07116b16bc84fb58f3f463"
+ember-open-browser@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ember-open-browser/-/ember-open-browser-0.4.1.tgz#6d8e42c2c0af26c2c1560e7d4c647a8e6603c0a1"
   dependencies:
     clean-base-url "^1.0.0"
     opn "^5.1.0"
