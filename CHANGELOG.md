@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
   - CodeClimate to use Engines analysis
   - Mocha test suite
+  - Ember CLI v2.14.1
 
 ### Removed
   - Unused Inch CI config

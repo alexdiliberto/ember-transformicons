@@ -8,13 +8,11 @@ const {
   Application
 } = Ember;
 
-let App;
-
 LinkComponent.reopen({
   attributeBindings: ['role']
 });
 
-App = Application.extend({
+const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver
