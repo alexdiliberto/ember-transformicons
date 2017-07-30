@@ -212,15 +212,9 @@ Video optional parameters:
 **[⬆️ back to top](#component-api)**
 
 ## Contributing
-**Please contribute!** This section outlines the details of collaborating on this Ember addon. You can help code, design, update documentation, fix typos, raise issues and much more.
+**Please contribute!** You can help code, design, update documentation, fix typos, raise issues and so much more.
 
-Any help is welcome and absolutely appreciated!
-
-## Backlog
-
-- [ ] Add/Update/Improve transformicons
-- [ ] More tests
-- [ ] Allow dynamic transformicon sizes
+Any help is welcome and appreciated!
 
 ## Development
 
