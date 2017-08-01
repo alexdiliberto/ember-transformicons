@@ -53,7 +53,7 @@
     "denodeify": "^1.2.1",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~2.14.1",
-    "ember-cli-addon-tests": "^0.7.1",
+    "ember-cli-addon-tests": "^0.8.0",
     "ember-cli-anybar": "0.5.0",
     "ember-cli-content-security-policy": "0.6.2",
     "ember-cli-dependency-checker": "^2.0.0",
