@@ -60,7 +60,7 @@
     "ember-cli-dependency-lint": "1.0.2",
     "ember-cli-eslint": "^4.2.0",
     "ember-cli-github-pages": "0.1.2",
-    "ember-cli-htmlbars-inline-precompile": "^0.4.3",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.7.0",
     "ember-cli-node-assets": "^0.2.2",
     "ember-cli-qunit": "^4.0.0",
