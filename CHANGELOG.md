@@ -8,11 +8,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Headless Chrome testing on Testem and CI
   - [`@alexdiliberto/eslint-config`](https://github.com/alexdiliberto/eslint-config) custom linting rules
   - [`ember-open-browser`](https://github.com/jasonmit/ember-open-browser) addon
+  - Fixed node test suite using [`ember-cli-addon-tests`](https://github.com/tomdale/ember-cli-addon-tests)
 
 ### Updated
   - CodeClimate to use Engines analysis
   - Mocha test suite
-  - Ember CLI v2.14.1
+  - Ember CLI v2.14.2
 
 ### Removed
   - Unused Inch CI config
