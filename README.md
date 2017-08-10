@@ -1,11 +1,18 @@
+<p align="center">
+  <a href="http://www.transformicons.com/">
+    <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/logo.svg">
+  </a>
+</p>
+
 # ember-cli-transformicons
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/alexdiliberto/ember-cli-transformicons.svg)](https://greenkeeper.io/)
-[![Known Vulnerabilities](https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons/badge.svg)](https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons)
-
-[![npm version][npm-version-svg]][npm-version-url]
-[![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
 [![build status][travis-badge]][travis-url]
+[![npm version][npm-version-svg]][npm-version-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/alexdiliberto/ember-cli-transformicons.svg)](https://greenkeeper.io/)
+[![Ember Version](https://embadge.io/v1/badge.svg?start=1.12.2)](https://embadge.io/)
+
+[![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
+[![Known Vulnerabilities](https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons/badge.svg)](https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons)
 [![code climate][code-climate-svg]][code-climate-url]
 
 Transformicons for Ember

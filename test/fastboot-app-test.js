@@ -9,7 +9,7 @@ const ui = new(require('console-ui'))({
   outputStream: process.stdout
 });
 
-const FASTBOOT_VERSION = '^1.0.1';
+const FASTBOOT_VERSION = '^1.0.2';
 
 describe('Acceptance | consuming fastboot app', function() {
   this.timeout(300000);
