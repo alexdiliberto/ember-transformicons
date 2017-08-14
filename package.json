@@ -87,6 +87,9 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://alexdiliberto.com/ember-cli-transformicons"
+    "demoURL": "http://alexdiliberto.com/ember-cli-transformicons",
+    "versionCompatibility": {
+      "ember": ">=1.12.2"
+    }
   }
 }

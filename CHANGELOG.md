@@ -9,7 +9,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - [`@alexdiliberto/eslint-config`](https://github.com/alexdiliberto/eslint-config) custom linting rules
   - [`ember-open-browser`](https://github.com/jasonmit/ember-open-browser) addon
   - Fixed node test suite using [`ember-cli-addon-tests`](https://github.com/tomdale/ember-cli-addon-tests)
-
+  - Transformicon SVG logo
+  - ember-try `versionCompatibility: >=1.12.2+`
+  
 ### Updated
   - CodeClimate to use Engines analysis
   - Mocha test suite
