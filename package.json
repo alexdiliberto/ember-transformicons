@@ -44,7 +44,7 @@
     "eslint-plugin-ember": "^4.1.3"
   },
   "devDependencies": {
-    "@alexdiliberto/eslint-config": "^1.1.0",
+    "@alexdiliberto/eslint-config": "^1.1.1",
     "bootstrap": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "chai": "^4.1.1",
