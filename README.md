@@ -1,23 +1,48 @@
-<p align="center">
+<h1 align="center">
   <a href="http://www.transformicons.com/">
-    <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/logo.svg">
+    <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/logo.svg" alt="Transformicons Logo">
+  </a>
+  <br>
+  <a href="https://alexdiliberto.com/ember-cli-transformicons">ember-cli-transformicons</a>
+  <br>
+</h1>
+
+<p align="center">
+  <a href="https://travis-ci.org/alexdiliberto/ember-cli-transformicons">
+    <img src="https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master"
+      alt="Build Status">
+  </a>
+  <a href="https://www.npmjs.com/package/ember-cli-transformicons">
+    <img src="https://badge.fury.io/js/ember-cli-transformicons.svg"
+      alt="NPM Version">
+  </a>
+  <a href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/alexdiliberto/ember-cli-transformicons.svg"
+      alt="Greenkeeper Badge">
+  </a>
+  <a href="https://embadge.io/">
+    <img src="https://embadge.io/v1/badge.svg?start=1.12.2"
+      alt="Ember Versions">
+  </a>
+</p>
+<p align="center">
+  <a href="http://emberobserver.com/addons/ember-cli-transformicons">
+    <img src="http://emberobserver.com/badges/ember-cli-transformicons.svg"
+      alt="Ember Observer Score">
+  </a>
+  <a href="https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons">
+    <img src="https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons/badge.svg"
+      alt="Known Vulnerabilities">
+  </a>
+  <a href="https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons">
+    <img src="https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons/badges/gpa.svg"
+      alt="Known Vulnerabilities">
   </a>
 </p>
 
-# ember-cli-transformicons
-
-[![build status][travis-badge]][travis-url]
-[![npm version][npm-version-svg]][npm-version-url]
-[![Greenkeeper badge](https://badges.greenkeeper.io/alexdiliberto/ember-cli-transformicons.svg)](https://greenkeeper.io/)
-[![Ember Version](https://embadge.io/v1/badge.svg?start=1.12.2)](https://embadge.io/)
-
-[![ember observer score][ember-observer-score-svg]][ember-observer-score-url]
-[![Known Vulnerabilities](https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons/badge.svg)](https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons)
-[![code climate][code-climate-svg]][code-climate-url]
-
-Transformicons for Ember
-
-[Demo][gh-pages-demo]
+<h3 align="center">
+  Transformicons for Ember
+</h4>
 
 ![ember-cli-transformicons demo gif][demo-gif]
 
@@ -26,6 +51,10 @@ Transformicons for Ember
 ```sh
 ember install ember-cli-transformicons
 ```
+
+## Demo
+
+https://alexdiliberto.com/ember-cli-transformicons
 
 ## Transformicon Components
 
@@ -266,19 +295,5 @@ git push origin gh-pages:gh-pages
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
-
-[npm-version-svg]: https://badge.fury.io/js/ember-cli-transformicons.svg
-[npm-version-url]: https://www.npmjs.com/package/ember-cli-transformicons
-
-[travis-url]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons
-[travis-badge]: https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master
-
-[ember-observer-score-svg]: http://emberobserver.com/badges/ember-cli-transformicons.svg
-[ember-observer-score-url]: http://emberobserver.com/addons/ember-cli-transformicons
-
-[code-climate-svg]: https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons/badges/gpa.svg
-[code-climate-url]: https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons
-
-[gh-pages-demo]: http://alexdiliberto.com/ember-cli-transformicons
 
 [demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-cli-transformicons/master/demo.gif
