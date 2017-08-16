@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="http://www.transformicons.com/">
-    <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/logo.svg" alt="Transformicons Logo">
-  </a>
+  <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/logo.svg" alt="Transformicons Logo">
   <br>
   <a href="https://alexdiliberto.com/ember-cli-transformicons">ember-cli-transformicons</a>
   <br>
@@ -41,7 +39,7 @@
 </p>
 
 <h3 align="center">
-  Transformicons for Ember
+  <a href="http://www.transformicons.com/">Transformicons</a> for Ember
 </h4>
 
 ![ember-cli-transformicons demo gif][demo-gif]
