@@ -77,7 +77,7 @@
     "ember-percy": "1.2.13",
     "ember-resolver": "^4.3.0",
     "ember-source": "^2.14.1",
-    "eslint": "^4.4.1",
+    "eslint": "^4.5.0",
     "loader.js": "4.6.0",
     "mocha": "^3.5.0",
     "request": "^2.81.0"
