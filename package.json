@@ -74,7 +74,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-native-dom-helpers": "^0.5.3",
     "ember-open-browser": "^0.5.1",
-    "ember-percy": "1.2.13",
+    "ember-percy": "1.2.15",
     "ember-resolver": "^4.3.0",
     "ember-source": "^2.14.1",
     "eslint": "^4.5.0",
