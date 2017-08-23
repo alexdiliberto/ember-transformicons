@@ -1,16 +1,11 @@
-import Ember from 'ember';
-
-const {
-  Controller,
-  Logger
-} = Ember;
+import Controller from '@ember/controller';
 
 export default Controller.extend({
   isRemoved: false,
 
   actions: {
     updateRemoveAction(isRemoved) {
-      Logger.info(`updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`);
+      console.info(`updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`);
     }
   }
 });

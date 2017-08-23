@@ -1,11 +1,6 @@
-import Ember from 'ember';
+import { computed, get } from '@ember/object';
 import layout from '../templates/components/t-form';
 import BaseTransformicon from './base-transformicon';
-
-const {
-  get,
-  computed
-} = Ember;
 
 /**
   Transformicon Form component.

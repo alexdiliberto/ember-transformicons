@@ -1,13 +1,8 @@
-import Ember from 'ember';
+import { alias } from '@ember/object/computed';
+import EmberObject, { computed, get } from '@ember/object';
 import layout from '../templates/components/t-add';
 import BaseTransformicon from './base-transformicon';
 
-const {
-  get,
-  computed,
-  computed: { alias },
-  Object: EmberObject
-} = Ember;
 const defaultAnimation = 'minus';
 const animationTypeTable = EmberObject.create({
   'minus': 'tcon-plus--minus',

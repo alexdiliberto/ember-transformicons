@@ -1,12 +1,7 @@
-import Ember from 'ember';
+import { computed, get } from '@ember/object';
+import { reads } from '@ember/object/computed';
 import layout from '../templates/components/t-mail';
 import BaseTransformicon from './base-transformicon';
-
-const {
-  get,
-  computed,
-  computed: { reads }
-} = Ember;
 
 /**
   Transformicon Mail component.
