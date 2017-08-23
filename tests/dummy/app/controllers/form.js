@@ -1,16 +1,11 @@
-import Ember from 'ember';
-
-const {
-  Controller,
-  Logger
-} = Ember;
+import Controller from '@ember/controller';
 
 export default Controller.extend({
   isSearching: false,
 
   actions: {
     updateFormAction(isSearching) {
-      Logger.info(`updateFormAction was triggered with the following arguments: isSearching=${isSearching}`);
+      console.info(`updateFormAction was triggered with the following arguments: isSearching=${isSearching}`);
     }
   }
 });

@@ -1,13 +1,8 @@
-import Ember from 'ember';
+import { alias } from '@ember/object/computed';
+import EmberObject, { computed, get } from '@ember/object';
 import layout from '../templates/components/t-grid';
 import BaseTransformicon from './base-transformicon';
 
-const {
-  get,
-  computed,
-  computed: { alias },
-  Object: EmberObject
-} = Ember;
 const defaultAnimation = 'rearrange';
 const animationTypeTable = EmberObject.create({
   'rearrange': 'tcon-grid--rearrange',

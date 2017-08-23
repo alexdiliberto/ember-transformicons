@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Fixed node test suite using [`ember-cli-addon-tests`](https://github.com/tomdale/ember-cli-addon-tests)
   - Transformicon SVG logo
   - ember-try `versionCompatibility: >=1.12.2+`
+  - [Ember RFC176](https://github.com/emberjs/rfcs/pull/176) module import syntax 
   
 ### Updated
   - CodeClimate to use Engines analysis

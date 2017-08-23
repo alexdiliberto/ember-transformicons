@@ -3,6 +3,7 @@ module.exports = {
     embertest: true
   },
   rules: {
-    'ember/alias-model-in-controller': 'off'
+    'ember/alias-model-in-controller': 'off',
+    'no-console': 'off'
   }
 };

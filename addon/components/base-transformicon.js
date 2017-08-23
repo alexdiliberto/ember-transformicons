@@ -1,10 +1,6 @@
-import Ember from 'ember';
-
-const {
-  get,
-  assert,
-  Component
-} = Ember;
+import { get } from '@ember/object';
+import { assert } from '@ember/debug';
+import Component from '@ember/component';
 
 /**
   Transformicon Base component.

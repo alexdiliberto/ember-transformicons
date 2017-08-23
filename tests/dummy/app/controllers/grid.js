@@ -1,16 +1,11 @@
-import Ember from 'ember';
-
-const {
-  Controller,
-  Logger
-} = Ember;
+import Controller from '@ember/controller';
 
 export default Controller.extend({
   isGridOpen: false,
 
   actions: {
     updateGridAction(isOpen) {
-      Logger.info(`updateGridAction was triggered with the following arguments: isOpen=${isOpen}`);
+      console.info(`updateGridAction was triggered with the following arguments: isOpen=${isOpen}`);
     }
   }
 });
