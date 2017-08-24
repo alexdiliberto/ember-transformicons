@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet...
+  
+  
+## [v1.1.0] - 2017-08-24
+### Added
   - Headless Chrome testing on Testem and CI
   - [`@alexdiliberto/eslint-config`](https://github.com/alexdiliberto/eslint-config) custom linting rules
   - [`ember-open-browser`](https://github.com/jasonmit/ember-open-browser) addon
@@ -273,7 +278,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.3...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.0...HEAD
+[v1.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.3...v1.1.0
 [v1.0.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...v1.0.3
 [v1.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...v1.0.2
 [v1.0.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...v1.0.1

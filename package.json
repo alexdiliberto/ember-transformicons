@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-transformicons",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Transformicons addon for your Ember CLI project",
   "keywords": [
     "ember-addon",
