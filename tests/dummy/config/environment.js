@@ -3,13 +3,13 @@
 
 const CONTENT_SECURITY_POLICY = {
   'default-src': ["'none'"],
-  'script-src':  ["'self'"],
-  'font-src':    ["'self'"],
+  'script-src': ["'self'", 'https://maxcdn.bootstrapcdn.com'],
+  'font-src': ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https://fonts.gstatic.com'],
   'connect-src': ["'self'"],
-  'img-src':     ["'self'", 'https://camo.githubusercontent.com'],
-  'style-src':   ["'self'"],
-  'media-src':   ["'self'"],
-  'frame-src':   ["'self'", 'https://ghbtns.com/github-btn.html']
+  'img-src': ["'self'", 'https://camo.githubusercontent.com'],
+  'style-src': ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https://fonts.googleapis.com'],
+  'media-src': ["'self'"],
+  'frame-src': ["'self'", 'https://ghbtns.com/github-btn.html']
 };
 
 module.exports = function(environment) {

@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - SCSS lint `app.scss` to improve Code Climate
+  - Fetch Bootstrap assets directly from CDN
 
 ### Removed
   - Nothing yet...

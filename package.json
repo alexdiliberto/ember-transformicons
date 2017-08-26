@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^1.1.1",
-    "bootstrap": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "chai": "^4.1.1",
     "chalk": "^2.1.0",
@@ -62,7 +61,6 @@
     "ember-cli-github-pages": "0.1.2",
     "ember-cli-htmlbars-inline-precompile": "^1.0.2",
     "ember-cli-inject-live-reload": "^1.7.0",
-    "ember-cli-node-assets": "^0.2.2",
     "ember-cli-qunit": "^4.0.0",
     "ember-cli-sass": "^7.0.0",
     "ember-cli-shims": "^1.1.0",
