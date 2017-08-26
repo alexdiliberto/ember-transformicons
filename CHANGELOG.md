@@ -6,8 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
   - Nothing yet...
-  
-  
+
+### Updated
+  - SCSS lint `app.scss` to improve Code Climate
+
+### Removed
+  - Nothing yet...
+
+
 ## [v1.1.0] - 2017-08-24
 ### Added
   - Headless Chrome testing on Testem and CI

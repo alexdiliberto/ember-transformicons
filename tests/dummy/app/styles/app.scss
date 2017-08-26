@@ -3,17 +3,17 @@ html {
 }
 
 .mail {
-  margin-bottom: 15px;
   display: inline-block;
+  margin-bottom: 15px;
 }
 
-#scroll-default {
+.scroll-default {
   display: block;
 }
 
 .github-ribbon {
-  position: absolute;
-  top: 0;
-  right: 0;
   border: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
