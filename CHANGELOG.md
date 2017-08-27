@@ -5,13 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet...
+
+### Updated
+  - Nothing yet...
+
+### Removed
+  - Nothing yet...
+
+
+## [v1.1.2] - 2017-08-27
+### Added
   - `ember-cli-app-version` to display the current release version in Demo app header
 
 ### Updated
   - Demo app default `<title>`
-
-### Removed
-  - Nothing yet...
 
 
 ## [v1.1.1] - 2017-08-27
@@ -291,7 +299,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.1...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.2...HEAD
+[v1.1.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.1...v1.1.2
 [v1.1.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.0...v1.1.1
 [v1.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.3...v1.1.0
 [v1.0.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...v1.0.3
