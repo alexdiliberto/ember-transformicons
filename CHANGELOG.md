@@ -8,13 +8,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Nothing yet...
 
 ### Updated
-  - SCSS lint `app.scss` to improve Code Climate
-  - Fetch Bootstrap assets directly from CDN
-  - Demo page updates
+  - Nothing yet...
 
 ### Removed
   - Nothing yet...
 
+
+## [v1.1.1] - 2017-08-27
+### Updated
+  - SCSS lint `app.scss` to improve Code Climate
+  - Fetch Bootstrap assets directly from CDN
+  - Demo page updates
+  
 
 ## [v1.1.0] - 2017-08-24
 ### Added
@@ -286,7 +291,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.1...HEAD
+[v1.1.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.0...v1.1.1
 [v1.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.3...v1.1.0
 [v1.0.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...v1.0.3
 [v1.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...v1.0.2
