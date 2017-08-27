@@ -5,10 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Nothing yet...
+  - `ember-cli-app-version` to display the current release version in Demo app header
 
 ### Updated
-  - Nothing yet...
+  - Demo app default `<title>`
 
 ### Removed
   - Nothing yet...

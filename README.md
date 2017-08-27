@@ -284,11 +284,6 @@ git commit
 git checkout master
 ember github-pages:commit --message "Release v<release_num>"
 git push origin gh-pages:gh-pages
-
-# Some Cleanup Items:
-# - Don't forget to update the `index.html`:
-#     <!-- v[rel-ver] -->
-#     <title>Demo App | ember-cli-transformicons</title>
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
