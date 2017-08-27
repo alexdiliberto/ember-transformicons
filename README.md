@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/logo.svg" alt="Transformicons Logo">
+  <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/tests/dummy/public/img/logo.svg" alt="Transformicons Logo">
   <br>
   <a href="https://alexdiliberto.com/ember-cli-transformicons">ember-cli-transformicons</a>
   <br>
