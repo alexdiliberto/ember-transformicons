@@ -1,7 +1,7 @@
 import { alias } from '@ember/object/computed';
 import EmberObject, { computed, get } from '@ember/object';
 import layout from '../templates/components/t-grid';
-import BaseTransformicon from './base-transformicon';
+import BaseTransformicon from './-private/base';
 
 const defaultAnimation = 'rearrange';
 const animationTypeTable = EmberObject.create({

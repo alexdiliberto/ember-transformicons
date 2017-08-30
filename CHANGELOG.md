@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `.jsbeautifyrc` file
 
 ### Updated
-  - Nothing yet...
+  - `mv addon/components/base-transformicon.js addon/components/-private/base.js`
 
 ### Removed
   - Nothing yet...

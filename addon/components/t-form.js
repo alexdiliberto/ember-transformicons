@@ -1,6 +1,6 @@
 import { computed, get } from '@ember/object';
 import layout from '../templates/components/t-form';
-import BaseTransformicon from './base-transformicon';
+import BaseTransformicon from './-private/base';
 
 /**
   Transformicon Form component.

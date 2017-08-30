@@ -1,7 +1,7 @@
 import { alias } from '@ember/object/computed';
 import EmberObject, { computed, get } from '@ember/object';
 import layout from '../templates/components/t-remove';
-import BaseTransformicon from './base-transformicon';
+import BaseTransformicon from './-private/base';
 
 const defaultAnimation = 'check';
 const animationTypeTable = EmberObject.create({

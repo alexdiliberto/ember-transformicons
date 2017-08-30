@@ -1,7 +1,7 @@
 import { computed, get } from '@ember/object';
 import { reads } from '@ember/object/computed';
 import layout from '../templates/components/t-mail';
-import BaseTransformicon from './base-transformicon';
+import BaseTransformicon from './-private/base';
 
 /**
   Transformicon Mail component.
