@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Nothing yet...
+  - `.jsbeautifyrc` file
 
 ### Updated
   - Nothing yet...
