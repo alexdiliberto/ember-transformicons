@@ -2,19 +2,26 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-
 ## [Unreleased][unreleased]
+### Added
+  - Nothing yet...
+
+### Updated
+  - Nothing yet...
+
+### Removed
+  - Nothing yet...
+  
+
+## [v2.0.0] - 2017-09-03
 ### Added
   - `.jsbeautifyrc` file
 
 ### Updated
   - `mv addon/components/base-transformicon.js addon/components/-private/base.js`
-  - addon name is now `ember-transformicons`
-  -  Ember CLI v2.15.0
-
-### Removed
-  - Nothing yet...
-
+  - BREAKING CHANGE: Addon's name is now `ember-transformicons` to better align with naming conventions
+  - Ember CLI v2.15.0
+  
 
 ## [v1.1.2] - 2017-08-27
 ### Added
@@ -301,7 +308,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.2...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.0...HEAD
+[v2.0.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.2...v2.0.0
 [v1.1.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.1...v1.1.2
 [v1.1.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.0...v1.1.1
 [v1.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.0.3...v1.1.0
