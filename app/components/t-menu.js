@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-transformicons/components/t-menu';
+export { default } from 'ember-transformicons/components/t-menu';

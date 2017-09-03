@@ -1,21 +1,21 @@
 <h1 align="center">
-  <img src="https://cdn.rawgit.com/alexdiliberto/ember-cli-transformicons/master/tests/dummy/public/img/logo.svg" alt="Transformicons Logo">
+  <img src="https://cdn.rawgit.com/alexdiliberto/ember-transformicons/master/tests/dummy/public/img/logo.svg" alt="Transformicons Logo">
   <br>
-  <a href="https://alexdiliberto.com/ember-cli-transformicons">ember-cli-transformicons</a>
+  <a href="https://alexdiliberto.com/ember-transformicons">ember-transformicons</a>
   <br>
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/alexdiliberto/ember-cli-transformicons">
-    <img src="https://travis-ci.org/alexdiliberto/ember-cli-transformicons.svg?branch=master"
+  <a href="https://travis-ci.org/alexdiliberto/ember-transformicons">
+    <img src="https://travis-ci.org/alexdiliberto/ember-transformicons.svg?branch=master"
       alt="Build Status">
   </a>
-  <a href="https://www.npmjs.com/package/ember-cli-transformicons">
-    <img src="https://badge.fury.io/js/ember-cli-transformicons.svg"
+  <a href="https://www.npmjs.com/package/ember-transformicons">
+    <img src="https://badge.fury.io/js/ember-transformicons.svg"
       alt="NPM Version">
   </a>
   <a href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/alexdiliberto/ember-cli-transformicons.svg"
+    <img src="https://badges.greenkeeper.io/alexdiliberto/ember-transformicons.svg"
       alt="Greenkeeper Badge">
   </a>
   <a href="https://embadge.io/">
@@ -24,16 +24,16 @@
   </a>
 </p>
 <p align="center">
-  <a href="http://emberobserver.com/addons/ember-cli-transformicons">
-    <img src="http://emberobserver.com/badges/ember-cli-transformicons.svg"
+  <a href="http://emberobserver.com/addons/ember-transformicons">
+    <img src="http://emberobserver.com/badges/ember-transformicons.svg"
       alt="Ember Observer Score">
   </a>
-  <a href="https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons">
-    <img src="https://snyk.io/test/github/alexdiliberto/ember-cli-transformicons/badge.svg"
+  <a href="https://snyk.io/test/github/alexdiliberto/ember-transformicons">
+    <img src="https://snyk.io/test/github/alexdiliberto/ember-transformicons/badge.svg"
       alt="Known Vulnerabilities">
   </a>
-  <a href="https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons">
-    <img src="https://codeclimate.com/github/alexdiliberto/ember-cli-transformicons/badges/gpa.svg"
+  <a href="https://codeclimate.com/github/alexdiliberto/ember-transformicons">
+    <img src="https://codeclimate.com/github/alexdiliberto/ember-transformicons/badges/gpa.svg"
       alt="Known Vulnerabilities">
   </a>
 </p>
@@ -42,17 +42,17 @@
   <a href="http://www.transformicons.com/">Transformicons</a> for Ember
 </h4>
 
-![ember-cli-transformicons demo gif][demo-gif]
+![ember-transformicons demo gif][demo-gif]
 
 ## Installation
 
 ```sh
-ember install ember-cli-transformicons
+ember install ember-transformicons
 ```
 
 ## Demo
 
-https://alexdiliberto.com/ember-cli-transformicons
+https://alexdiliberto.com/ember-transformicons
 
 ## Transformicon Components
 
@@ -255,8 +255,8 @@ Any help is welcome and appreciated!
 ### Setup
 
 ```sh
-git clone git@github.com:alexdiliberto/ember-cli-transformicons.git
-cd ember-cli-transformicons
+git clone git@github.com:alexdiliberto/ember-transformicons.git
+cd ember-transformicons
 yarn
 ```
 
@@ -289,4 +289,4 @@ git push origin gh-pages:gh-pages
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
 
-[demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-cli-transformicons/master/demo.gif
+[demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-transformicons/master/demo.gif

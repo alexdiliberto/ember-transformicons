@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-transformicons/components/t-grid';
+export { default } from 'ember-transformicons/components/t-grid';

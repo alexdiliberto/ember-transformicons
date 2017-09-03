@@ -1,4 +1,4 @@
-# ember-cli-transformicons Changelog
+# ember-transformicons Changelog
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - `mv addon/components/base-transformicon.js addon/components/-private/base.js`
+  - addon name is now `ember-transformicons`
+  -  Ember CLI v2.15.0
 
 ### Removed
   - Nothing yet...
@@ -299,26 +301,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.2...HEAD
-[v1.1.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.1...v1.1.2
-[v1.1.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.1.0...v1.1.1
-[v1.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.3...v1.1.0
-[v1.0.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.2...v1.0.3
-[v1.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.1...v1.0.2
-[v1.0.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v1.0.0...v1.0.1
-[v1.0.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.9.0...v1.0.0
-[v0.9.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.1...v0.9.0
-[v0.8.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.8.0...v0.8.1
-[v0.8.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.7.0...v0.8.0
-[v0.7.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.6.0...v0.7.0
-[v0.6.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.5.0...v0.6.0
-[v0.5.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.4.0...v0.5.0
-[v0.4.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.2...v0.4.0
-[v0.3.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.3.0...v0.3.2
-[v0.3.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.2.0...v0.3.0
-[v0.2.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.3...v0.2.0
-[v0.1.3]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.2...v0.1.3
-[v0.1.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.1...v0.1.2
-[v0.1.1]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.1.0...v0.1.1
-[v0.1.0]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.0.2...v0.1.0
-[v0.0.2]:      https://github.com/alexdiliberto/ember-cli-transformicons/compare/v0.0.1...v0.0.2
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.2...HEAD
+[v1.1.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.1...v1.1.2
+[v1.1.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.0...v1.1.1
+[v1.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.0.3...v1.1.0
+[v1.0.3]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.0.2...v1.0.3
+[v1.0.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.0.1...v1.0.2
+[v1.0.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.0.0...v1.0.1
+[v1.0.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.9.0...v1.0.0
+[v0.9.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.8.1...v0.9.0
+[v0.8.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.8.0...v0.8.1
+[v0.8.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.7.0...v0.8.0
+[v0.7.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.6.0...v0.7.0
+[v0.6.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.5.0...v0.6.0
+[v0.5.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.4.0...v0.5.0
+[v0.4.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.3.2...v0.4.0
+[v0.3.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.3.0...v0.3.2
+[v0.3.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.2.0...v0.3.0
+[v0.2.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.1.3...v0.2.0
+[v0.1.3]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.1.2...v0.1.3
+[v0.1.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.1.1...v0.1.2
+[v0.1.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.1.0...v0.1.1
+[v0.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.0.2...v0.1.0
+[v0.0.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v0.0.1...v0.0.2

@@ -29,7 +29,7 @@ describe('Acceptance | consuming non-fastboot app', function() {
     return app.stopServer();
   });
 
-  it('/assets/non-fastboot-app.js includes all `ember-cli-transformicons` exported `app` modules', function() {
+  it('/assets/non-fastboot-app.js includes all `ember-transformicons` exported `app` modules', function() {
     return request('http://localhost:49741/assets/non-fastboot-app.js')
       .then((response) => {
         expect(response.statusCode).to.equal(200);

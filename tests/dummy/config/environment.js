@@ -56,7 +56,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/ember-cli-transformicons/';
+    ENV.rootURL = '/ember-transformicons/';
     ENV.locationType = 'hash';
   }
 
