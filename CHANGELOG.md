@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - `mv addon/components/base-transformicon.js addon/components/-private/base.js`
+  - addon name is now `ember-transformicons`
+  -  Ember CLI v2.15.0
 
 ### Removed
   - Nothing yet...
