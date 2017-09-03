@@ -50,6 +50,8 @@
 ember install ember-transformicons
 ```
 
+_NOTE:_ This addon was recently renamed from `ember-cli-transformicons` to `ember-transformicons`. Please update your Ember applications to use the new naming convention.
+
 ## Demo
 
 https://alexdiliberto.com/ember-transformicons
