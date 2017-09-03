@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-transformicons/components/t-video';
+export { default } from 'ember-transformicons/components/t-video';

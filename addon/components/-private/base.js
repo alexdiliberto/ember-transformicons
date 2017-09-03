@@ -61,7 +61,7 @@ export default Component.extend({
     this.toggleProperty(initStateProp);
 
     if (onclick) {
-      assert(`[ember-cli-transformicons] ${this.toString()} \`onclick\` action handler must be a valid closure action`, typeof onclick === 'function');
+      assert(`[ember-transformicons] ${this.toString()} \`onclick\` action handler must be a valid closure action`, typeof onclick === 'function');
 
       let boolInitStateProp = get(this, initStateProp);
       onclick(boolInitStateProp);
