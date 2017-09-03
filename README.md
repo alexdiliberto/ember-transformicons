@@ -278,8 +278,7 @@ yarn test:all # ember try:each && mocha test/*-test.js
 
 ```sh
 git checkout gh-pages
-rm -rf assets/
-git commit
+rm -rf assets/ && git add . && git commit -m 'Remove old assets'
 
 git checkout master
 ember github-pages:commit --message "Release v<release_num>"
