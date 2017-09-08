@@ -51,7 +51,7 @@
     "cross-env": "^5.0.5",
     "denodeify": "^1.2.1",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "~2.15.0",
+    "ember-cli": "~2.15.1",
     "ember-cli-addon-tests": "^0.9.2",
     "ember-cli-anybar": "0.5.0",
     "ember-cli-app-version": "^3.1.0",
@@ -76,7 +76,7 @@
     "ember-percy": "1.2.16",
     "ember-resolver": "^4.3.0",
     "ember-source": "^2.15.0",
-    "eslint": "^4.5.0",
+    "eslint": "^4.6.1",
     "loader.js": "4.6.0",
     "mocha": "^3.5.0",
     "request": "^2.81.0"

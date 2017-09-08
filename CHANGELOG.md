@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Nothing yet...
 
 ### Updated
-  - Nothing yet...
+  - Ember CLI v2.15.1
 
 ### Removed
   - `useYarn` from the ember-try config. [It is causing issues when running `yarn test` locally](https://github.com/ember-cli/ember-try/issues/147).
