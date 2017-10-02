@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
   - `useYarn` from the ember-try config. [It is causing issues when running `yarn test` locally](https://github.com/ember-cli/ember-try/issues/147).
+  - All `a="typo"` components from the demo app
   
 
 ## [v2.0.0] - 2017-09-03
