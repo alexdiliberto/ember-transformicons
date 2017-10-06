@@ -78,7 +78,7 @@
     "ember-source": "^2.15.0",
     "eslint": "^4.6.1",
     "loader.js": "4.6.0",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.1",
     "request": "^2.81.0"
   },
   "engines": {
