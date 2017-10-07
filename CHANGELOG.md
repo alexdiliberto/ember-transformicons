@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
   - `greenkeeper-lockfile` for Travis CI
-
+  - Adding back `useYarn` to ember-try to fix CI
+  
 ### Updated
   - Ember CLI v2.15.1
 
