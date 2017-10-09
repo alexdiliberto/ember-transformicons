@@ -2,7 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+
 ## [Unreleased][unreleased]
+### Added
+  - Nothing yet...
+  
+  
+## [v2.0.1] - 2017-10-09
 ### Added
   - `greenkeeper-lockfile` for Travis CI
   - Adding back `useYarn` to ember-try to fix CI
@@ -311,7 +317,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.1...HEAD
+[v2.0.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.0...v2.0.1
 [v2.0.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.2...v2.0.0
 [v1.1.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.1...v1.1.2
 [v1.1.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.0...v1.1.1
