@@ -262,13 +262,13 @@ cd ember-transformicons
 yarn
 ```
 
-## Server
+## Serve Demo App
 
 ```sh
 ember s
 ```
 
-## Test Suite
+## Test
 
 ```sh
 yarn test # ember try:each
@@ -276,15 +276,10 @@ yarn mocha # cross-env DEBUG=ember-cli-addon-tests mocha
 yarn test:all # ember try:each && mocha test/*-test.js
 ```
 
-## Update Demo App
+## Deploy
 
 ```sh
-git checkout gh-pages
-rm -rf assets/ && git add . && git commit -m 'Remove old assets'
-
-git checkout master
-ember github-pages:commit --message "Release v<release_num>"
-git push origin gh-pages:gh-pages
+ember deploy production
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
