@@ -51,7 +51,7 @@
     "cross-env": "^5.0.5",
     "denodeify": "^1.2.1",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "~2.15.1",
+    "ember-cli": "~2.16.1",
     "ember-cli-addon-tests": "^0.10.0",
     "ember-cli-anybar": "0.5.0",
     "ember-cli-app-version": "^3.1.0",
