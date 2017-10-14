@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Ember CLI v2.16.1
+  - Ember CLI v2.16.2
   
   
 ## [v2.0.1] - 2017-10-09
