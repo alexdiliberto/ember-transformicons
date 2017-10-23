@@ -1,82 +1,78 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from 'ember-test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
 import { click, find } from 'ember-native-dom-helpers';
 
-/*
- * {{t-grid animation="collapse"}}
- */
-moduleForComponent('t-grid', 'Integration | Component | t grid', {
-  integration: true
-});
+module('Integration | Component | t grid', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  assert.expect(2);
+  test('it renders', async function(assert) {
+    assert.expect(2);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    await render(hbs`{{t-grid}}`);
 
-  this.render(hbs`{{t-grid}}`);
+    assert.equal(find('button').textContent.trim(), 'toggle grid');
 
-  assert.equal(find('button').textContent.trim(), 'toggle grid');
+    // Template block usage:
+    await render(hbs`
+      {{#t-grid}}
+        template block text
+      {{/t-grid}}
+    `);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#t-grid}}
-      template block text
-    {{/t-grid}}
-  `);
+    assert.equal(find('button').textContent.trim(), 'toggle grid');
+  });
 
-  assert.equal(find('button').textContent.trim(), 'toggle grid');
-});
+  test('it creates a grid transformicon with defaults', async function(assert) {
+    assert.expect(6);
 
-test('it creates a grid transformicon with defaults', function(assert) {
-  assert.expect(6);
+    await render(hbs`{{t-grid}}`);
+    percySnapshot(assert);
 
-  this.render(hbs`{{t-grid}}`);
-  percySnapshot(assert);
+    let button = find('button');
 
-  let button = find('button');
+    assert.equal(button.getAttribute('type'), 'button');
+    assert.equal(button.getAttribute('aria-label'), 'toggle grid');
+    assert.ok(button.classList.contains('tcon'));
+    assert.ok(button.classList.contains('tcon-grid'));
+    assert.ok(button.classList.contains('tcon-grid--rearrange'));
+    assert.notOk(button.classList.contains('tcon-transform'));
+  });
 
-  assert.equal(button.getAttribute('type'), 'button');
-  assert.equal(button.getAttribute('aria-label'), 'toggle grid');
-  assert.ok(button.classList.contains('tcon'));
-  assert.ok(button.classList.contains('tcon-grid'));
-  assert.ok(button.classList.contains('tcon-grid--rearrange'));
-  assert.notOk(button.classList.contains('tcon-transform'));
-});
+  test('it creates a grid transformicon with `is-open=true`', async function(assert) {
+    assert.expect(1);
 
-test('it creates a grid transformicon with `is-open=true`', function(assert) {
-  assert.expect(1);
+    await render(hbs`{{t-grid is-open=true}}`);
+    percySnapshot(assert);
 
-  this.render(hbs`{{t-grid is-open=true}}`);
-  percySnapshot(assert);
+    let button = find('button');
 
-  let button = find('button');
+    assert.ok(button.classList.contains('tcon-transform'));
+  });
 
-  assert.ok(button.classList.contains('tcon-transform'));
-});
+  test('it creates a grid transformicon with a non-default animation `a="collapse"`', async function(assert) {
+    assert.expect(1);
 
-test('it creates a grid transformicon with a non-default animation `a="collapse"`', function(assert) {
-  assert.expect(1);
+    await render(hbs`{{t-grid a="collapse"}}`);
 
-  this.render(hbs`{{t-grid a="collapse"}}`);
+    let button = find('button');
 
-  let button = find('button');
+    assert.ok(button.classList.contains('tcon-grid--collapse'));
+  });
 
-  assert.ok(button.classList.contains('tcon-grid--collapse'));
-});
+  test('user can click on the transformicon', async function(assert) {
+    assert.expect(2);
 
-test('user can click on the transformicon', function(assert) {
-  assert.expect(2);
+    await render(hbs`{{t-grid id="t-grid"}}`);
 
-  this.render(hbs`{{t-grid id="t-grid"}}`);
+    let button = find('#t-grid');
+    assert.equal(button.classList.contains('tcon-transform'), false);
 
-  let button = find('#t-grid');
-  assert.equal(button.classList.contains('tcon-transform'), false);
+    click('#t-grid');
+    percySnapshot(assert);
 
-  click('#t-grid');
-  percySnapshot(assert);
-
-  assert.equal(button.classList.contains('tcon-transform'), true);
+    assert.equal(button.classList.contains('tcon-transform'), true);
+  });
 });
