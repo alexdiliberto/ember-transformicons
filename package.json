@@ -41,7 +41,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.9.2",
     "ember-cli-htmlbars": "^2.0.2",
-    "eslint-plugin-ember": "^4.6.2"
+    "eslint-plugin-ember": "^5.0.0"
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^1.1.1",
