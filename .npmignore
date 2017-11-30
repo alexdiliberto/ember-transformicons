@@ -15,5 +15,10 @@ bower.json
 ember-cli-build.js
 testem.js
 
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try
+
 /*.sublime-workspace
 /*.sublime-project

@@ -28,7 +28,7 @@
   "scripts": {
     "postinstall": "npm rebuild node-sass",
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember serve",
     "test": "ember try:each",
     "mocha": "cross-env DEBUG=ember-cli-addon-tests mocha",
     "test:all": "yarn test && mocha",
@@ -67,7 +67,7 @@
     "ember-cli-inject-live-reload": "^1.7.0",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-sass": "^7.1.1",
-    "ember-cli-shims": "^1.1.0",
+    "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
     "ember-disable-prototype-extensions": "^1.1.3",
