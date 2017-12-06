@@ -2338,6 +2338,24 @@ ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-be
     clone "^2.0.0"
     ember-cli-version-checker "^2.0.0"
 
+ember-cli-babel@^6.10.0:
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.10.0.tgz#81424acd1d97fb13658168121eeb2007d6edee84"
+  dependencies:
+    amd-name-resolver "0.0.7"
+    babel-plugin-debug-macros "^0.1.11"
+    babel-plugin-ember-modules-api-polyfill "^2.0.1"
+    babel-plugin-transform-es2015-modules-amd "^6.24.0"
+    babel-polyfill "^6.16.0"
+    babel-preset-env "^1.5.1"
+    broccoli-babel-transpiler "^6.1.2"
+    broccoli-debug "^0.6.2"
+    broccoli-funnel "^1.0.0"
+    broccoli-source "^1.1.0"
+    clone "^2.0.0"
+    ember-cli-version-checker "^2.1.0"
+    semver "^5.4.1"
+
 ember-cli-babel@^6.9.2:
   version "6.9.2"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.9.2.tgz#ab9c650e1fdf229e70936d9629aba699a355ab40"
@@ -2762,12 +2780,12 @@ ember-open-browser@^0.5.1:
     cross-spawn "^5.1.0"
     opn "^5.1.0"
 
-ember-percy@1.2.21:
-  version "1.2.21"
-  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.2.21.tgz#97201bd850bb65d3c8544cda1aea2ea3fa6d1120"
+ember-percy@1.2.22:
+  version "1.2.22"
+  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.2.22.tgz#10e0db4492578998a46cc9b6d869b411c830c862"
   dependencies:
     body-parser "^1.15.0"
-    ember-cli-babel "^5.1.7"
+    ember-cli-babel "^6.10.0"
     es6-promise-pool "^2.4.1"
     percy-client "^2.4.2"
     walk "^2.3.9"
