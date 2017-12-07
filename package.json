@@ -75,7 +75,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-native-dom-helpers": "^0.5.5",
+    "ember-native-dom-helpers": "^0.6.0",
     "ember-open-browser": "^0.5.1",
     "ember-percy": "1.2.22",
     "ember-resolver": "^4.3.0",
