@@ -79,7 +79,7 @@
     "ember-open-browser": "^0.5.1",
     "ember-percy": "1.2.22",
     "ember-resolver": "^4.3.0",
-    "ember-source": "~2.17.0",
+    "ember-source": "~2.18.0",
     "eslint": "^4.11.0",
     "loader.js": "4.6.0",
     "mocha": "^4.0.1",
