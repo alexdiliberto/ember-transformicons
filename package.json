@@ -36,12 +36,12 @@
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s",
     "build:stats": "CONCAT_STATS=true yarn build",
     "lint": "eslint addon app test tests *.js",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "lint:fix": "yarn lint -- --fix"
   },
   "dependencies": {
     "ember-cli-babel": "^6.9.2",
-    "ember-cli-htmlbars": "^2.0.2",
-    "eslint-plugin-ember": "^5.0.0"
+    "ember-cli-htmlbars": "^2.0.2"
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^1.1.1",
@@ -51,7 +51,7 @@
     "cross-env": "^5.1.1",
     "denodeify": "^1.2.1",
     "ember-ajax": "^3.0.0",
-    "ember-cli": "~2.17.0",
+    "ember-cli": "~2.18.0",
     "ember-cli-addon-tests": "^0.11.0",
     "ember-cli-anybar": "0.5.0",
     "ember-cli-app-version": "^3.1.0",
@@ -79,8 +79,10 @@
     "ember-open-browser": "^0.5.1",
     "ember-percy": "1.2.22",
     "ember-resolver": "^4.3.0",
-    "ember-source": "~2.17.0",
+    "ember-source": "~2.18.0",
     "eslint": "^4.11.0",
+    "eslint-plugin-ember": "^5.0.0",
+    "eslint-plugin-node": "^5.2.1",
     "loader.js": "4.6.0",
     "mocha": "^4.0.1",
     "request": "^2.81.0"
