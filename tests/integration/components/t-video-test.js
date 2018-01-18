@@ -1,9 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from 'ember-test-helpers';
+import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
-import { click, find } from 'ember-native-dom-helpers';
 
 module('Integration | Component | t video', function(hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +12,7 @@ module('Integration | Component | t video', function(hooks) {
 
     await render(hbs`{{t-video}}`);
 
-    assert.equal(find('button').textContent.trim(), 'play video');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'play video');
 
     // Template block usage:
     await render(hbs`
@@ -22,7 +21,7 @@ module('Integration | Component | t video', function(hooks) {
       {{/t-video}}
     `);
 
-    assert.equal(find('button').textContent.trim(), 'play video');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'play video');
   });
 
   test('it creates a video transformicon with defaults', async function(assert) {
@@ -31,7 +30,7 @@ module('Integration | Component | t video', function(hooks) {
     await render(hbs`{{t-video}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.equal(button.getAttribute('role'), 'button');
     assert.equal(button.getAttribute('type'), 'button');
@@ -47,7 +46,7 @@ module('Integration | Component | t video', function(hooks) {
     await render(hbs`{{t-video is-playing=true}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-transform'));
   });
@@ -57,10 +56,10 @@ module('Integration | Component | t video', function(hooks) {
 
     await render(hbs`{{t-video id="t-video"}}`);
 
-    let button = find('#t-video');
+    let button = this.element.querySelector('#t-video');
     assert.equal(button.classList.contains('tcon-transform'), false);
 
-    click('#t-video');
+    await click('#t-video');
     percySnapshot(assert);
 
     assert.equal(button.classList.contains('tcon-transform'), true);

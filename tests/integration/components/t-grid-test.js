@@ -1,9 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from 'ember-test-helpers';
+import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
-import { click, find } from 'ember-native-dom-helpers';
 
 module('Integration | Component | t grid', function(hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +12,7 @@ module('Integration | Component | t grid', function(hooks) {
 
     await render(hbs`{{t-grid}}`);
 
-    assert.equal(find('button').textContent.trim(), 'toggle grid');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle grid');
 
     // Template block usage:
     await render(hbs`
@@ -22,7 +21,7 @@ module('Integration | Component | t grid', function(hooks) {
       {{/t-grid}}
     `);
 
-    assert.equal(find('button').textContent.trim(), 'toggle grid');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle grid');
   });
 
   test('it creates a grid transformicon with defaults', async function(assert) {
@@ -31,7 +30,7 @@ module('Integration | Component | t grid', function(hooks) {
     await render(hbs`{{t-grid}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.equal(button.getAttribute('type'), 'button');
     assert.equal(button.getAttribute('aria-label'), 'toggle grid');
@@ -47,7 +46,7 @@ module('Integration | Component | t grid', function(hooks) {
     await render(hbs`{{t-grid is-open=true}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-transform'));
   });
@@ -57,7 +56,7 @@ module('Integration | Component | t grid', function(hooks) {
 
     await render(hbs`{{t-grid a="collapse"}}`);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-grid--collapse'));
   });
@@ -67,10 +66,10 @@ module('Integration | Component | t grid', function(hooks) {
 
     await render(hbs`{{t-grid id="t-grid"}}`);
 
-    let button = find('#t-grid');
+    let button = this.element.querySelector('#t-grid');
     assert.equal(button.classList.contains('tcon-transform'), false);
 
-    click('#t-grid');
+    await click('#t-grid');
     percySnapshot(assert);
 
     assert.equal(button.classList.contains('tcon-transform'), true);

@@ -1,9 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from 'ember-test-helpers';
+import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
-import { click, find } from 'ember-native-dom-helpers';
 
 module('Integration | Component | t form', function(hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +12,7 @@ module('Integration | Component | t form', function(hooks) {
 
     await render(hbs`{{t-form}}`);
 
-    assert.equal(find('button').textContent.trim(), 'toggle search');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle search');
 
     // Template block usage:
     await render(hbs`
@@ -22,7 +21,7 @@ module('Integration | Component | t form', function(hooks) {
       {{/t-form}}
     `);
 
-    assert.equal(find('button').textContent.trim(), 'toggle search');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle search');
   });
 
   test('it creates a form transformicon with defaults', async function(assert) {
@@ -31,7 +30,7 @@ module('Integration | Component | t form', function(hooks) {
     await render(hbs`{{t-form}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.equal(button.getAttribute('type'), 'button');
     assert.equal(button.getAttribute('aria-label'), 'toggle search');
@@ -46,7 +45,7 @@ module('Integration | Component | t form', function(hooks) {
     await render(hbs`{{t-form is-searching=true}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-transform'));
   });
@@ -56,10 +55,10 @@ module('Integration | Component | t form', function(hooks) {
 
     await render(hbs`{{t-form id="t-form"}}`);
 
-    let button = find('#t-form');
+    let button = this.element.querySelector('#t-form');
     assert.equal(button.classList.contains('tcon-transform'), false);
 
-    click('#t-form');
+    await click('#t-form');
     percySnapshot(assert);
 
     assert.equal(button.classList.contains('tcon-transform'), true);

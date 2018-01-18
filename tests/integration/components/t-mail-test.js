@@ -1,9 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from 'ember-test-helpers';
+import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
-import { click, find } from 'ember-native-dom-helpers';
 
 module('Integration | Component | t mail', function(hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +12,7 @@ module('Integration | Component | t mail', function(hooks) {
 
     await render(hbs`{{t-mail}}`);
 
-    assert.equal(find('button').textContent.trim(), 'open mailbox');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'open mailbox');
 
     // Template block usage:
     await render(hbs`
@@ -22,7 +21,7 @@ module('Integration | Component | t mail', function(hooks) {
       {{/t-mail}}
     `);
 
-    assert.equal(find('button').textContent.trim(), 'open mailbox');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'open mailbox');
   });
 
   test('it creates a mail transformicon with defaults', async function(assert) {
@@ -31,7 +30,7 @@ module('Integration | Component | t mail', function(hooks) {
     await render(hbs`{{t-mail}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.equal(button.getAttribute('role'), 'button');
     assert.equal(button.getAttribute('type'), 'button');
@@ -47,7 +46,7 @@ module('Integration | Component | t mail', function(hooks) {
     await render(hbs`{{t-mail is-open=false}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-transform'));
   });
@@ -57,10 +56,10 @@ module('Integration | Component | t mail', function(hooks) {
 
     await render(hbs`{{t-mail id="t-mail"}}`);
 
-    let button = find('#t-mail');
+    let button = this.element.querySelector('#t-mail');
     assert.equal(button.classList.contains('tcon-transform'), false);
 
-    click('#t-mail');
+    await click('#t-mail');
     percySnapshot(assert);
 
     assert.equal(button.classList.contains('tcon-transform'), true);

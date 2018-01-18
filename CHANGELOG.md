@@ -5,11 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Ember CLI v2.17.x
+  - Ember CLI v2.18.x
 
 ### Updated
   - Integration tests align with [RFC-232 sytax and structure](http://rwjblue.com/2017/10/23/ember-qunit-simplication/)
     
+### Removed 
+  - ember-native-dom-helpers
+  
   
 ## [v2.0.1] - 2017-10-09
 ### Added

@@ -1,9 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from 'ember-test-helpers';
+import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
-import { click, find } from 'ember-native-dom-helpers';
 
 module('Integration | Component | t menu', function(hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +12,7 @@ module('Integration | Component | t menu', function(hooks) {
 
     await render(hbs`{{t-menu}}`);
 
-    assert.equal(find('button').textContent.trim(), 'toggle menu');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle menu');
 
     // Template block usage:
     await render(hbs`
@@ -22,7 +21,7 @@ module('Integration | Component | t menu', function(hooks) {
       {{/t-menu}}
     `);
 
-    assert.equal(find('button').textContent.trim(), 'toggle menu');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle menu');
   });
 
   test('it creates a menu transformicon with defaults', async function(assert) {
@@ -31,7 +30,7 @@ module('Integration | Component | t menu', function(hooks) {
     await render(hbs`{{t-menu}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.equal(button.getAttribute('type'), 'button');
     assert.equal(button.getAttribute('aria-label'), 'toggle menu');
@@ -46,7 +45,7 @@ module('Integration | Component | t menu', function(hooks) {
     await render(hbs`{{t-menu is-open=true}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-transform'));
   });
@@ -56,7 +55,7 @@ module('Integration | Component | t menu', function(hooks) {
 
     await render(hbs`{{t-menu a="arrow-360-left"}}`);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-menu--arrow'));
     assert.ok(button.classList.contains('tcon-menu--arrow360left'));
@@ -67,10 +66,10 @@ module('Integration | Component | t menu', function(hooks) {
 
     await render(hbs`{{t-menu id="t-menu"}}`);
 
-    let button = find('#t-menu');
+    let button = this.element.querySelector('#t-menu');
     assert.equal(button.classList.contains('tcon-transform'), false);
 
-    click('#t-menu');
+    await click('#t-menu');
     percySnapshot(assert);
 
     assert.equal(button.classList.contains('tcon-transform'), true);

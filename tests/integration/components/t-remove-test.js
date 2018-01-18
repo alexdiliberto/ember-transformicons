@@ -1,9 +1,8 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from 'ember-test-helpers';
+import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
-import { click, find } from 'ember-native-dom-helpers';
 
 module('Integration | Component | t remove', function(hooks) {
   setupRenderingTest(hooks);
@@ -13,7 +12,7 @@ module('Integration | Component | t remove', function(hooks) {
 
     await render(hbs`{{t-remove}}`);
 
-    assert.equal(find('button').textContent.trim(), 'remove item');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'remove item');
 
     // Template block usage:
     await render(hbs`
@@ -22,7 +21,7 @@ module('Integration | Component | t remove', function(hooks) {
       {{/t-remove}}
     `);
 
-    assert.equal(find('button').textContent.trim(), 'remove item');
+    assert.equal(this.element.querySelector('button').textContent.trim(), 'remove item');
   });
 
   test('it creates a remove transformicon with defaults', async function(assert) {
@@ -31,7 +30,7 @@ module('Integration | Component | t remove', function(hooks) {
     await render(hbs`{{t-remove}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.equal(button.getAttribute('type'), 'button');
     assert.equal(button.getAttribute('aria-label'), 'remove item');
@@ -46,7 +45,7 @@ module('Integration | Component | t remove', function(hooks) {
     await render(hbs`{{t-remove is-removed=true}}`);
     percySnapshot(assert);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-transform'));
   });
@@ -56,7 +55,7 @@ module('Integration | Component | t remove', function(hooks) {
 
     await render(hbs`{{t-remove a="chevron-right"}}`);
 
-    let button = find('button');
+    let button = this.element.querySelector('button');
 
     assert.ok(button.classList.contains('tcon-remove--chevron-right'));
   });
@@ -66,10 +65,10 @@ module('Integration | Component | t remove', function(hooks) {
 
     await render(hbs`{{t-remove id="t-remove"}}`);
 
-    let button = find('#t-remove');
+    let button = this.element.querySelector('#t-remove');
     assert.equal(button.classList.contains('tcon-transform'), false);
 
-    click('#t-remove');
+    await click('#t-remove');
     percySnapshot(assert);
 
     assert.equal(button.classList.contains('tcon-transform'), true);
