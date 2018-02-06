@@ -9,9 +9,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - Integration tests align with [RFC-232 sytax and structure](http://rwjblue.com/2017/10/23/ember-qunit-simplication/)
-    
+  - ember-addon demo URL now points to `https://`
+  
 ### Removed 
   - ember-native-dom-helpers
+  - Broken embadge.io link from the `README.md`
   
   
 ## [v2.0.1] - 2017-10-09

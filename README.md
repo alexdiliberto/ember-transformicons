@@ -18,10 +18,6 @@
     <img src="https://badges.greenkeeper.io/alexdiliberto/ember-transformicons.svg"
       alt="Greenkeeper Badge">
   </a>
-  <a href="https://embadge.io/">
-    <img src="https://embadge.io/v1/badge.svg?start=1.12.2"
-      alt="Ember Versions">
-  </a>
 </p>
 <p align="center">
   <a href="http://emberobserver.com/addons/ember-transformicons">
