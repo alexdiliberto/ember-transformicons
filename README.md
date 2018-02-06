@@ -28,9 +28,8 @@
     <img src="https://snyk.io/test/github/alexdiliberto/ember-transformicons/badge.svg"
       alt="Known Vulnerabilities">
   </a>
-  <a href="https://codeclimate.com/github/alexdiliberto/ember-transformicons">
-    <img src="https://codeclimate.com/github/alexdiliberto/ember-transformicons/badges/gpa.svg"
-      alt="Known Vulnerabilities">
+  <a href="https://codeclimate.com/github/alexdiliberto/ember-transformicons/maintainability">
+    <img src="https://api.codeclimate.com/v1/badges/01108fee4bb685fa23dd/maintainability" alt="Code Climate Maintainability Score">
   </a>
 </p>
 
