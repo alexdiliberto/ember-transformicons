@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
   - Integration tests align with [RFC-232 sytax and structure](http://rwjblue.com/2017/10/23/ember-qunit-simplication/)
   - ember-addon demo URL now points to `https://`
+  - Update `targets.js` to only reference evergreen browsers
   
 ### Removed 
   - ember-native-dom-helpers
