@@ -8,15 +8,24 @@ const Router = EmberRouter.extend({
 
 /* eslint-disable array-callback-return */
 Router.map(function() {
-  this.route('menu');
-  this.route('grid');
-  this.route('add');
-  this.route('remove');
-  this.route('scroll');
-  this.route('mail');
-  this.route('form');
-  this.route('video');
-  this.route('loader');
+  this.route('docs', function() {
+    this.route('transformicons', function() {
+      this.route('add');
+      this.route('form');
+      this.route('grid');
+      this.route('loader');
+      this.route('mail');
+      this.route('menu');
+      this.route('remove');
+      this.route('scroll');
+      this.route('video');
+    });
+    this.route('api', function() {
+      this.route('item', { path: '/*path' });
+    });
+  });
+
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;

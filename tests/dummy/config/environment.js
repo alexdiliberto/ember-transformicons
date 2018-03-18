@@ -1,23 +1,11 @@
 'use strict';
 
-const CONTENT_SECURITY_POLICY = {
-  'default-src': ["'none'"],
-  'script-src': ["'self'", 'https://maxcdn.bootstrapcdn.com'],
-  'font-src': ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https://fonts.gstatic.com'],
-  'connect-src': ["'self'"],
-  'img-src': ["'self'", 'https://camo.githubusercontent.com'],
-  'style-src': ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https://fonts.googleapis.com'],
-  'media-src': ["'self'"],
-  'frame-src': ["'self'", 'https://ghbtns.com/github-btn.html']
-};
-
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
     locationType: 'auto',
-    contentSecurityPolicy: CONTENT_SECURITY_POLICY,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

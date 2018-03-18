@@ -1,67 +1,28 @@
-$header-color: #777;
-$header-color-hover: #000;
-
 html {
   font-size: 16px;
 }
 
-.navbar {
-  margin-bottom: 20px;
-}
-
-.header-logo {
-  width: 27px;
-  margin-right: 10px;
-}
-
-.navbar-brand {
-  color: $header-color !important;
+button.tcon {
+  padding: 0;
 
   &:hover {
-    color: $header-color-hover !important;
+    background: inherit;
   }
 }
 
-.github-icon {
-  color: $header-color;
-
-  &:hover {
-    color: $header-color-hover;
-  }
+/*
+START OVERRIDE: ember-cli-addon-docs button:hover styles
+https://github.com/ember-learn/ember-cli-addon-docs/blob/v0.2.2/addon/styles/addon.scss#L35-L37
+*/
+button.tcon-mail--envelope:hover {
+  background: black;
 }
 
-.octicon {
-  fill: $header-color;
-  vertical-align: middle;
-  display: inline-block;
-  text-decoration: none;
-  text-rendering: auto;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  speak: none;
-
-  &:hover {
-    fill: $header-color-hover;
-  }
+button.tcon-vid--play:hover {
+  background: white;
 }
 
-.row-link-icons {
-  margin-bottom: 20px;
+button.tcon-vid--play.tcon-transform {
+  background: black;
 }
-
-.mail {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.scroll-default {
-  display: block;
-}
-
-.github-ribbon {
-  border: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+/* END OVERRIDE */
