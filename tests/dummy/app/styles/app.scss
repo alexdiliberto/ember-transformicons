@@ -1,28 +1,3 @@
 html {
   font-size: 16px;
 }
-
-button.tcon {
-  padding: 0;
-
-  &:hover {
-    background: inherit;
-  }
-}
-
-/*
-START OVERRIDE: ember-cli-addon-docs button:hover styles
-https://github.com/ember-learn/ember-cli-addon-docs/blob/v0.2.2/addon/styles/addon.scss#L35-L37
-*/
-button.tcon-mail--envelope:hover {
-  background: black;
-}
-
-button.tcon-vid--play:hover {
-  background: white;
-}
-
-button.tcon-vid--play.tcon-transform {
-  background: black;
-}
-/* END OVERRIDE */
