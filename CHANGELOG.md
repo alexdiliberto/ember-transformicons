@@ -5,7 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet...
+  
+  
+## [v2.0.2] - 2018-04-07
+### Added
   - Ember CLI v3.0.x
+  - `ember-cli-addon-docs` for documentation
 
 ### Updated
   - Integration tests align with [RFC-232 sytax and structure](http://rwjblue.com/2017/10/23/ember-qunit-simplication/)
@@ -326,7 +332,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.1...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.2...HEAD
+[v2.0.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.1...v2.0.2
 [v2.0.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.0...v2.0.1
 [v2.0.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.2...v2.0.0
 [v1.1.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.1...v1.1.2
