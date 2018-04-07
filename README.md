@@ -45,17 +45,12 @@
 ember install ember-transformicons
 ```
 
-_NOTE:_ This addon was recently renamed from `ember-cli-transformicons` to `ember-transformicons`. Please update your Ember applications to use the new naming convention.
-
-## Demo
+## Documentation
 
 https://alexdiliberto.com/ember-transformicons
 
-
-
-
-
 ## Contributing
+
 **Please contribute!** You can help code, design, update documentation, fix typos, raise issues and so much more.
 
 Any help is welcome and appreciated!
@@ -86,11 +81,12 @@ yarn test:all # ember try:each && mocha test/*-test.js
 
 ## Deploy
 
+Deploys are automated using Travis CI. If you need to manually deploy, run the following command:
+
 ```sh
 ember deploy production
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
-
 
 [demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-transformicons/master/demo.gif
