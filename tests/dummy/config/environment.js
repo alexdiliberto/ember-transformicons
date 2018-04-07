@@ -44,11 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
-    // ENV.rootURL = '/ember-transformicons/';
     // Allow ember-cli-addon-docs to update the rootURL in compiled assets
     ENV.rootURL = 'ADDON_DOCS_ROOT_URL';
-    ENV.locationType = 'hash';
   }
 
   return ENV;
