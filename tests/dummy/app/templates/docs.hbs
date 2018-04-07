@@ -1,0 +1,32 @@
+{{docs-header name="Transformicons"}}
+
+{{#docs-viewer as |viewer|}}
+
+  {{#viewer.nav as |nav|}}
+    {{nav.section "Introduction"}}
+    {{nav.item "Overview" "docs.index"}}
+    {{nav.item "Transformicons" "docs.transformicons.index"}}
+
+    {{nav.section "Components"}}
+    {{#nav.subnav as |nav|}}
+      {{nav.item "Add" "docs.transformicons.add"}}
+      {{nav.item "Form" "docs.transformicons.form"}}
+      {{nav.item "Grid" "docs.transformicons.grid"}}
+      {{nav.item "Loader" "docs.transformicons.loader"}}
+      {{nav.item "Mail" "docs.transformicons.mail"}}
+      {{nav.item "Menu" "docs.transformicons.menu"}}
+      {{nav.item "Remove" "docs.transformicons.remove"}}
+      {{nav.item "Scroll" "docs.transformicons.scroll"}}
+      {{nav.item "Video" "docs.transformicons.video"}}
+    {{/nav.subnav}}
+  {{/viewer.nav}}
+
+  {{#viewer.main}}
+    <div class="docs-container docs__center">
+      <div class="docs-section">
+        {{outlet}}
+      </div>
+    </div>
+  {{/viewer.main}}
+
+{{/docs-viewer}}
