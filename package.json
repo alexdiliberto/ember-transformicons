@@ -78,7 +78,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-native-dom-helpers": "^0.6.2",
     "ember-open-browser": "^1.0.0",
-    "ember-percy": "1.4.0",
+    "ember-percy": "1.4.1",
     "ember-resolver": "^4.3.0",
     "ember-source": "~3.0.0",
     "ember-source-channel-url": "^1.0.1",
