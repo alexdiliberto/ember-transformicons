@@ -3709,9 +3709,9 @@ ember-open-browser@^1.0.0:
     cross-spawn "^6.0.5"
     opn "^5.2.0"
 
-ember-percy@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.4.0.tgz#c415fa3dfe162850d950394b7fc9bd4a3585bb82"
+ember-percy@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.4.1.tgz#708776288c6117b465a21ca9ee3a0d150c5360d8"
   dependencies:
     body-parser "^1.15.0"
     ember-cli-babel "^6.10.0"
