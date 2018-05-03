@@ -3,4 +3,4 @@
 ## API and Examples
 
 ### animation
-`{{t-scroll}}` {{t-scroll class="db"}}
+`{{t-scroll}}` {{t-scroll class="block mt-2"}}

@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
-### Added
-  - Nothing yet...
+### Updated
+  - Consolidated `{{docs-header}}`
+  - Use Tailwind styles instead of Tachyons
+  
+### Removed 
+  - Old bootstrap styles on `tests/index.html`
+  - Tachyons
   
   
 ## [v2.0.2] - 2018-04-07
