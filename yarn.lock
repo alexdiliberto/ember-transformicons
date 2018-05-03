@@ -2872,9 +2872,9 @@ ember-cli-addon-docs-yuidoc@^0.2.0:
     lodash "^4.17.5"
     yuidocjs "^0.10.2"
 
-ember-cli-addon-docs@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-addon-docs/-/ember-cli-addon-docs-0.4.0.tgz#e8665aed524779dbf476ea1928807056e601d02d"
+ember-cli-addon-docs@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-addon-docs/-/ember-cli-addon-docs-0.4.1.tgz#d62744f5be9ad89b58e398339338cddfddb97e51"
   dependencies:
     "@glimmer/syntax" "^0.30.5"
     broccoli-caching-writer "^3.0.3"
@@ -2902,7 +2902,7 @@ ember-cli-addon-docs@^0.4.0:
     ember-keyboard "^3.0.0"
     ember-modal-dialog "2.4.3"
     ember-responsive "^3.0.0-beta.1"
-    ember-router-scroll "^0.4.0"
+    ember-router-scroll "^0.6.0"
     ember-svg-jar "^0.12.0"
     ember-tether "^1.0.0-beta.2"
     ember-truth-helpers "^2.0.0"
@@ -3219,12 +3219,6 @@ ember-cli-string-helpers@^1.7.0:
 ember-cli-string-utils@^1.0.0, ember-cli-string-utils@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-string-utils/-/ember-cli-string-utils-1.1.0.tgz#39b677fc2805f55173735376fcef278eaa4452a1"
-
-ember-cli-tachyons-shim@^4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-tachyons-shim/-/ember-cli-tachyons-shim-4.9.1.tgz#ee9262501d6f57d45b5279d5693e9a4238d60696"
-  dependencies:
-    ember-cli-babel "^6.3.0"
 
 ember-cli-tailwind@0.4.0:
   version "0.4.0"
@@ -3624,9 +3618,9 @@ ember-router-generator@^1.2.3:
   dependencies:
     recast "^0.11.3"
 
-ember-router-scroll@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ember-router-scroll/-/ember-router-scroll-0.4.0.tgz#df833738471bc854c76fc8620853563f275e649f"
+ember-router-scroll@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ember-router-scroll/-/ember-router-scroll-0.6.0.tgz#e94fda377bd00c45d866123ec6dcf05654d4d987"
   dependencies:
     ember-app-scheduler "^0.2.0"
     ember-cli-babel "^6.6.0"
@@ -8927,10 +8921,6 @@ table@4.0.2:
     lodash "^4.17.4"
     slice-ansi "1.0.0"
     string-width "^2.1.1"
-
-tachyons@4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.9.1.tgz#f88d7059d6e53c833bf9351a26f18314c8fdc76a"
 
 tailwindcss@^0.4.1:
   version "0.4.3"
