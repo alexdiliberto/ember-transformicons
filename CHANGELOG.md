@@ -5,12 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Updated
+  - Ember CLI v3.1.x
   - Consolidated `{{docs-header}}`
   - Use Tailwind styles instead of Tachyons
   
 ### Removed 
   - Old bootstrap styles on `tests/index.html`
   - Tachyons
+  - `ember-cli-app-version`
   
   
 ## [v2.0.2] - 2018-04-07
