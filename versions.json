@@ -12,9 +12,15 @@
     "name": "v2.0.2"
   },
   "latest": {
-    "sha": "9a7daf83aa43912a07124c7ab2396f63a5b19777",
-    "tag": "v2.0.2",
+    "sha": "ac25ca7c0eacf4eaa2a9b085917bfb18b17f5f10",
+    "tag": "v2.0.3",
     "path": "latest",
     "name": "latest"
+  },
+  "v2.0.3": {
+    "sha": "ac25ca7c0eacf4eaa2a9b085917bfb18b17f5f10",
+    "tag": "v2.0.3",
+    "path": "v2.0.3",
+    "name": "v2.0.3"
   }
 }
