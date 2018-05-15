@@ -1,9 +1,9 @@
 {
   "master": {
-    "sha": "ac25ca7c0eacf4eaa2a9b085917bfb18b17f5f10",
-    "tag": null,
     "path": "master",
-    "name": "master"
+    "name": "master",
+    "sha": "9e4f9dc9c6920922dc38e1859f6d0ca2007858df",
+    "tag": null
   },
   "v2.0.2": {
     "sha": "9a7daf83aa43912a07124c7ab2396f63a5b19777",
