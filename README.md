@@ -74,9 +74,17 @@ ember s
 ## Test
 
 ```sh
-yarn test # ember try:each
-yarn mocha # cross-env DEBUG=ember-cli-addon-tests mocha
-yarn test:all # ember try:each && mocha test/*-test.js
+yarn lint:js # eslint
+yarn test # ember test
+yarn test:all # ember try:each
+```
+
+## Release
+
+Ready to draft a new release:
+
+```sh
+npm version
 ```
 
 ## Deploy

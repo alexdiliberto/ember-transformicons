@@ -33,7 +33,6 @@
     "test:iterate": "ember exam:iterate 10",
     "start:inspect": "node --inspect --debug-brk node_modules/.bin/ember s",
     "build:stats": "CONCAT_STATS=true yarn build",
-    "lint": "eslint addon app test tests *.js",
     "lint:js": "eslint ./*.js addon addon-test-support app blueprints config lib server test-support tests",
     "lint:fix": "yarn lint -- --fix"
   },

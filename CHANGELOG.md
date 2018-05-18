@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Updated
-  - Nothing yet...
+  - `README.md` test and release docs
 
 
 ## [v2.0.3] - 2018-05-18
