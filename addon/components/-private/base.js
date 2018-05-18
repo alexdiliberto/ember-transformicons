@@ -55,8 +55,8 @@ export default Component.extend({
     @public
   */
   click() {
-    let initStateProp = get(this, 'initialState');
-    let onclick = get(this, 'onclick');
+    let initStateProp = this.initialState;
+    let onclick = this.onclick;
 
     this.toggleProperty(initStateProp);
 
