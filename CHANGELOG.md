@@ -5,10 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Updated
+  - Nothing yet...
+
+
+## [v2.0.3] - 2018-05-18
+### Updated
   - Ember CLI v3.1.x
   - Consolidated `{{docs-header}}`
   - Use Tailwind styles instead of Tachyons
-  
+  - `es5-getter-ember-codemod`
+
 ### Removed 
   - Old bootstrap styles on `tests/index.html`
   - Tachyons
@@ -339,7 +345,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.2...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.3...HEAD
+[v2.0.3]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.2...v2.0.3
 [v2.0.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.1...v2.0.2
 [v2.0.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.0...v2.0.1
 [v2.0.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v1.1.2...v2.0.0

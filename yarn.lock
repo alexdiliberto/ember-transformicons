@@ -2477,9 +2477,9 @@ create-error-class@^3.0.0:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-cross-env@^5.1.3:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.4.tgz#f61c14291f7cc653bb86457002ea80a04699d022"
+cross-env@^5.1.5:
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.5.tgz#31daf7f3a52ef337c8ddda585f08175cce5d1fa5"
   dependencies:
     cross-spawn "^5.1.0"
     is-windows "^1.0.0"
@@ -2889,9 +2889,9 @@ ember-app-scheduler@^0.2.0:
   dependencies:
     ember-cli-babel "^6.3.0"
 
-ember-cli-addon-docs-yuidoc@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-addon-docs-yuidoc/-/ember-cli-addon-docs-yuidoc-0.2.0.tgz#21456df4d6ae83326f94ed2e8a66d68a62608eb6"
+ember-cli-addon-docs-yuidoc@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-addon-docs-yuidoc/-/ember-cli-addon-docs-yuidoc-0.2.1.tgz#af6a29c2b3efba3bffd5a017d6ad53c5a3b0eebe"
   dependencies:
     broccoli-caching-writer "^3.0.3"
     ember-cli-babel "^6.6.0"
@@ -2900,9 +2900,9 @@ ember-cli-addon-docs-yuidoc@^0.2.0:
     lodash "^4.17.5"
     yuidocjs "^0.10.2"
 
-ember-cli-addon-docs@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-addon-docs/-/ember-cli-addon-docs-0.4.1.tgz#d62744f5be9ad89b58e398339338cddfddb97e51"
+ember-cli-addon-docs@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-addon-docs/-/ember-cli-addon-docs-0.4.2.tgz#8ca833d8c7299b960b06aa89937230404abda2c9"
   dependencies:
     "@glimmer/syntax" "^0.30.5"
     broccoli-caching-writer "^3.0.3"
@@ -2918,9 +2918,10 @@ ember-cli-addon-docs@^0.4.1:
     ember-cli-babel "^6.11.0"
     ember-cli-clipboard "^0.8.1"
     ember-cli-htmlbars "^2.0.3"
+    ember-cli-htmlbars-inline-precompile "^1.0.2"
     ember-cli-sass "7.1.3"
     ember-cli-string-helpers "^1.7.0"
-    ember-cli-tailwind "0.4.0"
+    ember-cli-tailwind "^0.4.1"
     ember-code-snippet "^2.1.0"
     ember-component-css "^0.3.5"
     ember-concurrency "^0.8.16"
@@ -2983,7 +2984,7 @@ ember-cli-autoprefixer@^0.8.1:
     broccoli-autoprefixer "^5.0.0"
     lodash "^4.0.0"
 
-ember-cli-babel@^5.0.0, ember-cli-babel@^5.1.7:
+ember-cli-babel@^5.1.7:
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.2.8.tgz#0356b03cc3fdff5d0f2ecaa46a0e1cfaebffd876"
   dependencies:
@@ -3241,9 +3242,9 @@ ember-cli-string-utils@^1.0.0, ember-cli-string-utils@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-string-utils/-/ember-cli-string-utils-1.1.0.tgz#39b677fc2805f55173735376fcef278eaa4452a1"
 
-ember-cli-tailwind@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-tailwind/-/ember-cli-tailwind-0.4.0.tgz#3ea90f109381d1da70fb1e459edf52fea0ea7d87"
+ember-cli-tailwind@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-tailwind/-/ember-cli-tailwind-0.4.1.tgz#1d453a23ffdfe47072f0b927c88d33e8db89fa80"
   dependencies:
     broccoli-plugin "^1.3.0"
     broccoli-rollup "^2.0.0"
@@ -3252,7 +3253,6 @@ ember-cli-tailwind@0.4.0:
     ember-cli-htmlbars "^2.0.1"
     ember-cli-string-utils "^1.1.0"
     ember-composable-helpers "^2.1.0"
-    ember-string-helpers "^1.0.2"
     ember-truth-helpers "^2.0.0"
     fs-extra "^5.0.0"
     jsdom "^11.6.2"
@@ -3305,9 +3305,9 @@ ember-cli-version-checker@^2.1.0:
     resolve "^1.3.3"
     semver "^5.3.0"
 
-ember-cli@~3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.1.3.tgz#cd5b580441489df17bbd23d10d39398203259d64"
+ember-cli@~3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.1.4.tgz#95f7ff4302d535619b5d5ff1c7040877a67d4468"
   dependencies:
     amd-name-resolver "^1.2.0"
     babel-plugin-transform-es2015-modules-amd "^6.24.0"
@@ -3632,13 +3632,17 @@ ember-responsive@^3.0.0-beta.1:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-rfc176-data@^0.2.0, ember-rfc176-data@^0.2.7:
+ember-rfc176-data@^0.2.0:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.2.7.tgz#bd355bc9b473e08096b518784170a23388bc973b"
 
 ember-rfc176-data@^0.3.0, ember-rfc176-data@^0.3.1:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.2.tgz#bde5538939529b263c142b53a47402f8127f8dce"
+
+ember-rfc176-data@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.3.tgz#27fba08d540a7463a4366c48eaa19c5a44971a39"
 
 ember-router-generator@^1.2.3:
   version "1.2.3"
@@ -3673,9 +3677,9 @@ ember-source-channel-url@^1.0.1:
   dependencies:
     got "^8.0.1"
 
-ember-source@~3.1.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.1.1.tgz#9cf95e8a6d7568d60b8eda2aeda17ac8944e654b"
+ember-source@~3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.1.2.tgz#3c25e63f1e4ff2b83bb3fbfb350625de2a1a521f"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
@@ -3690,12 +3694,6 @@ ember-source@~3.1.0:
     inflection "^1.12.0"
     jquery "^3.3.1"
     resolve "^1.5.0"
-
-ember-string-helpers@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ember-string-helpers/-/ember-string-helpers-1.0.2.tgz#2fcb958bcf0cdf0649e04dda5b65cae06a0f3d56"
-  dependencies:
-    ember-cli-babel "^5.0.0"
 
 ember-svg-jar@^0.12.0:
   version "0.12.0"
@@ -3903,12 +3901,11 @@ escodegen@^1.6.1, escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-ember@^5.0.3:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-5.1.0.tgz#fb96abd2d8bf105678a0aa81dadd99d7ca441ba1"
+eslint-plugin-ember@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-5.2.0.tgz#fa436e0497dfc01d1d38608229cd616e7c5b6067"
   dependencies:
-    ember-rfc176-data "^0.2.7"
-    require-folder-tree "^1.4.5"
+    ember-rfc176-data "^0.3.3"
     snake-case "^2.1.0"
 
 eslint-plugin-node@^6.0.1:
@@ -6452,10 +6449,6 @@ lodash.values@~2.3.0:
   dependencies:
     lodash.keys "~2.3.0"
 
-lodash@3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.8.0.tgz#376eb98bdcd9382a9365c33c4cb8250de1325b91"
-
 lodash@^3.10.0, lodash@^3.10.1, lodash@^3.9.3:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
@@ -6815,9 +6808,9 @@ mocha@^3.2.0:
     mkdirp "0.5.1"
     supports-color "3.1.2"
 
-mocha@^5.0.1:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.1.0.tgz#5ff11cc39c0bb65330ac6c41f9086634e3e3f686"
+mocha@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-5.1.1.tgz#b774c75609dac05eb48f4d9ba1d827b97fde8a7b"
   dependencies:
     browser-stdout "1.3.1"
     commander "2.11.0"
@@ -8020,7 +8013,7 @@ request-promise@^4.1.1:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@2, request@^2.40.0, request@^2.55.0, request@^2.81.0, request@^2.83.0:
+request@2, request@^2.40.0, request@^2.55.0, request@^2.83.0:
   version "2.85.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.85.0.tgz#5a03615a47c61420b3eb99b7dba204f83603e1fa"
   dependencies:
@@ -8074,6 +8067,32 @@ request@2.81.0:
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
+request@^2.86.0:
+  version "2.86.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.86.0.tgz#2b9497f449b0a32654c081a5cf426bbfb5bf5b69"
+  dependencies:
+    aws-sign2 "~0.7.0"
+    aws4 "^1.6.0"
+    caseless "~0.12.0"
+    combined-stream "~1.0.5"
+    extend "~3.0.1"
+    forever-agent "~0.6.1"
+    form-data "~2.3.1"
+    har-validator "~5.0.3"
+    hawk "~6.0.2"
+    http-signature "~1.2.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.17"
+    oauth-sign "~0.8.2"
+    performance-now "^2.1.0"
+    qs "~6.5.1"
+    safe-buffer "^5.1.1"
+    tough-cookie "~2.3.3"
+    tunnel-agent "^0.6.0"
+    uuid "^3.1.0"
+
 request@~2.40.0:
   version "2.40.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.40.0.tgz#4dd670f696f1e6e842e66b4b5e839301ab9beb67"
@@ -8121,12 +8140,6 @@ request@~2.79.0:
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
-
-require-folder-tree@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/require-folder-tree/-/require-folder-tree-1.4.5.tgz#dfe553cbab98cc88e1c56a3f2f358f06ef85bcb0"
-  dependencies:
-    lodash "3.8.0"
 
 require-from-string@^1.1.0:
   version "1.2.1"
