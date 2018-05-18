@@ -12,15 +12,21 @@
     "name": "v2.0.2"
   },
   "latest": {
-    "sha": "ac25ca7c0eacf4eaa2a9b085917bfb18b17f5f10",
-    "tag": "v2.0.3",
     "path": "latest",
-    "name": "latest"
+    "name": "latest",
+    "sha": "b3511bd4db6f5abd3f888f305044fd7ef98d041f",
+    "tag": "v2.0.4"
   },
   "v2.0.3": {
     "sha": "ac25ca7c0eacf4eaa2a9b085917bfb18b17f5f10",
     "tag": "v2.0.3",
     "path": "v2.0.3",
     "name": "v2.0.3"
+  },
+  "v2.0.4": {
+    "path": "v2.0.4",
+    "name": "v2.0.4",
+    "sha": "b3511bd4db6f5abd3f888f305044fd7ef98d041f",
+    "tag": "v2.0.4"
   }
 }
