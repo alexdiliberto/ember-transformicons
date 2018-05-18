@@ -85,6 +85,10 @@ Ready to draft a new release:
 
 ```sh
 npm version
+git push
+# Draft release on Github
+# Validate passing tests on Travis 
+npm publish
 ```
 
 ## Deploy
