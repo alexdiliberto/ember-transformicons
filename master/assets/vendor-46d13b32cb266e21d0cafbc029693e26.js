@@ -8688,7 +8688,7 @@ i.schedule("render",()=>{this.removeElement(t),this.removeTether(e)})},didRender
 return e&&e.element&&(e=e.element),e}),_tetherOptions(){let e={element:this.element,target:r(this,"_tetherTarget")}
 return["classPrefix","attachment","targetAttachment","offset","targetOffset","targetModifier","constraints","optimizations","bodyElement"].forEach(t=>{let n=r(this,t)
 s(n)||(e[t]=n)}),e}})}),define("ember-transformicons/components/-private/base",["exports"],function(e){"use strict"
-Object.defineProperty(e,"__esModule",{value:!0}),e.default=Ember.Component.extend({tagName:"button",attributeBindings:["type","label:aria-label"],type:"button",label:null,classNames:["tcon"],transformClass:"tcon-transform",initialState:"is-open",click(){let e=Ember.get(this,"initialState"),t=Ember.get(this,"onclick")
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=Ember.Component.extend({tagName:"button",attributeBindings:["type","label:aria-label"],type:"button",label:null,classNames:["tcon"],transformClass:"tcon-transform",initialState:"is-open",click(){let e=this.initialState,t=this.onclick
 if(this.toggleProperty(e),t){t(Ember.get(this,e))}}})}),define("ember-transformicons/components/t-add",["exports","ember-transformicons/templates/components/t-add","ember-transformicons/components/-private/base"],function(e,t,r){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0})
 const n=Ember.Object.create({minus:"tcon-plus--minus",check:"tcon-plus--check"})
