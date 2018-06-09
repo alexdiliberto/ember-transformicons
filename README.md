@@ -84,7 +84,7 @@ yarn test:all # ember try:each
 Ready to draft a new release:
 
 ```sh
-npm version
+npm version [major | minor | patch]
 git push
 # Draft release on Github
 # Validate passing tests on Travis 
