@@ -1,14 +1,14 @@
-import EmberRouter from '@ember/routing/router';
+import AddonDocsRouter, { docsRoute } from 'ember-cli-addon-docs/router';
 import config from './config/environment';
 
-const Router = EmberRouter.extend({
+const Router = AddonDocsRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
 /* eslint-disable array-callback-return */
 Router.map(function() {
-  this.route('docs', function() {
+  docsRoute(this, function() {
     this.route('transformicons', function() {
       this.route('add');
       this.route('form');
@@ -19,9 +19,6 @@ Router.map(function() {
       this.route('remove');
       this.route('scroll');
       this.route('video');
-    });
-    this.route('api', function() {
-      this.route('item', { path: '/*path' });
     });
   });
 

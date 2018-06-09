@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Updated
   - `README.md` test and release docs
-
+  - Use the provided `AddonDocsRouter` instead of the standard `EmberRouter` for the docs app
+  
 
 ## [v2.0.3] - 2018-05-18
 ### Updated
