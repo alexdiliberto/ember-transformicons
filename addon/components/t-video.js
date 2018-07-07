@@ -32,11 +32,9 @@ export default BaseTransformicon.extend({
   label: 'play video',
   initialState: 'is-playing',
 
-  /**
+  /*
     PUBLIC COMPONENT API
-
-    @public
-   */
+  */
   'is-playing': false,
 
   ariaRole: reads('type'),

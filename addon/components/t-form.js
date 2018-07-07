@@ -31,11 +31,9 @@ export default BaseTransformicon.extend({
   label: 'toggle search',
   initialState: 'is-searching',
 
-  /**
+  /*
     PUBLIC COMPONENT API
-
-    @public
-   */
+  */
   'is-searching': false,
 
   /**

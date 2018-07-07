@@ -52,11 +52,9 @@ export default BaseTransformicon.extend({
   label: 'remove item',
   initialState: 'is-removed',
 
-  /**
+  /*
     PUBLIC COMPONENT API
-
-    @public
-   */
+  */
   animation: defaultAnimation,
   'is-removed': false,
   a: alias('animation'),

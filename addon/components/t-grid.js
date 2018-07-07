@@ -44,11 +44,10 @@ export default BaseTransformicon.extend({
   classNameBindings: ['animationType', 'isOpen'],
 
   label: 'toggle grid',
-  /**
-    PUBLIC COMPONENT API
 
-    @public
-   */
+  /*
+    PUBLIC COMPONENT API
+  */
   animation: defaultAnimation,
   'is-open': false,
   a: alias('animation'),

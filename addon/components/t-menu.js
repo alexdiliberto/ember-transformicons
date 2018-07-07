@@ -52,11 +52,9 @@ export default BaseTransformicon.extend({
 
   label: 'toggle menu',
 
-  /**
+  /*
     PUBLIC COMPONENT API
-
-    @public
-   */
+  */
   animation: defaultAnimation,
   'is-open': false,
   a: alias('animation'),

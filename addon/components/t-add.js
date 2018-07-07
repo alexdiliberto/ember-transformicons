@@ -46,11 +46,9 @@ export default BaseTransformicon.extend({
   label: 'add item',
   initialState: 'is-added',
 
-  /**
+  /*
     PUBLIC COMPONENT API
-
-    @public
-   */
+  */
   animation: defaultAnimation,
   'is-added': false,
   a: alias('animation'),

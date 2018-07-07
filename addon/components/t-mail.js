@@ -31,11 +31,9 @@ export default BaseTransformicon.extend({
 
   label: 'open mailbox',
 
-  /**
+  /*
     PUBLIC COMPONENT API
-
-    @public
-   */
+  */
   'is-open': true,
 
   ariaRole: reads('type'),
