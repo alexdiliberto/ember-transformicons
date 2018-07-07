@@ -12,7 +12,7 @@ module('Integration | Component | t video', function(hooks) {
 
     await render(hbs`{{t-video}}`);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'play video');
+    assert.dom('button').hasText('play video');
 
     // Template block usage:
     await render(hbs`
@@ -21,7 +21,7 @@ module('Integration | Component | t video', function(hooks) {
       {{/t-video}}
     `);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'play video');
+    assert.dom('button').hasText('play video');
   });
 
   test('it creates a video transformicon with defaults', async function(assert) {
@@ -30,14 +30,12 @@ module('Integration | Component | t video', function(hooks) {
     await render(hbs`{{t-video}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.equal(button.getAttribute('role'), 'button');
-    assert.equal(button.getAttribute('type'), 'button');
-    assert.equal(button.getAttribute('aria-label'), 'play video');
-    assert.ok(button.classList.contains('tcon'));
-    assert.ok(button.classList.contains('tcon-vid--play'));
-    assert.notOk(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasAttribute('role', 'button');
+    assert.dom('button').hasAttribute('type', 'button');
+    assert.dom('button').hasAttribute('aria-label', 'play video');
+    assert.dom('button').hasClass('tcon');
+    assert.dom('button').hasClass('tcon-vid--play');
+    assert.dom('button').hasNoClass('tcon-transform');
   });
 
   test('it creates a video transformicon with `is-playing=true`', async function(assert) {
@@ -46,9 +44,7 @@ module('Integration | Component | t video', function(hooks) {
     await render(hbs`{{t-video is-playing=true}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasClass('tcon-transform');
   });
 
   test('user can click on the transformicon', async function(assert) {
@@ -56,12 +52,11 @@ module('Integration | Component | t video', function(hooks) {
 
     await render(hbs`{{t-video id="t-video"}}`);
 
-    let button = this.element.querySelector('#t-video');
-    assert.equal(button.classList.contains('tcon-transform'), false);
+    assert.dom('#t-video').hasNoClass('tcon-transform');
 
     await click('#t-video');
     percySnapshot(assert);
 
-    assert.equal(button.classList.contains('tcon-transform'), true);
+    assert.dom('#t-video').hasClass('tcon-transform');
   });
 });

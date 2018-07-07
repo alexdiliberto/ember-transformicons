@@ -12,7 +12,7 @@ module('Integration | Component | t menu', function(hooks) {
 
     await render(hbs`{{t-menu}}`);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle menu');
+    assert.dom('button').hasText('toggle menu');
 
     // Template block usage:
     await render(hbs`
@@ -21,7 +21,7 @@ module('Integration | Component | t menu', function(hooks) {
       {{/t-menu}}
     `);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle menu');
+    assert.dom('button').hasText('toggle menu');
   });
 
   test('it creates a menu transformicon with defaults', async function(assert) {
@@ -30,13 +30,11 @@ module('Integration | Component | t menu', function(hooks) {
     await render(hbs`{{t-menu}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.equal(button.getAttribute('type'), 'button');
-    assert.equal(button.getAttribute('aria-label'), 'toggle menu');
-    assert.ok(button.classList.contains('tcon'));
-    assert.ok(button.classList.contains('tcon-menu--xbutterfly'));
-    assert.notOk(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasAttribute('type', 'button');
+    assert.dom('button').hasAttribute('aria-label', 'toggle menu');
+    assert.dom('button').hasClass('tcon');
+    assert.dom('button').hasClass('tcon-menu--xbutterfly');
+    assert.dom('button').hasNoClass('tcon-transform');
   });
 
   test('it creates a menu transformicon with `is-open=true`', async function(assert) {
@@ -45,9 +43,7 @@ module('Integration | Component | t menu', function(hooks) {
     await render(hbs`{{t-menu is-open=true}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasClass('tcon-transform');
   });
 
   test('it creates a menu transformicon with a non-default animation `a="butterfly"`', async function(assert) {
@@ -55,10 +51,8 @@ module('Integration | Component | t menu', function(hooks) {
 
     await render(hbs`{{t-menu a="arrow-360-left"}}`);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-menu--arrow'));
-    assert.ok(button.classList.contains('tcon-menu--arrow360left'));
+    assert.dom('button').hasClass('tcon-menu--arrow');
+    assert.dom('button').hasClass('tcon-menu--arrow360left');
   });
 
   test('user can click on the transformicon', async function(assert) {
@@ -66,12 +60,11 @@ module('Integration | Component | t menu', function(hooks) {
 
     await render(hbs`{{t-menu id="t-menu"}}`);
 
-    let button = this.element.querySelector('#t-menu');
-    assert.equal(button.classList.contains('tcon-transform'), false);
+    assert.dom('#t-menu').hasNoClass('tcon-transform');
 
     await click('#t-menu');
     percySnapshot(assert);
 
-    assert.equal(button.classList.contains('tcon-transform'), true);
+    assert.dom('#t-menu').hasClass('tcon-transform');
   });
 });

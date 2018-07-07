@@ -12,7 +12,7 @@ module('Integration | Component | t grid', function(hooks) {
 
     await render(hbs`{{t-grid}}`);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle grid');
+    assert.dom('button').hasText('toggle grid');
 
     // Template block usage:
     await render(hbs`
@@ -21,7 +21,7 @@ module('Integration | Component | t grid', function(hooks) {
       {{/t-grid}}
     `);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle grid');
+    assert.dom('button').hasText('toggle grid');
   });
 
   test('it creates a grid transformicon with defaults', async function(assert) {
@@ -30,14 +30,12 @@ module('Integration | Component | t grid', function(hooks) {
     await render(hbs`{{t-grid}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.equal(button.getAttribute('type'), 'button');
-    assert.equal(button.getAttribute('aria-label'), 'toggle grid');
-    assert.ok(button.classList.contains('tcon'));
-    assert.ok(button.classList.contains('tcon-grid'));
-    assert.ok(button.classList.contains('tcon-grid--rearrange'));
-    assert.notOk(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasAttribute('type', 'button');
+    assert.dom('button').hasAttribute('aria-label', 'toggle grid');
+    assert.dom('button').hasClass('tcon');
+    assert.dom('button').hasClass('tcon-grid');
+    assert.dom('button').hasClass('tcon-grid--rearrange');
+    assert.dom('button').hasNoClass('tcon-transform');
   });
 
   test('it creates a grid transformicon with `is-open=true`', async function(assert) {
@@ -46,9 +44,7 @@ module('Integration | Component | t grid', function(hooks) {
     await render(hbs`{{t-grid is-open=true}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasClass('tcon-transform');
   });
 
   test('it creates a grid transformicon with a non-default animation `a="collapse"`', async function(assert) {
@@ -56,9 +52,7 @@ module('Integration | Component | t grid', function(hooks) {
 
     await render(hbs`{{t-grid a="collapse"}}`);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-grid--collapse'));
+    assert.dom('button').hasClass('tcon-grid--collapse');
   });
 
   test('user can click on the transformicon', async function(assert) {
@@ -66,12 +60,11 @@ module('Integration | Component | t grid', function(hooks) {
 
     await render(hbs`{{t-grid id="t-grid"}}`);
 
-    let button = this.element.querySelector('#t-grid');
-    assert.equal(button.classList.contains('tcon-transform'), false);
+    assert.dom('#t-grid').hasNoClass('tcon-transform');
 
     await click('#t-grid');
     percySnapshot(assert);
 
-    assert.equal(button.classList.contains('tcon-transform'), true);
+    assert.dom('#t-grid').hasClass('tcon-transform');
   });
 });

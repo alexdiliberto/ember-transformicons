@@ -11,7 +11,7 @@ module('Integration | Component | t loader', function(hooks) {
 
     await render(hbs`{{t-loader}}`);
 
-    assert.equal(this.element.querySelector('span').textContent.trim(), 'loading');
+    assert.dom('span').hasText('loading');
 
     // Template block usage:
     await render(hbs`
@@ -20,7 +20,7 @@ module('Integration | Component | t loader', function(hooks) {
       {{/t-loader}}
     `);
 
-    assert.equal(this.element.querySelector('span').textContent.trim(), 'loading');
+    assert.dom('span').hasText('loading');
   });
 
   test('it creates a loader transformicon with defaults', async function(assert) {
@@ -28,9 +28,7 @@ module('Integration | Component | t loader', function(hooks) {
 
     await render(hbs`{{t-loader}}`);
 
-    let span = this.element.querySelector('span');
-
-    assert.equal(span.getAttribute('aria-label'), 'loading');
-    assert.ok(span.classList.contains('tcon-loader--spinner360'));
+    assert.dom('span').hasAttribute('aria-label', 'loading');
+    assert.dom('span').hasClass('tcon-loader--spinner360');
   });
 });

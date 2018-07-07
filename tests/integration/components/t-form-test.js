@@ -12,7 +12,7 @@ module('Integration | Component | t form', function(hooks) {
 
     await render(hbs`{{t-form}}`);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle search');
+    assert.dom('button').hasText('toggle search');
 
     // Template block usage:
     await render(hbs`
@@ -21,7 +21,7 @@ module('Integration | Component | t form', function(hooks) {
       {{/t-form}}
     `);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'toggle search');
+    assert.dom('button').hasText('toggle search');
   });
 
   test('it creates a form transformicon with defaults', async function(assert) {
@@ -30,13 +30,11 @@ module('Integration | Component | t form', function(hooks) {
     await render(hbs`{{t-form}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.equal(button.getAttribute('type'), 'button');
-    assert.equal(button.getAttribute('aria-label'), 'toggle search');
-    assert.ok(button.classList.contains('tcon'));
-    assert.ok(button.classList.contains('tcon-search--xcross'));
-    assert.notOk(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasAttribute('type', 'button');
+    assert.dom('button').hasAttribute('aria-label', 'toggle search');
+    assert.dom('button').hasClass('tcon');
+    assert.dom('button').hasClass('tcon-search--xcross');
+    assert.dom('button').hasNoClass('tcon-transform');
   });
 
   test('it creates a form transformicon with `is-searching=true`', async function(assert) {
@@ -45,9 +43,7 @@ module('Integration | Component | t form', function(hooks) {
     await render(hbs`{{t-form is-searching=true}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasClass('tcon-transform');
   });
 
   test('user can click on the transformicon', async function(assert) {
@@ -55,12 +51,11 @@ module('Integration | Component | t form', function(hooks) {
 
     await render(hbs`{{t-form id="t-form"}}`);
 
-    let button = this.element.querySelector('#t-form');
-    assert.equal(button.classList.contains('tcon-transform'), false);
+    assert.dom('#t-form').hasNoClass('tcon-transform');
 
     await click('#t-form');
     percySnapshot(assert);
 
-    assert.equal(button.classList.contains('tcon-transform'), true);
+    assert.dom('#t-form').hasClass('tcon-transform');
   });
 });

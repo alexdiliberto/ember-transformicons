@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Updated
+  - Tests leverage `qunit-dom` syntax
+  - Fixed `WARNING: Missing item type` console deprecation messages
   - Ember CLI v3.2.x (NOTE: Keeping CLI at v3.1.x until https://github.com/ember-learn/ember-cli-addon-docs/issues/200 is fixed)
   - `README.md` test and release docs
   - Use the provided `AddonDocsRouter` instead of the standard `EmberRouter` for the docs app

@@ -12,7 +12,7 @@ module('Integration | Component | t add', function(hooks) {
 
     await render(hbs`{{t-add}}`);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'add item');
+    assert.dom('button').hasText('add item');
 
     // Template block usage:
     await render(hbs`
@@ -21,7 +21,7 @@ module('Integration | Component | t add', function(hooks) {
       {{/t-add}}
     `);
 
-    assert.equal(this.element.querySelector('button').textContent.trim(), 'add item');
+    assert.dom('button').hasText('add item');
   });
 
   test('it creates an add transformicon with defaults', async function(assert) {
@@ -30,14 +30,12 @@ module('Integration | Component | t add', function(hooks) {
     await render(hbs`{{t-add}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.equal(button.getAttribute('type'), 'button');
-    assert.equal(button.getAttribute('aria-label'), 'add item');
-    assert.ok(button.classList.contains('tcon'));
-    assert.ok(button.classList.contains('tcon-plus'));
-    assert.ok(button.classList.contains('tcon-plus--minus'));
-    assert.notOk(button.classList.contains('tcon-transform'));
+    assert.dom('button').hasAttribute('type', 'button');
+    assert.dom('button').hasAttribute('aria-label', 'add item');
+    assert.dom('button').hasClass('tcon');
+    assert.dom('button').hasClass('tcon-plus');
+    assert.dom('button').hasClass('tcon-plus--minus');
+    assert.dom('button').hasNoClass('tcon-transform');
   });
 
   test('it creates an add transformicon with `is-added=true`', async function(assert) {
@@ -48,7 +46,7 @@ module('Integration | Component | t add', function(hooks) {
 
     let button = this.element.querySelector('button');
 
-    assert.ok(button.classList.contains('tcon-transform'));
+    assert.dom(button).hasClass('tcon-transform');
   });
 
   test('it creates an add transformicon with a non-default animation `a="check"`', async function(assert) {
@@ -56,9 +54,7 @@ module('Integration | Component | t add', function(hooks) {
 
     await render(hbs`{{t-add a="check"}}`);
 
-    let button = this.element.querySelector('button');
-
-    assert.ok(button.classList.contains('tcon-plus--check'));
+    assert.dom('button').hasClass('tcon-plus--check');
   });
 
   test('user can click on the transformicon', async function(assert) {
@@ -66,12 +62,11 @@ module('Integration | Component | t add', function(hooks) {
 
     await render(hbs`{{t-add id="t-add"}}`);
 
-    let button = this.element.querySelector('#t-add');
-    assert.equal(button.classList.contains('tcon-transform'), false);
+    assert.dom('#t-add').hasNoClass('tcon-transform');
 
     await click('#t-add');
     percySnapshot(assert);
 
-    assert.equal(button.classList.contains('tcon-transform'), true);
+    assert.dom('#t-add').hasClass('tcon-transform');
   });
 });
