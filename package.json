@@ -53,7 +53,7 @@
     "ember-cli-addon-docs-yuidoc": "^0.2.1",
     "ember-cli-addon-tests": "^0.11.0",
     "ember-cli-anybar": "0.5.0",
-    "ember-cli-dependency-checker": "^2.1.1",
+    "ember-cli-dependency-checker": "^3.0.0",
     "ember-cli-dependency-lint": "1.0.3",
     "ember-cli-deploy": "^1.0.2",
     "ember-cli-deploy-build": "^1.1.1",
