@@ -4,14 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
+### Added
+  - `ember-fastboot-addon-tests` to facilitate testing this addon within the context of a consuming fastboot app
+  - `ember-fetch@4.0.2` because of an [upstream compatibility issue](https://github.com/ember-learn/ember-cli-addon-docs/issues/187) between `ember-cli-addon-docs` and `ember-cli-fastboot`
+
 ### Updated
   - Tests leverage `qunit-dom` syntax
   - Fixed `WARNING: Missing item type` console deprecation messages
   - Ember CLI v3.2.x (NOTE: Keeping CLI at v3.1.x until https://github.com/ember-learn/ember-cli-addon-docs/issues/200 is fixed)
   - `README.md` test and release docs
   - Use the provided `AddonDocsRouter` instead of the standard `EmberRouter` for the docs app
-  
 
+### Removed 
+  - `eslint` direct dependency and instead just use the inherited dependency from `ember-cli-eslint` -> `broccoli-lint-eslint` -> `eslint`
+  - `chalk`, `cross-env`, `mocha`, and `request` direct dependencies from the older fastboot test implementation using `ember-cli-addon-tests`
+  
+  
 ## [v2.0.3] - 2018-05-18
 ### Updated
   - Ember CLI v3.1.x
