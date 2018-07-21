@@ -49,12 +49,6 @@ ember install ember-transformicons
 
 https://alexdiliberto.com/ember-transformicons
 
-## Contributing
-
-**Please contribute!** You can help code, design, update documentation, fix typos, raise issues and so much more.
-
-Any help is welcome and appreciated!
-
 ## Development
 
 ### Setup

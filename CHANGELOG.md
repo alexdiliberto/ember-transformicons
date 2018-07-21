@@ -8,7 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ember-fastboot-addon-tests` to facilitate testing this addon within the context of a consuming fastboot app
   - `ember-fetch@4.0.2` because of an [upstream compatibility issue](https://github.com/ember-learn/ember-cli-addon-docs/issues/187) between `ember-cli-addon-docs` and `ember-cli-fastboot`
   - Set Greenkeeper to ignore specific core Ember/Ember CLI dependencies
-
+  - `CONTRIBUTING.md`
+  - `CODE_OF_CONDUCT.md`
+  
 ### Updated
   - Tests leverage `qunit-dom` syntax
   - Fixed `WARNING: Missing item type` console deprecation messages
