@@ -4,11 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [Unreleased][unreleased]
-### Updated
-  - Nothing yet...
-
-
-## [v2.1.0] - 2018-07-21
 ### Added
   - `ember-fastboot-addon-tests` to facilitate testing this addon within the context of a consuming fastboot app
   - `ember-fetch@4.0.2` because of an [upstream compatibility issue](https://github.com/ember-learn/ember-cli-addon-docs/issues/187) between `ember-cli-addon-docs` and `ember-cli-fastboot`
