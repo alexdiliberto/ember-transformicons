@@ -1,38 +1,43 @@
 {
   "master": {
-    "path": "master",
+    "path": "versions/master",
     "name": "master",
-    "sha": "8e1aef6397f18a215db134997e1cb689e7cb7f14",
+    "sha": "5d76f095b0e1074f8edb3c5c34537dc417c153f8",
     "tag": null
   },
   "v2.0.2": {
     "sha": "9a7daf83aa43912a07124c7ab2396f63a5b19777",
     "tag": "v2.0.2",
-    "path": "v2.0.2",
-    "name": "v2.0.2"
-  },
-  "latest": {
-    "path": "latest",
-    "name": "latest",
-    "sha": "539ad08c05811aa0775cef42f7d2319fba33a34e",
-    "tag": "v2.1.0"
+    "path": "versions/v2.0.2",
+    "name": "v2.0.2",
+    "oldPath": "v2.0.2"
   },
   "v2.0.3": {
     "sha": "ac25ca7c0eacf4eaa2a9b085917bfb18b17f5f10",
     "tag": "v2.0.3",
-    "path": "v2.0.3",
-    "name": "v2.0.3"
+    "path": "versions/v2.0.3",
+    "name": "v2.0.3",
+    "oldPath": "v2.0.3"
   },
   "v2.0.4": {
-    "path": "v2.0.4",
+    "path": "versions/v2.0.4",
     "name": "v2.0.4",
     "sha": "b3511bd4db6f5abd3f888f305044fd7ef98d041f",
-    "tag": "v2.0.4"
+    "tag": "v2.0.4",
+    "oldPath": "v2.0.4"
   },
   "v2.1.0": {
-    "path": "v2.1.0",
+    "path": "versions/v2.1.0",
     "name": "v2.1.0",
     "sha": "539ad08c05811aa0775cef42f7d2319fba33a34e",
-    "tag": "v2.1.0"
+    "tag": "v2.1.0",
+    "oldPath": "v2.1.0"
+  },
+  "-latest": {
+    "path": "",
+    "name": "Latest",
+    "sha": "539ad08c05811aa0775cef42f7d2319fba33a34e",
+    "tag": "v2.1.0",
+    "oldPath": "latest"
   }
 }
