@@ -37,11 +37,14 @@
     "test:fastboot": "DEBUG=ember-cli-addon-tests ember fastboot:test"
   },
   "dependencies": {
+    "@ember-decorators/babel-transforms": "^2.0.0",
     "ember-cli-babel": "^6.11.0",
-    "ember-cli-htmlbars": "^2.0.2"
+    "ember-cli-htmlbars": "^2.0.2",
+    "ember-decorators": "^2.4.0"
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^1.1.1",
+    "babel-eslint": "^8.0.0",
     "broccoli-asset-rev": "^2.7.0",
     "chai": "^4.1.2",
     "denodeify": "^1.2.1",
