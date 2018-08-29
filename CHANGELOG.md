@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Set Greenkeeper to ignore specific core Ember/Ember CLI dependencies
   - `CONTRIBUTING.md`
   - `CODE_OF_CONDUCT.md`
+  - `ember-decorators` style syntax
   
 ### Updated
   - Tests leverage `qunit-dom` syntax

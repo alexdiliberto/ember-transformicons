@@ -1,16 +1,12 @@
-import { alias } from '@ember/object/computed';
-import EmberObject, { computed, get } from '@ember/object';
-import layout from '../templates/components/t-remove';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, classNames, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import { alias } from '@ember-decorators/object/computed';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-remove';
 
 const defaultAnimation = 'check';
-const animationTypeTable = EmberObject.create({
-  'check': 'tcon-remove--check',
-  'chevron-left': 'tcon-remove--chevron-left',
-  'chevron-right': 'tcon-remove--chevron-right',
-  'chevron-down': 'tcon-remove--chevron-down',
-  'chevron-up': 'tcon-remove--chevron-up'
-});
 
 /**
   Transformicon Remove component.
@@ -43,21 +39,29 @@ const animationTypeTable = EmberObject.create({
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
+@layout(template)
+@classNames('tcon-remove')
+export default class TRemoveComponent extends BaseTransformiconComponent {
+  @className animationType;
+  @className isRemoved;
 
-  classNames: ['tcon-remove'],
-  classNameBindings: ['animationType', 'isRemoved'],
+  label = 'remove item';
+  initialState = 'is-removed';
 
-  label: 'remove item',
-  initialState: 'is-removed',
+  animationTypeTable = {
+    'check': 'tcon-remove--check',
+    'chevron-left': 'tcon-remove--chevron-left',
+    'chevron-right': 'tcon-remove--chevron-right',
+    'chevron-down': 'tcon-remove--chevron-down',
+    'chevron-up': 'tcon-remove--chevron-up'
+  }
 
   /*
     PUBLIC COMPONENT API
   */
-  animation: defaultAnimation,
-  'is-removed': false,
-  a: alias('animation'),
+ animation = _defaultTo(this.animation, defaultAnimation);
+ 'is-removed' = _defaultTo(this['is-removed'], false);
+  @alias('animation') a;
 
   /**
     Get the CSS classname corresponding to the component's current animation type.
@@ -66,12 +70,12 @@ export default BaseTransformicon.extend({
     @type String
     @public
   */
-  animationType: computed('animation', {
-    get() {
-      let anim = get(this, 'animation');
-      return get(animationTypeTable, anim) || get(animationTypeTable, defaultAnimation);
-    }
-  }),
+  @computed('animation')
+  get animationType() {
+    let anim = get(this, 'animation');
+    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+  }
+
   /**
     Get the classname representing the `remove` toggled state for the remove icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -79,9 +83,8 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isRemoved: computed('is-removed', {
-    get() {
-      return get(this, 'is-removed') ? get(this, 'transformClass') : false;
-    }
-  })
-});
+  @computed('is-removed')
+  get isRemoved() {
+    return get(this, 'is-removed') ? get(this, 'transformClass') : false;
+  }
+}

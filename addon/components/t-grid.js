@@ -1,13 +1,12 @@
-import { alias } from '@ember/object/computed';
-import EmberObject, { computed, get } from '@ember/object';
-import layout from '../templates/components/t-grid';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, classNames, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import { alias } from '@ember-decorators/object/computed';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-grid';
 
 const defaultAnimation = 'rearrange';
-const animationTypeTable = EmberObject.create({
-  'rearrange': 'tcon-grid--rearrange',
-  'collapse': 'tcon-grid--collapse'
-});
 
 /**
   Transformicon Grid component.
@@ -37,20 +36,25 @@ const animationTypeTable = EmberObject.create({
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
+@layout(template)
+@classNames('tcon-grid')
+export default class TGridComponent extends BaseTransformiconComponent {
+  @className animationType;
+  @className isOpen;
 
-  classNames: ['tcon-grid'],
-  classNameBindings: ['animationType', 'isOpen'],
+  label = 'toggle grid';
 
-  label: 'toggle grid',
+  animationTypeTable = {
+    'rearrange': 'tcon-grid--rearrange',
+    'collapse': 'tcon-grid--collapse'
+  };
 
   /*
     PUBLIC COMPONENT API
   */
-  animation: defaultAnimation,
-  'is-open': false,
-  a: alias('animation'),
+  animation = _defaultTo(this.animation, defaultAnimation);
+  'is-open' = _defaultTo(this['is-open'], false);
+  @alias('animation') a;
 
   /**
     Get the CSS classname corresponding to the component's current animation type.
@@ -59,12 +63,11 @@ export default BaseTransformicon.extend({
     @type String
     @public
   */
-  animationType: computed('animation', {
-    get() {
-      let anim = get(this, 'animation');
-      return get(animationTypeTable, anim) || get(animationTypeTable, defaultAnimation);
-    }
-  }),
+  @computed('animation')
+  get animationType() {
+    let anim = get(this, 'animation');
+    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+  }
   /**
     Get the classname representing the `open` toggled state for the grid icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -72,9 +75,8 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isOpen: computed('is-open', {
-    get() {
-      return get(this, 'is-open') ? get(this, 'transformClass') : false;
-    }
-  })
-});
+  @computed('is-open')
+  get isOpen() {
+    return get(this, 'is-open') ? get(this, 'transformClass') : false;
+  }
+}

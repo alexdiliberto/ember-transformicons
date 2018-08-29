@@ -17,7 +17,8 @@ module.exports = {
     browser: true
   },
   rules: {
-    'no-debugger': 0
+    'no-debugger': 0,
+    'indent': 0 // HACK: Removes error `Cannot read property 'range' of null`
   },
   overrides: [
     // node files
