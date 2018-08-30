@@ -29,8 +29,6 @@ import template from '../templates/components/t-mail';
 @layout(template)
 @classNames('tcon-mail--envelope')
 export default class TMailComponent extends BaseTransformiconComponent {
-  @className isOpen;
-
   label = 'open mailbox';
 
   /*
@@ -47,6 +45,7 @@ export default class TMailComponent extends BaseTransformiconComponent {
     @type String|Boolean
     @public
   */
+  @className
   @computed('is-open')
   get isOpen() {
     return get(this, 'is-open') ? false : get(this, 'transformClass');

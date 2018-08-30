@@ -28,8 +28,6 @@ import template from '../templates/components/t-form';
 @layout(template)
 @classNames('tcon-search--xcross')
 export default class TFormComponent extends BaseTransformiconComponent {
-  @className isSearching;
-
   label = 'toggle search';
   initialState = 'is-searching';
 
@@ -45,6 +43,7 @@ export default class TFormComponent extends BaseTransformiconComponent {
     @type String|Boolean
     @public
   */
+  @className
   @computed('is-searching')
   get isSearching() {
     return get(this, 'is-searching') ? get(this, 'transformClass') : false;

@@ -42,9 +42,6 @@ const defaultAnimation = 'check';
 @layout(template)
 @classNames('tcon-remove')
 export default class TRemoveComponent extends BaseTransformiconComponent {
-  @className animationType;
-  @className isRemoved;
-
   label = 'remove item';
   initialState = 'is-removed';
 
@@ -70,6 +67,7 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
     @type String
     @public
   */
+  @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
@@ -83,6 +81,7 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
     @type String|Boolean
     @public
   */
+  @className
   @computed('is-removed')
   get isRemoved() {
     return get(this, 'is-removed') ? get(this, 'transformClass') : false;

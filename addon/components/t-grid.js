@@ -39,9 +39,6 @@ const defaultAnimation = 'rearrange';
 @layout(template)
 @classNames('tcon-grid')
 export default class TGridComponent extends BaseTransformiconComponent {
-  @className animationType;
-  @className isOpen;
-
   label = 'toggle grid';
 
   animationTypeTable = {
@@ -63,6 +60,7 @@ export default class TGridComponent extends BaseTransformiconComponent {
     @type String
     @public
   */
+  @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
@@ -75,6 +73,7 @@ export default class TGridComponent extends BaseTransformiconComponent {
     @type String|Boolean
     @public
   */
+  @className
   @computed('is-open')
   get isOpen() {
     return get(this, 'is-open') ? get(this, 'transformClass') : false;

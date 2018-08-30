@@ -44,9 +44,7 @@ module('Integration | Component | t add', function(hooks) {
     await render(hbs`{{t-add is-added=true}}`);
     percySnapshot(assert);
 
-    let button = this.element.querySelector('button');
-
-    assert.dom(button).hasClass('tcon-transform');
+    assert.dom('button').hasClass('tcon-transform');
   });
 
   test('it creates an add transformicon with a non-default animation `a="check"`', async function(assert) {

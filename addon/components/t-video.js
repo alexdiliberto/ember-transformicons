@@ -29,8 +29,6 @@ import template from '../templates/components/t-video';
 @layout(template)
 @classNames('tcon-vid--play')
 export default class TVideoComponent extends BaseTransformiconComponent {
-  @className isPlaying;
-
   label = 'play video';
   initialState = 'is-playing';
 
@@ -48,6 +46,7 @@ export default class TVideoComponent extends BaseTransformiconComponent {
     @type String|Boolean
     @public
   */
+  @className
   @computed('is-playing')
   get isPlaying() {
     return get(this, 'is-playing') ? get(this, 'transformClass') : false;

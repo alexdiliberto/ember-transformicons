@@ -39,9 +39,6 @@ const defaultAnimation = 'minus';
 @layout(template)
 @classNames('tcon-plus')
 export default class TAddComponent extends BaseTransformiconComponent {
-  @className animationType;
-  @className isAdded;
-
   label = 'add item';
   initialState = 'is-added';
 
@@ -64,6 +61,7 @@ export default class TAddComponent extends BaseTransformiconComponent {
     @type String
     @public
   */
+  @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
@@ -77,6 +75,7 @@ export default class TAddComponent extends BaseTransformiconComponent {
     @type String|Boolean
     @public
   */
+  @className
   @computed('is-added')
   get isAdded() {
     return get(this, 'is-added') ? get(this, 'transformClass') : false;

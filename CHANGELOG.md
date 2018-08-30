@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Set Greenkeeper to ignore specific core Ember/Ember CLI dependencies
   - `CONTRIBUTING.md`
   - `CODE_OF_CONDUCT.md`
-  - `ember-decorators` style syntax
+  - Use `ember-decorators` style syntax
   
 ### Updated
   - Tests leverage `qunit-dom` syntax
@@ -22,6 +22,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed 
   - `eslint` direct dependency and instead just use the inherited dependency from `ember-cli-eslint` -> `broccoli-lint-eslint` -> `eslint`
   - `chalk`, `cross-env`, `mocha`, and `request` direct dependencies from the older fastboot test implementation using `ember-cli-addon-tests`
+  - `/-private` directory files from appearing in addon-docs
   
   
 ## [v2.0.3] - 2018-05-18
