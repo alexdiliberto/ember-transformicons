@@ -1,13 +1,12 @@
-import { alias } from '@ember/object/computed';
-import EmberObject, { computed, get } from '@ember/object';
-import layout from '../templates/components/t-add';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, classNames, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import { alias } from '@ember-decorators/object/computed';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-add';
 
 const defaultAnimation = 'minus';
-const animationTypeTable = EmberObject.create({
-  'minus': 'tcon-plus--minus',
-  'check': 'tcon-plus--check'
-});
 
 /**
   Transformicon Add component.
@@ -37,21 +36,23 @@ const animationTypeTable = EmberObject.create({
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
+@layout(template)
+@classNames('tcon-plus')
+export default class TAddComponent extends BaseTransformiconComponent {
+  label = 'add item';
+  initialState = 'is-added';
 
-  classNames: ['tcon-plus'],
-  classNameBindings: ['animationType', 'isAdded'],
-
-  label: 'add item',
-  initialState: 'is-added',
+  animationTypeTable = {
+    'minus': 'tcon-plus--minus',
+    'check': 'tcon-plus--check'
+  };
 
   /*
     PUBLIC COMPONENT API
   */
-  animation: defaultAnimation,
-  'is-added': false,
-  a: alias('animation'),
+  animation = _defaultTo(this.animation, defaultAnimation);
+  'is-added' = _defaultTo(this['is-added'], false);
+  @alias('animation') a;
 
   /**
     Get the CSS classname corresponding to the component's current animation type.
@@ -60,12 +61,13 @@ export default BaseTransformicon.extend({
     @type String
     @public
   */
-  animationType: computed('animation', {
-    get() {
-      let anim = get(this, 'animation');
-      return get(animationTypeTable, anim) || get(animationTypeTable, defaultAnimation);
-    }
-  }),
+  @className
+  @computed('animation')
+  get animationType() {
+    let anim = get(this, 'animation');
+    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+  }
+
   /**
     Get the classname representing the `added` toggled state for the add icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -73,9 +75,9 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isAdded: computed('is-added', {
-    get() {
-      return get(this, 'is-added') ? get(this, 'transformClass') : false;
-    }
-  })
-});
+  @className
+  @computed('is-added')
+  get isAdded() {
+    return get(this, 'is-added') ? get(this, 'transformClass') : false;
+  }
+}

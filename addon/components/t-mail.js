@@ -1,7 +1,10 @@
-import { computed, get } from '@ember/object';
-import { reads } from '@ember/object/computed';
-import layout from '../templates/components/t-mail';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, classNames, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import { reads } from '@ember-decorators/object/computed';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-mail';
 
 /**
   Transformicon Mail component.
@@ -23,20 +26,17 @@ import BaseTransformicon from './-private/base';
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
-
-  classNames: ['tcon-mail--envelope'],
-  classNameBindings: ['isOpen'],
-
-  label: 'open mailbox',
+@layout(template)
+@classNames('tcon-mail--envelope')
+export default class TMailComponent extends BaseTransformiconComponent {
+  label = 'open mailbox';
 
   /*
     PUBLIC COMPONENT API
   */
-  'is-open': true,
+  'is-open' = _defaultTo(this['is-open'], true);
 
-  ariaRole: reads('type'),
+  @reads('type') ariaRole;
 
   /**
     Get the classname representing the `open` toggled state for the mail icon. This classname is stored in the `BaseTransformiconComponent`.
@@ -45,9 +45,9 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isOpen: computed('is-open', {
-    get() {
-      return get(this, 'is-open') ? false : get(this, 'transformClass');
-    }
-  })
-});
+  @className
+  @computed('is-open')
+  get isOpen() {
+    return get(this, 'is-open') ? false : get(this, 'transformClass');
+  }
+}

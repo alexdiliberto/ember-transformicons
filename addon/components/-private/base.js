@@ -1,6 +1,8 @@
+import Component from '@ember/component';
 import { get } from '@ember/object';
 import { assert } from '@ember/debug';
-import Component from '@ember/component';
+import _defaultTo from 'lodash.defaultto';
+import { attribute, classNames, tagName } from '@ember-decorators/component';
 
 /**
   Transformicon Base component.
@@ -9,14 +11,11 @@ import Component from '@ember/component';
   @extends Ember.Component
   @public
 */
-export default Component.extend({
-  tagName: 'button',
-
-  attributeBindings: ['type', 'label:aria-label'],
-  type: 'button',
-  label: null,
-
-  classNames: ['tcon'],
+@tagName('button')
+@classNames('tcon')
+export default class BaseTransformiconComponent extends Component {
+  @attribute type = 'button';
+  @attribute('aria-label') label = null;
 
   /**
     Stores the classname representing the `on` toggled state for the transformicon. This classname will apply the necessary CSS animations and transitions.
@@ -27,7 +26,7 @@ export default Component.extend({
     @final
     @public
   */
-  transformClass: 'tcon-transform',
+  transformClass = 'tcon-transform';
 
   /**
     Stores the name of the component's public property indicating initial toggled state. Possible `initialState` names include:
@@ -43,7 +42,7 @@ export default Component.extend({
     @default 'is-open'
     @public
   */
-  initialState: 'is-open',
+  initialState = _defaultTo(this.initialState, 'is-open');
 
   /**
     This click handler does two things after retrieving the transformicons initital state property name.
@@ -67,4 +66,4 @@ export default Component.extend({
       onclick(boolInitStateProp);
     }
   }
-});
+}

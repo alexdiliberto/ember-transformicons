@@ -1,17 +1,12 @@
-import { alias } from '@ember/object/computed';
-import EmberObject, { computed, get } from '@ember/object';
-import layout from '../templates/components/t-menu';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import { alias } from '@ember-decorators/object/computed';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-menu';
 
 const defaultAnimation = 'butterfly';
-const animationTypeTable = EmberObject.create({
-  'butterfly': 'tcon-menu--xbutterfly',
-  'minus': 'tcon-menu--minus',
-  'x-cross': 'tcon-menu--xcross',
-  'arrow-up': 'tcon-menu--arrow tcon-menu--arrowup',
-  'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left',
-  'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
-});
 
 /**
   Transformicon Menu component.
@@ -45,19 +40,25 @@ const animationTypeTable = EmberObject.create({
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
+@layout(template)
+export default class TMenuComponent extends BaseTransformiconComponent {
+  label = 'toggle menu';
 
-  classNameBindings: ['animationType', 'isOpen'],
-
-  label: 'toggle menu',
+  animationTypeTable = {
+    'butterfly': 'tcon-menu--xbutterfly',
+    'minus': 'tcon-menu--minus',
+    'x-cross': 'tcon-menu--xcross',
+    'arrow-up': 'tcon-menu--arrow tcon-menu--arrowup',
+    'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left',
+    'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
+  };
 
   /*
     PUBLIC COMPONENT API
   */
-  animation: defaultAnimation,
-  'is-open': false,
-  a: alias('animation'),
+  animation = _defaultTo(this.animation, defaultAnimation);
+  'is-open' = _defaultTo(this['is-open'], false);
+  @alias('animation') a;
 
   /**
     Get the CSS classname corresponding to the component's current animation type.
@@ -66,12 +67,12 @@ export default BaseTransformicon.extend({
     @type String
     @public
   */
-  animationType: computed('animation', {
-    get() {
-      let anim = get(this, 'animation');
-      return get(animationTypeTable, anim) || get(animationTypeTable, defaultAnimation);
-    }
-  }),
+  @className
+  @computed('animation')
+  get animationType() {
+    let anim = get(this, 'animation');
+    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+  }
   /**
     Get the classname representing the `open` toggled state for the menu icon. This classname is stored in the `BaseTransformiconComponent`.
 
@@ -79,9 +80,9 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isOpen: computed('is-open', {
-    get() {
-      return get(this, 'is-open') ? get(this, 'transformClass') : false;
-    }
-  })
-});
+  @className
+  @computed('is-open')
+  get isOpen() {
+    return get(this, 'is-open') ? get(this, 'transformClass') : false;
+  }
+}

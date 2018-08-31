@@ -1,7 +1,10 @@
-import { computed, get } from '@ember/object';
-import { reads } from '@ember/object/computed';
-import layout from '../templates/components/t-video';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, classNames, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import { reads } from '@ember-decorators/object/computed';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-video';
 
 /**
   Transformicon Video component.
@@ -23,21 +26,18 @@ import BaseTransformicon from './-private/base';
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
-
-  classNames: ['tcon-vid--play'],
-  classNameBindings: ['isPlaying'],
-
-  label: 'play video',
-  initialState: 'is-playing',
+@layout(template)
+@classNames('tcon-vid--play')
+export default class TVideoComponent extends BaseTransformiconComponent {
+  label = 'play video';
+  initialState = 'is-playing';
 
   /*
     PUBLIC COMPONENT API
   */
-  'is-playing': false,
+  'is-playing' = _defaultTo(this['is-playing'], false);
 
-  ariaRole: reads('type'),
+  @reads('type') ariaRole;
 
   /**
     Get the classname representing the `playing` toggled state for the video icon. This classname is stored in the `BaseTransformiconComponent`.
@@ -46,9 +46,9 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isPlaying: computed('is-playing', {
-    get() {
-      return get(this, 'is-playing') ? get(this, 'transformClass') : false;
-    }
-  })
-});
+  @className
+  @computed('is-playing')
+  get isPlaying() {
+    return get(this, 'is-playing') ? get(this, 'transformClass') : false;
+  }
+}

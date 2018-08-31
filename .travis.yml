@@ -14,6 +14,9 @@ addons:
 cache:
   yarn: true
 
+notifications:
+  email: false 
+
 env:
   global:
     # See https://git.io/vdao3 for details.

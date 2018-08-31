@@ -1,5 +1,6 @@
 import Component from '@ember/component';
-import layout from '../templates/components/t-scroll';
+import { attribute, classNames, layout, tagName } from '@ember-decorators/component';
+import template from '../templates/components/t-scroll';
 
 /**
   Transformicon Scroll Indicator component.
@@ -14,13 +15,10 @@ import layout from '../templates/components/t-scroll';
   @extends Ember.Component
   @public
 */
-export default Component.extend({
-  layout,
-
-  tagName: 'span',
-  attributeBindings: ['label:aria-label', 'aria-hidden'],
-  classNames: ['tcon-indicator'],
-
-  label: 'scroll',
-  'aria-hidden': 'true'
-});
+@layout(template)
+@tagName('span')
+@classNames('tcon-indicator')
+export default class TScrollComponent extends Component {
+  @attribute('aria-hidden') ariaHidden = 'true';
+  @attribute('aria-label') label = 'scroll';
+}

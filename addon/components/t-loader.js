@@ -1,5 +1,6 @@
 import Component from '@ember/component';
-import layout from '../templates/components/t-loader';
+import { attribute, classNames, layout, tagName } from '@ember-decorators/component';
+import template from '../templates/components/t-loader';
 
 /**
   Transformicon Loader component.
@@ -14,13 +15,9 @@ import layout from '../templates/components/t-loader';
   @extends Ember.Component
   @public
 */
-export default Component.extend({
-  layout,
-
-  tagName: 'span',
-
-  attributeBindings: ['label:aria-label'],
-  label: 'loading',
-
-  classNames: ['tcon-loader--spinner360']
-});
+@layout(template)
+@tagName('span')
+@classNames('tcon-loader--spinner360')
+export default class TLoaderComponent extends Component {
+  @attribute('aria-label') label = 'loading';
+}

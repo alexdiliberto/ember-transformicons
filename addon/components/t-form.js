@@ -1,6 +1,9 @@
-import { computed, get } from '@ember/object';
-import layout from '../templates/components/t-form';
-import BaseTransformicon from './-private/base';
+import BaseTransformiconComponent from './-private/base';
+import { get } from '@ember/object';
+import { className, classNames, layout } from '@ember-decorators/component';
+import { computed } from '@ember-decorators/object';
+import _defaultTo from 'lodash.defaultto';
+import template from '../templates/components/t-form';
 
 /**
   Transformicon Form component.
@@ -22,19 +25,16 @@ import BaseTransformicon from './-private/base';
   @extends BaseTransformiconComponent
   @public
 */
-export default BaseTransformicon.extend({
-  layout,
-
-  classNames: ['tcon-search--xcross'],
-  classNameBindings: ['isSearching'],
-
-  label: 'toggle search',
-  initialState: 'is-searching',
+@layout(template)
+@classNames('tcon-search--xcross')
+export default class TFormComponent extends BaseTransformiconComponent {
+  label = 'toggle search';
+  initialState = 'is-searching';
 
   /*
     PUBLIC COMPONENT API
   */
-  'is-searching': false,
+  'is-searching' = _defaultTo(this['is-searching'], false);
 
   /**
     Get the classname representing the `searching` toggled state for the video icon. This classname is stored in the `BaseTransformiconComponent`.
@@ -43,9 +43,9 @@ export default BaseTransformicon.extend({
     @type String|Boolean
     @public
   */
-  isSearching: computed('is-searching', {
-    get() {
-      return get(this, 'is-searching') ? get(this, 'transformClass') : false;
-    }
-  })
-});
+  @className
+  @computed('is-searching')
+  get isSearching() {
+    return get(this, 'is-searching') ? get(this, 'transformClass') : false;
+  }
+}
