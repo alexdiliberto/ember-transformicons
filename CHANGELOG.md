@@ -5,12 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Use `ember-decorators` style syntax
+
+
+## [v2.1.0] - 2018-07-21
+### Added
   - `ember-fastboot-addon-tests` to facilitate testing this addon within the context of a consuming fastboot app
   - `ember-fetch@4.0.2` because of an [upstream compatibility issue](https://github.com/ember-learn/ember-cli-addon-docs/issues/187) between `ember-cli-addon-docs` and `ember-cli-fastboot`
   - Set Greenkeeper to ignore specific core Ember/Ember CLI dependencies
   - `CONTRIBUTING.md`
   - `CODE_OF_CONDUCT.md`
-  - Use `ember-decorators` style syntax
   
 ### Updated
   - Tests leverage `qunit-dom` syntax
@@ -362,7 +366,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.3...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.1.0...HEAD
+[v2.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.3...v2.1.0
 [v2.0.3]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.2...v2.0.3
 [v2.0.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.1...v2.0.2
 [v2.0.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.0...v2.0.1
