@@ -37,7 +37,6 @@
     "path": "",
     "name": "Latest",
     "sha": "539ad08c05811aa0775cef42f7d2319fba33a34e",
-    "tag": "v2.1.0",
-    "oldPath": "latest"
+    "tag": "v2.1.0"
   }
 }
