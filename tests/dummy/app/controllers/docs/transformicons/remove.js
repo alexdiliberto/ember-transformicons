@@ -1,12 +1,12 @@
 import Controller from '@ember/controller';
+import { action } from '@ember-decorators/object';
 
 /* eslint-disable ember/alias-model-in-controller, no-console */
-export default Controller.extend({
-  isRemoved: false,
+export default class TransformiconsRemoveController extends Controller {
+  isRemoved = false;
 
-  actions: {
-    updateRemoveAction(isRemoved) {
-      console.info(`updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`);
-    }
+  @action
+  updateRemoveAction(isRemoved) {
+    console.info(`updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`);
   }
-});
+}

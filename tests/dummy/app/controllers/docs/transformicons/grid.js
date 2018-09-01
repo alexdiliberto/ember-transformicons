@@ -1,12 +1,12 @@
 import Controller from '@ember/controller';
+import { action } from '@ember-decorators/object';
 
 /* eslint-disable ember/alias-model-in-controller, no-console */
-export default Controller.extend({
-  isGridOpen: false,
+export default class TransformiconsGridController extends Controller {
+  isGridOpen = false;
 
-  actions: {
-    updateGridAction(isOpen) {
-      console.info(`updateGridAction was triggered with the following arguments: isOpen=${isOpen}`);
-    }
+  @action
+  updateGridAction(isOpen) {
+    console.info(`updateGridAction was triggered with the following arguments: isOpen=${isOpen}`);
   }
-});
+}
