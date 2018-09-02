@@ -6,7 +6,7 @@ import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-remove';
 
-const defaultAnimation = 'check';
+const DEFAULT_ANIMATION = 'check';
 
 /**
   Transformicon Remove component.
@@ -24,20 +24,15 @@ const defaultAnimation = 'check';
     * chevron-down
     * chevron-up
 
-  Examples:
+  @example
+  ```hbs
+    {{! These are functionally equivalent}}
 
-    ```hbs
-      {{! These are functionally equivalent}}
-
-      {{t-remove}}
-      {{t-remove a='check'}}
-      {{t-remove animation='check'}}
-      {{t-remove is-removed=false animation='check'}}
-    ```
-
-  @class TRemoveComponent
-  @extends BaseTransformiconComponent
-  @public
+    {{t-remove}}
+    {{t-remove a='check'}}
+    {{t-remove animation='check'}}
+    {{t-remove is-removed=false animation='check'}}
+  ```
 */
 @layout(template)
 @classNames('tcon-remove')
@@ -45,7 +40,10 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
   label = 'remove item';
   initialState = 'is-removed';
 
-  animationTypeTable = {
+  /**
+   * Animation CSS classname lookup table for the Remove transformicon
+   */
+  _animationTypeTable = {
     'check': 'tcon-remove--check',
     'chevron-left': 'tcon-remove--chevron-left',
     'chevron-right': 'tcon-remove--chevron-right',
@@ -53,34 +51,50 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
     'chevron-up': 'tcon-remove--chevron-up'
   }
 
-  /*
-    PUBLIC COMPONENT API
-  */
- animation = _defaultTo(this.animation, defaultAnimation);
- 'is-removed' = _defaultTo(this['is-removed'], false);
-  @alias('animation') a;
+  /**
+   * Get the component's current animation type. This is used to lookup the CSS classname for the
+   * animation
+   * @type {string}
+   */
+  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
-    Get the CSS classname corresponding to the component's current animation type.
+   * Flag to indicate the state of this transformicon
+   * @type {boolean}
+   */
+  // 'is-removed' = _defaultTo(this['is-removed'], false);
 
-    @property animationType
-    @type String
-    @public
-  */
+  /**
+   * Alias for {@link animation}
+   * @type {string}
+   */
+  @alias('animation') a;
+
+  constructor() {
+    super(...arguments);
+
+    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
+    // here from the constructor as a temporary workaround.
+    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
+    this['is-removed'] = _defaultTo(this['is-removed'], false);
+  }
+
+  /**
+   * Get the CSS classname corresponding to the component's current {@link animation} type
+   * @type {string}
+   */
   @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
-    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+    return get(this._animationTypeTable, anim);
   }
 
   /**
-    Get the classname representing the `remove` toggled state for the remove icon. This classname is stored in the `BaseTransformiconComponent`.
-
-    @property isRemoved
-    @type String|Boolean
-    @public
-  */
+   * Get the {@link transformClass} CSS classname representing the `is-removed` toggled state
+   * for this transformicon
+   * @type {string|boolean}
+   */
   @className
   @computed('is-removed')
   get isRemoved() {
