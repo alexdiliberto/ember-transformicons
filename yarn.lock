@@ -1641,6 +1641,13 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
+broccoli-amd-funnel@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/broccoli-amd-funnel/-/broccoli-amd-funnel-1.3.0.tgz#c4426b4fce976e44295bd74f34725f53bdeb08e3"
+  dependencies:
+    broccoli-plugin "^1.3.0"
+    symlink-or-copy "^1.2.0"
+
 broccoli-asset-rev@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/broccoli-asset-rev/-/broccoli-asset-rev-2.7.0.tgz#c73da1d97c4180366fa442a87624ca1b7fb99161"
@@ -1941,6 +1948,23 @@ broccoli-middleware@^1.2.1:
   dependencies:
     handlebars "^4.0.4"
     mime-types "^2.1.18"
+
+broccoli-module-normalizer@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/broccoli-module-normalizer/-/broccoli-module-normalizer-1.3.0.tgz#f9982d9cbb776b4ed754161cc6547784d3eb19de"
+  dependencies:
+    broccoli-plugin "^1.3.0"
+    merge-trees "^1.0.1"
+    rimraf "^2.6.2"
+    symlink-or-copy "^1.1.8"
+
+broccoli-module-unification-reexporter@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/broccoli-module-unification-reexporter/-/broccoli-module-unification-reexporter-1.0.0.tgz#031909c5d3f159ec11d5f9e2346f2861db8acb3e"
+  dependencies:
+    broccoli-plugin "^1.3.0"
+    mkdirp "^0.5.1"
+    walk-sync "^0.3.2"
 
 broccoli-persistent-filter@^1.0.3, broccoli-persistent-filter@^1.1.5, broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.2.0, broccoli-persistent-filter@^1.4.2, broccoli-persistent-filter@^1.4.3:
   version "1.4.3"
@@ -2526,6 +2550,10 @@ chrome-trace-event@^1.0.0:
   dependencies:
     tslib "^1.9.0"
 
+ci-info@^1.1.2:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.4.0.tgz#4841d53cad49f11b827b648ebde27a6e189b412f"
+
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -2824,7 +2852,7 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
-console-ui@^2.1.0:
+console-ui@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/console-ui/-/console-ui-2.2.2.tgz#b294a2934de869dd06789ab4be69555411edef29"
   dependencies:
@@ -3928,14 +3956,15 @@ ember-cli-version-checker@^2.0.0, ember-cli-version-checker@^2.1.0, ember-cli-ve
     resolve "^1.3.3"
     semver "^5.3.0"
 
-ember-cli@~3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.1.4.tgz#95f7ff4302d535619b5d5ff1c7040877a67d4468"
+ember-cli@~3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.3.0.tgz#534ebe72453a4fb064a34077a0874ad69ea84be4"
   dependencies:
     amd-name-resolver "^1.2.0"
     babel-plugin-transform-es2015-modules-amd "^6.24.0"
     bower-config "^1.3.0"
     bower-endpoint-parser "0.2.2"
+    broccoli-amd-funnel "^1.3.0"
     broccoli-babel-transpiler "^6.0.0"
     broccoli-builder "^0.18.8"
     broccoli-concat "^3.2.2"
@@ -3946,15 +3975,18 @@ ember-cli@~3.1.4:
     broccoli-funnel-reducer "^1.0.0"
     broccoli-merge-trees "^2.0.0"
     broccoli-middleware "^1.2.1"
+    broccoli-module-normalizer "^1.3.0"
+    broccoli-module-unification-reexporter "^1.0.0"
     broccoli-source "^1.1.0"
     broccoli-stew "^1.2.0"
     calculate-cache-key-for-tree "^1.0.0"
     capture-exit "^1.1.0"
     chalk "^2.0.1"
+    ci-info "^1.1.2"
     clean-base-url "^1.0.0"
     compression "^1.4.4"
     configstore "^3.0.0"
-    console-ui "^2.1.0"
+    console-ui "^2.2.2"
     core-object "^3.1.3"
     dag-map "^2.0.2"
     diff "^3.2.0"
@@ -3965,8 +3997,7 @@ ember-cli@~3.1.4:
     ember-cli-preprocess-registry "^3.1.0"
     ember-cli-string-utils "^1.0.0"
     ensure-posix-path "^1.0.2"
-    execa "^0.9.0"
-    exists-sync "0.0.4"
+    execa "^0.10.0"
     exit "^0.1.2"
     express "^4.12.3"
     filesize "^3.1.3"
@@ -3975,7 +4006,7 @@ ember-cli@~3.1.4:
     fs-extra "^5.0.0"
     fs-tree-diff "^0.5.2"
     get-caller-file "^1.0.0"
-    git-repo-info "^1.4.1"
+    git-repo-info "^2.0.0"
     glob "^7.1.2"
     heimdalljs "^0.2.3"
     heimdalljs-fs-monitor "^0.2.0"
@@ -4005,9 +4036,9 @@ ember-cli@~3.1.4:
     semver "^5.1.1"
     silent-error "^1.0.0"
     sort-package-json "^1.4.0"
-    symlink-or-copy "^1.1.8"
+    symlink-or-copy "^1.2.0"
     temp "0.8.3"
-    testem "^2.0.0"
+    testem "^2.2.0"
     tiny-lr "^1.0.3"
     tree-sync "^1.2.1"
     uuid "^3.0.0"
@@ -4358,9 +4389,9 @@ ember-source-channel-url@^1.0.1:
   dependencies:
     got "^8.0.1"
 
-ember-source@~3.2.0:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.2.2.tgz#f1b899beeb838b0866a66cd327d22e567abd8a79"
+ember-source@~3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.3.2.tgz#2cc02893166d6b91ebf091521cd49d6598477a73"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
@@ -4627,7 +4658,7 @@ esdoc-ecmascript-proposal-plugin@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/esdoc-ecmascript-proposal-plugin/-/esdoc-ecmascript-proposal-plugin-1.0.0.tgz#390dc5656ba8a2830e39dba3570d79138df2ffd9"
 
-"esdoc@github:pzuraq/esdoc#015a342":
+esdoc@pzuraq/esdoc#015a342:
   version "1.0.4"
   resolved "https://codeload.github.com/pzuraq/esdoc/tar.gz/015a3426b2e53b2b0270a9c00133780db3f1d144"
   dependencies:
@@ -5549,6 +5580,10 @@ git-config-path@^1.0.1:
 git-repo-info@^1.1.2, git-repo-info@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-1.4.1.tgz#2a072823254aaf62fcf0766007d7b6651bd41943"
+
+git-repo-info@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-2.0.0.tgz#2e7a68ba3d0253e8e885c4138f922e6561de59bb"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -10333,9 +10368,9 @@ temp@0.8.3, temp@^0.8.3:
     os-tmpdir "^1.0.0"
     rimraf "~2.2.6"
 
-testem@^2.0.0:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/testem/-/testem-2.8.2.tgz#0d51801cbcdfe411e2e24ae7e63e2eca779dfe89"
+testem@^2.2.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/testem/-/testem-2.10.0.tgz#bc0db60ebaf78a8f0c9f173434e62bfc1ede9260"
   dependencies:
     backbone "^1.1.2"
     bluebird "^3.4.6"
