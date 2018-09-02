@@ -6,7 +6,7 @@ import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-grid';
 
-const defaultAnimation = 'rearrange';
+const DEFAULT_ANIMATION = 'rearrange';
 
 /**
   Transformicon Grid component.
@@ -21,58 +21,73 @@ const defaultAnimation = 'rearrange';
     * rearrange
     * collapse
 
-  Examples:
+  @example
+  ```hbs
+    {{! These are functionally equivalent}}
 
-    ```hbs
-      {{! These are functionally equivalent}}
-
-      {{t-grid}}
-      {{t-grid a='rearrange'}}
-      {{t-grid animation='rearrange'}}
-      {{t-grid is-open=false animation='rearrange'}}
-    ```
-
-  @class TGridComponent
-  @extends BaseTransformiconComponent
-  @public
+    {{t-grid}}
+    {{t-grid a='rearrange'}}
+    {{t-grid animation='rearrange'}}
+    {{t-grid is-open=false animation='rearrange'}}
+  ```
 */
 @layout(template)
 @classNames('tcon-grid')
 export default class TGridComponent extends BaseTransformiconComponent {
   label = 'toggle grid';
 
-  animationTypeTable = {
+  /**
+   * Animation CSS classname lookup table for the Grid transformicon
+   */
+  _animationTypeTable = {
     'rearrange': 'tcon-grid--rearrange',
     'collapse': 'tcon-grid--collapse'
   };
 
-  /*
-    PUBLIC COMPONENT API
-  */
-  animation = _defaultTo(this.animation, defaultAnimation);
-  'is-open' = _defaultTo(this['is-open'], false);
-  @alias('animation') a;
+  /**
+   * Get the component's current animation type. This is used to lookup the CSS classname for the
+   * animation
+   * @type {string}
+   */
+  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
-    Get the CSS classname corresponding to the component's current animation type.
+   * Flag to indicate the state of this transformicon
+   * @type {boolean}
+   */
+  // 'is-open' = _defaultTo(this['is-open'], false);
 
-    @property animationType
-    @type String
-    @public
-  */
+  /**
+   * Alias for {@link animation}
+   * @type {string}
+   */
+  @alias('animation') a;
+
+  constructor() {
+    super(...arguments);
+
+    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
+    // here from the constructor as a temporary workaround.
+    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
+    this['is-open'] = _defaultTo(this['is-open'], false);
+  }
+
+  /**
+   * Get the CSS classname corresponding to the component's current {@link animation} type
+   * @type {string}
+   */
   @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
-    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+    return get(this._animationTypeTable, anim);
   }
-  /**
-    Get the classname representing the `open` toggled state for the grid icon. This classname is stored in the `BaseTransformiconComponent`.
 
-    @property isOpen
-    @type String|Boolean
-    @public
-  */
+  /**
+   * Get the {@link transformClass} CSS classname representing the `is-open` toggled state
+   * for this transformicon
+   * @type {string|boolean}
+   */
   @className
   @computed('is-open')
   get isOpen() {

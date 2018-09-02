@@ -6,7 +6,7 @@ import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-menu';
 
-const defaultAnimation = 'butterfly';
+const DEFAULT_ANIMATION = 'butterfly';
 
 /**
   Transformicon Menu component.
@@ -25,26 +25,24 @@ const defaultAnimation = 'butterfly';
     * arrow-360-left
     * arrow-left
 
-  Examples:
+  @example
+  ```hbs
+    {{! These are functionally equivalent}}
 
-    ```hbs
-      {{! These are functionally equivalent}}
-
-      {{t-menu}}
-      {{t-menu a='butterfly'}}
-      {{t-menu animation='butterfly'}}
-      {{t-menu is-open=false animation='butterfly'}}
-    ```
-
-  @class TMenuComponent
-  @extends BaseTransformiconComponent
-  @public
+    {{t-menu}}
+    {{t-menu a='butterfly'}}
+    {{t-menu animation='butterfly'}}
+    {{t-menu is-open=false animation='butterfly'}}
+  ```
 */
 @layout(template)
 export default class TMenuComponent extends BaseTransformiconComponent {
   label = 'toggle menu';
 
-  animationTypeTable = {
+  /**
+   * Animation CSS classname lookup table for the Menu transformicon
+   */
+  _animationTypeTable = {
     'butterfly': 'tcon-menu--xbutterfly',
     'minus': 'tcon-menu--minus',
     'x-cross': 'tcon-menu--xcross',
@@ -53,33 +51,50 @@ export default class TMenuComponent extends BaseTransformiconComponent {
     'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
   };
 
-  /*
-    PUBLIC COMPONENT API
-  */
-  animation = _defaultTo(this.animation, defaultAnimation);
-  'is-open' = _defaultTo(this['is-open'], false);
-  @alias('animation') a;
+  /**
+   * Get the component's current animation type. This is used to lookup the CSS classname for the
+   * animation
+   * @type {string}
+   */
+  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
-    Get the CSS classname corresponding to the component's current animation type.
+   * Flag to indicate the state of this transformicon
+   * @type {boolean}
+   */
+  // 'is-open' = _defaultTo(this['is-open'], false);
 
-    @property animationType
-    @type String
-    @public
-  */
+  /**
+   * Alias for {@link animation}
+   * @type {string}
+   */
+  @alias('animation') a;
+
+  constructor() {
+    super(...arguments);
+
+    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
+    // here from the constructor as a temporary workaround.
+    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
+    this['is-open'] = _defaultTo(this['is-open'], false);
+  }
+
+  /**
+   * Get the CSS classname corresponding to the component's current {@link animation} type
+   * @type {string}
+   */
   @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
-    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+    return get(this._animationTypeTable, anim);
   }
-  /**
-    Get the classname representing the `open` toggled state for the menu icon. This classname is stored in the `BaseTransformiconComponent`.
 
-    @property isOpen
-    @type String|Boolean
-    @public
-  */
+  /**
+   * Get the {@link transformClass} CSS classname representing the `is-open` toggled state
+   * for this transformicon
+   * @type {string|boolean}
+   */
   @className
   @computed('is-open')
   get isOpen() {

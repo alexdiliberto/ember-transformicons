@@ -7,6 +7,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   - Use `ember-decorators` style syntax
 
+### Updated
+  - Tests leverage `qunit-dom` syntax
+  - Move from YUIDoc to ESDoc syntax
+  - Ember/Ember CLI v3.3.x
+
 
 ## [v2.1.0] - 2018-07-21
 ### Added

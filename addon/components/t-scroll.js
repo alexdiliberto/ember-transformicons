@@ -5,15 +5,10 @@ import template from '../templates/components/t-scroll';
 /**
   Transformicon Scroll Indicator component.
 
-  Example:
-
-    ```hbs
-      {{t-scroll}}
-    ```
-
-  @class TScrollComponent
-  @extends Ember.Component
-  @public
+  @example
+  ```hbs
+    {{t-scroll}}
+  ```
 */
 @layout(template)
 @tagName('span')

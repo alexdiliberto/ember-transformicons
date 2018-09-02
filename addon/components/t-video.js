@@ -13,18 +13,13 @@ import template from '../templates/components/t-video';
     * `is-playing` boolean - Set initial playing state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
 
-  Examples:
+  @example
+  ```hbs
+    {{! These are functionally equivalent}}
 
-    ```hbs
-      {{! These are functionally equivalent}}
-
-      {{t-video}}
-      {{t-video is-playing=false}}
-    ```
-
-  @class TVideoComponent
-  @extends BaseTransformiconComponent
-  @public
+    {{t-video}}
+    {{t-video is-playing=false}}
+  ```
 */
 @layout(template)
 @classNames('tcon-vid--play')
@@ -32,20 +27,28 @@ export default class TVideoComponent extends BaseTransformiconComponent {
   label = 'play video';
   initialState = 'is-playing';
 
-  /*
-    PUBLIC COMPONENT API
-  */
-  'is-playing' = _defaultTo(this['is-playing'], false);
+  /**
+   * Flag to indicate the state of this transformicon
+   * @type {boolean}
+   */
+  // 'is-playing' = _defaultTo(this['is-playing'], false);
 
   @reads('type') ariaRole;
 
-  /**
-    Get the classname representing the `playing` toggled state for the video icon. This classname is stored in the `BaseTransformiconComponent`.
+  constructor() {
+    super(...arguments);
 
-    @property isPlaying
-    @type String|Boolean
-    @public
-  */
+    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
+    // here from the constructor as a temporary workaround.
+    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
+    this['is-playing'] = _defaultTo(this['is-playing'], false);
+  }
+
+  /**
+   * Get the {@link transformClass} CSS classname representing the `is-playing` toggled state
+   * for this transformicon
+   * @type {string|boolean}
+   */
   @className
   @computed('is-playing')
   get isPlaying() {

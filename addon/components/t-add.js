@@ -6,7 +6,7 @@ import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-add';
 
-const defaultAnimation = 'minus';
+const DEFAULT_ANIMATION = 'minus';
 
 /**
   Transformicon Add component.
@@ -21,20 +21,14 @@ const defaultAnimation = 'minus';
     * minus
     * check
 
-  Examples:
+  ```hbs
+  {{! These are functionally equivalent}}
 
-    ```hbs
-      {{! These are functionally equivalent}}
-
-      {{t-add}}
-      {{t-add a='minus'}}
-      {{t-add animation='minus'}}
-      {{t-add is-added=false animation='minus'}}
-    ```
-
-  @class TAddComponent
-  @extends BaseTransformiconComponent
-  @public
+  {{t-add}}
+  {{t-add a='minus'}}
+  {{t-add animation='minus'}}
+  {{t-add is-added=false animation='minus'}}
+  ```
 */
 @layout(template)
 @classNames('tcon-plus')
@@ -42,39 +36,58 @@ export default class TAddComponent extends BaseTransformiconComponent {
   label = 'add item';
   initialState = 'is-added';
 
-  animationTypeTable = {
+  /**
+   * Animation CSS classname lookup table for the Add transformicon
+   */
+  _animationTypeTable = {
     'minus': 'tcon-plus--minus',
     'check': 'tcon-plus--check'
   };
 
-  /*
-    PUBLIC COMPONENT API
-  */
-  animation = _defaultTo(this.animation, defaultAnimation);
-  'is-added' = _defaultTo(this['is-added'], false);
-  @alias('animation') a;
+  /**
+   * Get the component's current animation type. This is used to lookup the CSS classname for the
+   * animation
+   * @type {string}
+   */
+  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
-    Get the CSS classname corresponding to the component's current animation type.
+   * Flag to indicate the state of this transformicon
+   * @type {boolean}
+   */
+  // 'is-added' = _defaultTo(this['is-added'], false);
 
-    @property animationType
-    @type String
-    @public
-  */
+  /**
+   * Alias for {@link animation}
+   * @type {string}
+   */
+  @alias('animation') a;
+
+  constructor() {
+    super(...arguments);
+
+    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
+    // here from the constructor as a temporary workaround.
+    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
+    this['is-added'] = _defaultTo(this['is-added'], false);
+  }
+
+  /**
+   * Get the CSS classname corresponding to the component's current {@link animation} type
+   * @type {string}
+   */
   @className
   @computed('animation')
   get animationType() {
     let anim = get(this, 'animation');
-    return get(this.animationTypeTable, anim) || get(this.animationTypeTable, defaultAnimation);
+    return get(this._animationTypeTable, anim);
   }
 
   /**
-    Get the classname representing the `added` toggled state for the add icon. This classname is stored in the `BaseTransformiconComponent`.
-
-    @property isAdded
-    @type String|Boolean
-    @public
-  */
+   * Get the {@link transformClass} CSS classname representing the `is-added` toggled state
+   * for this transformicon
+   * @type {string|boolean}
+   */
   @className
   @computed('is-added')
   get isAdded() {

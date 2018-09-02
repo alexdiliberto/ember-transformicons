@@ -5,15 +5,10 @@ import template from '../templates/components/t-loader';
 /**
   Transformicon Loader component.
 
-  Example:
-
-    ```hbs
-      {{t-loader}}
-    ```
-
-  @class TLoaderComponent
-  @extends Ember.Component
-  @public
+  @example
+  ```hbs
+    {{t-loader}}
+  ```
 */
 @layout(template)
 @tagName('span')
