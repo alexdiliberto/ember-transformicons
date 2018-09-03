@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^1.1.1",
+    "@ember/optional-features": "^0.6.4",
     "babel-eslint": "^8.0.0",
     "broccoli-asset-rev": "^2.7.0",
     "broccoli-funnel": "^2.0.1",
