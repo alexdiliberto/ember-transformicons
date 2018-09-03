@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet...
+
+
+## [v2.2.0] - 2018-09-03
+### Added
   - Use `ember-decorators` style syntax
   - `@ember/optional-features` addon 
   - Angle Bracket syntax
@@ -373,7 +378,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.1.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.2.0...HEAD
+[v2.2.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.1.0...v2.2.0
 [v2.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.3...v2.1.0
 [v2.0.3]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.2...v2.0.3
 [v2.0.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.1...v2.0.2
