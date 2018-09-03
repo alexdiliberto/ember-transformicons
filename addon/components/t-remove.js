@@ -9,29 +9,20 @@ import template from '../templates/components/t-remove';
 const DEFAULT_ANIMATION = 'check';
 
 /**
-  Transformicon Remove component.
+  Remove Transformicon
 
-  PUBLIC - Optional parameters:
-    * `animation` string - Set the menu animation type.
-    * `a` string - Shorthand alias for `animation`.
+  PUBLIC
+    * `animation` string - Set the menu animation type  (alias: `a`).
+      * types - `check` | `chevron-left` | `chevron-right` | `chevron-down` | `chevron-up`
     * `is-removed` boolean - Set initial open removed state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
 
-  Available `animation` types:
-    * check
-    * chevron-left
-    * chevron-right
-    * chevron-down
-    * chevron-up
-
-  @example
   ```hbs
     {{! These are functionally equivalent}}
-
-    {{t-remove}}
-    {{t-remove a='check'}}
-    {{t-remove animation='check'}}
-    {{t-remove is-removed=false animation='check'}}
+    <TRemove />
+    <TRemove @a='check' />
+    <TRemove @animation='check' />
+    <TRemove @is-removed={{false}} @animation='check' />
   ```
 */
 @layout(template)

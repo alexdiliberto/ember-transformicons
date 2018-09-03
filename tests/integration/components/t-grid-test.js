@@ -10,15 +10,17 @@ module('Integration | Component | t grid', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-grid}}`);
+    await render(hbs`
+      <TGrid />
+    `);
 
     assert.dom('button').hasText('toggle grid');
 
     // Template block usage:
     await render(hbs`
-      {{#t-grid}}
+      <TGrid>
         template block text
-      {{/t-grid}}
+      </TGrid>
     `);
 
     assert.dom('button').hasText('toggle grid');
@@ -27,7 +29,9 @@ module('Integration | Component | t grid', function(hooks) {
   test('it creates a grid transformicon with defaults', async function(assert) {
     assert.expect(6);
 
-    await render(hbs`{{t-grid}}`);
+    await render(hbs`
+      <TGrid />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasAttribute('type', 'button');
@@ -41,7 +45,9 @@ module('Integration | Component | t grid', function(hooks) {
   test('it creates a grid transformicon with `is-open=true`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-grid is-open=true}}`);
+    await render(hbs`
+      <TGrid @is-open={{true}} />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasClass('tcon-transform');
@@ -50,7 +56,9 @@ module('Integration | Component | t grid', function(hooks) {
   test('it creates a grid transformicon with a non-default animation `a="collapse"`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-grid a="collapse"}}`);
+    await render(hbs`
+      <TGrid @a="collapse" />
+    `);
 
     assert.dom('button').hasClass('tcon-grid--collapse');
   });
@@ -58,7 +66,11 @@ module('Integration | Component | t grid', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-grid id="t-grid"}}`);
+    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
+    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
+    await render(hbs`
+      <TGrid @id="t-grid" />
+    `);
 
     assert.dom('#t-grid').hasNoClass('tcon-transform');
 

@@ -10,15 +10,17 @@ module('Integration | Component | t video', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-video}}`);
+    await render(hbs`
+      <TVideo />
+    `);
 
     assert.dom('button').hasText('play video');
 
     // Template block usage:
     await render(hbs`
-      {{#t-video}}
+      <TVideo>
         template block text
-      {{/t-video}}
+      </TVideo>
     `);
 
     assert.dom('button').hasText('play video');
@@ -27,7 +29,9 @@ module('Integration | Component | t video', function(hooks) {
   test('it creates a video transformicon with defaults', async function(assert) {
     assert.expect(6);
 
-    await render(hbs`{{t-video}}`);
+    await render(hbs`
+      <TVideo />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasAttribute('role', 'button');
@@ -41,7 +45,9 @@ module('Integration | Component | t video', function(hooks) {
   test('it creates a video transformicon with `is-playing=true`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-video is-playing=true}}`);
+    await render(hbs`
+      <TVideo @is-playing={{true}} />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasClass('tcon-transform');
@@ -50,7 +56,11 @@ module('Integration | Component | t video', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-video id="t-video"}}`);
+    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
+    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
+    await render(hbs`
+      <TVideo @id="t-video" />
+    `);
 
     assert.dom('#t-video').hasNoClass('tcon-transform');
 

@@ -9,25 +9,20 @@ import template from '../templates/components/t-add';
 const DEFAULT_ANIMATION = 'minus';
 
 /**
-  Transformicon Add component.
+  Add Transformicon
 
-  PUBLIC - Optional parameters:
-    * `animation` string - Set the add animation type.
-    * `a` string - Shorthand alias for `animation`.
+  PUBLIC
+    * `animation` string - Set the add animation type (alias: `a`).
+      * types - `minus` | `check`
     * `is-added` boolean - Set initial open added state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
-  Available `animation` types:
-    * minus
-    * check
-
   ```hbs
   {{! These are functionally equivalent}}
-
-  {{t-add}}
-  {{t-add a='minus'}}
-  {{t-add animation='minus'}}
-  {{t-add is-added=false animation='minus'}}
+  <TAdd />
+  <TAdd @a='minus' />
+  <TAdd @animation='minus' />
+  <TAdd @is-added={{false}} @animation='minus' />
   ```
 */
 @layout(template)

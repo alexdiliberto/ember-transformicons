@@ -10,15 +10,17 @@ module('Integration | Component | t form', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-form}}`);
+    await render(hbs`
+      <TForm />
+    `);
 
     assert.dom('button').hasText('toggle search');
 
     // Template block usage:
     await render(hbs`
-      {{#t-form}}
+      <TForm>
         template block text
-      {{/t-form}}
+      </TForm>
     `);
 
     assert.dom('button').hasText('toggle search');
@@ -27,7 +29,9 @@ module('Integration | Component | t form', function(hooks) {
   test('it creates a form transformicon with defaults', async function(assert) {
     assert.expect(5);
 
-    await render(hbs`{{t-form}}`);
+    await render(hbs`
+      <TForm />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasAttribute('type', 'button');
@@ -40,7 +44,9 @@ module('Integration | Component | t form', function(hooks) {
   test('it creates a form transformicon with `is-searching=true`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-form is-searching=true}}`);
+    await render(hbs`
+      <TForm @is-searching={{true}} />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasClass('tcon-transform');
@@ -49,7 +55,11 @@ module('Integration | Component | t form', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-form id="t-form"}}`);
+    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
+    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
+    await render(hbs`
+      <TForm @id="t-form" />
+    `);
 
     assert.dom('#t-form').hasNoClass('tcon-transform');
 

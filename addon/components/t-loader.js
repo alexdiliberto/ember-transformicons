@@ -3,11 +3,10 @@ import { attribute, classNames, layout, tagName } from '@ember-decorators/compon
 import template from '../templates/components/t-loader';
 
 /**
-  Transformicon Loader component.
+  Loader Transformicon
 
-  @example
   ```hbs
-    {{t-loader}}
+    <TLoader />
   ```
 */
 @layout(template)

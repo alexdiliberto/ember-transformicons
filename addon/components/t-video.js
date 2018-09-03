@@ -7,18 +7,16 @@ import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-video';
 
 /**
-  Transformicon Video component.
+  Video Transformicon
 
-  PUBLIC - Optional parameters:
+  PUBLIC
     * `is-playing` boolean - Set initial playing state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
 
-  @example
   ```hbs
     {{! These are functionally equivalent}}
-
-    {{t-video}}
-    {{t-video is-playing=false}}
+    <TVideo />
+    <TVideo @is-playing={{false}} />
   ```
 */
 @layout(template)

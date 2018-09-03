@@ -6,18 +6,16 @@ import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-form';
 
 /**
-  Transformicon Form component.
+  Form Transformicon
 
-  PUBLIC - Optional parameters:
+  PUBLIC
     * `is-searching` boolean - Set initial searching state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
 
-  @example
   ```hbs
     {{! These are functionally equivalent}}
-
-    {{t-form}}
-    {{t-form is-searching=false}}
+    <TForm />
+    <TForm @is-searching={{false}} />
   ```
 */
 @layout(template)

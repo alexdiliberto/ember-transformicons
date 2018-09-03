@@ -9,15 +9,17 @@ module('Integration | Component | t loader', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-loader}}`);
+    await render(hbs`
+      <TLoader />
+    `);
 
     assert.dom('span').hasText('loading');
 
     // Template block usage:
     await render(hbs`
-      {{#t-loader}}
+      <TLoader>
         template block text
-      {{/t-loader}}
+      </TLoader>
     `);
 
     assert.dom('span').hasText('loading');
@@ -26,7 +28,9 @@ module('Integration | Component | t loader', function(hooks) {
   test('it creates a loader transformicon with defaults', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-loader}}`);
+    await render(hbs`
+      <TLoader />
+    `);
 
     assert.dom('span').hasAttribute('aria-label', 'loading');
     assert.dom('span').hasClass('tcon-loader--spinner360');

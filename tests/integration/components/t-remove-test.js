@@ -10,15 +10,17 @@ module('Integration | Component | t remove', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-remove}}`);
+    await render(hbs`
+      <TRemove />
+    `);
 
     assert.dom('button').hasText('remove item');
 
     // Template block usage:
     await render(hbs`
-      {{#t-remove}}
+      <TRemove>
         template block text
-      {{/t-remove}}
+      </TRemove>
     `);
 
     assert.dom('button').hasText('remove item');
@@ -27,7 +29,9 @@ module('Integration | Component | t remove', function(hooks) {
   test('it creates a remove transformicon with defaults', async function(assert) {
     assert.expect(5);
 
-    await render(hbs`{{t-remove}}`);
+    await render(hbs`
+      <TRemove />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasAttribute('type', 'button');
@@ -40,7 +44,9 @@ module('Integration | Component | t remove', function(hooks) {
   test('it creates a remove transformicon with `is-removed=true`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-remove is-removed=true}}`);
+    await render(hbs`
+      <TRemove @is-removed={{true}} />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasClass('tcon-transform');
@@ -49,7 +55,9 @@ module('Integration | Component | t remove', function(hooks) {
   test('it creates a remove transformicon with a non-default animation `a="chevron-right"`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-remove a="chevron-right"}}`);
+    await render(hbs`
+      <TRemove @a="chevron-right" />
+    `);
 
     assert.dom('button').hasClass('tcon-remove--chevron-right');
   });
@@ -57,7 +65,11 @@ module('Integration | Component | t remove', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-remove id="t-remove"}}`);
+    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
+    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
+    await render(hbs`
+      <TRemove @id="t-remove" />
+    `);
 
     assert.dom('#t-remove').hasNoClass('tcon-transform');
 
