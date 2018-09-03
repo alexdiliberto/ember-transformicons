@@ -1,21 +1,20 @@
 # Form Transformicon
 ---
-## API and Examples
-Form optional parameters:
+## API
   * `is-searching` boolean - Set initial searching state.
   * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isSearching`, which is a boolean type indicating if the current state is searching or not searching.
 
 ### animation
-`{{t-form}}` {{t-form}}
+`<TForm />` <TForm />
 
 ### is-searching
 ```handlebars
-{{t-form is-searching=false}}
-{{t-form is-searching=someBoundProperty}}
+<TForm @is-searching={{false}} />
+<TForm @is-searching={{someBoundProperty}} />
 ```
-`{{t-form is-searching=true}}` {{t-form is-searching=true}}
+`<TForm @is-searching={{true}} />` <TForm @is-searching={{true}} />
 
 ### onclick action
-`{{t-form is-searching=isSearching onclick=(action "updateFormAction")}}` {{t-form is-searching=isSearching onclick=(action "updateFormAction")}}
+`<TForm @is-searching={{isSearching}} @onclick={{action this.updateFormAction}} />` <TForm @is-searching={{isSearching}} @onclick={{action this.updateFormAction}} />
 
 `isSearching` = {{isSearching}}

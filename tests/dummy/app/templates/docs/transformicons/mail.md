@@ -1,21 +1,20 @@
 # Mail Transformicon
 ---
-## API and Examples
-Mail optional parameters:
+## API
   * `is-open` boolean - Set initial open mail state.
   * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 ### animation
-`{{t-mail}}` {{t-mail class="docs-mt-3"}}
+`<TMail />` <TMail @class="docs-mt-3" />
 
 ### is-open
 ```handlebars
-{{t-mail is-open=false}}
-{{t-mail is-open=someBoundProperty}}
+<TMail @is-open={{false}} />
+<TMail @is-open={{someBoundProperty}} />
 ```
-`{{t-mail is-open=false}}` {{t-mail is-open=false class="docs-mt-3"}}
+`<TMail @is-open={{false}} />` <TMail @is-open={{false}} @class="docs-mt-3" />
 
 ### onclick action
-`{{t-mail is-open=hasUnreadMail onclick=(action "updateMailAction")}}` {{t-mail is-open=hasUnreadMail onclick=(action "updateMailAction") class="docs-mt-3"}}
+`<TMail @is-open={{hasUnreadMail}} @onclick={{action this.updateMailAction}} />` <TMail @is-open={{hasUnreadMail}} @onclick={{action this.updateMailAction}} @class="docs-mt-3" />
 
 `hasUnreadMail` = {{hasUnreadMail}}

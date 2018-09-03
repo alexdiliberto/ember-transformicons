@@ -9,15 +9,17 @@ module('Integration | Component | t scroll', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-scroll}}`);
+    await render(hbs`
+      <TScroll />
+    `);
 
     assert.dom('span').hasText('');
 
     // Template block usage:
     await render(hbs`
-      {{#t-scroll}}
+      <TScroll>
         template block text
-      {{/t-scroll}}
+      </TScroll>
     `);
 
     assert.dom('span').hasText('');
@@ -26,7 +28,9 @@ module('Integration | Component | t scroll', function(hooks) {
   test('it creates a scroll indicator transformicon with defaults', async function(assert) {
     assert.expect(5);
 
-    await render(hbs`{{t-scroll}}`);
+    await render(hbs`
+      <TScroll />
+    `);
 
     assert.dom('span').hasAttribute('aria-label', 'scroll');
     assert.dom('span').hasAttribute('aria-hidden', 'true');

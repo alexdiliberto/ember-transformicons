@@ -3,11 +3,10 @@ import { attribute, classNames, layout, tagName } from '@ember-decorators/compon
 import template from '../templates/components/t-scroll';
 
 /**
-  Transformicon Scroll Indicator component.
+  Scroll Transformicon
 
-  @example
   ```hbs
-    {{t-scroll}}
+    <TScroll />
   ```
 */
 @layout(template)

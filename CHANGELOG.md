@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   - Use `ember-decorators` style syntax
   - `@ember/optional-features` addon 
+  - Angle Bracket syntax
 
 ### Updated
   - Tests leverage `qunit-dom` syntax

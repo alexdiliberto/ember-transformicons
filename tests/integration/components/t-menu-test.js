@@ -10,15 +10,17 @@ module('Integration | Component | t menu', function(hooks) {
   test('it renders', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-menu}}`);
+    await render(hbs`
+      <TMenu />
+    `);
 
     assert.dom('button').hasText('toggle menu');
 
     // Template block usage:
     await render(hbs`
-      {{#t-menu}}
+      <TMenu>
         template block text
-      {{/t-menu}}
+      </TMenu>
     `);
 
     assert.dom('button').hasText('toggle menu');
@@ -27,7 +29,9 @@ module('Integration | Component | t menu', function(hooks) {
   test('it creates a menu transformicon with defaults', async function(assert) {
     assert.expect(5);
 
-    await render(hbs`{{t-menu}}`);
+    await render(hbs`
+      <TMenu />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasAttribute('type', 'button');
@@ -40,7 +44,9 @@ module('Integration | Component | t menu', function(hooks) {
   test('it creates a menu transformicon with `is-open=true`', async function(assert) {
     assert.expect(1);
 
-    await render(hbs`{{t-menu is-open=true}}`);
+    await render(hbs`
+      <TMenu @is-open={{true}} />
+    `);
     percySnapshot(assert);
 
     assert.dom('button').hasClass('tcon-transform');
@@ -49,7 +55,9 @@ module('Integration | Component | t menu', function(hooks) {
   test('it creates a menu transformicon with a non-default animation `a="butterfly"`', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-menu a="arrow-360-left"}}`);
+    await render(hbs`
+      <TMenu @a="arrow-360-left" />
+    `);
 
     assert.dom('button').hasClass('tcon-menu--arrow');
     assert.dom('button').hasClass('tcon-menu--arrow360left');
@@ -58,7 +66,11 @@ module('Integration | Component | t menu', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    await render(hbs`{{t-menu id="t-menu"}}`);
+    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
+    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
+    await render(hbs`
+      <TMenu @id="t-menu" />
+    `);
 
     assert.dom('#t-menu').hasNoClass('tcon-transform');
 

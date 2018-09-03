@@ -9,26 +9,20 @@ import template from '../templates/components/t-grid';
 const DEFAULT_ANIMATION = 'rearrange';
 
 /**
-  Transformicon Grid component.
+  Grid Transformicon
 
   PUBLIC - Optional parameters:
-    * `animation` string - Set the grid animation type.
-    * `a` string - Shorthand alias for `animation`.
+    * `animation` string - Set the grid animation type  (alias: `a`).
+      * types - `rearrange` | `collapse`
     * `is-open` boolean - Set initial open grid state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
-  Available `animation` types:
-    * rearrange
-    * collapse
-
-  @example
   ```hbs
     {{! These are functionally equivalent}}
-
-    {{t-grid}}
-    {{t-grid a='rearrange'}}
-    {{t-grid animation='rearrange'}}
-    {{t-grid is-open=false animation='rearrange'}}
+    <TGrid />
+    <TGrid @a='rearrange' />
+    <TGrid @animation='rearrange' />
+    <TGrid @is-open={{false}} @animation='rearrange' />
   ```
 */
 @layout(template)

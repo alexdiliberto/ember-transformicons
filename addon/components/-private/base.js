@@ -5,7 +5,7 @@ import _defaultTo from 'lodash.defaultto';
 import { attribute, classNames, tagName } from '@ember-decorators/component';
 
 /**
-  Transformicon Base component.
+  Base Transformicon component
 */
 @tagName('button')
 @classNames('tcon')

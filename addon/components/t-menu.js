@@ -9,30 +9,20 @@ import template from '../templates/components/t-menu';
 const DEFAULT_ANIMATION = 'butterfly';
 
 /**
-  Transformicon Menu component.
+  Menu Transformicon
 
-  PUBLIC - Optional parameters:
-    * `animation` string - Set the menu animation type.
-    * `a` string - Shorthand alias for `animation`.
+  PUBLIC
+    * `animation` string - Set the menu animation type  (alias: `a`).
+      * types - `butterfly` | `minus` | `x-cross` | `arrow-up` | `arrow-360-left` | `arrow-left`
     * `is-open` boolean - Set initial open menu state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
-  Available `animation` types:
-    * butterfly
-    * minus
-    * x-cross
-    * arrow-up
-    * arrow-360-left
-    * arrow-left
-
-  @example
   ```hbs
     {{! These are functionally equivalent}}
-
-    {{t-menu}}
-    {{t-menu a='butterfly'}}
-    {{t-menu animation='butterfly'}}
-    {{t-menu is-open=false animation='butterfly'}}
+    <TMenu />
+    <TMenu @a='butterfly' />
+    <TMenu @animation='butterfly' />
+    <TMenu @is-open={{false}} @animation='butterfly' />
   ```
 */
 @layout(template)

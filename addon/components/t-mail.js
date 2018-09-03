@@ -7,18 +7,16 @@ import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-mail';
 
 /**
-  Transformicon Mail component.
+  Mail Transformicon
 
-  PUBLIC - Optional parameters:
+  PUBLIC
     * `is-open` boolean - Set initial open mail state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
-  @example
   ```hbs
     {{! These are functionally equivalent}}
-
-    {{t-mail}}
-    {{t-mail is-open=true}}
+    <TMail />
+    <TMail @is-open={{true}} />
   ```
 */
 @layout(template)
