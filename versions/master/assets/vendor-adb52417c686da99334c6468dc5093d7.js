@@ -4064,7 +4064,7 @@ if(!e){var t,r=document.createElement("style"),n=document.getElementsByTagName("
 r.type="text/css",r.id="matchmediajs-test",n.parentNode.insertBefore(r,n),t="getComputedStyle"in window&&window.getComputedStyle(r,null)||r.currentStyle,e={matchMedium:function(e){var n="@media "+e+"{ #matchmediajs-test { width: 1px; } }"
 return r.styleSheet?r.styleSheet.cssText=n:r.textContent=n,"1px"===t.width}}}return function(t){return{matches:e.matchMedium(t||"all"),media:t||"all"}}}())),function(e){(function(){var t,r,n,i,o,s,a,l,u,c,d,p,h,f,m,b,y,g,v,_,E,x,w,k,P,R,O,C,T=function(e){var t=new T.Builder
 return t.pipeline.add(T.trimmer,T.stopWordFilter,T.stemmer),t.searchPipeline.add(T.stemmer),e.call(t,t),t.build()}
-T.version="2.3.2",T.utils={},T.utils.warn=(t=this,function(e){t.console&&console.warn&&console.warn(e)}),T.utils.asString=function(e){return null==e?"":e.toString()},T.utils.clone=function(e){if(null==e)return e
+T.version="2.3.3",T.utils={},T.utils.warn=(t=this,function(e){t.console&&console.warn&&console.warn(e)}),T.utils.asString=function(e){return null==e?"":e.toString()},T.utils.clone=function(e){if(null==e)return e
 for(var t=Object.create(null),r=Object.keys(e),n=0;n<r.length;n++){var i=r[n],o=e[i]
 if(Array.isArray(o))t[i]=o.slice()
 else{if("string"!=typeof o&&"number"!=typeof o&&"boolean"!=typeof o)throw new TypeError("clone is not deep and does not support nested objects")
@@ -4120,10 +4120,10 @@ else{l=new T.TokenSet
 a.node.edges["*"]=l}1==a.str.length?l.final=!0:n.push({node:l,editsRemaining:a.editsRemaining-1,str:a.str.slice(1)})}if(a.editsRemaining>0){if("*"in a.node.edges)var u=a.node.edges["*"]
 else{u=new T.TokenSet
 a.node.edges["*"]=u}0==a.str.length?u.final=!0:n.push({node:u,editsRemaining:a.editsRemaining-1,str:a.str})}if(a.editsRemaining>0&&a.str.length>1){var c,d=a.str.charAt(0),p=a.str.charAt(1)
-p in a.node.edges?c=a.node.edges[p]:(c=new T.TokenSet,a.node.edges[p]=c),1==a.str.length?c.final=!0:n.push({node:c,editsRemaining:a.editsRemaining-1,str:d+a.str.slice(2)})}}return r},T.TokenSet.fromString=function(e){for(var t=new T.TokenSet,r=t,n=!1,i=0,o=e.length;i<o;i++){var s=e[i],a=i==o-1
-if("*"==s)n=!0,t.edges[s]=t,t.final=a
-else{var l=new T.TokenSet
-l.final=a,t.edges[s]=l,t=l,n&&(t.edges["*"]=r)}}return r},T.TokenSet.prototype.toArray=function(){for(var e=[],t=[{prefix:"",node:this}];t.length;){var r=t.pop(),n=Object.keys(r.node.edges),i=n.length
+p in a.node.edges?c=a.node.edges[p]:(c=new T.TokenSet,a.node.edges[p]=c),1==a.str.length?c.final=!0:n.push({node:c,editsRemaining:a.editsRemaining-1,str:d+a.str.slice(2)})}}return r},T.TokenSet.fromString=function(e){for(var t=new T.TokenSet,r=t,n=0,i=e.length;n<i;n++){var o=e[n],s=n==i-1
+if("*"==o)t.edges[o]=t,t.final=s
+else{var a=new T.TokenSet
+a.final=s,t.edges[o]=a,t=a}}return r},T.TokenSet.prototype.toArray=function(){for(var e=[],t=[{prefix:"",node:this}];t.length;){var r=t.pop(),n=Object.keys(r.node.edges),i=n.length
 r.node.final&&(r.prefix.charAt(0),e.push(r.prefix))
 for(var o=0;o<i;o++){var s=n[o]
 t.push({prefix:r.prefix.concat(s),node:r.node.edges[s]})}}return e},T.TokenSet.prototype.toString=function(){if(this._str)return this._str
