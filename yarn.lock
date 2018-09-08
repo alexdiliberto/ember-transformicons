@@ -386,6 +386,61 @@
   dependencies:
     "@types/estree" "*"
 
+"@types/ember-qunit@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@types/ember-qunit/-/ember-qunit-3.4.0.tgz#9077d2c5091e13586ca61e9d7355419d5e3af197"
+  dependencies:
+    "@types/ember" "*"
+    "@types/ember-test-helpers" "*"
+
+"@types/ember-test-helpers@*":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@types/ember-test-helpers/-/ember-test-helpers-0.7.1.tgz#14b9f132e9c60c2dfaf7a10ace937bfb7157fb26"
+  dependencies:
+    "@types/ember" "*"
+    "@types/htmlbars-inline-precompile" "*"
+    "@types/jquery" "*"
+    "@types/rsvp" "*"
+
+"@types/ember-test-helpers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/ember-test-helpers/-/ember-test-helpers-1.0.0.tgz#bc0ac361ab3361726ab6479f9e15f325916d6718"
+  dependencies:
+    "@types/ember" "*"
+    "@types/htmlbars-inline-precompile" "*"
+    "@types/jquery" "*"
+    "@types/rsvp" "*"
+
+"@types/ember-testing-helpers@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@types/ember-testing-helpers/-/ember-testing-helpers-0.0.3.tgz#1a6cfc484b63d19ddd822c87e4dd710597db17d9"
+  dependencies:
+    "@types/jquery" "*"
+    "@types/rsvp" "*"
+
+"@types/ember@*":
+  version "2.8.32"
+  resolved "https://registry.yarnpkg.com/@types/ember/-/ember-2.8.32.tgz#258bac52403b68baabfa3fff422cd2bb73f7d77d"
+  dependencies:
+    "@types/handlebars" "*"
+    "@types/jquery" "*"
+    "@types/rsvp" "*"
+
+"@types/ember@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@types/ember/-/ember-3.0.2.tgz#9c1a63a888c4f2572f43e72a8d3e8463c0e89f26"
+  dependencies:
+    "@types/handlebars" "*"
+    "@types/jquery" "*"
+    "@types/rsvp" "*"
+
+"@types/ember__test-helpers@^0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@types/ember__test-helpers/-/ember__test-helpers-0.7.1.tgz#8f042e5e578925c48fa594ea96b6a553b356cf30"
+  dependencies:
+    "@types/ember" "*"
+    "@types/htmlbars-inline-precompile" "*"
+
 "@types/estree@*":
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
@@ -394,9 +449,29 @@
   version "0.0.38"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.38.tgz#c1be40aa933723c608820a99a373a16d215a1ca2"
 
+"@types/handlebars@*":
+  version "4.0.39"
+  resolved "https://registry.yarnpkg.com/@types/handlebars/-/handlebars-4.0.39.tgz#961fb54db68030890942e6aeffe9f93a957807bd"
+
+"@types/htmlbars-inline-precompile@*":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/htmlbars-inline-precompile/-/htmlbars-inline-precompile-1.0.0.tgz#4c283da1a7e303b269de3c6aa953acc8d8736949"
+
+"@types/jquery@*":
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.6.tgz#5932ead926307ca21e5b36808257f7c926b06565"
+
 "@types/node@^9.6.0":
   version "9.6.31"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.31.tgz#4d1722987f8d808b4c194dceb8c213bd92f028e5"
+
+"@types/qunit@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.5.3.tgz#e7df363b5e1d1ba034b5fdd34b560d5ec0914225"
+
+"@types/rsvp@*", "@types/rsvp@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/rsvp/-/rsvp-4.0.2.tgz#bf9f72eaa6771292638a85bb8ce1db97e754b371"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
@@ -2143,7 +2218,7 @@ broccoli-static-compiler@^0.1.4:
     broccoli-writer "^0.1.1"
     mkdirp "^0.3.5"
 
-broccoli-stew@^1.2.0, broccoli-stew@^1.4.2, broccoli-stew@^1.5.0:
+broccoli-stew@^1.2.0, broccoli-stew@^1.4.0, broccoli-stew@^1.4.2, broccoli-stew@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/broccoli-stew/-/broccoli-stew-1.6.0.tgz#01f6d92806ed6679ddbe48d405066a0e164dfbef"
   dependencies:
@@ -2576,7 +2651,7 @@ cheerio@0.22.0, cheerio@^0.22.0:
     lodash.reject "^4.4.0"
     lodash.some "^4.4.0"
 
-chokidar@^2.0.2:
+chokidar@^2.0.2, chokidar@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.4.tgz#356ff4e2b0e8e43e322d18a372460bbcf3accd26"
   dependencies:
@@ -4046,6 +4121,45 @@ ember-cli-test-loader@^2.2.0:
   dependencies:
     ember-cli-babel "^6.8.1"
 
+ember-cli-typescript-blueprints@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-typescript-blueprints/-/ember-cli-typescript-blueprints-1.0.0.tgz#8470e3c8ed44b7e446c02cf2fd0a7a76b0d77686"
+  dependencies:
+    chalk "^2.4.1"
+    ember-cli-get-component-path-option "^1.0.0"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-cli-normalize-entity-name "^1.0.0"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
+    ember-cli-test-info "^1.0.0"
+    ember-cli-valid-component-name "^1.0.0"
+    ember-cli-version-checker "^2.1.0"
+    ember-router-generator "^1.2.3"
+    exists-sync "^0.0.4"
+    fs-extra "^5.0.0"
+    inflection "^1.12.0"
+    silent-error "^1.1.0"
+
+ember-cli-typescript@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-1.4.2.tgz#4fad637cf0b74a4452611030419c9a97a5bddb41"
+  dependencies:
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^2.0.0"
+    broccoli-plugin "^1.2.1"
+    broccoli-stew "^1.4.0"
+    chokidar "^2.0.3"
+    debug "^3.1.0"
+    ember-cli-typescript-blueprints "^1.0.0"
+    escape-string-regexp "^1.0.5"
+    execa "^0.9.0"
+    fs-extra "^5.0.0"
+    glob "^7.1.2"
+    resolve "^1.5.0"
+    rsvp "^4.8.1"
+    symlink-or-copy "^1.1.8"
+    walk-sync "^0.3.2"
+
 ember-cli-uglify@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-uglify/-/ember-cli-uglify-2.1.0.tgz#4a0641fe4768d7ab7d4807aca9924cc77c544184"
@@ -5031,7 +5145,7 @@ exists-sync@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.3.tgz#b910000bedbb113b378b82f5f5a7638107622dcf"
 
-exists-sync@0.0.4:
+exists-sync@0.0.4, exists-sync@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.4.tgz#9744c2c428cc03b01060db454d4b12f0ef3c8879"
 
@@ -10783,6 +10897,10 @@ type-is@~1.6.15, type-is@~1.6.16:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typescript@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
 
 uc.micro@^1.0.0, uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.5"
