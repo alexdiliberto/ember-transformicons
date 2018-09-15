@@ -4,7 +4,11 @@ import { className, classNames, layout } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import { reads } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
+// NOTE: https://github.com/typed-ember/ember-cli-typescript/issues/242
+// @ts-ignore: Ignore import of compiled template
 import template from '../templates/components/t-video';
+
+type InitialState = 'is-open'|'is-added'|'is-searching'|'is-removed'|'is-playing';
 
 /**
   Video Transformicon
@@ -23,15 +27,15 @@ import template from '../templates/components/t-video';
 @classNames('tcon-vid--play')
 export default class TVideoComponent extends BaseTransformiconComponent {
   label = 'play video';
-  initialState = 'is-playing';
+  initialState: InitialState = 'is-playing';
 
   /**
    * Flag to indicate the state of this transformicon
-   * @type {boolean}
    */
   // 'is-playing' = _defaultTo(this['is-playing'], false);
+  'is-playing': boolean;
 
-  @reads('type') ariaRole;
+  @reads('type') ariaRole!: string;
 
   constructor() {
     super(...arguments);
@@ -45,11 +49,10 @@ export default class TVideoComponent extends BaseTransformiconComponent {
   /**
    * Get the {@link transformClass} CSS classname representing the `is-playing` toggled state
    * for this transformicon
-   * @type {string|boolean}
    */
   @className
   @computed('is-playing')
-  get isPlaying() {
+  get isPlaying(): string|boolean {
     return get(this, 'is-playing') ? get(this, 'transformClass') : false;
   }
 }

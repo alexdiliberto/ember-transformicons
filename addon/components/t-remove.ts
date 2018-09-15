@@ -4,9 +4,14 @@ import { className, classNames, layout } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
+// NOTE: https://github.com/typed-ember/ember-cli-typescript/issues/242
+// @ts-ignore: Ignore import of compiled template
 import template from '../templates/components/t-remove';
 
 const DEFAULT_ANIMATION = 'check';
+
+type Animation = 'check'|'chevron-left'|'chevron-right'|'chevron-down'|'chevron-up';
+type InitialState = 'is-open'|'is-added'|'is-searching'|'is-removed'|'is-playing';
 
 /**
   Remove Transformicon
@@ -29,7 +34,7 @@ const DEFAULT_ANIMATION = 'check';
 @classNames('tcon-remove')
 export default class TRemoveComponent extends BaseTransformiconComponent {
   label = 'remove item';
-  initialState = 'is-removed';
+  initialState: InitialState = 'is-removed';
 
   /**
    * Animation CSS classname lookup table for the Remove transformicon
@@ -45,21 +50,19 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
   /**
    * Get the component's current animation type. This is used to lookup the CSS classname for the
    * animation
-   * @type {string}
    */
-  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
+  animation: Animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
    * Flag to indicate the state of this transformicon
-   * @type {boolean}
    */
   // 'is-removed' = _defaultTo(this['is-removed'], false);
+  'is-removed': boolean;
 
   /**
    * Alias for {@link animation}
-   * @type {string}
    */
-  @alias('animation') a;
+  @alias('animation') a?: Animation;
 
   constructor() {
     super(...arguments);
@@ -72,11 +75,10 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
 
   /**
    * Get the CSS classname corresponding to the component's current {@link animation} type
-   * @type {string}
    */
   @className
   @computed('animation')
-  get animationType() {
+  get animationType(): string {
     let anim = get(this, 'animation');
     return get(this._animationTypeTable, anim);
   }
@@ -84,11 +86,10 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
   /**
    * Get the {@link transformClass} CSS classname representing the `is-removed` toggled state
    * for this transformicon
-   * @type {string|boolean}
    */
   @className
   @computed('is-removed')
-  get isRemoved() {
+  get isRemoved(): string|boolean {
     return get(this, 'is-removed') ? get(this, 'transformClass') : false;
   }
 }

@@ -18,6 +18,6 @@ module.exports = {
   },
 
   isDevelopingAddon() {
-    return false;
+    return true;
   }
 };

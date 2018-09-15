@@ -1,64 +1,63 @@
 import BaseTransformiconComponent from './-private/base';
 import { get } from '@ember/object';
-import { className, layout } from '@ember-decorators/component';
+import { className, classNames, layout } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
-import template from '../templates/components/t-menu';
+// NOTE: https://github.com/typed-ember/ember-cli-typescript/issues/242
+// @ts-ignore: Ignore import of compiled template
+import template from '../templates/components/t-grid';
 
-const DEFAULT_ANIMATION = 'butterfly';
+const DEFAULT_ANIMATION = 'rearrange';
+
+type Animation = 'rearrange'|'collapse';
 
 /**
-  Menu Transformicon
+  Grid Transformicon
 
-  PUBLIC
-    * `animation` string - Set the menu animation type  (alias: `a`).
-      * types - `butterfly` | `minus` | `x-cross` | `arrow-up` | `arrow-360-left` | `arrow-left`
-    * `is-open` boolean - Set initial open menu state.
+  PUBLIC - Optional parameters:
+    * `animation` string - Set the grid animation type  (alias: `a`).
+      * types - `rearrange` | `collapse`
+    * `is-open` boolean - Set initial open grid state.
     * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
   ```hbs
     {{! These are functionally equivalent}}
-    <TMenu />
-    <TMenu @a='butterfly' />
-    <TMenu @animation='butterfly' />
-    <TMenu @is-open={{false}} @animation='butterfly' />
+    <TGrid />
+    <TGrid @a='rearrange' />
+    <TGrid @animation='rearrange' />
+    <TGrid @is-open={{false}} @animation='rearrange' />
   ```
 */
 @layout(template)
-export default class TMenuComponent extends BaseTransformiconComponent {
-  label = 'toggle menu';
+@classNames('tcon-grid')
+export default class TGridComponent extends BaseTransformiconComponent {
+  label = 'toggle grid';
 
   /**
-   * Animation CSS classname lookup table for the Menu transformicon
+   * Animation CSS classname lookup table for the Grid transformicon
    */
   _animationTypeTable = {
-    'butterfly': 'tcon-menu--xbutterfly',
-    'minus': 'tcon-menu--minus',
-    'x-cross': 'tcon-menu--xcross',
-    'arrow-up': 'tcon-menu--arrow tcon-menu--arrowup',
-    'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left',
-    'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
+    'rearrange': 'tcon-grid--rearrange',
+    'collapse': 'tcon-grid--collapse'
   };
 
   /**
    * Get the component's current animation type. This is used to lookup the CSS classname for the
    * animation
-   * @type {string}
    */
-  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
+  animation: Animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
    * Flag to indicate the state of this transformicon
-   * @type {boolean}
    */
   // 'is-open' = _defaultTo(this['is-open'], false);
+  'is-open': boolean ;
 
   /**
    * Alias for {@link animation}
-   * @type {string}
    */
-  @alias('animation') a;
+  @alias('animation') a?: Animation;
 
   constructor() {
     super(...arguments);
@@ -71,11 +70,10 @@ export default class TMenuComponent extends BaseTransformiconComponent {
 
   /**
    * Get the CSS classname corresponding to the component's current {@link animation} type
-   * @type {string}
    */
   @className
   @computed('animation')
-  get animationType() {
+  get animationType(): string {
     let anim = get(this, 'animation');
     return get(this._animationTypeTable, anim);
   }
@@ -83,11 +81,10 @@ export default class TMenuComponent extends BaseTransformiconComponent {
   /**
    * Get the {@link transformClass} CSS classname representing the `is-open` toggled state
    * for this transformicon
-   * @type {string|boolean}
    */
   @className
   @computed('is-open')
-  get isOpen() {
+  get isOpen(): string|boolean {
     return get(this, 'is-open') ? get(this, 'transformClass') : false;
   }
 }

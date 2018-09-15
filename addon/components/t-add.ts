@@ -4,9 +4,14 @@ import { className, classNames, layout } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import { alias } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
+// NOTE: https://github.com/typed-ember/ember-cli-typescript/issues/242
+// @ts-ignore: Ignore import of compiled template
 import template from '../templates/components/t-add';
 
 const DEFAULT_ANIMATION = 'minus';
+
+type Animation = 'minus'|'check';
+type InitialState = 'is-open'|'is-added'|'is-searching'|'is-removed'|'is-playing';
 
 /**
   Add Transformicon
@@ -29,7 +34,7 @@ const DEFAULT_ANIMATION = 'minus';
 @classNames('tcon-plus')
 export default class TAddComponent extends BaseTransformiconComponent {
   label = 'add item';
-  initialState = 'is-added';
+  initialState: InitialState = 'is-added';
 
   /**
    * Animation CSS classname lookup table for the Add transformicon
@@ -42,21 +47,19 @@ export default class TAddComponent extends BaseTransformiconComponent {
   /**
    * Get the component's current animation type. This is used to lookup the CSS classname for the
    * animation
-   * @type {string}
    */
-  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
+  animation: Animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
    * Flag to indicate the state of this transformicon
-   * @type {boolean}
    */
   // 'is-added' = _defaultTo(this['is-added'], false);
+  'is-added': boolean;
 
   /**
    * Alias for {@link animation}
-   * @type {string}
    */
-  @alias('animation') a;
+  @alias('animation') a?: Animation;
 
   constructor() {
     super(...arguments);
@@ -69,11 +72,10 @@ export default class TAddComponent extends BaseTransformiconComponent {
 
   /**
    * Get the CSS classname corresponding to the component's current {@link animation} type
-   * @type {string}
    */
   @className
   @computed('animation')
-  get animationType() {
+  get animationType(this: TAddComponent): string {
     let anim = get(this, 'animation');
     return get(this._animationTypeTable, anim);
   }
@@ -81,11 +83,10 @@ export default class TAddComponent extends BaseTransformiconComponent {
   /**
    * Get the {@link transformClass} CSS classname representing the `is-added` toggled state
    * for this transformicon
-   * @type {string|boolean}
    */
   @className
   @computed('is-added')
-  get isAdded() {
+  get isAdded(): string|boolean {
     return get(this, 'is-added') ? get(this, 'transformClass') : false;
   }
 }

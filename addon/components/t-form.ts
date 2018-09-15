@@ -3,7 +3,11 @@ import { get } from '@ember/object';
 import { className, classNames, layout } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import _defaultTo from 'lodash.defaultto';
+// NOTE: https://github.com/typed-ember/ember-cli-typescript/issues/242
+// @ts-ignore: Ignore import of compiled template
 import template from '../templates/components/t-form';
+
+type InitialState = 'is-open'|'is-added'|'is-searching'|'is-removed'|'is-playing';
 
 /**
   Form Transformicon
@@ -22,13 +26,13 @@ import template from '../templates/components/t-form';
 @classNames('tcon-search--xcross')
 export default class TFormComponent extends BaseTransformiconComponent {
   label = 'toggle search';
-  initialState = 'is-searching';
+  initialState: InitialState = 'is-searching';
 
   /**
    * Flag to indicate the state of this transformicon
-   * @type {boolean}
    */
   // 'is-searching' = _defaultTo(this['is-searching'], false);
+  'is-searching': boolean;
 
   constructor() {
     super(...arguments);
@@ -42,11 +46,10 @@ export default class TFormComponent extends BaseTransformiconComponent {
   /**
    * Get the {@link transformClass} CSS classname representing the `is-searching` toggled state
    * for this transformicon
-   * @type {string|boolean}
    */
   @className
   @computed('is-searching')
-  get isSearching() {
+  get isSearching(): string|boolean {
     return get(this, 'is-searching') ? get(this, 'transformClass') : false;
   }
 }

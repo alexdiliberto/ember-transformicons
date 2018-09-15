@@ -4,6 +4,8 @@ import { className, classNames, layout } from '@ember-decorators/component';
 import { computed } from '@ember-decorators/object';
 import { reads } from '@ember-decorators/object/computed';
 import _defaultTo from 'lodash.defaultto';
+// NOTE: https://github.com/typed-ember/ember-cli-typescript/issues/242
+// @ts-ignore: Ignore import of compiled template
 import template from '../templates/components/t-mail';
 
 /**
@@ -26,11 +28,11 @@ export default class TMailComponent extends BaseTransformiconComponent {
 
   /**
    * Flag to indicate the state of this transformicon
-   * @type {boolean}
    */
   // 'is-open' = _defaultTo(this['is-open'], true);
+  'is-open': boolean;
 
-  @reads('type') ariaRole;
+  @reads('type') ariaRole!: string;
 
   constructor() {
     super(...arguments);
@@ -44,11 +46,10 @@ export default class TMailComponent extends BaseTransformiconComponent {
   /**
    * Get the {@link transformClass} CSS classname representing the `is-open` toggled state
    * for this transformicon
-   * @type {string|boolean}
    */
   @className
   @computed('is-open')
-  get isOpen() {
+  get isOpen(): string|boolean {
     return get(this, 'is-open') ? false : get(this, 'transformClass');
   }
 }
