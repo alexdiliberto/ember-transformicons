@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Nothing yet...
+  - `ember-cli-template-lint`
 
 
 ## [v2.2.0] - 2018-09-03

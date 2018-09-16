@@ -15,7 +15,7 @@ cache:
   yarn: true
 
 notifications:
-  email: false 
+  email: false
 
 env:
   global:
@@ -50,6 +50,7 @@ before_script:
   - greenkeeper-lockfile-update
 
 script:
+  - yarn lint:hbs
   - yarn lint:js
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
