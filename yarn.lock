@@ -225,46 +225,47 @@
     babel-plugin-transform-decorators-legacy "^1.3.4"
     ember-cli-version-checker "^2.1.0"
 
-"@ember-decorators/component@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@ember-decorators/component/-/component-2.4.1.tgz#8234b271cb3bd8ce4496836a259b415236cb4d1b"
+"@ember-decorators/component@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/component/-/component-2.5.0.tgz#ef7b15a2b34467e40f3d140b35bc306bbafe2070"
   dependencies:
-    "@ember-decorators/utils" "^2.4.1"
+    "@ember-decorators/utils" "^2.5.0"
     ember-cli-babel "^6.6.0"
 
-"@ember-decorators/controller@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@ember-decorators/controller/-/controller-2.4.1.tgz#1beda355dfe534c0b68194964b2933f5207093b2"
+"@ember-decorators/controller@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/controller/-/controller-2.5.0.tgz#6ebb105cfd89cd4e2d8d37d216eedf58b8c8f61c"
   dependencies:
-    "@ember-decorators/utils" "^2.4.1"
+    "@ember-decorators/utils" "^2.5.0"
     ember-cli-babel "^6.6.0"
 
-"@ember-decorators/data@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@ember-decorators/data/-/data-2.4.1.tgz#c2d78df56b2d4d57647f20f712267a548486a73a"
+"@ember-decorators/data@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/data/-/data-2.5.0.tgz#44b4bce42c7e8b8011e268a176eb4399d50e8e8f"
   dependencies:
-    "@ember-decorators/utils" "^2.4.1"
+    "@ember-decorators/utils" "^2.5.0"
     ember-cli-babel "^6.6.0"
 
-"@ember-decorators/object@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@ember-decorators/object/-/object-2.4.1.tgz#9dc9291ab217619485e0b6e5d6acf94c6d9989f6"
+"@ember-decorators/object@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/object/-/object-2.5.0.tgz#64955d0216632641f1aee9f474222ce1afdb7bb6"
   dependencies:
-    "@ember-decorators/utils" "^2.4.1"
+    "@ember-decorators/utils" "^2.5.0"
     ember-cli-babel "^6.6.0"
     ember-compatibility-helpers "^1.0.0"
 
-"@ember-decorators/service@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@ember-decorators/service/-/service-2.4.1.tgz#fa06510e6631c24f80de801f1ff1a2b7e2ec559d"
+"@ember-decorators/service@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/service/-/service-2.5.0.tgz#e4ccc829989b6df593d2534f013c09f747f36400"
   dependencies:
-    "@ember-decorators/utils" "^2.4.1"
+    "@ember-decorators/utils" "^2.5.0"
     ember-cli-babel "^6.6.0"
 
-"@ember-decorators/utils@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@ember-decorators/utils/-/utils-2.4.1.tgz#5882575f8851d6111b486c017f75367766b24958"
+"@ember-decorators/utils@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@ember-decorators/utils/-/utils-2.5.0.tgz#46a42f5e1cf6623a4314c341cfb21d37cb6c13aa"
   dependencies:
+    babel-plugin-debug-macros "^0.1.11"
     ember-cli-babel "^6.6.0"
     ember-compatibility-helpers "^1.0.0"
 
@@ -4257,15 +4258,15 @@ ember-data@^2.18.0:
     semver "^5.1.0"
     silent-error "^1.0.0"
 
-ember-decorators@^2.4.0:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/ember-decorators/-/ember-decorators-2.4.1.tgz#922f719759e4d12053760628eb978afd716ab5b3"
+ember-decorators@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/ember-decorators/-/ember-decorators-2.5.0.tgz#ffc78a776c851189b3eba96a17fadc2eb75d16fe"
   dependencies:
-    "@ember-decorators/component" "^2.4.1"
-    "@ember-decorators/controller" "^2.4.1"
-    "@ember-decorators/data" "^2.4.1"
-    "@ember-decorators/object" "^2.4.1"
-    "@ember-decorators/service" "^2.4.1"
+    "@ember-decorators/component" "^2.5.0"
+    "@ember-decorators/controller" "^2.5.0"
+    "@ember-decorators/data" "^2.5.0"
+    "@ember-decorators/object" "^2.5.0"
+    "@ember-decorators/service" "^2.5.0"
     ember-cli-babel "^6.0.0"
     semver "^5.5.0"
 
