@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   - `ember-cli-template-lint`
 
+### Updated
+  - Yarn add `integrity` hash to each dependency
+
 
 ## [v2.2.0] - 2018-09-03
 ### Added
