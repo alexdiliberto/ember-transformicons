@@ -1,7 +1,7 @@
 {
   "name": "ember-transformicons",
   "version": "2.2.0",
-  "description": "Transformicons addon for your Ember CLI project",
+  "description": "Transformicons for Ember: Animated icons, symbols and buttons",
   "keywords": [
     "ember-addon",
     "ember",
