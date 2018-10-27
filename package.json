@@ -103,6 +103,7 @@
   },
   "greenkeeper": {
     "ignore": [
+      "@ember/optional-features",
       "broccoli-asset-rev",
       "ember-ajax",
       "ember-cli",
