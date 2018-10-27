@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
   - Yarn add `integrity` hash to each dependency
+  - greenkeeper ignore `ember-ajax`
 
 
 ## [v2.2.0] - 2018-09-03

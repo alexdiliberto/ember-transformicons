@@ -104,6 +104,7 @@
   "greenkeeper": {
     "ignore": [
       "broccoli-asset-rev",
+      "ember-ajax",
       "ember-cli",
       "ember-cli-dependency-checker",
       "ember-cli-eslint",
