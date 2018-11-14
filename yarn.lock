@@ -4959,7 +4959,7 @@ ember-rfc176-data@^0.2.0:
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.2.7.tgz#bd355bc9b473e08096b518784170a23388bc973b"
   integrity sha512-pJE2w+sI22UDsYmudI4nCp3WcImpUzXwe9qHfpOcEu3yM/HD1nGpDRt6kZD0KUnDmqkLeik/nYyzEwN/NU6xxA==
 
-ember-rfc176-data@^0.3.1, ember-rfc176-data@^0.3.3, ember-rfc176-data@^0.3.5:
+ember-rfc176-data@^0.3.1, ember-rfc176-data@^0.3.5:
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.5.tgz#f630e550572c81a5e5c7220f864c0f06eee9e977"
   integrity sha512-5NfL1iTkIQDYs16/IZ7/jWCEglNsUrigLelBkBMsNcib9T3XzQwmhhVTjoSsk66s57LmWJ1bQu+2c1CAyYCV7A==
@@ -5341,12 +5341,12 @@ esdoc@pzuraq/esdoc#015a342:
     minimist "1.2.0"
     taffydb "2.7.2"
 
-eslint-plugin-ember@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-5.2.0.tgz#fa436e0497dfc01d1d38608229cd616e7c5b6067"
-  integrity sha1-+kNuBJffwB0dOGCCKc1hbnxbYGc=
+eslint-plugin-ember@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-6.0.0.tgz#64f83aa263c2816a194bed6bc39574571ef70893"
+  integrity sha512-y56nUmgb3ZGA2yusmLcfuHrsQf3tYeTHnuj8nL9nSSHjYw7og6hX4FrdjMnHPFyan0v5sdK6b75DK9U0f5zgvw==
   dependencies:
-    ember-rfc176-data "^0.3.3"
+    ember-rfc176-data "^0.3.5"
     snake-case "^2.1.0"
 
 eslint-plugin-node@^6.0.1:
