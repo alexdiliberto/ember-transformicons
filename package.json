@@ -24,7 +24,6 @@
     "url": "https://github.com/alexdiliberto/ember-transformicons/issues"
   },
   "scripts": {
-    "postinstall": "npm rebuild node-sass",
     "build": "ember build",
     "build:stats": "CONCAT_STATS=true yarn build",
     "lint:hbs": "ember-template-lint .",
