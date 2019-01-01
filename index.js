@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-transformicons',
+  name: require('./package').name,
 
   included(app) {
     // Old syntax necessary to support Node v4 Ember apps
