@@ -8,8 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ember-cli-template-lint`
 
 ### Updated
+  - Ember CLI v3.6.x
   - Yarn add `integrity` hash to each dependency
   - Greenkeeper ignore `@ember/optional-features` and `ember-ajax`
+  - Greenkeeper ignore `eslint-plugin-ember` and `eslint-plugin-node`
 
 
 ## [v2.2.0] - 2018-09-03
