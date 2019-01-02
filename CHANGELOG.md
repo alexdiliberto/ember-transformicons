@@ -5,11 +5,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet ...
+
+
+## [v2.3.0] - 2019-02-23
+### Added
   - `ember-cli-template-lint`
+  - Dependabot
+  - `ember-cli-addon-docs` custom favicon
+  - `ember-cli-addon-docs` updates to align with latest version
 
 ### Updated
+  - Ember CLI v3.7.x
   - Yarn add `integrity` hash to each dependency
   - Greenkeeper ignore `@ember/optional-features` and `ember-ajax`
+  - Greenkeeper ignore `eslint-plugin-ember` and `eslint-plugin-node`
+  - Updated many dependencies
+  - `ember-cli-addon-docs` custom theme
+
+### Removed 
+  - Greenkeeper
 
 
 ## [v2.2.0] - 2018-09-03
