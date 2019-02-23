@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
   - `ember-default` scenario to ember-try config to fix automatic deploy
+  - `ember deploy production` fix related to 3rd party dependency `terser`
 
 ### Updated 
   - Auto deploy branch now points to `ember-default-with-jquery`
