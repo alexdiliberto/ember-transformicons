@@ -39,6 +39,11 @@
 
 ![ember-transformicons demo gif][demo-gif]
 
+## Compatibility
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+
 ## Installation
 
 ```sh
@@ -93,6 +98,13 @@ Deploys are automated using Travis CI. If you need to manually deploy, run the f
 ember deploy production
 ```
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+## Contributing
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
 
 [demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-transformicons/master/demo.gif
