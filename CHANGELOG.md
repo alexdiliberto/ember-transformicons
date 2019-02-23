@@ -5,11 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet ...
+
+
+## [v2.3.1] - 2019-02-23
+### Added
   - `ember-default` scenario to ember-try config to fix automatic deploy
   - `ember deploy production` fix related to 3rd party dependency `terser`
 
 ### Updated 
   - Auto deploy branch now points to `ember-default-with-jquery`
+
 
 ## [v2.3.0] - 2019-02-23
 ### Added
@@ -400,7 +406,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.1...HEAD
+[v2.3.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.1
 [v2.3.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.2.0...v2.3.0
 [v2.2.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.1.0...v2.2.0
 [v2.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.3...v2.1.0
