@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@ember-decorators/babel-transforms": "^2.0.2",
-    "ember-auto-import": "^1.2.15",
+    "ember-auto-import": "^1.2.21",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.2",
     "ember-decorators": "^3.0.0",
