@@ -1,22 +1,13 @@
-engines:
-  duplication:
+version: "2"
+checks:
+  similar-code:
+    enabled: false
+plugins:
+  eslint:
+    enabled: false
+  csslint:
     enabled: true
-    exclude_paths:
-    - tests/dummy/app/controllers/**
-    - tests/integration/**
-    config:
-      languages:
-      - javascript:
-  scss-lint:
-    enabled: true
-
-ratings:
-  paths:
-  - "**.js"
-  - "**.md"
-  - "**.scss"
-
-exclude_paths:
+exclude_patterns:
 - "config/**"
 - "node_modules/**"
 - "vendor/**"

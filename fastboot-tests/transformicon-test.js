@@ -1,3 +1,4 @@
+/* eslint-env node, mocha */
 'use strict';
 
 const expect = require('chai').expect;

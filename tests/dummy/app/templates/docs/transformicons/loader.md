@@ -1,4 +1,8 @@
 # Loader Transformicon
 ---
 ### animation
-`<TLoader />` <TLoader @class="docs-mt-2" />
+{{#docs-snippet name='t-loader-animation-snippet.hbs'}}
+  <TLoader />
+{{/docs-snippet}}
+
+<TLoader class="docs-mt-2"/>
