@@ -3276,6 +3276,25 @@ broccoli-funnel@^2.0.0, broccoli-funnel@^2.0.1:
     symlink-or-copy "^1.0.0"
     walk-sync "^0.3.1"
 
+broccoli-funnel@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/broccoli-funnel/-/broccoli-funnel-2.0.2.tgz#0edf629569bc10bd02cc525f74b9a38e71366a75"
+  integrity sha512-/vDTqtv7ipjEZQOVqO4vGDVAOZyuYzQ/EgGoyewfOgh1M7IQAToBKZI0oAQPgMBeFPPlIbfMuAngk+ohPBuaHQ==
+  dependencies:
+    array-equal "^1.0.0"
+    blank-object "^1.0.1"
+    broccoli-plugin "^1.3.0"
+    debug "^2.2.0"
+    fast-ordered-set "^1.0.0"
+    fs-tree-diff "^0.5.3"
+    heimdalljs "^0.2.0"
+    minimatch "^3.0.0"
+    mkdirp "^0.5.0"
+    path-posix "^1.0.0"
+    rimraf "^2.4.3"
+    symlink-or-copy "^1.0.0"
+    walk-sync "^0.3.1"
+
 broccoli-kitchen-sink-helpers@^0.2.0, broccoli-kitchen-sink-helpers@^0.2.5:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/broccoli-kitchen-sink-helpers/-/broccoli-kitchen-sink-helpers-0.2.9.tgz#a5e0986ed8d76fb5984b68c3f0450d3a96e36ecc"
@@ -5240,10 +5259,10 @@ ember-ajax@^3.0.0:
     ember-cli-babel "^6.16.0"
     najax "^1.0.3"
 
-ember-angle-bracket-invocation-polyfill@^1.2.2:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/ember-angle-bracket-invocation-polyfill/-/ember-angle-bracket-invocation-polyfill-1.2.3.tgz#4381f8bb12aa95af83b982ca543de9baed7ee248"
-  integrity sha512-imiDfGkPet7zVw6JIon2pG00OW76mi4MKnfYFQY8rany7Is7Bac8ZRspevfue0AAM/5VsQ0MbgU0vICMa5ifpw==
+ember-angle-bracket-invocation-polyfill@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/ember-angle-bracket-invocation-polyfill/-/ember-angle-bracket-invocation-polyfill-1.2.5.tgz#25b9c1f8dc137cb7e7dd478cc517e40971931c55"
+  integrity sha512-fGU8iBwduCmr7TfWpA0VlAhfJJKGVXPyAwxKizRn4/DIEDkS20TWox3XD+B8DCup9VKGiP0UMaXU9NK23xPQMg==
   dependencies:
     ember-cli-babel "^6.17.0"
     ember-cli-version-checker "^2.1.2"
@@ -5561,10 +5580,10 @@ ember-cli-dependency-checker@^2.1.1:
     resolve "^1.5.0"
     semver "^5.3.0"
 
-ember-cli-dependency-lint@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-dependency-lint/-/ember-cli-dependency-lint-1.1.1.tgz#02c0011e74b501bbf9355d5fdb5ade5d2361b1bc"
-  integrity sha512-li2CBNJaGem3e0RWhMWTo8fmE9h4Tjr/AC10XD5dtGvnHoF1VT2h3ZpNGTsJkLuDIl9uTJtCPoniP+vvaPhEFw==
+ember-cli-dependency-lint@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-dependency-lint/-/ember-cli-dependency-lint-1.1.3.tgz#ece5a319734d0b0462c12fd7a93d322e1f9fe60f"
+  integrity sha512-v836nMZuYhnvZ7MvIwGkwJkFhx7gc7RrlNcD90IHdBpR7kWBXIljLgSNIae84qKn1V1UqHImBTMnJvJCe2qvQw==
   dependencies:
     archy "^1.0.0"
     broccoli-plugin "^1.3.0"
