@@ -98,27 +98,6 @@
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
   },
-  "greenkeeper": {
-    "ignore": [
-      "@ember/optional-features",
-      "broccoli-asset-rev",
-      "ember-ajax",
-      "ember-cli",
-      "ember-cli-dependency-checker",
-      "ember-cli-eslint",
-      "ember-cli-htmlbars",
-      "ember-cli-htmlbars-inline-precompile",
-      "ember-cli-inject-live-reload",
-      "ember-load-initializers",
-      "ember-resolver",
-      "ember-source",
-      "ember-source-channel-url",
-      "ember-try",
-      "eslint-plugin-ember",
-      "eslint-plugin-node",
-      "loader.js"
-    ]
-  },
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "https://alexdiliberto.com/ember-transformicons",

@@ -14,10 +14,6 @@
     <img src="https://badge.fury.io/js/ember-transformicons.svg"
       alt="NPM Version">
   </a>
-  <a href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/alexdiliberto/ember-transformicons.svg"
-      alt="Greenkeeper Badge">
-  </a>
 </p>
 <p align="center">
   <a href="http://emberobserver.com/addons/ember-transformicons">
