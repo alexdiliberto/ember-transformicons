@@ -7,14 +7,14 @@ engines:
     config:
       languages:
       - javascript:
-  scss-lint:
+  csslint:
     enabled: true
 
 ratings:
   paths:
   - "**.js"
   - "**.md"
-  - "**.scss"
+  - "**.css"
 
 exclude_paths:
 - "config/**"
