@@ -1,11 +1,12 @@
 version: "2"
-
+checks:
+  similar-code:
+    enabled: false
 plugins:
   eslint:
     enabled: false
   csslint:
     enabled: true
-
 exclude_patterns:
 - "config/**"
 - "node_modules/**"
