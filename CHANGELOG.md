@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Nothing yet ...
+  - `ember-default` scenario to ember-try config to fix automatic deploy
 
 
 ## [v2.3.0] - 2019-02-23
