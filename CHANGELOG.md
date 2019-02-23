@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Nothing yet ...
 
 
-## [v2.3.1] - 2019-02-23
+## [v2.3.2] - 2019-02-23
 ### Added
   - `ember-default` scenario to ember-try config to fix automatic deploy
   - `ember deploy production` fix related to 3rd party dependency `terser`
@@ -406,8 +406,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.1...HEAD
-[v2.3.1]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.1
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.2...HEAD
+[v2.3.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.2
 [v2.3.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.2.0...v2.3.0
 [v2.2.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.1.0...v2.2.0
 [v2.1.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.0.3...v2.1.0
