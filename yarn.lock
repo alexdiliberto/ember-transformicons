@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@alexdiliberto/eslint-config@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@alexdiliberto/eslint-config/-/eslint-config-1.1.1.tgz#708ce9055c4551e596e9c1eb8c6516c008b06105"
-  integrity sha1-cIzpBVxFUeWW6cHrjGUWwAiwYQU=
+"@alexdiliberto/eslint-config@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@alexdiliberto/eslint-config/-/eslint-config-2.1.0.tgz#39427443cc87bdec4ae5f92664ab09a1efb50f6e"
+  integrity sha512-OFUxszH2uNjnKxgDzs8xpd4Q1eYrmPm0lYZRHbdx0ELINeQ2Hr41s/Yxk5HGvh6bKOD8bQRQ7bRV0PR4N3mYXA==
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -5694,14 +5694,6 @@ ember-cli-get-component-path-option@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
   integrity sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=
-
-ember-cli-github-pages@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-github-pages/-/ember-cli-github-pages-0.2.0.tgz#2789d178936d8a1350ebbb1a300ab90760a111da"
-  integrity sha512-jUDv1i3P9IvBeAAiNns9Yc4EkS0nkfbuedl9e8GRYVh7WOi5eR0SDi/7cYHXT5UnGkAe+eTBjjZkDKthL/DLPQ==
-  dependencies:
-    ember-cli-version-checker "^2.1.0"
-    rsvp "^4.7.0"
 
 ember-cli-htmlbars-inline-precompile@^1.0.0, ember-cli-htmlbars-inline-precompile@^1.0.3:
   version "1.0.5"
@@ -11948,10 +11940,10 @@ quick-temp@^0.1.0, quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quic
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
 
-qunit-dom@^0.8.0:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-0.8.3.tgz#0ea673e6c7c99f5f0fc547f30be38ea7141160f4"
-  integrity sha512-Qmj6bw+Fym17hadUypMK9VqNIqR+5zDzAJAmSnQWwlg/ujUfd5zVPdkhiOXY0bz20/AAKaz4GjRrFTYIOo7Hqg==
+qunit-dom@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-0.8.4.tgz#8b75a73040df1735280fc2fab4c6a1a7f518488b"
+  integrity sha512-Ab2wCPQP2G2XdbIwhlUHMp3ROHh4XnqmK0ogHlpxwVIv+cXbW3/L6F9ucCThAMkjqCaxwZQQR+LaUHaaMxDCmw==
   dependencies:
     broccoli-funnel "^2.0.0"
     broccoli-merge-trees "^3.0.1"
