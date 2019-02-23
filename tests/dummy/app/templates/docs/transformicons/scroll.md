@@ -1,4 +1,8 @@
 # Scroll Transformicon
 ---
 ### animation
-`<TScroll />` <TScroll @class="docs-block docs-mt-2" />
+{{#docs-snippet name='t-scroll-animation-snippet.hbs'}}
+  <TScroll />
+{{/docs-snippet}}
+
+<TScroll class="docs-block docs-mt-2" />
