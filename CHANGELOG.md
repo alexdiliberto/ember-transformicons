@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
   - `ember-default` scenario to ember-try config to fix automatic deploy
 
+### Updated 
+  - Auto deploy branch now points to `ember-default-with-jquery`
 
 ## [v2.3.0] - 2019-02-23
 ### Added
