@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
-  - Nothing yet ...
+  - Dependabot `config.yml` file
 
 
 ## [v2.3.2] - 2019-02-23
