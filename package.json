@@ -54,7 +54,6 @@
     "broccoli-merge-trees": "^3.0.1",
     "broccoli-source": "^1.1.0",
     "chai": "^4.2.0",
-    "denodeify": "^1.2.1",
     "ember-angle-bracket-invocation-polyfill": "^1.2.5",
     "ember-cli": "~3.7.1",
     "ember-cli-addon-docs": "^0.6.4",
