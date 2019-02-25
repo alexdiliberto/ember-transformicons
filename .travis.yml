@@ -21,7 +21,6 @@ env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
-    - secure: PoTdWMcFljzYcnh3Y7cEoN+61ad1EXse5Hp3cZetbQ30mwtysAI6nK4/WaqlgeCfj6DLQLLpFAis8VWJ2Z6GNJcHCdsYs9cvEvxsXz5geqc/xtmNTbAMewKHzJGXgsG7OOYs9mUf7S4pdJjMqWU/dMOFDa6J36aFNPgu5HcG0eM=
 
 branches:
   only:
@@ -72,5 +71,5 @@ script:
 
 after_success:
   - if [[ ($TRAVIS_BRANCH == master || -n $TRAVIS_TAG) && $EMBER_TRY_SCENARIO == ember-default-with-jquery ]]; then
-      node_modules/.bin/ember deploy production;
+    node_modules/.bin/ember deploy production;
     fi
