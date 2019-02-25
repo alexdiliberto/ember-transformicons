@@ -21,8 +21,6 @@ env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
-    # travis deploy token: https://github.com/settings/tokens
-    - secure: "KyB85FFNbw4bqgGOthodqSUaSHqL0us4QE/MJXCkFxnMLC8uP/5b7J0pxq8kxxi0PNjFA7Paybblo6GA0xxKZjgEazuILL4LjRCnApTMzTY2jAtIDiIVLUJy4xFk/GVB1B4+oPr8wGTGlNEoEqosT7sagDHOHmuxt3ENhhdsS3Y="
 
 branches:
   only:
@@ -66,6 +64,20 @@ jobs:
       if: (branch = master OR tag IS present) AND type = push
       script:
         - node_modules/.bin/ember deploy production
+
+    # https://docs.travis-ci.com/user/deployment/npm/
+    # https://tailordev.fr/blog/2018/03/15/automated-npm-releases-with-travis-ci/
+    - stage: "NPM Publish"
+      install: skip
+      script: skip
+      deploy:
+        provider: npm
+        email: $NPM_EMAIL
+        api_key:
+          secure: SmJbc7O2JHXkIJY3SRzkelNiUpEsImKMpTqepYN1TLmhJwVa8qdd53zkW4aRheZOEopedDo89rodIhpBVny0OZoLtGLupkOB60eh0A9sWiIE4ma2lTweUXZEjtRgmrJ5/poCnBlidJsbZFyaxNqlN2llB0u148dwiySSSEbqYVQ=
+        on:
+          tags: true
+          repo: alexdiliberto/ember-transformicons
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
