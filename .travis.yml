@@ -21,6 +21,8 @@ env:
   global:
     # See https://git.io/vdao3 for details.
     - JOBS=1
+    # travis deploy token: https://github.com/settings/tokens
+    - secure: "KyB85FFNbw4bqgGOthodqSUaSHqL0us4QE/MJXCkFxnMLC8uP/5b7J0pxq8kxxi0PNjFA7Paybblo6GA0xxKZjgEazuILL4LjRCnApTMzTY2jAtIDiIVLUJy4xFk/GVB1B4+oPr8wGTGlNEoEqosT7sagDHOHmuxt3ENhhdsS3Y="
 
 branches:
   only:
@@ -59,6 +61,12 @@ jobs:
     - env: EMBER_TRY_SCENARIO=ember-canary
     - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
 
+    - stage: "Production Deploy"
+      name: "Production Deploy"
+      if: (branch = master OR tag IS present) AND type = push
+      script:
+        - node_modules/.bin/ember deploy production
+
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
@@ -68,8 +76,3 @@ install:
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
-
-after_success:
-  - if [[ ($TRAVIS_BRANCH == master || -n $TRAVIS_TAG) && $EMBER_TRY_SCENARIO == ember-default-with-jquery ]]; then
-    node_modules/.bin/ember deploy production;
-    fi
