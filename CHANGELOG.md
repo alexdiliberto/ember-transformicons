@@ -5,7 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 ### Added
+  - Nothing yet...
+  
+
+## [v3.0.0] - 2019-02-26
+### Added
   - Dependabot `config.yml` file
+  
+### Updated
+  - Dependabot dependency updates
+  - BREAKING CHANGE: Drop Node v6 test support. Testing against Node v8 to fix `ember deploy production` CI segmentation fault issue
+
+### Removed 
+  - Unused `denodify` dependency
 
 
 ## [v2.3.2] - 2019-02-23
@@ -406,7 +418,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Initial transformicons
 
 
-[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.2...HEAD
+[unreleased]:  https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.0...HEAD
+[v3.0.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.2...v3.0.0
 [v2.3.2]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.2
 [v2.3.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.2.0...v2.3.0
 [v2.2.0]:      https://github.com/alexdiliberto/ember-transformicons/compare/v2.1.0...v2.2.0
