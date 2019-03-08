@@ -46,7 +46,7 @@
     "lodash.defaultto": "^4.14.0"
   },
   "devDependencies": {
-    "@alexdiliberto/eslint-config": "^2.1.0",
+    "@alexdiliberto/eslint-config": "^3.0.0",
     "@ember/optional-features": "^0.7.0",
     "babel-eslint": "^8.0.0",
     "broccoli-asset-rev": "^2.7.0",
