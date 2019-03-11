@@ -26,6 +26,7 @@
   "scripts": {
     "build": "ember build",
     "build:stats": "CONCAT_STATS=true yarn build",
+    "changelog": "git-chglog -o CHANGELOG.md",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
@@ -34,7 +35,8 @@
     "lint:fix": "yarn lint -- --fix",
     "start:inspect": "node --inspect-brk node_modules/.bin/ember s",
     "test:iterate": "ember exam:iterate 10",
-    "test:fastboot": "DEBUG=ember-cli-addon-tests ember fastboot:test"
+    "test:fastboot": "DEBUG=ember-cli-addon-tests ember fastboot:test",
+    "version": "yarn changelog && git add CHANGELOG.md"
   },
   "dependencies": {
     "@ember-decorators/babel-transforms": "^5.1.3",

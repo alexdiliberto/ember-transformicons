@@ -1,0 +1,34 @@
+style: github
+template: CHANGELOG.tpl.md
+info:
+  title: ember-transformicons CHANGELOG
+  repository_url: https://github.com/alexdiliberto/ember-transformicons
+options:
+  commits:
+    # filters:
+    #   Type:
+    #     - feat
+    #     - fix
+    #     - docs
+    #     - style
+    #     - perf
+    #     - refactor
+    #     - test
+    #     - build
+    #     - ci
+  commit_groups:
+    title_maps:
+      ci: CI
+      feat: Features
+      fix: Bug Fixes
+      perf: Performance Improvements
+      refactor: Refactors
+  header:
+    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Scope
+      - Subject
+  notes:
+    keywords:
+      - BREAKING CHANGE
