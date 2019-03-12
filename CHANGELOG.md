@@ -1,6 +1,18 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v3.0.4"></a>
+## [v3.0.4](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.3...v3.0.4) (2019-03-12)
+
+### Build
+
+* **package.json:** update scripts to use `git-chglog --next-tag` flag
+
+### Docs
+
+* **changelog:** 📄
+
+
 <a name="v3.0.3"></a>
 ## [v3.0.3](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.2...v3.0.3) (2019-03-12)
 
