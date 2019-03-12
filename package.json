@@ -37,7 +37,7 @@
     "test:iterate": "ember exam:iterate 10",
     "test:fastboot": "DEBUG=ember-cli-addon-tests ember fastboot:test",
     "preversion": "yarn test",
-    "version": "yarn changelog && git add CHANGELOG.md",
+    "version": "yarn changelog && git add CHANGELOG.md && git commit -m 'docs(changelog): 📄'",
     "postversion": "git push && git push --tags && rm -rf tmp dist"
   },
   "dependencies": {
