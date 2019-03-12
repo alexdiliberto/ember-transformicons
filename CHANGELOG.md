@@ -1,6 +1,19 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v3.0.3"></a>
+## [v3.0.3](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.2...v3.0.3) (2019-03-12)
+
+### Build
+
+* **package.json:** update scripts again
+* **package.json:** update `version` script to commit changelog
+
+### Docs
+
+* **readme:** update release steps
+
+
 <a name="v3.0.2"></a>
 ## [v3.0.2](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.1...v3.0.2) (2019-03-12)
 
