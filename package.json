@@ -36,8 +36,7 @@
     "start:inspect": "node --inspect-brk node_modules/.bin/ember s",
     "test:iterate": "ember exam:iterate 10",
     "test:fastboot": "DEBUG=ember-cli-addon-tests ember fastboot:test",
-    "preversion": "yarn test",
-    "version": "yarn changelog && git add CHANGELOG.md && git commit -m 'docs(changelog): 📄'",
+    "version": "git-chglog $(git describe --tags $(git rev-list --tags --max-count=1)) && yarn changelog && git add CHANGELOG.md",
     "postversion": "git push && git push --tags && rm -rf tmp dist"
   },
   "dependencies": {
