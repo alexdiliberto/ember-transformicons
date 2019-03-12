@@ -36,7 +36,9 @@
     "start:inspect": "node --inspect-brk node_modules/.bin/ember s",
     "test:iterate": "ember exam:iterate 10",
     "test:fastboot": "DEBUG=ember-cli-addon-tests ember fastboot:test",
-    "version": "yarn changelog && git add CHANGELOG.md"
+    "preversion": "yarn test",
+    "version": "yarn changelog && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags && rm -rf tmp dist"
   },
   "dependencies": {
     "@ember-decorators/babel-transforms": "^5.1.3",
