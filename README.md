@@ -79,10 +79,11 @@ yarn test:all # ember try:each
 Ready to draft a new release:
 
 ```sh
-yarn version [--major | --minor | --patch]
+npm version <major | minor | patch>
 # package.json scripts automatically update CHANGELOG.md and git push
-# Draft release on Github and copy CHANGELOG.md for the release
-# Validate passing tests on Travis and Travis will automatically deploy and publish (`npm publish`)
+# Draft release on Github, generate CHANGELOG with only the commits included in the latest tag using this command:
+git-chglog $(git describe --tags $(git rev-list --tags --max-count=1))
+# Validate passing tests on Travis and Travis will automatically deploy (`ember deploy`) and publish (`npm publish`)
 ```
 
 ## Deploy
