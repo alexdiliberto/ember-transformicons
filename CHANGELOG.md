@@ -1,6 +1,21 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v3.0.1"></a>
+## [v3.0.1](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.0...v3.0.1) (2019-03-11)
+
+### Build
+
+* **changelog:** add auto changelog generation using git-chglog
+* **deps:** Bump ember-decorators from 5.1.3 to 5.1.4 ([#215](https://github.com/alexdiliberto/ember-transformicons/issues/215))
+* **deps:** Bump [@ember](https://github.com/ember)-decorators/babel-transforms from 5.1.3 to 5.1.4 ([#216](https://github.com/alexdiliberto/ember-transformicons/issues/216))
+* **deps-dev:** bump [@alexdiliberto](https://github.com/alexdiliberto)/eslint-config from 3.0.0 to 3.0.1 ([#220](https://github.com/alexdiliberto/ember-transformicons/issues/220))
+* **deps-dev:** bump [@alexdiliberto](https://github.com/alexdiliberto)/eslint-config from 2.1.0 to 3.0.0 ([#218](https://github.com/alexdiliberto/ember-transformicons/issues/218))
+* **deps-dev:** bump ember-source from 3.7.3 to 3.8.0 ([#207](https://github.com/alexdiliberto/ember-transformicons/issues/207))
+* **deps-dev:** bump ember-cli-addon-docs from 0.6.5 to 0.6.6 ([#219](https://github.com/alexdiliberto/ember-transformicons/issues/219))
+* **deps-dev:** Bump ember-cli-addon-docs from 0.6.4 to 0.6.5 ([#214](https://github.com/alexdiliberto/ember-transformicons/issues/214))
+
+
 <a name="v3.0.0"></a>
 ## [v3.0.0](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.2...v3.0.0) (2019-02-26)
 
