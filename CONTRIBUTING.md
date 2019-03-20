@@ -27,4 +27,24 @@ Any help is welcome and appreciated! :+1: :tada:
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
+## Release
+
+Ready to draft a new release:
+
+```sh
+npm version <major | minor | patch>
+# package.json scripts automatically update CHANGELOG.md and git push
+# Draft release on Github, generate CHANGELOG with only the commits included in the latest tag using this command:
+git-chglog $(git describe --tags $(git rev-list --tags --max-count=1))
+# Validate passing tests on Travis and Travis will automatically deploy (`ember deploy`) and publish (`npm publish`)
+```
+
+## Deploy
+
+Deploys are automated using Travis CI. If you need to manually deploy, run the following command:
+
+```sh
+ember deploy production
+```
+
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
