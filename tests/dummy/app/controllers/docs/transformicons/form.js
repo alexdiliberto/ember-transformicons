@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { action } from '@ember-decorators/object';
+import { action } from '@ember/object';
 
 /* eslint-disable ember/alias-model-in-controller, no-console */
 export default class TransformiconsFormController extends Controller {

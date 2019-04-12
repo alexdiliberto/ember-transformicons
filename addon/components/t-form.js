@@ -1,7 +1,6 @@
 import BaseTransformiconComponent from './-private/base';
-import { get } from '@ember/object';
+import { computed, get } from '@ember/object';
 import { className, classNames, layout } from '@ember-decorators/component';
-import { computed } from '@ember-decorators/object';
 import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-form';
 
