@@ -54,7 +54,7 @@
     "broccoli-asset-rev": "^2.7.0",
     "broccoli-funnel": "^2.0.2",
     "broccoli-merge-trees": "^3.0.1",
-    "broccoli-source": "^1.1.0",
+    "broccoli-source": "^2.1.1",
     "chai": "^4.2.0",
     "ember-angle-bracket-invocation-polyfill": "^1.2.5",
     "ember-cli": "~3.7.1",

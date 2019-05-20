@@ -3492,6 +3492,11 @@ broccoli-source@^1.1.0:
   resolved "https://registry.yarnpkg.com/broccoli-source/-/broccoli-source-1.1.0.tgz#54f0e82c8b73f46580cbbc4f578f0b32fca8f809"
   integrity sha1-VPDoLItz9GWAy7xPV48LMvyo+Ak=
 
+broccoli-source@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/broccoli-source/-/broccoli-source-2.1.1.tgz#5395704518c3cfb73ce7586590ef804332e55fe0"
+  integrity sha512-yMWSaBHza7iwLD5wy7329CeLN3h2668DB2Ky5goi2E/NBsB9YLrr9Tt29ZiNWa3r2P1XiIelV7TuTK4SzesnOA==
+
 broccoli-sri-hash@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/broccoli-sri-hash/-/broccoli-sri-hash-2.1.2.tgz#bc69905ed7a381ad325cc0d02ded071328ebf3f3"
