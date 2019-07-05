@@ -18,6 +18,7 @@ Compatibility
 
 * Ember.js v2.18 or above
 * Ember CLI v2.13 or above
+* Node.js v8 or above
 
 Installation
 ------------------------------------------------------------------------------
@@ -26,10 +27,18 @@ Installation
 ember install ember-transformicons
 ```
 
+
+Usage
+------------------------------------------------------------------------------
+
+Simply use the provided Transformicon components in any of your Ember applications
+
+
 Contributing
 ------------------------------------------------------------------------------
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
+
 
 License
 ------------------------------------------------------------------------------
