@@ -2,7 +2,6 @@ import BaseTransformiconComponent from './-private/base';
 import { computed, get } from '@ember/object';
 import { className, classNames, layout } from '@ember-decorators/component';
 import { alias } from '@ember/object/computed';
-import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-remove';
 
 const DEFAULT_ANIMATION = 'check';
@@ -46,13 +45,13 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
    * animation
    * @type {string}
    */
-  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
+  animation = DEFAULT_ANIMATION;
 
   /**
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-removed' = _defaultTo(this['is-removed'], false);
+  // 'is-removed' = false;
 
   /**
    * Alias for {@link animation}
@@ -66,7 +65,7 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
     // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
     // here from the constructor as a temporary workaround.
     // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-removed'] = _defaultTo(this['is-removed'], false);
+    this['is-removed'] = false;
   }
 
   /**
