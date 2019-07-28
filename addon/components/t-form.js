@@ -1,7 +1,6 @@
 import BaseTransformiconComponent from './-private/base';
 import { computed, get } from '@ember/object';
 import { className, classNames, layout } from '@ember-decorators/component';
-import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-form';
 
 /**
@@ -27,7 +26,7 @@ export default class TFormComponent extends BaseTransformiconComponent {
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-searching' = _defaultTo(this['is-searching'], false);
+  // 'is-searching' = false;
 
   constructor() {
     super(...arguments);
@@ -35,7 +34,7 @@ export default class TFormComponent extends BaseTransformiconComponent {
     // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
     // here from the constructor as a temporary workaround.
     // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-searching'] = _defaultTo(this['is-searching'], false);
+    this['is-searching'] = false;
   }
 
   /**
