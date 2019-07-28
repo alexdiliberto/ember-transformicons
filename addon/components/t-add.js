@@ -2,6 +2,7 @@ import BaseTransformiconComponent from './-private/base';
 import { computed, get } from '@ember/object';
 import { className, classNames, layout } from '@ember-decorators/component';
 import { alias } from '@ember/object/computed';
+import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-add';
 
 const DEFAULT_ANIMATION = 'minus';
@@ -42,13 +43,13 @@ export default class TAddComponent extends BaseTransformiconComponent {
    * animation
    * @type {string}
    */
-  animation = DEFAULT_ANIMATION;
+  animation = _defaultTo(this.animation, DEFAULT_ANIMATION);
 
   /**
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-added' = false
+  // 'is-added' = _defaultTo(this['is-added'], false);
 
   /**
    * Alias for {@link animation}
@@ -62,7 +63,7 @@ export default class TAddComponent extends BaseTransformiconComponent {
     // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
     // here from the constructor as a temporary workaround.
     // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-added'] = false;
+    this['is-added'] = _defaultTo(this['is-added'], false);
   }
 
   /**

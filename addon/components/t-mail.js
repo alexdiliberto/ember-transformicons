@@ -2,6 +2,7 @@ import BaseTransformiconComponent from './-private/base';
 import { computed, get } from '@ember/object';
 import { className, classNames, layout } from '@ember-decorators/component';
 import { reads } from '@ember/object/computed';
+import _defaultTo from 'lodash.defaultto';
 import template from '../templates/components/t-mail';
 
 /**
@@ -26,7 +27,7 @@ export default class TMailComponent extends BaseTransformiconComponent {
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-open' = true;
+  // 'is-open' = _defaultTo(this['is-open'], true);
 
   @reads('type') ariaRole;
 
@@ -36,7 +37,7 @@ export default class TMailComponent extends BaseTransformiconComponent {
     // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
     // here from the constructor as a temporary workaround.
     // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-open'] = true;
+    this['is-open'] = _defaultTo(this['is-open'], true);
   }
 
   /**

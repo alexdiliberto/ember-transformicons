@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import { get } from '@ember/object';
 import { assert } from '@ember/debug';
+import _defaultTo from 'lodash.defaultto';
 import { attribute, classNames, tagName } from '@ember-decorators/component';
 
 /**
@@ -30,7 +31,7 @@ export default class BaseTransformiconComponent extends Component {
    *    `is-playing`
    * @type {string}
    */
-  initialState = 'is-open'
+  initialState = _defaultTo(this.initialState, 'is-open');
 
   /**
    * This click handler does two things after retrieving the transformicons initital state property name.
