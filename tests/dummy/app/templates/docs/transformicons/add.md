@@ -31,7 +31,7 @@
 
 ### onClick action
 {{#docs-snippet name='t-add-onclick-snippet.hbs'}}
-  {{! Custom onClick handler after the addon toggles the value }}
+  {{! Custom onclick handler after the addon toggles the value }}
   <TAdd
     @isAdded={{isAdded}}
     @onClick={{action this.updateAddAction}} />

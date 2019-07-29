@@ -10,7 +10,7 @@ import template from '../templates/components/t-mail';
 
   PUBLIC
     * `isOpen` boolean - Set initial open mail state.
-    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+    * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
   ```hbs
     {{! These are functionally equivalent}}
