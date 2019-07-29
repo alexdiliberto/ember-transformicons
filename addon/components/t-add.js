@@ -1,7 +1,8 @@
-import BaseTransformiconComponent from './-private/base';
-import { computed, get } from '@ember/object';
-import { className, classNames, layout } from '@ember-decorators/component';
+import Component from '@ember/component';
+import { assert } from '@ember/debug';
+import { action } from '@ember/object';
 import { alias } from '@ember/object/computed';
+import { layout, tagName } from '@ember-decorators/component';
 import template from '../templates/components/t-add';
 
 const DEFAULT_ANIMATION = 'minus';
@@ -12,27 +13,24 @@ const DEFAULT_ANIMATION = 'minus';
   PUBLIC
     * `animation` string - Set the add animation type (alias: `a`).
       * types - `minus` | `check`
-    * `is-added` boolean - Set initial open added state.
-    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
+    * `isAdded` boolean - Set initial open added state.
+    * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isAdded`, which is a boolean type indicating if the current state is pending add.
 
   ```hbs
   {{! These are functionally equivalent}}
   <TAdd />
   <TAdd @a='minus' />
   <TAdd @animation='minus' />
-  <TAdd @is-added={{false}} @animation='minus' />
+  <TAdd @isAdded={{false}} @animation='minus' />
   ```
 */
 @layout(template)
-@classNames('tcon-plus')
-export default class TAddComponent extends BaseTransformiconComponent {
-  label = 'add item';
-  initialState = 'is-added';
-
+@tagName('')
+export default class TAddComponent extends Component {
   /**
    * Animation CSS classname lookup table for the Add transformicon
    */
-  _animationTypeTable = {
+  animationTypeTable = {
     'minus': 'tcon-plus--minus',
     'check': 'tcon-plus--check'
   };
@@ -48,7 +46,7 @@ export default class TAddComponent extends BaseTransformiconComponent {
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-added' = false
+  isAdded = false;
 
   /**
    * Alias for {@link animation}
@@ -56,34 +54,14 @@ export default class TAddComponent extends BaseTransformiconComponent {
    */
   @alias('animation') a;
 
-  constructor() {
-    super(...arguments);
+  @action
+  clickHandler() {
+    this.toggleProperty('isAdded');
 
-    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
-    // here from the constructor as a temporary workaround.
-    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-added'] = false;
-  }
+    if (this.onClick) {
+      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
 
-  /**
-   * Get the CSS classname corresponding to the component's current {@link animation} type
-   * @type {string}
-   */
-  @className
-  @computed('animation')
-  get animationType() {
-    let anim = get(this, 'animation');
-    return get(this._animationTypeTable, anim);
-  }
-
-  /**
-   * Get the {@link transformClass} CSS classname representing the `is-added` toggled state
-   * for this transformicon
-   * @type {string|boolean}
-   */
-  @className
-  @computed('is-added')
-  get isAdded() {
-    return get(this, 'is-added') ? get(this, 'transformClass') : false;
+      this.onClick(this.isAdded);
+    }
   }
 }

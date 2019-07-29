@@ -1,8 +1,8 @@
 # Remove Transformicon
 ---
 ## API
-  * `is-removed` boolean - Set initial open removed state.
-  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
+  * `isRemoved` boolean - Set initial open removed state.
+  * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
 
 ### animation
 {{#docs-snippet name='t-remove-animation-snippet.hbs'}}
@@ -29,25 +29,25 @@
 
 <br />
 
-### is-removed
+### isRemoved
 {{#docs-snippet name='t-remove-is-removed-snippet.hbs'}}
-  <TRemove @is-removed={{true}} />
+  <TRemove @isRemoved={{true}} />
 {{/docs-snippet}}
 
-<TRemove @is-removed={{true}} />
+<TRemove @isRemoved={{true}} />
 
 <br />
 
-### onclick action
+### onClick action
 {{#docs-snippet name='t-remove-onclick-snippet.hbs'}}
   {{! Custom onclick handler after the addon toggles the value }}
   <TRemove
-    @is-removed={{isRemoved}}
-    @onclick={{action this.updateRemoveAction}} />
+    @isRemoved={{isRemoved}}
+    @onClick={{action this.updateRemoveAction}} />
 {{/docs-snippet}}
 
 <TRemove
-  @is-removed={{isRemoved}}
-  @onclick={{action this.updateRemoveAction}} />
+  @isRemoved={{isRemoved}}
+  @onClick={{action this.updateRemoveAction}} />
 
 `isRemoved` = {{isRemoved}}

@@ -1,1 +1,3 @@
-<span class="tcon-visuallyhidden">add item</span>
+<button {{on "click" this.clickHandler}} aria-label="add item" type="button" class="tcon tcon-plus {{get this.animationTypeTable this.animation}} {{if this.isAdded "tcon-transform"}}" ...attributes>
+  <span class="tcon-visuallyhidden">add item</span>
+</button>
