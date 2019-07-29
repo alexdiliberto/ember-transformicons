@@ -1,53 +1,39 @@
-import BaseTransformiconComponent from './-private/base';
-import { computed, get } from '@ember/object';
-import { className, classNames, layout } from '@ember-decorators/component';
-import { reads } from '@ember/object/computed';
+import Component from '@ember/component';
+import { assert } from '@ember/debug';
+import { action } from '@ember/object';
+import { layout, tagName } from '@ember-decorators/component';
 import template from '../templates/components/t-video';
 
 /**
   Video Transformicon
 
   PUBLIC
-    * `is-playing` boolean - Set initial playing state.
-    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
+    * `isPlaying` boolean - Set initial playing state.
+    * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isPlaying`, which is a boolean type indicating if the current state is playing or stopped.
 
   ```hbs
     {{! These are functionally equivalent}}
     <TVideo />
-    <TVideo @is-playing={{false}} />
+    <TVideo @isPlaying={{false}} />
   ```
 */
 @layout(template)
-@classNames('tcon-vid--play')
-export default class TVideoComponent extends BaseTransformiconComponent {
-  label = 'play video';
-  initialState = 'is-playing';
-
+@tagName('')
+export default class TVideoComponent extends Component {
   /**
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-playing' = false;
+  isPlaying = false;
 
-  @reads('type') ariaRole;
+  @action
+  clickHandler() {
+    this.toggleProperty('isPlaying');
 
-  constructor() {
-    super(...arguments);
+    if (this.onClick) {
+      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
 
-    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
-    // here from the constructor as a temporary workaround.
-    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-playing'] = false;
-  }
-
-  /**
-   * Get the {@link transformClass} CSS classname representing the `is-playing` toggled state
-   * for this transformicon
-   * @type {string|boolean}
-   */
-  @className
-  @computed('is-playing')
-  get isPlaying() {
-    return get(this, 'is-playing') ? get(this, 'transformClass') : false;
+      this.onClick(this.isPlaying);
+    }
   }
 }

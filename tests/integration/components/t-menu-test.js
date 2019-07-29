@@ -41,11 +41,11 @@ module('Integration | Component | t menu', function(hooks) {
     assert.dom('button').hasNoClass('tcon-transform');
   });
 
-  test('it creates a menu transformicon with `is-open=true`', async function(assert) {
+  test('it creates a menu transformicon with `isOpen=true`', async function(assert) {
     assert.expect(1);
 
     await render(hbs`
-      <TMenu @is-open={{true}} />
+      <TMenu @isOpen={{true}} />
     `);
     percySnapshot(assert);
 
@@ -66,10 +66,8 @@ module('Integration | Component | t menu', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
-    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
     await render(hbs`
-      <TMenu @id="t-menu" />
+      <TMenu id="t-menu" />
     `);
 
     assert.dom('#t-menu').hasNoClass('tcon-transform');

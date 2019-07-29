@@ -1,6 +1,7 @@
-import BaseTransformiconComponent from './-private/base';
-import { computed, get } from '@ember/object';
-import { className, classNames, layout } from '@ember-decorators/component';
+import Component from '@ember/component';
+import { assert } from '@ember/debug';
+import { action } from '@ember/object';
+import { layout, tagName } from '@ember-decorators/component';
 import { alias } from '@ember/object/computed';
 import template from '../templates/components/t-remove';
 
@@ -12,27 +13,24 @@ const DEFAULT_ANIMATION = 'check';
   PUBLIC
     * `animation` string - Set the menu animation type  (alias: `a`).
       * types - `check` | `chevron-left` | `chevron-right` | `chevron-down` | `chevron-up`
-    * `is-removed` boolean - Set initial open removed state.
-    * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
+    * `isRemoved` boolean - Set initial open removed state.
+    * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isRemoved`, which is a boolean type indicating if the current state is pending remove.
 
   ```hbs
     {{! These are functionally equivalent}}
     <TRemove />
     <TRemove @a='check' />
     <TRemove @animation='check' />
-    <TRemove @is-removed={{false}} @animation='check' />
+    <TRemove @isRemoved={{false}} @animation='check' />
   ```
 */
 @layout(template)
-@classNames('tcon-remove')
-export default class TRemoveComponent extends BaseTransformiconComponent {
-  label = 'remove item';
-  initialState = 'is-removed';
-
+@tagName('')
+export default class TRemoveComponent extends Component {
   /**
    * Animation CSS classname lookup table for the Remove transformicon
    */
-  _animationTypeTable = {
+  animationTypeTable = {
     'check': 'tcon-remove--check',
     'chevron-left': 'tcon-remove--chevron-left',
     'chevron-right': 'tcon-remove--chevron-right',
@@ -51,7 +49,7 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
    * Flag to indicate the state of this transformicon
    * @type {boolean}
    */
-  // 'is-removed' = false;
+  isRemoved = false;
 
   /**
    * Alias for {@link animation}
@@ -59,34 +57,14 @@ export default class TRemoveComponent extends BaseTransformiconComponent {
    */
   @alias('animation') a;
 
-  constructor() {
-    super(...arguments);
+  @action
+  clickHandler() {
+    this.toggleProperty('isRemoved');
 
-    // NOTE: ESDoc does not currently support parsing a quoted and dasherized class field. Adding
-    // here from the constructor as a temporary workaround.
-    // https://github.com/esdoc/esdoc/issues/519#issuecomment-417895936
-    this['is-removed'] = false;
-  }
+    if (this.onClick) {
+      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
 
-  /**
-   * Get the CSS classname corresponding to the component's current {@link animation} type
-   * @type {string}
-   */
-  @className
-  @computed('animation')
-  get animationType() {
-    let anim = get(this, 'animation');
-    return get(this._animationTypeTable, anim);
-  }
-
-  /**
-   * Get the {@link transformClass} CSS classname representing the `is-removed` toggled state
-   * for this transformicon
-   * @type {string|boolean}
-   */
-  @className
-  @computed('is-removed')
-  get isRemoved() {
-    return get(this, 'is-removed') ? get(this, 'transformClass') : false;
+      this.onClick(this.isRemoved);
+    }
   }
 }

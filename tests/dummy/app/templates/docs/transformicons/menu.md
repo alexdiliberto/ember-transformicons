@@ -1,8 +1,8 @@
 # Menu Transformicon
 ---
 ## API
-  * `is-open` boolean - Set initial open menu state.
-  * `onclick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
+  * `isOpen` boolean - Set initial open menu state.
+  * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 ### animation
 {{#docs-snippet name='t-menu-animation-snippet.hbs'}}
@@ -31,25 +31,25 @@
 
 <br />
 
-### is-open
+### isOpen
 {{#docs-snippet name='t-menu-is-open-snippet.hbs'}}
-  <TMenu @is-open={{true}} />
+  <TMenu @isOpen={{true}} />
 {{/docs-snippet}}
 
-<TMenu @is-open={{true}} />
+<TMenu @isOpen={{true}} />
 
 <br />
 
-### onclick action
+### onClick action
 {{#docs-snippet name='t-menu-onclick-snippet.hbs'}}
   {{! Custom onclick handler after the addon toggles the value }}
   <TMenu
-    @is-open={{isMenuOpen}}
-    @onclick={{action this.updateMenuAction}} />
+    @isOpen={{isMenuOpen}}
+    @onClick={{action this.updateMenuAction}} />
 {{/docs-snippet}}
 
 <TMenu
-  @is-open={{isMenuOpen}}
-  @onclick={{action this.updateMenuAction}} />
+  @isOpen={{isMenuOpen}}
+  @onClick={{action this.updateMenuAction}} />
 
 `isMenuOpen` = {{isMenuOpen}}

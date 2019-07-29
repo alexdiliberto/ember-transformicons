@@ -41,11 +41,11 @@ module('Integration | Component | t remove', function(hooks) {
     assert.dom('button').hasNoClass('tcon-transform');
   });
 
-  test('it creates a remove transformicon with `is-removed=true`', async function(assert) {
+  test('it creates a remove transformicon with `isRemoved=true`', async function(assert) {
     assert.expect(1);
 
     await render(hbs`
-      <TRemove @is-removed={{true}} />
+      <TRemove @isRemoved={{true}} />
     `);
     percySnapshot(assert);
 
@@ -65,10 +65,8 @@ module('Integration | Component | t remove', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
-    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
     await render(hbs`
-      <TRemove @id="t-remove" />
+      <TRemove id="t-remove" />
     `);
 
     assert.dom('#t-remove').hasNoClass('tcon-transform');

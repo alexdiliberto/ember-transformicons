@@ -42,11 +42,11 @@ module('Integration | Component | t grid', function(hooks) {
     assert.dom('button').hasNoClass('tcon-transform');
   });
 
-  test('it creates a grid transformicon with `is-open=true`', async function(assert) {
+  test('it creates a grid transformicon with `isOpen=true`', async function(assert) {
     assert.expect(1);
 
     await render(hbs`
-      <TGrid @is-open={{true}} />
+      <TGrid @isOpen={{true}} />
     `);
     percySnapshot(assert);
 
@@ -66,10 +66,8 @@ module('Integration | Component | t grid', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
-    // FIXME: https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill/issues/4#issue-328822657
-    // Currently necessary to use `<TAdd @id="t-add" />` syntax when specifying an `id` but the `aid` prefix shouldn't be necessary -- should be able to say `<TAdd @id="t-add" />`. Fix after this issue is closed.
     await render(hbs`
-      <TGrid @id="t-grid" />
+      <TGrid id="t-grid" />
     `);
 
     assert.dom('#t-grid').hasNoClass('tcon-transform');
