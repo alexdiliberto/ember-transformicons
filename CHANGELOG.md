@@ -1,6 +1,46 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v4.0.0"></a>
+## [v4.0.0](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.4...v4.0.0) (2019-07-29)
+
+### Build
+
+* ember-cli-update
+* remove fastboot and all related items
+* **deps:** [security] bump jquery from 3.3.1 to 3.4.0 ([#246](https://github.com/alexdiliberto/ember-transformicons/issues/246))
+* **deps:** [security] bump lodash.defaultsdeep from 4.6.0 to 4.6.1 ([#270](https://github.com/alexdiliberto/ember-transformicons/issues/270))
+* **deps:** update ember-decorators to 6.0.0
+* **deps-dev:** bump eslint-plugin-ember from 6.2.0 to 6.3.0 ([#224](https://github.com/alexdiliberto/ember-transformicons/issues/224))
+* **deps-dev:** bump ember-angle-bracket-invocation-polyfill from 1.2.5 to 1.3.1 ([#249](https://github.com/alexdiliberto/ember-transformicons/issues/249))
+* **deps-dev:** bump ember-cli-template-lint from 1.0.0-beta.2 to 1.0.0-beta.3 ([#241](https://github.com/alexdiliberto/ember-transformicons/issues/241))
+* **deps-dev:** remove ember-exam
+* **deps-dev:** bump ember-source from 3.8.0 to 3.9.1 ([#236](https://github.com/alexdiliberto/ember-transformicons/issues/236))
+* **deps-dev:** bump ember-cli-addon-docs from 0.6.7 to 0.6.10 ([#238](https://github.com/alexdiliberto/ember-transformicons/issues/238))
+* **deps-dev:** bump ember-cli-addon-docs from 0.6.6 to 0.6.7 ([#222](https://github.com/alexdiliberto/ember-transformicons/issues/222))
+* **package.json:** update `ember-addon.versionCompatibility` min version
+
+### CI
+
+* **travis:** yarn upgrade ember-cli-template-lint ([#276](https://github.com/alexdiliberto/ember-transformicons/issues/276))
+
+### Docs
+
+* **package.json:** update `versionCompatibility` to be at least v2.18.x
+* **readme:** more conventional addon README format
+* **readme:** update release docs with latest info
+
+### Refactors
+
+* remove old base class, modernize, remove outdated deps ([#277](https://github.com/alexdiliberto/ember-transformicons/issues/277))
+* **package.json:** remove lodash.defaultto
+
+### Reverts
+
+* Revert "refactor(package.json): remove lodash.defaultto"
+* refactor(package.json): remove lodash.defaultto
+
+
 <a name="v3.0.4"></a>
 ## [v3.0.4](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.3...v3.0.4) (2019-03-12)
 
