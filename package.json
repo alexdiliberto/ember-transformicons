@@ -93,7 +93,7 @@
     "configPath": "tests/dummy/config",
     "demoURL": "https://alexdiliberto.com/ember-transformicons",
     "versionCompatibility": {
-      "ember": ">=2.18"
+      "ember": ">=3.4"
     }
   }
 }
