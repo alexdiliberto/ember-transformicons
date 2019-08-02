@@ -1,6 +1,18 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v4.0.1"></a>
+## [v4.0.1](https://github.com/alexdiliberto/ember-transformicons/compare/v4.0.0...v4.0.1) (2019-08-02)
+
+### Build
+
+* **deps-dev:** bump ember-angle-bracket-invocation-polyfill from ^1.2.5 to ^2.0.1
+
+### Test
+
+* **lint:** remove `ember-assign-polyfill` from dependency-lint allowed versions list
+
+
 <a name="v4.0.0"></a>
 ## [v4.0.0](https://github.com/alexdiliberto/ember-transformicons/compare/v3.0.4...v4.0.0) (2019-07-29)
 
