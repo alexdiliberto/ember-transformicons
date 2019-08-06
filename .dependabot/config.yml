@@ -5,7 +5,7 @@ version: 1
 update_configs:
   - package_manager: "javascript"
     directory: "/"
-    update_schedule: "daily"
+    update_schedule: "live"
     ignored_updates:
       - match:
           dependency_name: "ember-cli"
