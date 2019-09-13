@@ -3,9 +3,9 @@
 
 
 "@alexdiliberto/eslint-config@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@alexdiliberto/eslint-config/-/eslint-config-3.0.1.tgz#4f949558f83510b9ee8ef95fea0dd3751c3e128c"
-  integrity sha512-xd7qhPWjYNaylb2fgxtoTciQTWZt/34lnbcsBDwPGuitW6r0Jn5py59SruwZmrBWyVigmW3UgND3QRwAmm74EQ==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@alexdiliberto/eslint-config/-/eslint-config-3.1.0.tgz#d48cfaf18ebc624763c843959ec2d46973294c7c"
+  integrity sha512-eS62ZUWjfV0h3JG6es5vlCoLsXZL5D+pzDwAIdyGKf7UNNWpHqpJ9LF1FEwu69MIIaAhGwsBHWGfHV+52qykqA==
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
