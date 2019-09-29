@@ -3,6 +3,7 @@ import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { alias } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
+import classic from 'ember-classic-decorator';
 import template from '../templates/components/t-menu';
 
 const DEFAULT_ANIMATION = 'butterfly';
@@ -26,6 +27,7 @@ const DEFAULT_ANIMATION = 'butterfly';
 */
 @layout(template)
 @tagName('')
+@classic
 export default class TMenuComponent extends Component {
   /**
    * Animation CSS classname lookup table for the Menu transformicon

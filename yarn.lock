@@ -5153,6 +5153,14 @@ ember-auto-import@^1.4.1, ember-auto-import@^1.5.2:
     walk-sync "^0.3.3"
     webpack "~4.28"
 
+ember-classic-decorator@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ember-classic-decorator/-/ember-classic-decorator-1.0.1.tgz#4c1c886961a0854aca8b839cf064ff0edf5939f6"
+  integrity sha512-Zojs112/BJemAwxPIwcp0uG4ImYHvre2ygN4HP6YrE5oGLh7u9xwR5NBMGzKRaIUP4/os7CNjFk49WS//1Jz5A==
+  dependencies:
+    babel-plugin-filter-imports "^3.0.0"
+    ember-cli-babel "^7.11.1"
+
 ember-cli-addon-docs-esdoc@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/ember-cli-addon-docs-esdoc/-/ember-cli-addon-docs-esdoc-0.2.3.tgz#918d029b2041765d757d07161b0f4f94b7e0de94"
@@ -6469,7 +6477,7 @@ esdoc-ecmascript-proposal-plugin@^1.0.0:
   resolved "https://registry.yarnpkg.com/esdoc-ecmascript-proposal-plugin/-/esdoc-ecmascript-proposal-plugin-1.0.0.tgz#390dc5656ba8a2830e39dba3570d79138df2ffd9"
   integrity sha1-OQ3FZWuoooMOOdujVw15E43y/9k=
 
-"esdoc@github:pzuraq/esdoc#015a342":
+esdoc@pzuraq/esdoc#015a342:
   version "1.0.4"
   resolved "https://codeload.github.com/pzuraq/esdoc/tar.gz/015a3426b2e53b2b0270a9c00133780db3f1d144"
   dependencies:

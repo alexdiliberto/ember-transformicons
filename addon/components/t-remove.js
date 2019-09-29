@@ -3,6 +3,7 @@ import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { layout, tagName } from '@ember-decorators/component';
 import { alias } from '@ember/object/computed';
+import classic from 'ember-classic-decorator';
 import template from '../templates/components/t-remove';
 
 const DEFAULT_ANIMATION = 'check';
@@ -26,6 +27,7 @@ const DEFAULT_ANIMATION = 'check';
 */
 @layout(template)
 @tagName('')
+@classic
 export default class TRemoveComponent extends Component {
   /**
    * Animation CSS classname lookup table for the Remove transformicon

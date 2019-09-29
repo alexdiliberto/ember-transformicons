@@ -3,6 +3,7 @@ import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { alias } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
+import classic from 'ember-classic-decorator';
 import template from '../templates/components/t-add';
 
 const DEFAULT_ANIMATION = 'minus';
@@ -26,6 +27,7 @@ const DEFAULT_ANIMATION = 'minus';
 */
 @layout(template)
 @tagName('')
+@classic
 export default class TAddComponent extends Component {
   /**
    * Animation CSS classname lookup table for the Add transformicon

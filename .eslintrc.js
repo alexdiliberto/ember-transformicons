@@ -22,6 +22,8 @@ module.exports = {
   rules: {
     'no-debugger': 0,
     'indent': 0, // HACK: Removes error `Cannot read property 'range' of null`
+    'ember/classic-decorator-hooks': 'error',
+    'ember/classic-decorator-no-classic-methods': 'error',
     'ember/no-jquery': 'error'
   },
   overrides: [

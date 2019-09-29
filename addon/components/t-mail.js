@@ -3,6 +3,7 @@ import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { not } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
+import classic from 'ember-classic-decorator';
 import template from '../templates/components/t-mail';
 
 /**
@@ -20,6 +21,7 @@ import template from '../templates/components/t-mail';
 */
 @layout(template)
 @tagName('')
+@classic
 export default class TMailComponent extends Component {
   /**
    * Flag to indicate the state of this transformicon

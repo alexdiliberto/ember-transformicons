@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { layout, tagName } from '@ember-decorators/component';
+import classic from 'ember-classic-decorator';
 import template from '../templates/components/t-video';
 
 /**
@@ -19,6 +20,7 @@ import template from '../templates/components/t-video';
 */
 @layout(template)
 @tagName('')
+@classic
 export default class TVideoComponent extends Component {
   /**
    * Flag to indicate the state of this transformicon
