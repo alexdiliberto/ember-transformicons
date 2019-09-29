@@ -3,7 +3,10 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
   plugins: [
     'ember'
@@ -18,7 +21,8 @@ module.exports = {
   },
   rules: {
     'no-debugger': 0,
-    'indent': 0 // HACK: Removes error `Cannot read property 'range' of null`
+    'indent': 0, // HACK: Removes error `Cannot read property 'range' of null`
+    'ember/no-jquery': 'error'
   },
   overrides: [
     // node files
