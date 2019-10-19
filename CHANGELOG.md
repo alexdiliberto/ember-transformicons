@@ -1,6 +1,36 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v4.0.2"></a>
+## [v4.0.2](https://github.com/alexdiliberto/ember-transformicons/compare/v4.0.1...v4.0.2) (2019-10-19)
+
+### Build
+
+* add `ember-classic-decorator`
+* **deps:** bump ember-cli-htmlbars from 4.0.1 to 4.0.5 ([#309](https://github.com/alexdiliberto/ember-transformicons/issues/309))
+* **deps:** bump ember-cli-htmlbars from 4.0.5 to 4.0.8 ([#317](https://github.com/alexdiliberto/ember-transformicons/issues/317))
+* **deps:** bump ember-auto-import from 1.5.2 to 1.5.3 ([#313](https://github.com/alexdiliberto/ember-transformicons/issues/313))
+* **deps:** [security] bump eslint-utils from 1.3.1 to 1.4.2 ([#292](https://github.com/alexdiliberto/ember-transformicons/issues/292))
+* **deps-dev:** bump ember-source from 3.13.2 to 3.13.3 ([#311](https://github.com/alexdiliberto/ember-transformicons/issues/311))
+* **deps-dev:** bump ember-cli-htmlbars-inline-precompile from… ([#307](https://github.com/alexdiliberto/ember-transformicons/issues/307))
+* **deps-dev:** bump ember-cli-addon-docs from 0.6.14 to 0.6.15 ([#310](https://github.com/alexdiliberto/ember-transformicons/issues/310))
+* **deps-dev:** bump ember-cli-inject-live-reload from 2.0.1 to… ([#312](https://github.com/alexdiliberto/ember-transformicons/issues/312))
+* **deps-dev:** bump ember-angle-bracket-invocation-polyfill fr… ([#283](https://github.com/alexdiliberto/ember-transformicons/issues/283))
+* **deps-dev:** bump [@alexdiliberto](https://github.com/alexdiliberto)/eslint-config from 3.0.1 to… ([#282](https://github.com/alexdiliberto/ember-transformicons/issues/282))
+
+### CI
+
+* **dependabot:** update_schedule "daily" -> "live"
+
+### Docs
+
+* **readme:** add bundlephobia badge, remove snyk badge
+
+### Style
+
+* codemod whitespace removal
+
+
 <a name="v4.0.1"></a>
 ## [v4.0.1](https://github.com/alexdiliberto/ember-transformicons/compare/v4.0.0...v4.0.1) (2019-08-02)
 
@@ -130,21 +160,17 @@
 
 
 <a name="v2.3.2"></a>
-## [v2.3.2](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.1...v2.3.2) (2019-02-23)
-
-### Docs
-
-* **changelog:** update to reference v2.3.2
-
-
-<a name="v2.3.1"></a>
-## [v2.3.1](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.1) (2019-02-23)
+## [v2.3.2](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.2) (2019-02-23)
 
 ### Build
 
 * **deploy:** fix `TypeError: Cannot read property '_walk' of null`
 * **travis:** auto deploy branch now points to `ember-default-with-jquery`
 * **travis:** `ember-default` scenario to ember-try config to fix automatic deploy
+
+### Docs
+
+* **changelog:** update to reference v2.3.2
 
 
 <a name="v2.3.0"></a>
