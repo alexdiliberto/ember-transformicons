@@ -33,8 +33,8 @@ export default class TGridComponent extends Component {
    * Animation CSS classname lookup table for the Grid transformicon
    */
   animationTypeTable = {
-    'rearrange': 'tcon-grid--rearrange',
-    'collapse': 'tcon-grid--collapse'
+    rearrange: 'tcon-grid--rearrange',
+    collapse: 'tcon-grid--collapse'
   };
 
   /**
@@ -61,7 +61,10 @@ export default class TGridComponent extends Component {
     this.toggleProperty('isOpen');
 
     if (this.onClick) {
-      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
+      assert(
+        `[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`,
+        typeof this.onClick === 'function'
+      );
 
       this.onClick(this.isOpen);
     }

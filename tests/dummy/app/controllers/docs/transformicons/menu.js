@@ -7,6 +7,8 @@ export default class TransformiconsMenuController extends Controller {
 
   @action
   updateMenuAction(isMenuOpen) {
-    console.info(`updateMenuAction was triggered with the following arguments: isMenuOpen=${isMenuOpen}`);
+    console.info(
+      `updateMenuAction was triggered with the following arguments: isMenuOpen=${isMenuOpen}`
+    );
   }
 }

@@ -7,6 +7,8 @@ export default class TransformiconsVideoController extends Controller {
 
   @action
   updateVideoAction(isPlaying) {
-    console.info(`updateVideoAction was triggered with the following arguments: isPlaying=${isPlaying}`);
+    console.info(
+      `updateVideoAction was triggered with the following arguments: isPlaying=${isPlaying}`
+    );
   }
 }

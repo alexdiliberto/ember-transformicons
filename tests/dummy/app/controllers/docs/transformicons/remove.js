@@ -7,6 +7,8 @@ export default class TransformiconsRemoveController extends Controller {
 
   @action
   updateRemoveAction(isRemoved) {
-    console.info(`updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`);
+    console.info(
+      `updateRemoveAction was triggered with the following arguments: isRemoved=${isRemoved}`
+    );
   }
 }

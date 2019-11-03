@@ -8,20 +8,18 @@ module.exports = {
       legacyDecorators: true
     }
   },
-  plugins: [
-    'ember'
-  ],
+  plugins: ['ember', 'prettier', 'qunit'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
-    '@alexdiliberto'
+    'plugin:qunit/recommended',
+    '@alexdiliberto',
+    'plugin:prettier/recommended'
   ],
   env: {
     browser: true
   },
   rules: {
-    'no-debugger': 0,
-    'indent': 0, // HACK: Removes error `Cannot read property 'range' of null`
     'ember/classic-decorator-hooks': 'error',
     'ember/classic-decorator-no-classic-methods': 'error',
     'ember/no-jquery': 'error'
@@ -30,7 +28,9 @@ module.exports = {
     // node files
     {
       files: [
+        '.ember-cli.js',
         '.eslintrc.js',
+        '.prettierrc.js',
         '.template-lintrc.js',
         'ember-cli-build.js',
         'index.js',
@@ -39,12 +39,7 @@ module.exports = {
         'config/**/*.js',
         'tests/dummy/config/**/*.js'
       ],
-      excludedFiles: [
-        'addon/**',
-        'addon-test-support/**',
-        'app/**',
-        'tests/dummy/app/**'
-      ],
+      excludedFiles: ['addon/**', 'addon-test-support/**', 'app/**', 'tests/dummy/app/**'],
       parserOptions: {
         sourceType: 'script'
       },

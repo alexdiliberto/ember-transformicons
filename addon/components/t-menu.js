@@ -33,8 +33,8 @@ export default class TMenuComponent extends Component {
    * Animation CSS classname lookup table for the Menu transformicon
    */
   animationTypeTable = {
-    'butterfly': 'tcon-menu--xbutterfly',
-    'minus': 'tcon-menu--minus',
+    butterfly: 'tcon-menu--xbutterfly',
+    minus: 'tcon-menu--minus',
     'x-cross': 'tcon-menu--xcross',
     'arrow-up': 'tcon-menu--arrow tcon-menu--arrowup',
     'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left',
@@ -65,7 +65,10 @@ export default class TMenuComponent extends Component {
     this.toggleProperty('isOpen');
 
     if (this.onClick) {
-      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
+      assert(
+        `[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`,
+        typeof this.onClick === 'function'
+      );
 
       this.onClick(this.isOpen);
     }

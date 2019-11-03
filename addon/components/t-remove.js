@@ -33,12 +33,12 @@ export default class TRemoveComponent extends Component {
    * Animation CSS classname lookup table for the Remove transformicon
    */
   animationTypeTable = {
-    'check': 'tcon-remove--check',
+    check: 'tcon-remove--check',
     'chevron-left': 'tcon-remove--chevron-left',
     'chevron-right': 'tcon-remove--chevron-right',
     'chevron-down': 'tcon-remove--chevron-down',
     'chevron-up': 'tcon-remove--chevron-up'
-  }
+  };
 
   /**
    * Get the component's current animation type. This is used to lookup the CSS classname for the
@@ -64,7 +64,10 @@ export default class TRemoveComponent extends Component {
     this.toggleProperty('isRemoved');
 
     if (this.onClick) {
-      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
+      assert(
+        `[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`,
+        typeof this.onClick === 'function'
+      );
 
       this.onClick(this.isRemoved);
     }
