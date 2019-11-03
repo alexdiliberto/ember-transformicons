@@ -33,8 +33,8 @@ export default class TAddComponent extends Component {
    * Animation CSS classname lookup table for the Add transformicon
    */
   animationTypeTable = {
-    'minus': 'tcon-plus--minus',
-    'check': 'tcon-plus--check'
+    minus: 'tcon-plus--minus',
+    check: 'tcon-plus--check'
   };
 
   /**
@@ -61,7 +61,10 @@ export default class TAddComponent extends Component {
     this.toggleProperty('isAdded');
 
     if (this.onClick) {
-      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
+      assert(
+        `[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`,
+        typeof this.onClick === 'function'
+      );
 
       this.onClick(this.isAdded);
     }

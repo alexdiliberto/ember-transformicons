@@ -7,6 +7,8 @@ export default class TransformiconsFormController extends Controller {
 
   @action
   updateFormAction(isSearching) {
-    console.info(`updateFormAction was triggered with the following arguments: isSearching=${isSearching}`);
+    console.info(
+      `updateFormAction was triggered with the following arguments: isSearching=${isSearching}`
+    );
   }
 }

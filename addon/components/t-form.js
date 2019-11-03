@@ -33,7 +33,10 @@ export default class TFormComponent extends Component {
     this.toggleProperty('isSearching');
 
     if (this.onClick) {
-      assert(`[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`, typeof this.onClick === 'function');
+      assert(
+        `[ember-transformicons] ${this.toString()} \`onClick\` action handler must be a valid closure action`,
+        typeof this.onClick === 'function'
+      );
 
       this.onClick(this.isSearching);
     }
