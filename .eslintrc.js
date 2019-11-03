@@ -10,13 +10,15 @@ module.exports = {
   },
   plugins: [
     'ember',
+    'prettier',
     'qunit'
   ],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
     'plugin:qunit/recommended',
-    '@alexdiliberto'
+    '@alexdiliberto',
+    'plugin:prettier/recommended'
   ],
   env: {
     browser: true
