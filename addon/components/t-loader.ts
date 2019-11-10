@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-loader';
+import template from 'ember-transformicons/templates/components/t-loader';
 
 /**
   Loader Transformicon
@@ -9,6 +9,9 @@ import template from '../templates/components/t-loader';
   ```hbs
     <TLoader />
   ```
+
+  @class TLoaderComponent
+  @public
 */
 @layout(template)
 @tagName('')

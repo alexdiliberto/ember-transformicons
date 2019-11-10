@@ -2,11 +2,15 @@
 
 <div class="docs-container docs-md docs-my-16">
   <section class="docs-section docs-max-w-md docs-mx-auto docs-pb-8">
-    <img src="https://cdn.rawgit.com/alexdiliberto/ember-transformicons/master/tests/dummy/public/img/logo.svg" alt="Transformicons Logo" class="docs-block docs-mx-auto docs-my-4">
+    <img
+      src="https://cdn.rawgit.com/alexdiliberto/ember-transformicons/master/tests/dummy/public/img/logo.svg" 
+      alt="Transformicons Logo"
+      class="docs-block docs-mx-auto docs-my-4"
+    >
 
     <h2>Introduction</h2>
 
-    <p>Transformicons markup is built with <a href="https://a11yproject.com/">accessibility</a> in mind. Since not all screen readers know what <code>aria-label</code> is yet we've chosen to include important text in a <code>.tcon-visuallyhidden</code> span using the <a href="https://github.com/h5bp/html5-boilerplate/blob/v5.0.0/dist/css/main.css#L133-L142">HTML5 Boilerplate</a> method that is screen reader friendly.</p>
+    <p>Transformicons markup is built with <a href="https://a11yproject.com/">accessibility</a> in mind. Since not all screen readers know what <code>aria-label</code> is yet we've chosen to include important text in a <code>.tcon-visuallyhidden</code> span using the <a {{! template-lint-disable attribute-indentation }} href="https://github.com/h5bp/html5-boilerplate/blob/v5.0.0/dist/css/main.css#L133-L142">HTML5 Boilerplate</a> method that is screen reader friendly.</p>
 
     <h2>What is a transformicon?</h2>
 
@@ -14,10 +18,9 @@
 
     <div class="docs-my-5 docs-text-right">
       {{#docs-link "docs"}}
-        <button class="
-          docs-bg-grey-darkest docs-text-white docs-py-2 docs-px-4 docs-no-underline docs-rounded
-          hover:docs-bg-black
-        ">
+        <button
+          class="docs-bg-grey-darkest docs-text-white docs-py-2 docs-px-4 docs-no-underline docs-rounded hover:docs-bg-black"
+        >
           Get started &rarr;
         </button>
       {{/docs-link}}

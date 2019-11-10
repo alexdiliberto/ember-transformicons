@@ -4,9 +4,16 @@ import { action } from '@ember/object';
 import { alias } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-grid';
+import template from 'ember-transformicons/templates/components/t-grid';
 
 const DEFAULT_ANIMATION = 'rearrange';
+
+interface IAnimationTypeTable {
+  rearrange: 'tcon-grid--rearrange';
+  collapse: 'tcon-grid--collapse';
+}
+
+type Animation = typeof DEFAULT_ANIMATION | 'collapse';
 
 /**
   Grid Transformicon
@@ -24,37 +31,24 @@ const DEFAULT_ANIMATION = 'rearrange';
     <TGrid @animation='rearrange' />
     <TGrid @isOpen={{false}} @animation='rearrange' />
   ```
+
+  @class TGridComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TGridComponent extends Component {
-  /**
-   * Animation CSS classname lookup table for the Grid transformicon
-   */
-  animationTypeTable = {
+  // --- COMPONENT ARGUMENTS ---
+  isOpen = false;
+  onClick: (prop?: boolean) => void = () => {};
+
+  animationTypeTable: IAnimationTypeTable = {
     rearrange: 'tcon-grid--rearrange',
     collapse: 'tcon-grid--collapse'
   };
-
-  /**
-   * Get the component's current animation type. This is used to lookup the CSS classname for the
-   * animation
-   * @type {string}
-   */
-  animation = DEFAULT_ANIMATION;
-
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
-  isOpen = false;
-
-  /**
-   * Alias for {@link animation}
-   * @type {string}
-   */
-  @alias('animation') a;
+  animation: Animation = DEFAULT_ANIMATION;
+  @alias('animation') a!: Animation;
 
   @action
   clickHandler() {

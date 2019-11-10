@@ -1,4 +1,10 @@
-<button {{on "click" this.clickHandler}} aria-label="toggle menu" type="button" class="tcon {{get this.animationTypeTable this.animation}} {{if this.isOpen "tcon-transform"}}" ...attributes>
+<button
+  aria-label="toggle menu"
+  type="button"
+  class="tcon {{get this.animationTypeTable this.animation}} {{if this.isOpen "tcon-transform"}}"
+  ...attributes
+  {{on "click" this.clickHandler}}
+>
   <span class="tcon-menu__lines" aria-hidden="true"></span>
   <span class="tcon-visuallyhidden">toggle menu</span>
 </button>

@@ -3,7 +3,7 @@ import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-video';
+import template from 'ember-transformicons/templates/components/t-video';
 
 /**
   Video Transformicon
@@ -17,16 +17,17 @@ import template from '../templates/components/t-video';
     <TVideo />
     <TVideo @isPlaying={{false}} />
   ```
+
+  @class TVideoComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TVideoComponent extends Component {
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
+  // --- COMPONENT ARGUMENTS ---
   isPlaying = false;
+  onClick: (prop?: boolean) => void = () => {};
 
   @action
   clickHandler() {

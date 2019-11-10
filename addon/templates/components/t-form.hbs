@@ -1,4 +1,10 @@
-<button {{on "click" this.clickHandler}} aria-label="toggle search" type="button" class="tcon tcon-search--xcross {{if this.isSearching "tcon-transform"}}" ...attributes>
+<button
+  aria-label="toggle search"
+  type="button"
+  class="tcon tcon-search--xcross {{if this.isSearching "tcon-transform"}}"
+  ...attributes
+  {{on "click" this.clickHandler}}
+>
   <span class="tcon-search__item" aria-hidden="true"></span>
   <span class="tcon-visuallyhidden">toggle search</span>
 </button>

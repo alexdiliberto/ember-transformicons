@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-scroll';
+import template from 'ember-transformicons/templates/components/t-scroll';
 
 /**
   Scroll Transformicon
@@ -9,6 +9,9 @@ import template from '../templates/components/t-scroll';
   ```hbs
     <TScroll />
   ```
+
+  @class TScrollComponent
+  @public
 */
 @layout(template)
 @tagName('')

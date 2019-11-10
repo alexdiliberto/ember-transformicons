@@ -1,4 +1,10 @@
-<button {{on "click" this.clickHandler}} aria-label="toggle grid" type="button" class="tcon tcon-grid {{get this.animationTypeTable this.animation}} {{if this.isOpen "tcon-transform"}}" ...attributes>
+<button
+  aria-label="toggle grid"
+  type="button"
+  class="tcon tcon-grid {{get this.animationTypeTable this.animation}} {{if this.isOpen "tcon-transform"}}" 
+  ...attributes
+  {{on "click" this.clickHandler}}
+>
   <span class="tcon-grid__item" aria-hidden="true"></span>
   <span class="tcon-visuallyhidden">toggle grid</span>
 </button>

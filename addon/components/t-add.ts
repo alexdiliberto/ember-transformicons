@@ -4,9 +4,16 @@ import { action } from '@ember/object';
 import { alias } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-add';
+import template from 'ember-transformicons/templates/components/t-add';
 
 const DEFAULT_ANIMATION = 'minus';
+
+interface IAnimationTypeTable {
+  minus: 'tcon-plus--minus';
+  check: 'tcon-plus--check';
+}
+
+type Animation = typeof DEFAULT_ANIMATION | 'check';
 
 /**
   Add Transformicon
@@ -24,37 +31,24 @@ const DEFAULT_ANIMATION = 'minus';
   <TAdd @animation='minus' />
   <TAdd @isAdded={{false}} @animation='minus' />
   ```
+
+  @class TAddComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TAddComponent extends Component {
-  /**
-   * Animation CSS classname lookup table for the Add transformicon
-   */
-  animationTypeTable = {
+  // --- COMPONENT ARGUMENTS ---
+  isAdded = false;
+  onClick: (prop?: boolean) => void = () => {};
+
+  animationTypeTable: IAnimationTypeTable = {
     minus: 'tcon-plus--minus',
     check: 'tcon-plus--check'
   };
-
-  /**
-   * Get the component's current animation type. This is used to lookup the CSS classname for the
-   * animation
-   * @type {string}
-   */
-  animation = DEFAULT_ANIMATION;
-
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
-  isAdded = false;
-
-  /**
-   * Alias for {@link animation}
-   * @type {string}
-   */
-  @alias('animation') a;
+  animation: Animation = DEFAULT_ANIMATION;
+  @alias('animation') a!: Animation;
 
   @action
   clickHandler() {
