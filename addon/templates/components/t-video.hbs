@@ -1,3 +1,10 @@
-<button {{on "click" this.clickHandler}} aria-label="play video" role="button" type="button" class="tcon tcon-vid--play {{get this.animationTypeTable this.animation}} {{if this.isPlaying "tcon-transform"}}" ...attributes>
+<button
+  aria-label="play video"
+  role="button"
+  type="button"
+  class="tcon tcon-vid--play {{get this.animationTypeTable this.animation}} {{if this.isPlaying "tcon-transform"}}" 
+  ...attributes
+  {{on "click" this.clickHandler}}
+>
   <span class="tcon-visuallyhidden">play video</span>
 </button>

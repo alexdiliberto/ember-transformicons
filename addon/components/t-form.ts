@@ -3,7 +3,7 @@ import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-form';
+import template from 'ember-transformicons/templates/components/t-form';
 
 /**
   Form Transformicon
@@ -17,16 +17,17 @@ import template from '../templates/components/t-form';
     <TForm />
     <TForm @isSearching={{false}} />
   ```
+
+  @class TFormComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TFormComponent extends Component {
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
+  // --- COMPONENT ARGUMENTS ---
   isSearching = false;
+  onClick: (prop?: boolean) => void = () => {};
 
   @action
   clickHandler() {

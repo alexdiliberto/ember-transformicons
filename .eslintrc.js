@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -8,21 +8,32 @@ module.exports = {
       legacyDecorators: true
     }
   },
-  plugins: ['ember', 'prettier', 'qunit'],
+  plugins: ['ember', 'prettier', 'qunit', '@typescript-eslint'],
   extends: [
     'eslint:recommended',
+    '@alexdiliberto',
     'plugin:ember/recommended',
     'plugin:qunit/recommended',
-    '@alexdiliberto',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint'
   ],
   env: {
     browser: true
   },
   rules: {
+    // ember
     'ember/classic-decorator-hooks': 'error',
     'ember/classic-decorator-no-classic-methods': 'error',
-    'ember/no-jquery': 'error'
+    'ember/no-jquery': 'error',
+
+    // qunit
+    'qunit/no-identical-names': 'warn',
+
+    // typescript
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+
+    // prettier
+    'prettier/prettier': 'error'
   },
   overrides: [
     // node files

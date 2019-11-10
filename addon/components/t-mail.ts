@@ -4,7 +4,7 @@ import { action } from '@ember/object';
 import { not } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-mail';
+import template from 'ember-transformicons/templates/components/t-mail';
 
 /**
   Mail Transformicon
@@ -18,22 +18,19 @@ import template from '../templates/components/t-mail';
     <TMail />
     <TMail @isOpen={{true}} />
   ```
+
+  @class TMailComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TMailComponent extends Component {
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
+  // --- COMPONENT ARGUMENTS ---
   isOpen = true;
+  onClick: (prop?: boolean) => void = () => {};
 
-  /**
-   * Inverse of {@link isOpen}
-   * @type {boolean}
-   */
-  @not('isOpen') notOpen;
+  @not('isOpen') notOpen!: boolean;
 
   @action
   clickHandler() {

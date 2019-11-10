@@ -4,9 +4,24 @@ import { action } from '@ember/object';
 import { layout, tagName } from '@ember-decorators/component';
 import { alias } from '@ember/object/computed';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-remove';
+import template from 'ember-transformicons/templates/components/t-remove';
 
 const DEFAULT_ANIMATION = 'check';
+
+interface IAnimationTypeTable {
+  check: 'tcon-remove--check';
+  'chevron-left': 'tcon-remove--chevron-left';
+  'chevron-right': 'tcon-remove--chevron-right';
+  'chevron-down': 'tcon-remove--chevron-down';
+  'chevron-up': 'tcon-remove--chevron-up';
+}
+
+type Animation =
+  | typeof DEFAULT_ANIMATION
+  | 'chevron-left'
+  | 'chevron-right'
+  | 'chevron-down'
+  | 'chevron-up';
 
 /**
   Remove Transformicon
@@ -24,40 +39,27 @@ const DEFAULT_ANIMATION = 'check';
     <TRemove @animation='check' />
     <TRemove @isRemoved={{false}} @animation='check' />
   ```
+
+  @class TRemoveComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TRemoveComponent extends Component {
-  /**
-   * Animation CSS classname lookup table for the Remove transformicon
-   */
-  animationTypeTable = {
+  // --- COMPONENT ARGUMENTS ---
+  isRemoved = false;
+  onClick: (prop?: boolean) => void = () => {};
+
+  animationTypeTable: IAnimationTypeTable = {
     check: 'tcon-remove--check',
     'chevron-left': 'tcon-remove--chevron-left',
     'chevron-right': 'tcon-remove--chevron-right',
     'chevron-down': 'tcon-remove--chevron-down',
     'chevron-up': 'tcon-remove--chevron-up'
   };
-
-  /**
-   * Get the component's current animation type. This is used to lookup the CSS classname for the
-   * animation
-   * @type {string}
-   */
-  animation = DEFAULT_ANIMATION;
-
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
-  isRemoved = false;
-
-  /**
-   * Alias for {@link animation}
-   * @type {string}
-   */
-  @alias('animation') a;
+  animation: Animation = DEFAULT_ANIMATION;
+  @alias('animation') a!: Animation;
 
   @action
   clickHandler() {

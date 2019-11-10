@@ -4,9 +4,26 @@ import { action } from '@ember/object';
 import { alias } from '@ember/object/computed';
 import { layout, tagName } from '@ember-decorators/component';
 import classic from 'ember-classic-decorator';
-import template from '../templates/components/t-menu';
+import template from 'ember-transformicons/templates/components/t-menu';
 
 const DEFAULT_ANIMATION = 'butterfly';
+
+interface IAnimationTypeTable {
+  butterfly: 'tcon-menu--xbutterfly';
+  minus: 'tcon-menu--minus';
+  'x-cross': 'tcon-menu--xcross';
+  'arrow-up': 'tcon-menu--arrow tcon-menu--arrowup';
+  'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left';
+  'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft';
+}
+
+type Animation =
+  | typeof DEFAULT_ANIMATION
+  | 'minus'
+  | 'x-cross'
+  | 'arrow-up'
+  | 'arrow-360-left'
+  | 'arrow-left';
 
 /**
   Menu Transformicon
@@ -24,15 +41,19 @@ const DEFAULT_ANIMATION = 'butterfly';
     <TMenu @animation='butterfly' />
     <TMenu @isOpen={{false}} @animation='butterfly' />
   ```
+
+  @class TMenuComponent
+  @public
 */
 @layout(template)
 @tagName('')
 @classic
 export default class TMenuComponent extends Component {
-  /**
-   * Animation CSS classname lookup table for the Menu transformicon
-   */
-  animationTypeTable = {
+  // --- COMPONENT ARGUMENTS ---
+  isOpen = false;
+  onClick: (prop?: boolean) => void = () => {};
+
+  animationTypeTable: IAnimationTypeTable = {
     butterfly: 'tcon-menu--xbutterfly',
     minus: 'tcon-menu--minus',
     'x-cross': 'tcon-menu--xcross',
@@ -40,25 +61,8 @@ export default class TMenuComponent extends Component {
     'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left',
     'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
   };
-
-  /**
-   * Get the component's current animation type. This is used to lookup the CSS classname for the
-   * animation
-   * @type {string}
-   */
-  animation = DEFAULT_ANIMATION;
-
-  /**
-   * Flag to indicate the state of this transformicon
-   * @type {boolean}
-   */
-  isOpen = false;
-
-  /**
-   * Alias for {@link animation}
-   * @type {string}
-   */
-  @alias('animation') a;
+  animation: Animation = DEFAULT_ANIMATION;
+  @alias('animation') a!: Animation;
 
   @action
   clickHandler() {

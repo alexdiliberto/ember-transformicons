@@ -1,3 +1,9 @@
-<button {{on "click" this.clickHandler}} aria-label="remove item" type="button" class="tcon tcon-remove {{get this.animationTypeTable this.animation}} {{if this.isRemoved "tcon-transform"}}" ...attributes>
+<button
+  aria-label="remove item"
+  type="button"
+  class="tcon tcon-remove {{get this.animationTypeTable this.animation}} {{if this.isRemoved "tcon-transform"}}" 
+  ...attributes
+  {{on "click" this.clickHandler}}
+>
   <span class="tcon-visuallyhidden">remove item</span>
 </button>
