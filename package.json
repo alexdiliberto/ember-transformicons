@@ -116,5 +116,9 @@
     "versionCompatibility": {
       "ember": ">=3.4"
     }
+  },
+  "volta": {
+    "node": "12.13.1",
+    "yarn": "1.19.1"
   }
 }
