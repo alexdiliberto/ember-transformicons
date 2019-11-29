@@ -45,10 +45,10 @@
     "postpublish": "ember ts:clean"
   },
   "dependencies": {
-    "ember-auto-import": "^1.4.1",
+    "ember-auto-import": "^1.5.2",
     "ember-classic-decorator": "^1.0.1",
     "ember-cli-babel": "^7.11.1",
-    "ember-cli-htmlbars": "^4.0.0",
+    "ember-cli-htmlbars": "^4.0.5",
     "ember-cli-typescript": "^3.1.1",
     "ember-decorators": "^6.1.1",
     "ember-legacy-class-shim": "^1.0.5"
@@ -66,7 +66,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-concat-analyser": "^4.3.5",
     "ember-angle-bracket-invocation-polyfill": "^2.0.1",
-    "ember-cli": "~3.13.1",
+    "ember-cli": "~3.14.0",
     "ember-cli-addon-docs": "^0.6.14",
     "ember-cli-addon-docs-yuidoc": "^0.2.3",
     "ember-cli-dependency-checker": "^3.1.0",
@@ -77,7 +77,6 @@
     "ember-cli-deploy-git-ci": "^1.0.1",
     "ember-cli-eslint": "^5.1.0",
     "ember-cli-favicon": "^2.2.0",
-    "ember-cli-htmlbars-inline-precompile": "^3.0.0",
     "ember-cli-inject-live-reload": "^2.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.3",

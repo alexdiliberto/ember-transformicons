@@ -1,10 +1,12 @@
 import AddonDocsRouter, { docsRoute } from 'ember-cli-addon-docs/router';
 import config from './config/environment';
+import classic from 'ember-classic-decorator';
 
-const Router = AddonDocsRouter.extend({
-  location: config.locationType,
-  rootURL: config.rootURL
-});
+@classic
+export default class Router extends AddonDocsRouter {
+  location = config.locationType;
+  rootURL = config.rootURL;
+}
 
 /* eslint-disable array-callback-return */
 Router.map(function() {
@@ -24,5 +26,3 @@ Router.map(function() {
 
   this.route('not-found', { path: '/*path' });
 });
-
-export default Router;
