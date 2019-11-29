@@ -5274,9 +5274,9 @@ ember-auto-import@^1.4.1, ember-auto-import@^1.5.2:
     webpack "~4.28"
 
 ember-classic-decorator@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/ember-classic-decorator/-/ember-classic-decorator-1.0.3.tgz#fe66f2708c63e041ac1518a234f0a285675a86a4"
-  integrity sha512-Tc3wtaeY+XxulI3qMJ/W3yphAGT+dFAgSLgjWRQw4Pjc37PVXye2Uq9IpqFLH9grX6oininP8GcTiZVnGctzNg==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ember-classic-decorator/-/ember-classic-decorator-1.0.5.tgz#33f3851ed33c810b56dfb77e25a00160815eaa5a"
+  integrity sha512-jAZLP1zh7+oTlbvzSI4YTkSb8JS7of9sKQTLpObmah1MP+BCBu39HXKogCdibjWUJzBP2Xp03FQwjquQPuJ2Gw==
   dependencies:
     babel-plugin-filter-imports "^3.0.0"
     ember-cli-babel "^7.11.1"
