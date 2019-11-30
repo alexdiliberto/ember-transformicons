@@ -5,7 +5,6 @@ Add your favorite Transformicon component to any template in your Ember applicat
 
 Global optional parameters:
   * `animation` string - Set the menu animation type. If you do not provide a specific type for an icon category, then a default type will simply be provided for you.
-    * Aliases: `a`
 
 ## Components
 

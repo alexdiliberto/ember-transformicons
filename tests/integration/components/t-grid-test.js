@@ -53,11 +53,11 @@ module('Integration | Component | t grid', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('it creates a grid transformicon with a non-default animation `a="collapse"`', async function(assert) {
+  test('it creates a grid transformicon with a non-default animation `animation="collapse"`', async function(assert) {
     assert.expect(1);
 
     await render(hbs`
-      <TGrid @a="collapse" />
+      <TGrid @animation="collapse" />
     `);
 
     assert.dom('button').hasClass('tcon-grid--collapse');
@@ -66,8 +66,14 @@ module('Integration | Component | t grid', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isOpen = false;
+
     await render(hbs`
-      <TGrid id="t-grid" />
+      <TGrid
+        id="t-grid"
+        @isOpen={{this.isOpen}}
+        {{on "click" (fn (mut this.isOpen) (not this.isOpen))}}
+      />
     `);
 
     assert.dom('#t-grid').hasNoClass('tcon-transform');

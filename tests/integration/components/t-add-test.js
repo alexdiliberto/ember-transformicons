@@ -4,7 +4,7 @@ import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
 
-module('Integration | Component | t add', function(hooks) {
+module('Integration | Component | t-add', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
@@ -53,11 +53,11 @@ module('Integration | Component | t add', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('it creates an add transformicon with a non-default animation `a="check"`', async function(assert) {
+  test('it creates an add transformicon with a non-default animation `animation="check"`', async function(assert) {
     assert.expect(1);
 
     await render(hbs`
-      <TAdd @a="check" />
+      <TAdd @animation="check" />
     `);
 
     assert.dom('button').hasClass('tcon-plus--check');
@@ -66,8 +66,14 @@ module('Integration | Component | t add', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isAdded = false;
+
     await render(hbs`
-      <TAdd id="t-add" />
+      <TAdd
+        id="t-add"
+        @isAdded={{this.isAdded}}
+        {{on "click" (fn (mut this.isAdded) (not this.isAdded))}}
+      />
     `);
 
     assert.dom('#t-add').hasNoClass('tcon-transform');

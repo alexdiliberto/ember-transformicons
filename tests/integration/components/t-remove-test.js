@@ -52,11 +52,11 @@ module('Integration | Component | t remove', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('it creates a remove transformicon with a non-default animation `a="chevron-right"`', async function(assert) {
+  test('it creates a remove transformicon with a non-default animation `animation="chevron-right"`', async function(assert) {
     assert.expect(1);
 
     await render(hbs`
-      <TRemove @a="chevron-right" />
+      <TRemove @animation="chevron-right" />
     `);
 
     assert.dom('button').hasClass('tcon-remove--chevron-right');
@@ -65,8 +65,14 @@ module('Integration | Component | t remove', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isRemoved = false;
+
     await render(hbs`
-      <TRemove id="t-remove" />
+      <TRemove
+        id="t-remove"
+        @isRemoved={{this.isRemoved}}
+        {{on "click" (fn (mut this.isRemoved) (not this.isRemoved))}}
+      />
     `);
 
     assert.dom('#t-remove').hasNoClass('tcon-transform');

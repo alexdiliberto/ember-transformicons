@@ -55,8 +55,14 @@ module('Integration | Component | t form', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isSearching = false;
+
     await render(hbs`
-      <TForm id="t-form" />
+      <TForm
+        id="t-form"
+        @isSearching={{this.isSearching}}
+        {{on "click" (fn (mut this.isSearching) (not this.isSearching))}}
+      />
     `);
 
     assert.dom('#t-form').hasNoClass('tcon-transform');

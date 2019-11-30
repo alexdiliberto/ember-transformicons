@@ -52,11 +52,11 @@ module('Integration | Component | t menu', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('it creates a menu transformicon with a non-default animation `a="butterfly"`', async function(assert) {
+  test('it creates a menu transformicon with a non-default animation `animation="butterfly"`', async function(assert) {
     assert.expect(2);
 
     await render(hbs`
-      <TMenu @a="arrow-360-left" />
+      <TMenu @animation="arrow-360-left" />
     `);
 
     assert.dom('button').hasClass('tcon-menu--arrow');
@@ -66,8 +66,14 @@ module('Integration | Component | t menu', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isOpen = false;
+
     await render(hbs`
-      <TMenu id="t-menu" />
+      <TMenu
+        id="t-menu"
+        @isOpen={{this.isOpen}}
+        {{on "click" (fn (mut this.isOpen) (not this.isOpen))}}
+      />
     `);
 
     assert.dom('#t-menu').hasNoClass('tcon-transform');
