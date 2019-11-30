@@ -1,6 +1,14 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v5.0.1"></a>
+## [v5.0.1](https://github.com/alexdiliberto/ember-transformicons/compare/v5.0.0...v5.0.1) (2019-11-29)
+
+### Build
+
+* API updates and min supported Ember JS Version - v3.12 ([#356](https://github.com/alexdiliberto/ember-transformicons/issues/356))
+
+
 <a name="v5.0.0"></a>
 ## [v5.0.0](https://github.com/alexdiliberto/ember-transformicons/compare/v4.0.2...v5.0.0) (2019-11-29)
 
