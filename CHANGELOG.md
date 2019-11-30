@@ -1,6 +1,89 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v5.0.0"></a>
+## [v5.0.0](https://github.com/alexdiliberto/ember-transformicons/compare/v4.0.2...v5.0.0) (2019-11-29)
+
+### Build
+
+* API updates and min supported Ember JS Version - v3.12
+* **.prettierrc.js:** `tabs` --> `useTabs`
+* **deps:** bump ember-classic-decorator from 1.0.1 to 1.0.3
+* **deps:** bump ember-classic-decorator from 1.0.1 to 1.0.3 ([#328](https://github.com/alexdiliberto/ember-transformicons/issues/328))
+* **deps:** bump ember-cli-babel from 7.12.0 to 7.13.0
+* **deps:** bump ember-classic-decorator from 1.0.3 to 1.0.5
+* **deps-dev:** bump qunit-dom from 0.9.1 to 0.9.2
+* **deps-dev:** bump ember-qunit from 4.5.1 to 4.6.0
+* **deps-dev:** bump qunit-dom from 0.9.1 to 0.9.2 ([#342](https://github.com/alexdiliberto/ember-transformicons/issues/342))
+* **deps-dev:** bump ember-source from 3.14.1 to 3.14.2
+* **deps-dev:** bump ember-resolver from 5.3.0 to 6.0.0
+* **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/eslint-plugin
+* **deps-dev:** bump eslint-plugin-ember from 7.5.0 to 7.6.0
+* **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 2.7.0 to 2.8.0
+* **deps-dev:** bump eslint-config-prettier from 6.6.0 to 6.7.0
+* **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/eslint-plugin
+* **deps-dev:** bump eslint-config-prettier from 6.5.0 to 6.6.0
+* **deps-dev:** bump ember-export-application-global
+* **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 2.6.1 to 2.7.0
+* **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/parser from 2.8.0 to 2.9.0
+* **deps-dev:** bump [@typescript](https://github.com/typescript)-eslint/eslint-plugin
+* **deps-dev:** bump eslint-plugin-ember from 7.4.1 to 7.5.0
+* **deps-dev:** bump ember-try from 1.2.1 to 1.3.0
+* **deps-dev:** bump qunit-dom from 0.9.0 to 0.9.1 ([#323](https://github.com/alexdiliberto/ember-transformicons/issues/323))
+* **deps-dev:** bump qunit-dom from 0.9.0 to 0.9.1
+* **deps-dev:** bump ember-source from 3.13.3 to 3.14.1
+* **deps-dev:** bump ember-resolver from 5.3.0 to 6.0.0 ([#349](https://github.com/alexdiliberto/ember-transformicons/issues/349))
+* **deps-dev:** bump ember-load-initializers from 2.1.0 to 2.1.1 ([#332](https://github.com/alexdiliberto/ember-transformicons/issues/332))
+* **deps-dev:** bump prettier from 1.18.2 to 1.19.1 ([#336](https://github.com/alexdiliberto/ember-transformicons/issues/336))
+* **deps-dev:** bump ember-decorators-polyfill from 1.0.6 to 1.1.1
+* **deps-dev:** bump prettier from 1.18.2 to 1.19.1
+* **deps-dev:** bump eslint-plugin-ember from 7.1.0 to 7.4.1
+* **deps-dev:** bump ember-load-initializers from 2.1.0 to 2.1.1
+* **deps-dev:** bump [@ember](https://github.com/ember)/optional-features from 1.0.0 to 1.1.0
+* **package.json:** add `eslint-plugin-qunit`
+* **package.json:** scripts updates and quick dep cleanup
+* **package.json:** pin volta
+* **package.json:** ember-cli-update
+* **package.json:** add `prettier`
+
+### CI
+
+* **dependabot:** update "daily" and automerge in-range versions
+
+### Features
+
+* **typescript:** add typescript
+
+### Style
+
+* **lint:** remove old rules
+* **lint:** `eslint . --fix`
+
+### Pull Requests
+
+* Merge pull request [#353](https://github.com/alexdiliberto/ember-transformicons/issues/353) from alexdiliberto/dependabot/npm_and_yarn/ember-classic-decorator-1.0.5
+* Merge pull request [#355](https://github.com/alexdiliberto/ember-transformicons/issues/355) from alexdiliberto/dependabot/npm_and_yarn/typescript-eslint/parser-2.9.0
+* Merge pull request [#354](https://github.com/alexdiliberto/ember-transformicons/issues/354) from alexdiliberto/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-2.9.0
+* Merge pull request [#351](https://github.com/alexdiliberto/ember-transformicons/issues/351) from alexdiliberto/dependabot/npm_and_yarn/ember-source-3.14.2
+* Merge pull request [#350](https://github.com/alexdiliberto/ember-transformicons/issues/350) from alexdiliberto/dependabot/npm_and_yarn/ember-cli-babel-7.13.0
+* Merge pull request [#348](https://github.com/alexdiliberto/ember-transformicons/issues/348) from alexdiliberto/dependabot/npm_and_yarn/eslint-plugin-ember-7.6.0
+* Merge pull request [#346](https://github.com/alexdiliberto/ember-transformicons/issues/346) from alexdiliberto/dependabot/npm_and_yarn/typescript-eslint/parser-2.8.0
+* Merge pull request [#347](https://github.com/alexdiliberto/ember-transformicons/issues/347) from alexdiliberto/dependabot/npm_and_yarn/eslint-config-prettier-6.7.0
+* Merge pull request [#345](https://github.com/alexdiliberto/ember-transformicons/issues/345) from alexdiliberto/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-2.8.0
+* Merge pull request [#344](https://github.com/alexdiliberto/ember-transformicons/issues/344) from alexdiliberto/dependabot/npm_and_yarn/eslint-config-prettier-6.6.0
+* Merge pull request [#343](https://github.com/alexdiliberto/ember-transformicons/issues/343) from alexdiliberto/dependabot/npm_and_yarn/ember-export-application-global-2.0.1
+* Merge pull request [#341](https://github.com/alexdiliberto/ember-transformicons/issues/341) from alexdiliberto/dependabot/npm_and_yarn/typescript-eslint/parser-2.7.0
+* Merge pull request [#340](https://github.com/alexdiliberto/ember-transformicons/issues/340) from alexdiliberto/dependabot/npm_and_yarn/typescript-eslint/eslint-plugin-2.7.0
+* Merge pull request [#339](https://github.com/alexdiliberto/ember-transformicons/issues/339) from alexdiliberto/dependabot/npm_and_yarn/eslint-plugin-ember-7.5.0
+* Merge pull request [#338](https://github.com/alexdiliberto/ember-transformicons/issues/338) from alexdiliberto/dependabot/npm_and_yarn/ember-try-1.3.0
+* Merge pull request [#337](https://github.com/alexdiliberto/ember-transformicons/issues/337) from alexdiliberto/typescript-2
+* Merge pull request [#327](https://github.com/alexdiliberto/ember-transformicons/issues/327) from alexdiliberto/dependabot/npm_and_yarn/ember-source-3.14.1
+* Merge pull request [#320](https://github.com/alexdiliberto/ember-transformicons/issues/320) from alexdiliberto/dependabot/npm_and_yarn/ember/optional-features-1.1.0
+* Merge pull request [#322](https://github.com/alexdiliberto/ember-transformicons/issues/322) from alexdiliberto/dependabot/npm_and_yarn/ember-decorators-polyfill-1.1.1
+* Merge pull request [#330](https://github.com/alexdiliberto/ember-transformicons/issues/330) from alexdiliberto/dependabot/npm_and_yarn/ember-qunit-4.6.0
+* Merge pull request [#334](https://github.com/alexdiliberto/ember-transformicons/issues/334) from alexdiliberto/dependabot/npm_and_yarn/eslint-plugin-ember-7.4.1
+
+
 <a name="v4.0.2"></a>
 ## [v4.0.2](https://github.com/alexdiliberto/ember-transformicons/compare/v4.0.1...v4.0.2) (2019-10-19)
 
