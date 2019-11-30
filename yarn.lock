@@ -6190,6 +6190,15 @@ ember-fetch@^6.7.0:
     node-fetch "^2.6.0"
     whatwg-fetch "^3.0.0"
 
+ember-fn-helper-polyfill@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ember-fn-helper-polyfill/-/ember-fn-helper-polyfill-1.0.2.tgz#deb035fced77f98b9256ba4eb17694b7a2e2a526"
+  integrity sha512-T/YG1Do59xvyMCUItqvY61ZJfSLiUsUuykG8C4o9ffrwDuspbquL3eJdLi+NF1dNoihwcIdJHcxLKvwvQB05LQ==
+  dependencies:
+    calculate-cache-key-for-tree "^2.0.0"
+    ember-cli-babel "^7.7.3"
+    ember-cli-version-checker "^3.1.3"
+
 ember-getowner-polyfill@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-2.2.0.tgz#38e7dccbcac69d5ec694000329ec0b2be651d2b2"

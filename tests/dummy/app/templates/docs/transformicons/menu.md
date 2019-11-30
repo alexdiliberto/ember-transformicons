@@ -2,54 +2,103 @@
 ---
 ## API
   * `isOpen` boolean - Set initial open menu state.
-  * `onClick` closure action - The name of your consuming application's component/controller/route action to handle the transformicon click. Returned with 1 parameter `isOpen`, which is a boolean type indicating if the current state is open or closed.
 
 ### animation
 {{#docs-snippet name='t-menu-animation-snippet.hbs'}}
-  <TMenu /> 
-  <TMenu @animation="butterfly" /> {}
-  <TMenu @a="minus" />
-  <TMenu @a="x-cross" />
-  <TMenu @a="arrow-up" />
-  <TMenu @a="arrow-360-left" />
-  <TMenu @a="arrow-left" />
+  <TMenu
+    @isOpen={{this.default}}
+    {{on "click" (fn (mut this.default) (not this.default))}}
+  /> 
+  <TMenu
+    @animation="butterfly"
+    @isOpen={{this.butterfly}}
+    {{on "click" (fn (mut this.butterfly) (not this.butterfly))}}
+  />
+  <TMenu
+    @animation="minus"
+    @isOpen={{this.minus}}
+    {{on "click" (fn (mut this.minus) (not this.minus))}}
+  />
+  <TMenu
+    @animation="x-cross"
+    @isOpen={{this.xCross}}
+    {{on "click" (fn (mut this.xCross) (not this.xCross))}}
+  />
+  <TMenu
+    @animation="arrow-up"
+    @isOpen={{this.arrowUp}}
+    {{on "click" (fn (mut this.arrowUp) (not this.arrowUp))}}
+  />
+  <TMenu
+    @animation="arrow-360-left"
+    @isOpen={{this.arrow360Left}}
+    {{on "click" (fn (mut this.arrow360Left) (not this.arrow360Left))}}
+  />
+  <TMenu
+    @animation="arrow-left"
+    @isOpen={{this.arrowLeft}}
+    {{on "click" (fn (mut this.arrowLeft) (not this.arrowLeft))}}
+  />
 {{/docs-snippet}}
 
 `default`
-<TMenu />
-`butterfly (default)`
-<TMenu @animation="butterfly" />
-`minus`
-<TMenu @a="minus" />
-`x-cross`
-<TMenu @a="x-cross" />
-`arrow-up`
-<TMenu @a="arrow-up" />
-`arrow-360-left`
-<TMenu @a="arrow-360-left" />
-`arrow-left` <TMenu @a="arrow-left" />
-
-<br />
-
-### isOpen
-{{#docs-snippet name='t-menu-is-open-snippet.hbs'}}
-  <TMenu @isOpen={{true}} />
-{{/docs-snippet}}
-
-<TMenu @isOpen={{true}} />
-
-<br />
-
-### onClick action
-{{#docs-snippet name='t-menu-onclick-snippet.hbs'}}
-  {{! Custom onclick handler after the addon toggles the value }}
-  <TMenu
-    @isOpen={{isMenuOpen}}
-    @onClick={{action this.updateMenuAction}} />
-{{/docs-snippet}}
-
 <TMenu
-  @isOpen={{isMenuOpen}}
-  @onClick={{action this.updateMenuAction}} />
+  @isOpen={{this.default}}
+  {{on "click" (fn (mut this.default) (not this.default))}}
+/>
 
-`isMenuOpen` = {{isMenuOpen}}
+`this.default` = {{this.default}}
+
+`butterfly (default)`
+<TMenu
+  @animation="butterfly"
+  @isOpen={{this.butterfly}}
+  {{on "click" (fn (mut this.butterfly) (not this.butterfly))}}
+/>
+
+`this.butterfly` = {{this.butterfly}}
+
+`minus`
+<TMenu
+  @animation="minus"
+  @isOpen={{this.minus}}
+  {{on "click" (fn (mut this.minus) (not this.minus))}}
+/>
+
+`this.minus` = {{this.minus}}
+
+`x-cross`
+<TMenu
+  @animation="x-cross"
+  @isOpen={{this.xCross}}
+  {{on "click" (fn (mut this.xCross) (not this.xCross))}}
+/>
+
+`this.xCross` = {{this.xCross}}
+
+`arrow-up`
+<TMenu
+  @animation="arrow-up"
+  @isOpen={{this.arrowUp}}
+  {{on "click" (fn (mut this.arrowUp) (not this.arrowUp))}}
+/>
+
+`this.arrowUp` = {{this.arrowUp}}
+
+`arrow-360-left`
+<TMenu
+  @animation="arrow-360-left"
+  @isOpen={{this.arrow360Left}}
+  {{on "click" (fn (mut this.arrow360Left) (not this.arrow360Left))}}
+/>
+
+`this.arrow360Left` = {{this.arrow360Left}}
+
+`arrow-left`
+<TMenu
+  @animation="arrow-left"
+  @isOpen={{this.arrowLeft}}
+  {{on "click" (fn (mut this.arrowLeft) (not this.arrowLeft))}}
+/>
+
+`this.arrowLeft` = {{this.arrowLeft}}

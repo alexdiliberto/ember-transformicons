@@ -56,8 +56,14 @@ module('Integration | Component | t video', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isPlaying = false;
+
     await render(hbs`
-      <TVideo id="t-video" />
+      <TVideo
+        id="t-video"
+        @isPlaying={{this.isPlaying}}
+        {{on "click" (fn (mut this.isPlaying) (not this.isPlaying))}}
+      />
     `);
 
     assert.dom('#t-video').hasNoClass('tcon-transform');

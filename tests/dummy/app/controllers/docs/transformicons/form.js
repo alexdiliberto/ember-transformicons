@@ -1,14 +1,7 @@
 import Controller from '@ember/controller';
-import { action } from '@ember/object';
+import classic from 'ember-classic-decorator';
 
-/* eslint-disable ember/alias-model-in-controller, no-console */
+@classic
 export default class TransformiconsFormController extends Controller {
-  isSearching = false;
-
-  @action
-  updateFormAction(isSearching) {
-    console.info(
-      `updateFormAction was triggered with the following arguments: isSearching=${isSearching}`
-    );
-  }
+  default = false;
 }

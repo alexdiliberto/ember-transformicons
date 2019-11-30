@@ -39,7 +39,7 @@ module('Integration | Component | t mail', function(hooks) {
     assert.dom('button').hasAttribute('aria-label', 'open mailbox');
     assert.dom('button').hasClass('tcon');
     assert.dom('button').hasClass('tcon-mail--envelope');
-    assert.dom('button').hasNoClass('tcon-transform');
+    assert.dom('button').hasClass('tcon-transform');
   });
 
   test('it creates a mail transformicon with `isOpen=false`', async function(assert) {
@@ -56,8 +56,14 @@ module('Integration | Component | t mail', function(hooks) {
   test('user can click on the transformicon', async function(assert) {
     assert.expect(2);
 
+    this.isOpen = true;
+
     await render(hbs`
-      <TMail id="t-mail" />
+      <TMail
+        id="t-mail"
+        @isOpen={{this.isOpen}}
+        {{on "click" (fn (mut this.isOpen) (not this.isOpen))}}
+      />
     `);
 
     assert.dom('#t-mail').hasNoClass('tcon-transform');

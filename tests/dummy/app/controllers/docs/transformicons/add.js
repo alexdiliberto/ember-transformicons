@@ -1,12 +1,9 @@
 import Controller from '@ember/controller';
-import { action } from '@ember/object';
+import classic from 'ember-classic-decorator';
 
-/* eslint-disable ember/alias-model-in-controller, no-console */
+@classic
 export default class TransformiconsAddController extends Controller {
-  isAdded = false;
-
-  @action
-  updateAddAction(isAdded) {
-    console.info(`updateAddAction was triggered with the following arguments: isAdded=${isAdded}`);
-  }
+  default = false;
+  minus = false;
+  check = false;
 }
