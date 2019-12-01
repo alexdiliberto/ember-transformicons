@@ -1,5 +1,9 @@
 'use strict';
 
+const { setEdition } = require('@ember/edition-utils');
+
+setEdition('octane');
+
 module.exports = {
   /**
     Ember CLI sends analytics information by default. The data is completely
