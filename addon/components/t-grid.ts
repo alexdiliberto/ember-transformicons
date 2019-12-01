@@ -1,16 +1,19 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-grid';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
 
-const DEFAULT_ANIMATION = 'rearrange';
+interface IArgs {
+  animation?: Animation;
+  isOpen?: boolean;
+}
 
 interface IAnimationTypeTable {
+  default: 'tcon-grid--rearrange';
   rearrange: 'tcon-grid--rearrange';
   collapse: 'tcon-grid--collapse';
 }
 
-type Animation = typeof DEFAULT_ANIMATION | 'collapse';
+type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 
 /**
   Grid Transformicon
@@ -30,16 +33,25 @@ type Animation = typeof DEFAULT_ANIMATION | 'collapse';
   @class TGridComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TGridComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  animation?: Animation = DEFAULT_ANIMATION;
-  isOpen?: boolean;
-
+class TGridComponent extends Component<IArgs> {
   animationTypeTable: IAnimationTypeTable = {
+    default: 'tcon-grid--rearrange',
     rearrange: 'tcon-grid--rearrange',
     collapse: 'tcon-grid--collapse'
   };
 }
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="toggle grid"
+    type="button"
+    class="tcon tcon-grid {{get this.animationTypeTable (or @animation "default")}} {{if @isOpen "tcon-transform"}}" 
+    ...attributes
+  >
+    <span class="tcon-grid__item" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle grid</span>
+  </button>
+  `,
+  TGridComponent
+);

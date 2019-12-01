@@ -1,8 +1,6 @@
 import AddonDocsRouter, { docsRoute } from 'ember-cli-addon-docs/router';
 import config from './config/environment';
-import classic from 'ember-classic-decorator';
 
-@classic
 export default class Router extends AddonDocsRouter {
   location = config.locationType;
   rootURL = config.rootURL;

@@ -1,11 +1,14 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-menu';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
 
-const DEFAULT_ANIMATION = 'butterfly';
+interface IArgs {
+  animation?: Animation;
+  isOpen?: boolean;
+}
 
 interface IAnimationTypeTable {
+  default: 'tcon-menu--xbutterfly';
   butterfly: 'tcon-menu--xbutterfly';
   minus: 'tcon-menu--minus';
   'x-cross': 'tcon-menu--xcross';
@@ -14,13 +17,7 @@ interface IAnimationTypeTable {
   'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft';
 }
 
-type Animation =
-  | typeof DEFAULT_ANIMATION
-  | 'minus'
-  | 'x-cross'
-  | 'arrow-up'
-  | 'arrow-360-left'
-  | 'arrow-left';
+type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 
 /**
   Menu Transformicon
@@ -40,15 +37,9 @@ type Animation =
   @class TMenuComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TMenuComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  animation?: Animation = DEFAULT_ANIMATION;
-  isOpen?: boolean;
-
+class TMenuComponent extends Component<IArgs> {
   animationTypeTable: IAnimationTypeTable = {
+    default: 'tcon-menu--xbutterfly',
     butterfly: 'tcon-menu--xbutterfly',
     minus: 'tcon-menu--minus',
     'x-cross': 'tcon-menu--xcross',
@@ -57,3 +48,18 @@ export default class TMenuComponent extends Component {
     'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
   };
 }
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="toggle menu"
+    type="button"
+    class="tcon {{get this.animationTypeTable (or @animation "default")}} {{if @isOpen "tcon-transform"}}"
+    ...attributes
+  >
+    <span class="tcon-menu__lines" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle menu</span>
+  </button>
+  `,
+  TMenuComponent
+);
