@@ -110,7 +110,7 @@
     "configPath": "tests/dummy/config",
     "demoURL": "https://alexdiliberto.com/ember-transformicons",
     "versionCompatibility": {
-      "ember": ">=3.4"
+      "ember": ">=3.13"
     }
   },
   "volta": {
