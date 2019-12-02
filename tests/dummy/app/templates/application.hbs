@@ -1,5 +1,10 @@
-{{docs-header}}
+{{!--
+  `ember-cli-addon-docs` needs the `div.ember-view` application-template wrapper present for css to behave as expected
+--}}
+<div class="ember-view">
+  {{docs-header}}
 
-{{outlet}}
+  {{outlet}}
 
-{{docs-keyboard-shortcuts}}
+  {{docs-keyboard-shortcuts}}
+</div>

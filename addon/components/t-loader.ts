@@ -1,7 +1,6 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-loader';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
 
 /**
   Loader Transformicon
@@ -13,7 +12,13 @@ import template from 'ember-transformicons/templates/components/t-loader';
   @class TLoaderComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TLoaderComponent extends Component {}
+class TLoaderComponent extends Component {}
+
+export default setComponentTemplate(
+  hbs`
+  <span aria-label="loading" class="tcon-loader--spinner360" ...attributes>
+    <span class="tcon-visuallyhidden">loading</span>
+  </span>
+  `,
+  TLoaderComponent
+);

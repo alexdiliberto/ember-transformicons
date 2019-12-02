@@ -1,11 +1,14 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-remove';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
 
-const DEFAULT_ANIMATION = 'check';
+interface IArgs {
+  animation?: Animation;
+  isRemoved?: boolean;
+}
 
 interface IAnimationTypeTable {
+  default: 'tcon-remove--check';
   check: 'tcon-remove--check';
   'chevron-left': 'tcon-remove--chevron-left';
   'chevron-right': 'tcon-remove--chevron-right';
@@ -13,12 +16,7 @@ interface IAnimationTypeTable {
   'chevron-up': 'tcon-remove--chevron-up';
 }
 
-type Animation =
-  | typeof DEFAULT_ANIMATION
-  | 'chevron-left'
-  | 'chevron-right'
-  | 'chevron-down'
-  | 'chevron-up';
+type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 
 /**
   Remove Transformicon
@@ -38,15 +36,9 @@ type Animation =
   @class TRemoveComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TRemoveComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  animation?: Animation = DEFAULT_ANIMATION;
-  isRemoved?: boolean;
-
+class TRemoveComponent extends Component<IArgs> {
   animationTypeTable: IAnimationTypeTable = {
+    default: 'tcon-remove--check',
     check: 'tcon-remove--check',
     'chevron-left': 'tcon-remove--chevron-left',
     'chevron-right': 'tcon-remove--chevron-right',
@@ -54,3 +46,17 @@ export default class TRemoveComponent extends Component {
     'chevron-up': 'tcon-remove--chevron-up'
   };
 }
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="remove item"
+    type="button"
+    class="tcon tcon-remove {{get this.animationTypeTable (or @animation "default")}} {{if @isRemoved "tcon-transform"}}" 
+    ...attributes
+  >
+    <span class="tcon-visuallyhidden">remove item</span>
+  </button>
+  `,
+  TRemoveComponent
+);

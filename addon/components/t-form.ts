@@ -1,7 +1,10 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-form';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
+
+interface IArgs {
+  isSearching?: boolean;
+}
 
 /**
   Form Transformicon
@@ -18,10 +21,19 @@ import template from 'ember-transformicons/templates/components/t-form';
   @class TFormComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TFormComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  isSearching?: boolean;
-}
+class TFormComponent extends Component<IArgs> {}
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="toggle search"
+    type="button"
+    class="tcon tcon-search--xcross {{if @isSearching "tcon-transform"}}"
+    ...attributes
+  >
+    <span class="tcon-search__item" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle search</span>
+  </button>
+  `,
+  TFormComponent
+);

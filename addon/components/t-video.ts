@@ -1,7 +1,10 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-video';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
+
+interface IArgs {
+  isPlaying?: boolean;
+}
 
 /**
   Video Transformicon
@@ -18,10 +21,19 @@ import template from 'ember-transformicons/templates/components/t-video';
   @class TVideoComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TVideoComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  isPlaying?: boolean;
-}
+class TVideoComponent extends Component<IArgs> {}
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="play video"
+    role="button"
+    type="button"
+    class="tcon tcon-vid--play {{if @isPlaying "tcon-transform"}}" 
+    ...attributes
+  >
+    <span class="tcon-visuallyhidden">play video</span>
+  </button>
+  `,
+  TVideoComponent
+);

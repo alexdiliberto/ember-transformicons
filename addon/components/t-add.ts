@@ -1,16 +1,19 @@
-import Component from '@ember/component';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-add';
+import Component from '@glimmer/component';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
 
-const DEFAULT_ANIMATION = 'minus';
+interface IArgs {
+  animation?: Animation;
+  isAdded?: boolean;
+}
 
 interface IAnimationTypeTable {
+  default: 'tcon-plus--minus';
   minus: 'tcon-plus--minus';
   check: 'tcon-plus--check';
 }
 
-type Animation = typeof DEFAULT_ANIMATION | 'check';
+type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 
 /**
   Add Transformicon
@@ -30,16 +33,24 @@ type Animation = typeof DEFAULT_ANIMATION | 'check';
   @class TAddComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TAddComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  animation?: Animation = DEFAULT_ANIMATION;
-  isAdded?: boolean;
-
+class TAddComponent extends Component<IArgs> {
   animationTypeTable: IAnimationTypeTable = {
+    default: 'tcon-plus--minus',
     minus: 'tcon-plus--minus',
     check: 'tcon-plus--check'
   };
 }
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="add item"
+    type="button"
+    class="tcon tcon-plus {{get this.animationTypeTable (or @animation "default")}} {{if @isAdded "tcon-transform"}}"
+    ...attributes
+  >
+    <span class="tcon-visuallyhidden">add item</span>
+  </button>
+  `,
+  TAddComponent
+);

@@ -45,15 +45,17 @@
     "postpublish": "ember ts:clean"
   },
   "dependencies": {
+    "@glimmer/component": "^0.14.0-alpha.13",
     "ember-auto-import": "^1.5.2",
-    "ember-classic-decorator": "^1.0.1",
     "ember-cli-babel": "^7.11.1",
     "ember-cli-htmlbars": "^4.0.5",
     "ember-cli-typescript": "^3.1.1",
-    "ember-decorators": "^6.1.1"
+    "ember-decorators": "^6.1.1",
+    "ember-truth-helpers": "^2.1.0"
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^3.0.0",
+    "@ember/edition-utils": "^1.1.1",
     "@ember/optional-features": "^1.0.0",
     "@types/ember": "^3.1.1",
     "@types/ember-qunit": "^3.4.7",
@@ -90,7 +92,6 @@
     "ember-resolver": "^6.0.0",
     "ember-source": "~3.14.1",
     "ember-source-channel-url": "^2.0.1",
-    "ember-truth-helpers": "^2.1.0",
     "ember-try": "^1.2.1",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-ember": "^7.1.0",
@@ -109,7 +110,7 @@
     "configPath": "tests/dummy/config",
     "demoURL": "https://alexdiliberto.com/ember-transformicons",
     "versionCompatibility": {
-      "ember": ">=3.4"
+      "ember": ">=3.13"
     }
   },
   "volta": {

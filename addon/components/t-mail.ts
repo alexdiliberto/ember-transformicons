@@ -1,8 +1,11 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import { not } from '@ember/object/computed';
-import { layout, tagName } from '@ember-decorators/component';
-import classic from 'ember-classic-decorator';
-import template from 'ember-transformicons/templates/components/t-mail';
+import { setComponentTemplate } from '@ember/component';
+import { hbs } from 'ember-cli-htmlbars';
+
+interface IArgs {
+  isOpen?: boolean;
+}
 
 /**
   Mail Transformicon
@@ -19,12 +22,22 @@ import template from 'ember-transformicons/templates/components/t-mail';
   @class TMailComponent
   @public
 */
-@layout(template)
-@tagName('')
-@classic
-export default class TMailComponent extends Component {
-  // --- COMPONENT ARGUMENTS ---
-  isOpen?: boolean;
-
-  @not('isOpen') notOpen!: boolean;
+class TMailComponent extends Component<IArgs> {
+  @not('args.isOpen') notOpen!: boolean;
 }
+
+export default setComponentTemplate(
+  hbs`
+  <button
+    aria-label="open mailbox"
+    role="button"
+    type="button"
+    class="tcon tcon-mail--envelope {{if this.notOpen "tcon-transform"}}"
+    ...attributes
+  >
+    <span class="tcon-mail--envelope__flap" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">open mailbox</span>
+  </button>
+  `,
+  TMailComponent
+);
