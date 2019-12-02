@@ -21,6 +21,10 @@ module.exports = {
     browser: true
   },
   rules: {
+    // @alexdiliberto
+    camelcase: 'off', // https://github.com/typescript-eslint/typescript-eslint/blob/v2.6.1/packages/eslint-plugin/src/configs/recommended.json#L7
+    'no-unused-vars': 'off', // https://github.com/typescript-eslint/typescript-eslint/blob/v2.6.1/packages/eslint-plugin/src/configs/recommended.json#L25
+
     // ember
     'ember/classic-decorator-hooks': 'error',
     'ember/classic-decorator-no-classic-methods': 'error',
