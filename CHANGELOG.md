@@ -1,6 +1,29 @@
 # ember-transformicons CHANGELOG
 
 
+<a name="v5.0.2"></a>
+## [v5.0.2](https://github.com/alexdiliberto/ember-transformicons/compare/v5.0.1...v5.0.2) (2019-12-01)
+
+### Build
+
+* minimum supported app version ember.js >= v3.13
+* **optional-features:** remove application-template-wrapper
+* **package.json:** adding octane dependencies
+* **package.json:** remove unnecessary polyfills
+
+### Features
+
+* **typescript:** types for `setComponentTemplate` and `ember-cli-htmlbars`
+
+### Refactors
+
+* octanify
+
+### Style
+
+* **eslint:** remove possible conflicts between `typescript-eslint` and `[@alexdiliberto](https://github.com/alexdiliberto)` config
+
+
 <a name="v5.0.1"></a>
 ## [v5.0.1](https://github.com/alexdiliberto/ember-transformicons/compare/v5.0.0...v5.0.1) (2019-11-29)
 
@@ -251,17 +274,21 @@
 
 
 <a name="v2.3.2"></a>
-## [v2.3.2](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.2) (2019-02-23)
+## [v2.3.2](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.1...v2.3.2) (2019-02-23)
+
+### Docs
+
+* **changelog:** update to reference v2.3.2
+
+
+<a name="v2.3.1"></a>
+## [v2.3.1](https://github.com/alexdiliberto/ember-transformicons/compare/v2.3.0...v2.3.1) (2019-02-23)
 
 ### Build
 
 * **deploy:** fix `TypeError: Cannot read property '_walk' of null`
 * **travis:** auto deploy branch now points to `ember-default-with-jquery`
 * **travis:** `ember-default` scenario to ember-try config to fix automatic deploy
-
-### Docs
-
-* **changelog:** update to reference v2.3.2
 
 
 <a name="v2.3.0"></a>
