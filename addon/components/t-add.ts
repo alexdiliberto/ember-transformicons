@@ -18,16 +18,21 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 /**
   Add Transformicon
 
-  PUBLIC
+  **PUBLIC**
     * `animation` string - Set the add animation type.
       * types - `minus` | `check`
     * `isAdded` boolean - Set initial open added state.
 
   ```hbs
-  {{! These are functionally equivalent}}
+  {{! These are equivalent }}
   <TAdd />
-  <TAdd @animation='minus' />
-  <TAdd @isAdded={{false}} @animation='minus' />
+  <TAdd
+    @animation="minus"
+  />
+  <TAdd
+    @isAdded={{false}}
+    @animation="minus"
+  />
   ```
 
   @class TAddComponent

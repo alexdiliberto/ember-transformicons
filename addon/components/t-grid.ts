@@ -18,16 +18,21 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 /**
   Grid Transformicon
 
-  PUBLIC - Optional parameters:
+  **PUBLIC**
     * `animation` string - Set the grid animation type.
       * types - `rearrange` | `collapse`
     * `isOpen` boolean - Set initial open grid state.
 
   ```hbs
-    {{! These are functionally equivalent}}
+    {{! These are equivalent }}
     <TGrid />
-    <TGrid @animation='rearrange' />
-    <TGrid @isOpen={{false}} @animation='rearrange' />
+    <TGrid
+      @animation="rearrange"
+    />
+    <TGrid
+      @isOpen={{false}}
+      @animation="rearrange"
+    />
   ```
 
   @class TGridComponent

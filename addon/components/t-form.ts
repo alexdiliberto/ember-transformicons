@@ -9,13 +9,15 @@ interface IArgs {
 /**
   Form Transformicon
 
-  PUBLIC
+  **PUBLIC**
     * `isSearching` boolean - Set initial searching state.
 
   ```hbs
-    {{! These are functionally equivalent}}
+    {{! These are equivalent }}
     <TForm />
-    <TForm @isSearching={{false}} />
+    <TForm
+      @isSearching={{false}}
+    />
   ```
 
   @class TFormComponent

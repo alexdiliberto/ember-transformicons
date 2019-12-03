@@ -22,16 +22,21 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 /**
   Menu Transformicon
 
-  PUBLIC
+  **PUBLIC**
     * `animation` string - Set the menu animation type.
       * types - `butterfly` | `minus` | `x-cross` | `arrow-up` | `arrow-360-left` | `arrow-left`
     * `isOpen` boolean - Set initial open menu state.
 
   ```hbs
-    {{! These are functionally equivalent}}
+    {{! These are equivalent }}
     <TMenu />
-    <TMenu @animation='butterfly' />
-    <TMenu @isOpen={{false}} @animation='butterfly' />
+    <TMenu
+      @animation="butterfly"
+    />
+    <TMenu
+      @isOpen={{false}}
+      @animation="butterfly"
+    />
   ```
 
   @class TMenuComponent

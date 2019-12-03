@@ -9,13 +9,15 @@ interface IArgs {
 /**
   Video Transformicon
 
-  PUBLIC
+  **PUBLIC**
     * `isPlaying` boolean - Set initial playing state.
 
   ```hbs
-    {{! These are functionally equivalent}}
+    {{! These are equivalent }}
     <TVideo />
-    <TVideo @isPlaying={{false}} />
+    <TVideo
+      @isPlaying={{false}}
+    />
   ```
 
   @class TVideoComponent

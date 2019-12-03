@@ -10,13 +10,15 @@ interface IArgs {
 /**
   Mail Transformicon
 
-  PUBLIC
+  **PUBLIC**
     * `isOpen` boolean - Set initial open mail state.
 
   ```hbs
-    {{! These are functionally equivalent}}
+    {{! These are equivalent }}
     <TMail />
-    <TMail @isOpen={{true}} />
+    <TMail
+      @isOpen={{true}}
+    />
   ```
 
   @class TMailComponent

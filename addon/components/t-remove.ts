@@ -21,16 +21,21 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
 /**
   Remove Transformicon
 
-  PUBLIC
+  **PUBLIC**
     * `animation` string - Set the menu animation type.
       * types - `check` | `chevron-left` | `chevron-right` | `chevron-down` | `chevron-up`
     * `isRemoved` boolean - Set initial open removed state.
 
   ```hbs
-    {{! These are functionally equivalent}}
+    {{! These are equivalent }}
     <TRemove />
-    <TRemove @animation='check' />
-    <TRemove @isRemoved={{false}} @animation='check' />
+    <TRemove
+      @animation="check"
+    />
+    <TRemove
+      @isRemoved={{false}}
+      @animation="check"
+    />
   ```
 
   @class TRemoveComponent

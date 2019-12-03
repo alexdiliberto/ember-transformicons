@@ -12,5 +12,6 @@
     "qunit",
     "transformicon",
     "transformicons"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
