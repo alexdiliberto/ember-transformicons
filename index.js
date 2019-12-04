@@ -4,20 +4,27 @@ module.exports = {
   name: require('./package').name,
 
   included(app) {
-    // Old syntax necessary to support Node v4 Ember apps
-    // SEE: https://github.com/ember-cli/ember-cli/commit/1c1a2159c02e8e2c467f5f62f86db57c519261af
-    /* eslint-disable prefer-spread */
-    this._super.apply(this, arguments);
+    this._super.included.apply(this, arguments);
 
-    // see: https://github.com/ember-cli/ember-cli/issues/3718
-    if (typeof app.import !== 'function' && app.app) {
-      app = app.app;
-    }
+    app = this._findApp(this);
 
     app.import('vendor/transformicons/transformicons.css');
   },
 
   isDevelopingAddon() {
     return false;
+  },
+
+  _findApp(addon) {
+    let current = addon;
+    let app;
+
+    // Keep iterating upward until we don't have a grandparent.
+    // Has to do this grandparent check because at some point we hit the project.
+    do {
+      app = current.app || app;
+    } while (current.parent.parent && (current = current.parent));
+
+    return app;
   }
 };
