@@ -13,11 +13,7 @@ interface IArgs {
     * `isPlaying` boolean - Set initial playing state.
 
   ```hbs
-    {{! These are equivalent }}
     <TVideo />
-    <TVideo
-      @isPlaying={{false}}
-    />
   ```
 
   @class TVideoComponent

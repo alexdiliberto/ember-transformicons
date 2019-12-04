@@ -13,11 +13,7 @@ interface IArgs {
     * `isSearching` boolean - Set initial searching state.
 
   ```hbs
-    {{! These are equivalent }}
     <TForm />
-    <TForm
-      @isSearching={{false}}
-    />
   ```
 
   @class TFormComponent

@@ -28,15 +28,7 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
     * `isOpen` boolean - Set initial open menu state.
 
   ```hbs
-    {{! These are equivalent }}
     <TMenu />
-    <TMenu
-      @animation="butterfly"
-    />
-    <TMenu
-      @isOpen={{false}}
-      @animation="butterfly"
-    />
   ```
 
   @class TMenuComponent

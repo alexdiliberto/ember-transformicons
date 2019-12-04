@@ -24,15 +24,7 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
     * `isOpen` boolean - Set initial open grid state.
 
   ```hbs
-    {{! These are equivalent }}
     <TGrid />
-    <TGrid
-      @animation="rearrange"
-    />
-    <TGrid
-      @isOpen={{false}}
-      @animation="rearrange"
-    />
   ```
 
   @class TGridComponent

@@ -27,15 +27,7 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
     * `isRemoved` boolean - Set initial open removed state.
 
   ```hbs
-    {{! These are equivalent }}
     <TRemove />
-    <TRemove
-      @animation="check"
-    />
-    <TRemove
-      @isRemoved={{false}}
-      @animation="check"
-    />
   ```
 
   @class TRemoveComponent

@@ -24,15 +24,7 @@ type Animation = Exclude<keyof IAnimationTypeTable, 'default'>;
     * `isAdded` boolean - Set initial open added state.
 
   ```hbs
-  {{! These are equivalent }}
-  <TAdd />
-  <TAdd
-    @animation="minus"
-  />
-  <TAdd
-    @isAdded={{false}}
-    @animation="minus"
-  />
+    <TAdd />
   ```
 
   @class TAddComponent

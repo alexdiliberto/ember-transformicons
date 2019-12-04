@@ -14,11 +14,7 @@ interface IArgs {
     * `isOpen` boolean - Set initial open mail state.
 
   ```hbs
-    {{! These are equivalent }}
     <TMail />
-    <TMail
-      @isOpen={{true}}
-    />
   ```
 
   @class TMailComponent
