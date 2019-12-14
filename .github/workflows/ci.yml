@@ -18,8 +18,8 @@ env:
   CI: true
 
 jobs:
-  test-locked-deps:
-    name: Locked Dependencies
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -34,11 +34,9 @@ jobs:
         run: yarn lint:hbs
       - name: Lint JS
         run: yarn lint:js
-      - name: Browser Tests
-        run: yarn test
 
-  test-floating-deps:
-    name: Floating Dependencies
+  test-locked-deps:
+    name: Locked Dependencies
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -48,6 +46,22 @@ jobs:
         with:
           node-version: 8
       - name: Install Dependencies
+        run: yarn install --non-interactive
+      - name: Browser Tests
+        run: yarn test
+
+  test-floating-deps:
+    name: Floating Dependencies
+    runs-on: ubuntu-latest
+    needs: [lint, test-locked-deps]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8
+      - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
       - name: Browser Tests
         run: yarn test
@@ -55,7 +69,7 @@ jobs:
   test-ember-try:
     name: Ember Try
     runs-on: ubuntu-latest
-    needs: [test-locked-deps, test-floating-deps]
+    needs: [lint, test-locked-deps]
     strategy:
       matrix:
         scenario:
@@ -73,7 +87,7 @@ jobs:
           node-version: 8
       - name: Install Dependencies
         run: yarn install --no-lockfile --non-interactive
-      - name: Scenario
+      - name: "Scenario: ${{ matrix.scenario }}"
         run: yarn ember try:one ${{ matrix.scenario }}
 
   # deploy-prod:
@@ -108,4 +122,4 @@ jobs:
   #     - name: Publish
   #       run: npm publish --dry-run
   #       env:
-  #         NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
