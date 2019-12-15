@@ -18,6 +18,34 @@ env:
   CI: true
 
 jobs:
+  context-dump:
+    name: Context Dump
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo "$JOB_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+      - name: Dump strategy context
+        env:
+          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+        run: echo "$STRATEGY_CONTEXT"
+      - name: Test conditional logic
+        run: |
+          echo "${{ github }}"
+          echo "${{ github.ref }}"
+          echo "${{ github.event_name }}"
+          echo "${{ github.ref == 'master' && github.event_name == 'push'}}"
+
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
