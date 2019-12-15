@@ -43,7 +43,7 @@ jobs:
           echo "${{ github }}"
           echo "${{ github.ref }}"
           echo "${{ github.event_name }}"
-          echo "${{ github.ref == 'master' && github.event_name == 'push'}}"
+          echo "${{ github.ref == 'refs/heads/master' && github.event_name == 'push'}}"
 
 
   lint:
@@ -123,7 +123,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test-floating-deps, test-ember-try]
     # if: (branch = master OR tag IS present) AND type = push
-    if: github.ref == 'master' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
