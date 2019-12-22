@@ -38,11 +38,16 @@ jobs:
         env:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
         run: echo "$STRATEGY_CONTEXT"
+      - name: Set ENV
+        run: |
+          echo "::set-env name=VERSION_PATH::${GITHUB_REF##*/}"
       - name: Test conditional logic
         run: |
-          echo "${{ github }}"
           echo "${{ github.ref }}"
           echo "${{ github.event_name }}"
+          echo ${GITHUB_REF##*/}
+          echo $VERSION_PATH
+          echo "$VERSION_PATH"
           echo "${{ github.ref == 'refs/heads/master' && github.event_name == 'push'}}"
 
 
@@ -118,25 +123,27 @@ jobs:
       - name: "Scenario: ${{ matrix.scenario }}"
         run: yarn ember try:one ${{ matrix.scenario }}
 
-  # Disabling `deploy-prod` step until the following issue is fixed:
   # https://github.com/ember-learn/ember-cli-addon-docs/issues/437
-  # deploy-prod:
-  #   name: Production Deploy
-  #   runs-on: ubuntu-latest
-  #   needs: [test-floating-deps, test-ember-try]
-  #   # if: (branch = master OR tag IS present) AND type = push
-  #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-  #   steps:
-  #     - name: Checkout Code
-  #       uses: actions/checkout@v1
-  #     - name: Install Node
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 8
-  #     - name: Install Dependencies
-  #       run: yarn install --no-lockfile --non-interactive
-  #     - name: Deploy
-  #       run: yarn ember deploy production
+  deploy-prod:
+    name: Production Deploy
+    runs-on: ubuntu-latest
+    needs: [test-floating-deps, test-ember-try]
+    # if: (branch = master OR tag IS present) AND type = push
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8
+      - name: Install Dependencies
+        run: yarn install --no-lockfile --non-interactive
+      - name: Set ENV
+        # 'master' or 'v1.2.3'
+        run: echo "::set-env name=ADDON_DOCS_VERSION_PATH::${GITHUB_REF##*/}"
+      - name: Deploy
+        run: yarn ember deploy production
 
   # publish-npm:
   #   name: NPM Publish
