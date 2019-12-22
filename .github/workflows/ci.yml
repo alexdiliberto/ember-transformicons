@@ -18,37 +18,6 @@ env:
   CI: true
 
 jobs:
-  context-dump:
-    name: Context Dump
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJson(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJson(runner) }}
-        run: echo "$RUNNER_CONTEXT"
-      - name: Dump strategy context
-        env:
-          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
-        run: echo "$STRATEGY_CONTEXT"
-      - name: Set ENV
-        run: |
-          echo "::set-env name=VERSION_PATH::${GITHUB_REF##*/}"
-      - name: Test conditional logic
-        run: |
-          echo "${{ github.ref }}"
-          echo "${{ github.event_name }}"
-          echo ${GITHUB_REF##*/}
-          echo "$VERSION_PATH"
-          echo "${{ github.ref == 'refs/heads/master' && github.event_name == 'push'}}"
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -153,6 +122,7 @@ jobs:
   #   name: NPM Publish
   #   runs-on: ubuntu-latest
   #   needs: [deploy-prod]
+  #   if: success()
   #   steps:
   #     - name: Checkout Code
   #       uses: actions/checkout@v1
