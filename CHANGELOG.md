@@ -1,5 +1,3 @@
-* adding context dump for additional ci logging (aa787a9)
-
 ## v6.0.0 (2019-12-22)
 
 #### :boom: Breaking Change
