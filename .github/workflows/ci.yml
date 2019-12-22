@@ -46,10 +46,8 @@ jobs:
           echo "${{ github.ref }}"
           echo "${{ github.event_name }}"
           echo ${GITHUB_REF##*/}
-          echo $VERSION_PATH
           echo "$VERSION_PATH"
           echo "${{ github.ref == 'refs/heads/master' && github.event_name == 'push'}}"
-
 
   lint:
     name: Lint
@@ -106,11 +104,14 @@ jobs:
     strategy:
       matrix:
         scenario:
-         - ember-3.13
-         - ember-release
-         - ember-beta
-         - ember-canary
-         - ember-default-with-jquery
+          - ember-3.13
+          - ember-release
+          - ember-beta
+          - ember-canary
+          - ember-default-with-jquery
+        include:
+          - scenario: ember-canary
+            continue-on-error: true
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
@@ -122,6 +123,7 @@ jobs:
         run: yarn install --no-lockfile --non-interactive
       - name: "Scenario: ${{ matrix.scenario }}"
         run: yarn ember try:one ${{ matrix.scenario }}
+        continue-on-error: ${{ matrix['continue-on-error'] == true }}
 
   # https://github.com/ember-learn/ember-cli-addon-docs/issues/437
   deploy-prod:
@@ -129,7 +131,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test-floating-deps, test-ember-try]
     # if: (branch = master OR tag IS present) AND type = push
-    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    if: success() && github.ref == 'refs/heads/master' && github.event_name == 'push'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v1
@@ -143,6 +145,8 @@ jobs:
         # 'master' or 'v1.2.3'
         run: echo "::set-env name=ADDON_DOCS_VERSION_PATH::${GITHUB_REF##*/}"
       - name: Deploy
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: yarn ember deploy production
 
   # publish-npm:
