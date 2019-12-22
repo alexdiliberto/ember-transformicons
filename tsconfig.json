@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "module": "es6",
     "experimentalDecorators": true,
+    "skipLibCheck": true, // https://github.com/typed-ember/ember-cli-typescript/issues/1029
     "paths": {
       "dummy/tests/*": [
         "tests/*"
