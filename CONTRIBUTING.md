@@ -27,24 +27,30 @@ Any help is welcome and appreciated! :+1: :tada:
 * `ember serve`
 * Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
+## Deploy
+
+Deploys are automated using Github Actions. If you need to manually deploy, run the following command:
+
+```sh
+yarn ember deploy production
+```
+
 ## Release
+
+When reviewing merged PR's the labels to be used are:
+
+* breaking - Used when the PR is considered a breaking change.
+* enhancement - Used when the PR adds a new feature or enhancement.
+* bug - Used when the PR fixes a bug included in a previous release.
+* documentation - Used when the PR adds or updates documentation.
+* internal - Used for internal changes that still require a mention in the
+  changelog/release notes.
 
 Ready to draft a new release:
 
 ```sh
-npm version <major | minor | patch>
-# package.json scripts automatically update CHANGELOG.md and git push
-# Draft release on Github, generate CHANGELOG with only the commits included in the latest tag using this command:
-git-chglog $(git describe --tags $(git rev-list --tags --max-count=1))
-# Validate passing tests on Travis and Travis will automatically deploy (`ember deploy`) and publish (`npm publish`)
-```
-
-## Deploy
-
-Deploys are automated using Travis CI. If you need to manually deploy, run the following command:
-
-```sh
-ember deploy production
+yarn install
+yarn release
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
