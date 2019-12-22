@@ -1,3 +1,28 @@
+## v6.0.0 (2019-12-22)
+
+#### :boom: Breaking Change
+* [#391](https://github.com/alexdiliberto/ember-transformicons/pull/391) drop node 8 support ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### :memo: Documentation
+* [#392](https://github.com/alexdiliberto/ember-transformicons/pull/392) CONTRIBUTING.md release documentation updates ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### :house: Internal
+* [#318](https://github.com/alexdiliberto/ember-transformicons/pull/318) build(deps-dev): bump @alexdiliberto/eslint-config from 3.1.0 to 4.1.1 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+* [#390](https://github.com/alexdiliberto/ember-transformicons/pull/390) adding lerna-changelog and release-it ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#389](https://github.com/alexdiliberto/ember-transformicons/pull/389) update dependabot default labels: depdendencies & internal ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#383](https://github.com/alexdiliberto/ember-transformicons/pull/383) build(deps-dev): bump ember-resolver from 6.0.1 to 7.0.0 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+* [#388](https://github.com/alexdiliberto/ember-transformicons/pull/388) fix `ember ts:precompile` by adding `skipLibCheck` to tsconfig ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#387](https://github.com/alexdiliberto/ember-transformicons/pull/387) enable Percy snapshots on CI ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#386](https://github.com/alexdiliberto/ember-transformicons/pull/386) ember try continue-on-error for canary and add `DEPLOY_KEY` ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#385](https://github.com/alexdiliberto/ember-transformicons/pull/385) update ci.yml deploy-prod step ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#377](https://github.com/alexdiliberto/ember-transformicons/pull/377) Actions dump context vars and test conditional logic ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#375](https://github.com/alexdiliberto/ember-transformicons/pull/375) Github Actions ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#374](https://github.com/alexdiliberto/ember-transformicons/pull/374) build(package.json): first batch of updates ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### Committers: 2
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 # ember-transformicons CHANGELOG
 
 
