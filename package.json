@@ -29,18 +29,17 @@
     "build:prod": "yarn ember build -prod",
     "build:prod:stats": "CONCAT_STATS=true yarn build:prod",
     "clean": "rm -rf dist tmp node_modules concat-stats-for",
-    "changelog": "git-chglog -o CHANGELOG.md",
+    "changelog": "lerna-changelog",
     "lint:hbs": "ember-template-lint .",
     "lint:types": "tsc --skipLibCheck",
     "lint:js": "yarn eslint . --ext .ts --ext .js",
     "lint:all": "yarn lint:hbs && yarn lint:js",
+    "release": "release-it",
     "start": "yarn ember serve",
     "start:inspect": "node --inspect-brk yarn start",
     "test": "yarn ember test",
     "test:all": "yarn ember try:each",
     "test:iterate": "ember exam:iterate 10",
-    "version": "git-chglog --next-tag v$npm_package_version -o CHANGELOG.md && git add CHANGELOG.md",
-    "postversion": "git push --follow-tags && rm -rf tmp dist",
     "prepublishOnly": "ember ts:precompile",
     "postpublish": "ember ts:clean"
   },
@@ -98,9 +97,12 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-qunit": "^4.0.0",
+    "lerna-changelog": "^1.0.0",
     "loader.js": "4.7.0",
     "prettier": "^1.18.2",
     "qunit-dom": "^0.9.2",
+    "release-it": "^12.4.3",
+    "release-it-lerna-changelog": "^1.0.3",
     "typescript": "^3.7.3"
   },
   "engines": {
@@ -114,6 +116,22 @@
     "demoURL": "https://alexdiliberto.com/ember-transformicons",
     "versionCompatibility": {
       "ember": ">=3.13"
+    }
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": true
     }
   },
   "volta": {
