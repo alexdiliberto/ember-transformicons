@@ -48,6 +48,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install --non-interactive
       - name: Browser Tests
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: yarn test
 
   test-floating-deps:
