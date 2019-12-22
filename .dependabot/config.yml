@@ -13,3 +13,6 @@ update_configs:
     ignored_updates:
       - match:
           dependency_name: "ember-cli"
+    default_labels:
+      - "dependencies"
+      - "internal"
