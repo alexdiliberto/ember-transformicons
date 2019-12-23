@@ -1,3 +1,19 @@
+## v6.0.3 (2019-12-23)
+
+#### :memo: Documentation
+* [#399](https://github.com/alexdiliberto/ember-transformicons/pull/399) fix github actions status readme badge ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#393](https://github.com/alexdiliberto/ember-transformicons/pull/393) update changelog history to use lerna-changelog format ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### :house: Internal
+* [#398](https://github.com/alexdiliberto/ember-transformicons/pull/398) actions/cache for CI ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#397](https://github.com/alexdiliberto/ember-transformicons/pull/397) ember-cli-update to 3.15.1 ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#396](https://github.com/alexdiliberto/ember-transformicons/pull/396) remove .jsbeautifyrc ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#395](https://github.com/alexdiliberto/ember-transformicons/pull/395) remove travis ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#394](https://github.com/alexdiliberto/ember-transformicons/pull/394) remove chglog ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### Committers: 1
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+
 ## v6.0.0 (2019-12-22)
 
 #### :boom: Breaking Change
@@ -23,7 +39,6 @@
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 - [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
 
-
 ## v5.0.2 (2019-12-01)
 
 #### :rocket: Enhancement
@@ -34,7 +49,6 @@
 
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
-
 
 ## v5.0.0 (2019-11-29)
 
@@ -49,7 +63,6 @@
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 - [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
 
-
 ## v4.0.2 (2019-10-19)
 
 #### :house: Internal
@@ -58,7 +71,6 @@
 #### Committers: 2
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 - [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
-
 
 ## v4.0.0 (2019-07-29)
 
@@ -71,7 +83,6 @@
 #### Committers: 2
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 - [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
-
 
 ## v2.3.0 (2019-02-23)
 
@@ -89,7 +100,6 @@
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 
-
 ## v2.2.0 (2018-09-03)
 
 #### :rocket: Enhancement
@@ -102,7 +112,6 @@
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 
-
 ## v2.1.0 (2018-07-21)
 
 #### :memo: Documentation
@@ -110,7 +119,6 @@
 
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
-
 
 ## v2.0.3 (2018-05-03)
 
@@ -124,7 +132,6 @@
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 
-
 ## v2.0.1 (2017-10-09)
 
 #### :house: Internal
@@ -135,7 +142,6 @@
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 
-
 ## v2.0.0 (2017-09-03)
 
 #### :boom: Breaking Change
@@ -143,7 +149,6 @@
 
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
-
 
 ## v1.1.0 (2017-08-24)
 
@@ -157,7 +162,6 @@
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
 
-
 ## v1.0.3 (2017-07-10)
 
 #### :house: Internal
@@ -167,7 +171,6 @@
 
 #### Committers: 1
 - Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
-
 
 ## v1.0.2 (2017-06-17)
 
