@@ -1,4 +1,5 @@
-# ember-transformicons
+ember-transformicons
+==============================================================================
 
 [![Build Status](https://github.com/alexdiliberto/ember-transformicons/actions)](https://github.com/alexdiliberto/ember-transformicons/workflows/CI/badge.svg)
 [![NPM Version](https://badge.fury.io/js/ember-transformicons.svg)](https://www.npmjs.com/package/ember-transformicons)
@@ -7,18 +8,20 @@
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/ember-transformicons)](https://bundlephobia.com/result?p=ember-transformicons)
 [![Code Climate Maintainability Score](https://api.codeclimate.com/v1/badges/01108fee4bb685fa23dd/maintainability)](https://codeclimate.com/github/alexdiliberto/ember-transformicons/maintainability)
 
-[Transformicons](http://www.transformicons.com/) for Ember
+[Transformicons](http://www.transformicons.com/) for Ember applications
 
 [View the docs here](https://alexdiliberto.com/ember-transformicons/)
 
 ![ember-transformicons demo gif][demo-gif]
+
 
 Compatibility
 ------------------------------------------------------------------------------
 
 * Ember.js v3.13 or above
 * Ember CLI v2.13 or above
-* Node.js v8 or above
+* Node.js v10 or above
+
 
 Installation
 ------------------------------------------------------------------------------
