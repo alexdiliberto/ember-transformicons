@@ -1,6 +1,6 @@
 # ember-transformicons
 
-[![Build Status](https://travis-ci.org/alexdiliberto/ember-transformicons.svg?branch=master)](https://travis-ci.org/alexdiliberto/ember-transformicons)
+[![Build Status](https://github.com/alexdiliberto/ember-transformicons/actions)](https://github.com/alexdiliberto/ember-transformicons/workflows/CI/badge.svg)
 [![NPM Version](https://badge.fury.io/js/ember-transformicons.svg)](https://www.npmjs.com/package/ember-transformicons)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-transformicons.svg)](http://emberobserver.com/addons/ember-transformicons)
 
