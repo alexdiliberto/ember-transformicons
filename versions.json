@@ -140,5 +140,11 @@
     "name": "v6.0.3",
     "sha": "6e02d74e3787f87693a44381ccfbc642253a4c8b",
     "tag": "v6.0.3"
+  },
+  "updates": {
+    "path": "versions/updates",
+    "name": "updates",
+    "sha": "a5d44c44c7301697cd1778dc4a1caf4a547d5dfe",
+    "tag": null
   }
 }
