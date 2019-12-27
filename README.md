@@ -8,9 +8,9 @@ ember-transformicons
 [![Bundlephobia](https://badgen.net/bundlephobia/minzip/ember-transformicons)](https://bundlephobia.com/result?p=ember-transformicons)
 [![Code Climate Maintainability Score](https://api.codeclimate.com/v1/badges/01108fee4bb685fa23dd/maintainability)](https://codeclimate.com/github/alexdiliberto/ember-transformicons/maintainability)
 
-[Transformicons](http://www.transformicons.com/) for Ember applications
+Transformicons for Ember applications
 
-[View the docs here](https://alexdiliberto.com/ember-transformicons/)
+[Docs](https://alexdiliberto.com/ember-transformicons/)
 
 ![ember-transformicons demo gif][demo-gif]
 
