@@ -10,9 +10,6 @@ on:
     # always run CI for tags
     tags:
       - '*'
-  # early issue detection: run CI weekly on Sundays
-  schedule:
-  - cron:  '0 6 * * 0'
 
 env:
   CI: true
