@@ -5587,12 +5587,9 @@ e=t.ok?yield t.json():{[n]:Ember.assign({},this.get("currentVersion"))},this.set
 return r.truncatedSha=r.sha.substr(0,5),r.key=t,r}))})),redirectTo(e){window.location.href=`${this.get("root")}${e.path}`},loadAvailableVersions(){return this.get("_loadAvailableVersions").perform()},root:Ember.computed("currentVersion.path",(function(){return Ember.getOwner(this).resolveRegistration("config:environment").rootURL.replace(`/${this.get("currentVersion.path")}/`,"/")})),currentVersion:Ember.computed((function(){let e=Ember.getOwner(this).resolveRegistration("config:environment")["ember-cli-addon-docs"],t=e.deployVersion
 return"ADDON_DOCS_DEPLOY_VERSION"===t&&(t={key:n,name:n,tag:e.projectTag,path:"",sha:"abcde"}),t}))})
 e.default=i})),define("ember-cli-addon-docs/styles/tailwind.config",[],(function(){"use strict"
-function e(e,t){var r=Object.keys(e)
-if(Object.getOwnPropertySymbols){var n=Object.getOwnPropertySymbols(e)
-t&&(n=n.filter((function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable}))),r.push.apply(r,n)}return r}function t(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}let r={xxs:"12px",xs:"14px",sm:"15px",base:"16px","large-1":"18px","large-2":"20px","large-3":"22px","large-4":"24px","large-5":"30px","large-6":"36px","large-7":"42px","jumbo-1":"60px","jumbo-2":"74px","jumbo-3":"86px"},n=Object.keys(r).reduce((e,t)=>{let n=`${+r[t].replace("px","")/16}rem`
-return e[t]=n,e},{})
-module.exports={prefix:"docs-",theme:{colors:{transparent:"transparent",inherit:"inherit",black:"#22292f","grey-darkest":"#3d4852","grey-darker":"#606f7b","grey-dark":"#8795a1",grey:"#b8c2cc","grey-light":"#dae1e7","grey-lighter":"#f1f5f8","grey-lightest":"#f8fafc",white:"white",yellow:"#ffed4a","code-base":"#282c34","brand-var":"var(--brand-primary, #E04E39)"},screens:{sm:"576px",md:"768px",lg:"992px",xl:"1200px"},fontFamily:{title:['"Crimson Text"',"serif"],sans:["system-ui","BlinkMacSystemFont","-apple-system","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","sans-serif"],serif:["Constantia","Lucida Bright","Lucidabright","Lucida Serif","Lucida","DejaVu Serif","Bitstream Vera Serif","Liberation Serif","Georgia","serif"],mono:["Menlo","Monaco","Consolas","Liberation Mono","Courier New","monospace"]},fontSize:n,fontWeight:{hairline:100,thin:200,light:300,normal:400,medium:500,semibold:600,bold:700,extrabold:800,black:900},lineHeight:{none:1,tight:1.25,small:1.45,normal:1.625,loose:2},letterSpacing:{tight:"-0.2px",normal:"0",wide:"0.05em"},textColor:e=>e("colors"),backgroundColor:e=>e("colors"),backgroundSize:{auto:"auto",cover:"cover",contain:"contain"},borderWidth:{default:"1px",0:"0",2:"2px",4:"4px",8:"8px"},borderColor:r=>(function(r){for(var n=1;n<arguments.length;n++){var i=null!=arguments[n]?arguments[n]:{}
-n%2?e(Object(i),!0).forEach((function(e){t(r,e,i[e])})):Object.getOwnPropertyDescriptors?Object.defineProperties(r,Object.getOwnPropertyDescriptors(i)):e(Object(i)).forEach((function(e){Object.defineProperty(r,e,Object.getOwnPropertyDescriptor(i,e))}))}return r})({default:r("colors.grey-light")},r("colors")),borderRadius:{none:"0",sm:".125rem",default:".25rem",lg:".5rem",full:"9999px"},width:{"site-container":"1400px",auto:"auto",px:"1px",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",6:"1.5rem",8:"2rem",10:"2.5rem",12:"3rem",16:"4rem",24:"6rem",32:"8rem",48:"12rem",56:"14rem",64:"16rem",72:"18rem",76:"19rem","1/2":"50%","1/3":"33.33333%","2/3":"66.66667%","1/4":"25%","3/4":"75%","1/5":"20%","2/5":"40%","3/5":"60%","4/5":"80%","1/6":"16.66667%","5/6":"83.33333%","90%":"90%",full:"100%",screen:"100vw"},height:{auto:"auto",px:"1px",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",6:"1.5rem",8:"2rem",10:"2.5rem",12:"3rem",16:"4rem",24:"6rem",32:"8rem",48:"12rem",64:"16rem",full:"100%",screen:"100vh"},minWidth:{0:"0",full:"100%"},minHeight:{0:"0",full:"100%",screen:"100vh"},maxWidth:{"site-container":"1400px","measure-byline":"12rem",none:"none",xxs:"17rem",xs:"20rem",sm:"30rem",md:"40rem",lg:"50rem",xl:"60rem","2xl":"70rem","3xl":"80rem","4xl":"90rem","5xl":"100rem",full:"100%","2/3":"66.67%"},maxHeight:{full:"100%",screen:"100vh"},padding:{px:"1px",0:"0",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",5:"1.25rem",6:"1.5rem",8:"2rem",16:"4rem",20:"5rem"},margin:{auto:"auto",px:"1px",0:"0",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",6:"1.5rem",8:"2rem",12:"3rem",16:"4rem",20:"5rem","-px":"-1px","-2px":"-2px","-0":"-0","-1":"-0.25rem","-2":"-0.5rem","-3":"-0.75rem","-4":"-1rem","-6":"-1.5rem","-8":"-2rem","-16":"-4rem","-20":"-5rem"},boxShadow:{sm:"0 1px 1px 0 rgba(116, 129, 141, 0.1)",default:"0 2px 4px 0 rgba(0,0,0,0.10)",md:"0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)",lg:"0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",inner:"inset 0 2px 4px 0 rgba(0,0,0,0.06)",none:"none"},zIndex:{auto:"auto",0:0,10:10,20:20,30:30,40:40,50:50},fill:{current:"currentColor"},stroke:{current:"currentColor"}},variants:{appearance:["responsive"],backgroundAttachment:["responsive"],backgroundColor:["responsive","hover","focus"],backgroundPosition:["responsive"],backgroundRepeat:["responsive"],backgroundSize:["responsive"],borderColor:["responsive","hover"],borderRadius:["responsive"],borderStyle:["responsive"],borderWidth:["responsive"],cursor:["responsive"],display:["responsive"],flexDirection:["responsive"],flexWrap:["responsive"],alignItems:["responsive"],alignSelf:["responsive"],justifyContent:["responsive"],alignContent:["responsive"],flex:["responsive"],flexGrow:["responsive"],flexShrink:["responsive"],float:["responsive"],fonts:["responsive"],fontWeight:["responsive","hover"],height:["responsive"],lineHeight:["responsive"],listStylePosition:["responsive"],listStyleType:["responsive"],margin:["responsive"],maxHeight:["responsive"],maxWidth:["responsive"],minHeight:["responsive"],minWidth:["responsive"],negativeMargin:["responsive"],opacity:["responsive","hover","group-hover"],overflow:["responsive"],padding:["responsive"],pointerEvents:["responsive"],position:["responsive"],inset:["responsive"],resize:["responsive"],boxShadow:["responsive","hover"],fill:[],stroke:[],textAlign:["responsive"],textColor:["responsive","hover"],fontSize:["responsive"],fontStyle:["responsive","hover"],fontSmoothing:["responsive","hover"],textDecoration:["responsive","hover"],textTransform:["responsive","hover"],letterSpacing:["responsive"],userSelect:["responsive"],verticalAlign:["responsive"],visibility:["responsive"],whitespace:["responsive"],wordBreak:["responsive"],width:["responsive"],zIndex:["responsive"]},plugins:[],corePlugins:{container:!1}}})),define("ember-cli-addon-docs/transitions/fade-and-drop",["exports","liquid-fire"],(function(e,t){"use strict"
+let e={xxs:"12px",xs:"14px",sm:"15px",base:"16px","large-1":"18px","large-2":"20px","large-3":"22px","large-4":"24px","large-5":"30px","large-6":"36px","large-7":"42px","jumbo-1":"60px","jumbo-2":"74px","jumbo-3":"86px"},t=Object.keys(e).reduce((t,r)=>{let n=`${+e[r].replace("px","")/16}rem`
+return t[r]=n,t},{})
+module.exports={prefix:"docs-",theme:{colors:{transparent:"transparent",inherit:"inherit",black:"#22292f","grey-darkest":"#3d4852","grey-darker":"#606f7b","grey-dark":"#8795a1",grey:"#b8c2cc","grey-light":"#dae1e7","grey-lighter":"#f1f5f8","grey-lightest":"#f8fafc",white:"white",yellow:"#ffed4a","code-base":"#282c34","brand-var":"var(--brand-primary, #E04E39)"},screens:{sm:"576px",md:"768px",lg:"992px",xl:"1200px"},fontFamily:{title:['"Crimson Text"',"serif"],sans:["system-ui","BlinkMacSystemFont","-apple-system","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","sans-serif"],serif:["Constantia","Lucida Bright","Lucidabright","Lucida Serif","Lucida","DejaVu Serif","Bitstream Vera Serif","Liberation Serif","Georgia","serif"],mono:["Menlo","Monaco","Consolas","Liberation Mono","Courier New","monospace"]},fontSize:t,fontWeight:{hairline:100,thin:200,light:300,normal:400,medium:500,semibold:600,bold:700,extrabold:800,black:900},lineHeight:{none:1,tight:1.25,small:1.45,normal:1.625,loose:2},letterSpacing:{tight:"-0.2px",normal:"0",wide:"0.05em"},textColor:e=>e("colors"),backgroundColor:e=>e("colors"),backgroundSize:{auto:"auto",cover:"cover",contain:"contain"},borderWidth:{default:"1px",0:"0",2:"2px",4:"4px",8:"8px"},borderColor:e=>({default:e("colors.grey-light"),...e("colors")}),borderRadius:{none:"0",sm:".125rem",default:".25rem",lg:".5rem",full:"9999px"},width:{"site-container":"1400px",auto:"auto",px:"1px",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",6:"1.5rem",8:"2rem",10:"2.5rem",12:"3rem",16:"4rem",24:"6rem",32:"8rem",48:"12rem",56:"14rem",64:"16rem",72:"18rem",76:"19rem","1/2":"50%","1/3":"33.33333%","2/3":"66.66667%","1/4":"25%","3/4":"75%","1/5":"20%","2/5":"40%","3/5":"60%","4/5":"80%","1/6":"16.66667%","5/6":"83.33333%","90%":"90%",full:"100%",screen:"100vw"},height:{auto:"auto",px:"1px",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",6:"1.5rem",8:"2rem",10:"2.5rem",12:"3rem",16:"4rem",24:"6rem",32:"8rem",48:"12rem",64:"16rem",full:"100%",screen:"100vh"},minWidth:{0:"0",full:"100%"},minHeight:{0:"0",full:"100%",screen:"100vh"},maxWidth:{"site-container":"1400px","measure-byline":"12rem",none:"none",xxs:"17rem",xs:"20rem",sm:"30rem",md:"40rem",lg:"50rem",xl:"60rem","2xl":"70rem","3xl":"80rem","4xl":"90rem","5xl":"100rem",full:"100%","2/3":"66.67%"},maxHeight:{full:"100%",screen:"100vh"},padding:{px:"1px",0:"0",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",5:"1.25rem",6:"1.5rem",8:"2rem",16:"4rem",20:"5rem"},margin:{auto:"auto",px:"1px",0:"0",1:"0.25rem",2:"0.5rem",3:"0.75rem",4:"1rem",6:"1.5rem",8:"2rem",12:"3rem",16:"4rem",20:"5rem","-px":"-1px","-2px":"-2px","-0":"-0","-1":"-0.25rem","-2":"-0.5rem","-3":"-0.75rem","-4":"-1rem","-6":"-1.5rem","-8":"-2rem","-16":"-4rem","-20":"-5rem"},boxShadow:{sm:"0 1px 1px 0 rgba(116, 129, 141, 0.1)",default:"0 2px 4px 0 rgba(0,0,0,0.10)",md:"0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)",lg:"0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",inner:"inset 0 2px 4px 0 rgba(0,0,0,0.06)",none:"none"},zIndex:{auto:"auto",0:0,10:10,20:20,30:30,40:40,50:50},fill:{current:"currentColor"},stroke:{current:"currentColor"}},variants:{appearance:["responsive"],backgroundAttachment:["responsive"],backgroundColor:["responsive","hover","focus"],backgroundPosition:["responsive"],backgroundRepeat:["responsive"],backgroundSize:["responsive"],borderColor:["responsive","hover"],borderRadius:["responsive"],borderStyle:["responsive"],borderWidth:["responsive"],cursor:["responsive"],display:["responsive"],flexDirection:["responsive"],flexWrap:["responsive"],alignItems:["responsive"],alignSelf:["responsive"],justifyContent:["responsive"],alignContent:["responsive"],flex:["responsive"],flexGrow:["responsive"],flexShrink:["responsive"],float:["responsive"],fonts:["responsive"],fontWeight:["responsive","hover"],height:["responsive"],lineHeight:["responsive"],listStylePosition:["responsive"],listStyleType:["responsive"],margin:["responsive"],maxHeight:["responsive"],maxWidth:["responsive"],minHeight:["responsive"],minWidth:["responsive"],negativeMargin:["responsive"],opacity:["responsive","hover","group-hover"],overflow:["responsive"],padding:["responsive"],pointerEvents:["responsive"],position:["responsive"],inset:["responsive"],resize:["responsive"],boxShadow:["responsive","hover"],fill:[],stroke:[],textAlign:["responsive"],textColor:["responsive","hover"],fontSize:["responsive"],fontStyle:["responsive","hover"],fontSmoothing:["responsive","hover"],textDecoration:["responsive","hover"],textTransform:["responsive","hover"],letterSpacing:["responsive"],userSelect:["responsive"],verticalAlign:["responsive"],visibility:["responsive"],whitespace:["responsive"],wordBreak:["responsive"],width:["responsive"],zIndex:["responsive"]},plugins:[],corePlugins:{container:!1}}})),define("ember-cli-addon-docs/transitions/fade-and-drop",["exports","liquid-fire"],(function(e,t){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=function(e={duration:100}){this.newElement&&this.newElement.css("margin-top","-10px")
 return(0,t.animate)(this.newElement,{opacity:1,"margin-top":"0px"},e)}})),define("ember-cli-addon-docs/utils/compile-markdown",["exports","marked","highlight.js/lib/highlight","highlight.js/lib/languages/javascript","highlight.js/lib/languages/css","highlight.js/lib/languages/handlebars","highlight.js/lib/languages/htmlbars","highlight.js/lib/languages/json","highlight.js/lib/languages/xml","highlight.js/lib/languages/diff","highlight.js/lib/languages/shell","highlight.js/lib/languages/typescript"],(function(e,t,r,n,i,s,a,o,l,u,c,d){"use strict"
 function h(e,t){return r.default.getLanguage(t)?r.default.highlight(t,e).value:e}function p(e,t){let r=0
@@ -6107,7 +6104,7 @@ Object.defineProperty(e,"__esModule",{value:!0}),e.task=function(e){let t=u((fun
 return t.taskFn=e,Object.setPrototypeOf(t,r.TaskProperty.prototype),t},e.taskGroup=function(e){let t=u((function(e){return i.TaskGroup.create({fn:t.taskFn,context:this,_origin:this,_taskGroupPath:t._taskGroupPath,_scheduler:(0,o.resolveScheduler)(t,this,i.TaskGroup),_propertyName:e})}))
 return t.taskFn=e,Object.setPrototypeOf(t,i.TaskGroupProperty.prototype),t},Object.defineProperty(e,"timeout",{enumerable:!0,get:function(){return t.timeout}}),Object.defineProperty(e,"forever",{enumerable:!0,get:function(){return t.forever}}),Object.defineProperty(e,"rawTimeout",{enumerable:!0,get:function(){return t.rawTimeout}}),Object.defineProperty(e,"didCancel",{enumerable:!0,get:function(){return n.didCancel}}),Object.defineProperty(e,"all",{enumerable:!0,get:function(){return s.all}}),Object.defineProperty(e,"allSettled",{enumerable:!0,get:function(){return s.allSettled}}),Object.defineProperty(e,"hash",{enumerable:!0,get:function(){return s.hash}}),Object.defineProperty(e,"race",{enumerable:!0,get:function(){return s.race}}),Object.defineProperty(e,"waitForQueue",{enumerable:!0,get:function(){return a.waitForQueue}}),Object.defineProperty(e,"waitForEvent",{enumerable:!0,get:function(){return a.waitForEvent}}),Object.defineProperty(e,"waitForProperty",{enumerable:!0,get:function(){return a.waitForProperty}})
 const l=Ember._setClassicDecorator||Ember._setComputedDecorator
-function u(e){{let t=function t(r,n){return void 0!==t.setup&&t.setup(r,n),Ember.computed(e)(...arguments)}
+function u(e){{let t=function(r,n){return void 0!==t.setup&&t.setup(r,n),Ember.computed(e)(...arguments)}
 return l(t),t}}})),define("ember-concurrency/initializers/ember-concurrency",["exports","ember-concurrency"],(function(e,t){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 e.default={name:"ember-concurrency",initialize:function(){}}})),define("ember-concurrency/utils",["exports"],(function(e){"use strict"
@@ -7596,7 +7593,7 @@ return p?Lr(r,o-(e-d)):r}(e))}function v(e){return u=i,f&&n?m(e):(n=s=i,l)}funct
 if(n=arguments,s=this,c=e,r){if(u===i)return function(e){return d=e,u=Gs(b,t),h?m(e):l}(c)
 if(p)return Bi(u),u=Gs(b,t),m(c)}return u===i&&(u=Gs(b,t)),l}return t=No(t)||0,vo(r)&&(h=!!r.leading,o=(p="maxWait"in r)?Ir(No(r.maxWait)||0,t):o,f="trailing"in r?!!r.trailing:f),y.cancel=function(){u!==i&&Bi(u),d=0,n=c=s=u=i},y.flush=function(){return u===i?l:v(Ha())},y}var Ka=fi((function(e,t){return Tn(e,1,t)})),Ya=fi((function(e,t,r){return Tn(e,No(t)||0,r)}))
 function Xa(e,t){if("function"!=typeof e||null!=t&&"function"!=typeof t)throw new Xe(a)
-var r=function r(){var n=arguments,i=t?t.apply(this,n):n[0],s=r.cache
+var r=function(){var n=arguments,i=t?t.apply(this,n):n[0],s=r.cache
 if(s.has(i))return s.get(i)
 var a=e.apply(this,n)
 return r.cache=s.set(i,a)||s,a}
@@ -7837,25 +7834,26 @@ wt._=xr,(n=function(){return xr}.call(t,r,t,e))===i||(e.exports=n)}).call(this)}
  * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.8
  * Copyright (C) 2019 Oliver Nightingale
  * @license MIT
- */!function(){var s,a,o,l,u,c,d,h,p,f,m,g,b,v,y,_,E,x,w,R,O,k,S,P,T,C=function e(t){var r=new e.Builder
-return r.pipeline.add(e.trimmer,e.stopWordFilter,e.stemmer),r.searchPipeline.add(e.stemmer),t.call(r,r),r.build()}
+ */!function(){var s,a,o,l,u,c,d,h,p,f,m,g,b,v,y,_,E,x,w,R,O,k,S,P,T,C=function(e){var t=new C.Builder
+return t.pipeline.add(C.trimmer,C.stopWordFilter,C.stemmer),t.searchPipeline.add(C.stemmer),e.call(t,t),t.build()}
 C.version="2.3.8",
 /*!
    * lunr.utils
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.utils={}).warn=function(e){return function(t){e.console&&console.warn&&console.warn(t)}}(this),C.utils.asString=function(e){return null==e?"":e.toString()},C.utils.clone=function(e){if(null==e)return e
+   */
+C.utils={},C.utils.warn=function(e){return function(t){e.console&&console.warn&&console.warn(t)}}(this),C.utils.asString=function(e){return null==e?"":e.toString()},C.utils.clone=function(e){if(null==e)return e
 for(var t=Object.create(null),r=Object.keys(e),n=0;n<r.length;n++){var i=r[n],s=e[i]
 if(Array.isArray(s))t[i]=s.slice()
 else{if("string"!=typeof s&&"number"!=typeof s&&"boolean"!=typeof s)throw new TypeError("clone is not deep and does not support nested objects")
-t[i]=s}}return t},(C.FieldRef=function(e,t,r){this.docRef=e,this.fieldName=t,this._stringValue=r}).joiner="/",C.FieldRef.fromString=function(e){var t=e.indexOf(C.FieldRef.joiner)
+t[i]=s}}return t},C.FieldRef=function(e,t,r){this.docRef=e,this.fieldName=t,this._stringValue=r},C.FieldRef.joiner="/",C.FieldRef.fromString=function(e){var t=e.indexOf(C.FieldRef.joiner)
 if(-1===t)throw"malformed field ref string"
 var r=e.slice(0,t),n=e.slice(t+1)
-return new C.FieldRef(n,r,e)},C.FieldRef.prototype.toString=function(){return null==this._stringValue&&(this._stringValue=this.fieldName+C.FieldRef.joiner+this.docRef),this._stringValue},
+return new C.FieldRef(n,r,e)},C.FieldRef.prototype.toString=function(){return null==this._stringValue&&(this._stringValue=this.fieldName+C.FieldRef.joiner+this.docRef),this._stringValue
 /*!
    * lunr.Set
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.Set=function(e){if(this.elements=Object.create(null),e){this.length=e.length
-for(var t=0;t<this.length;t++)this.elements[e[t]]=!0}else this.length=0}).complete={intersect:function(e){return e},union:function(e){return e},contains:function(){return!0}},C.Set.empty={intersect:function(){return this},union:function(e){return e},contains:function(){return!1}},C.Set.prototype.contains=function(e){return!!this.elements[e]},C.Set.prototype.intersect=function(e){var t,r,n,i=[]
+   */},C.Set=function(e){if(this.elements=Object.create(null),e){this.length=e.length
+for(var t=0;t<this.length;t++)this.elements[e[t]]=!0}else this.length=0},C.Set.complete={intersect:function(e){return e},union:function(e){return e},contains:function(){return!0}},C.Set.empty={intersect:function(){return this},union:function(e){return e},contains:function(){return!1}},C.Set.prototype.contains=function(e){return!!this.elements[e]},C.Set.prototype.intersect=function(e){var t,r,n,i=[]
 if(e===C.Set.complete)return this
 if(e===C.Set.empty)return e
 this.length<e.length?(t=this,r=e):(t=e,r=this),n=Object.keys(t.elements)
@@ -7863,19 +7861,20 @@ for(var s=0;s<n.length;s++){var a=n[s]
 a in r.elements&&i.push(a)}return new C.Set(i)},C.Set.prototype.union=function(e){return e===C.Set.complete?C.Set.complete:e===C.Set.empty?this:new C.Set(Object.keys(this.elements).concat(Object.keys(e.elements)))},C.idf=function(e,t){var r=0
 for(var n in e)"_index"!=n&&(r+=Object.keys(e[n]).length)
 var i=(t-r+.5)/(r+.5)
-return Math.log(1+Math.abs(i))},(C.Token=function(e,t){this.str=e||"",this.metadata=t||{}}).prototype.toString=function(){return this.str},C.Token.prototype.update=function(e){return this.str=e(this.str,this.metadata),this},C.Token.prototype.clone=function(e){return new C.Token((e=e||function(e){return e})(this.str,this.metadata),this.metadata)},
+return Math.log(1+Math.abs(i))},C.Token=function(e,t){this.str=e||"",this.metadata=t||{}},C.Token.prototype.toString=function(){return this.str},C.Token.prototype.update=function(e){return this.str=e(this.str,this.metadata),this},C.Token.prototype.clone=function(e){return e=e||function(e){return e},new C.Token(e(this.str,this.metadata),this.metadata)
 /*!
    * lunr.tokenizer
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.tokenizer=function(e,t){if(null==e||null==e)return[]
+   */},C.tokenizer=function(e,t){if(null==e||null==e)return[]
 if(Array.isArray(e))return e.map((function(e){return new C.Token(C.utils.asString(e).toLowerCase(),C.utils.clone(t))}))
 for(var r=e.toString().toLowerCase(),n=r.length,i=[],s=0,a=0;s<=n;s++){var o=s-a
 if(r.charAt(s).match(C.tokenizer.separator)||s==n){if(o>0){var l=C.utils.clone(t)||{}
-l.position=[a,o],l.index=i.length,i.push(new C.Token(r.slice(a,s),l))}a=s+1}}return i}).separator=/[\s\-]+/,
+l.position=[a,o],l.index=i.length,i.push(new C.Token(r.slice(a,s),l))}a=s+1}}return i},C.tokenizer.separator=/[\s\-]+/,
 /*!
    * lunr.Pipeline
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.Pipeline=function(){this._stack=[]}).registeredFunctions=Object.create(null),C.Pipeline.registerFunction=function(e,t){t in this.registeredFunctions&&C.utils.warn("Overwriting existing registered function: "+t),e.label=t,C.Pipeline.registeredFunctions[e.label]=e},C.Pipeline.warnIfFunctionNotRegistered=function(e){e.label&&e.label in this.registeredFunctions||C.utils.warn("Function is not registered with pipeline. This may cause problems when serialising the index.\n",e)},C.Pipeline.load=function(e){var t=new C.Pipeline
+   */
+C.Pipeline=function(){this._stack=[]},C.Pipeline.registeredFunctions=Object.create(null),C.Pipeline.registerFunction=function(e,t){t in this.registeredFunctions&&C.utils.warn("Overwriting existing registered function: "+t),e.label=t,C.Pipeline.registeredFunctions[e.label]=e},C.Pipeline.warnIfFunctionNotRegistered=function(e){e.label&&e.label in this.registeredFunctions||C.utils.warn("Function is not registered with pipeline. This may cause problems when serialising the index.\n",e)},C.Pipeline.load=function(e){var t=new C.Pipeline
 return e.forEach((function(e){var r=C.Pipeline.registeredFunctions[e]
 if(!r)throw new Error("Cannot load unregistered function: "+e)
 t.add(r)})),t},C.Pipeline.prototype.add=function(){var e=Array.prototype.slice.call(arguments)
@@ -7892,7 +7891,8 @@ return this.run([r]).map((function(e){return e.toString()}))},C.Pipeline.prototy
 /*!
    * lunr.Vector
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.Vector=function(e){this._magnitude=0,this.elements=e||[]}).prototype.positionForIndex=function(e){if(0==this.elements.length)return 0
+   */
+C.Vector=function(e){this._magnitude=0,this.elements=e||[]},C.Vector.prototype.positionForIndex=function(e){if(0==this.elements.length)return 0
 for(var t=0,r=this.elements.length/2,n=r-t,i=Math.floor(n/2),s=this.elements[2*i];n>1&&(s<e&&(t=i),s>e&&(r=i),s!=e);)n=r-t,i=t+Math.floor(n/2),s=this.elements[2*i]
 return s==e?2*i:s>e?2*i:s<e?2*(i+1):void 0},C.Vector.prototype.insert=function(e,t){this.upsert(e,t,(function(){throw"duplicate index"}))},C.Vector.prototype.upsert=function(e,t,r){this._magnitude=0
 var n=this.positionForIndex(e)
@@ -7924,7 +7924,8 @@ C.trimmer=function(e){return e.update((function(e){return e.replace(/^\W+/,"").r
 /*!
    * lunr.TokenSet
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.TokenSet=function(){this.final=!1,this.edges={},this.id=C.TokenSet._nextId,C.TokenSet._nextId+=1})._nextId=1,C.TokenSet.fromArray=function(e){for(var t=new C.TokenSet.Builder,r=0,n=e.length;r<n;r++)t.insert(e[r])
+   */
+C.TokenSet=function(){this.final=!1,this.edges={},this.id=C.TokenSet._nextId,C.TokenSet._nextId+=1},C.TokenSet._nextId=1,C.TokenSet.fromArray=function(e){for(var t=new C.TokenSet.Builder,r=0,n=e.length;r<n;r++)t.insert(e[r])
 return t.finish(),t.root},C.TokenSet.fromClause=function(e){return"editDistance"in e?C.TokenSet.fromFuzzyString(e.term,e.editDistance):C.TokenSet.fromString(e.term)},C.TokenSet.fromFuzzyString=function(e,t){for(var r=new C.TokenSet,n=[{node:r,editsRemaining:t,str:e}];n.length;){var i=n.pop()
 if(i.str.length>0){var s,a=i.str.charAt(0)
 a in i.node.edges?s=i.node.edges[a]:(s=new C.TokenSet,i.node.edges[a]=s),1==i.str.length&&(s.final=!0),n.push({node:s,editsRemaining:i.editsRemaining,str:i.str.slice(1)})}if(0!=i.editsRemaining){if("*"in i.node.edges)var o=i.node.edges["*"]
@@ -7952,7 +7953,8 @@ n in this.minimizedNodes?r.parent.edges[r.char]=this.minimizedNodes[n]:(r.child.
 /*!
    * lunr.Index
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.Index=function(e){this.invertedIndex=e.invertedIndex,this.fieldVectors=e.fieldVectors,this.tokenSet=e.tokenSet,this.fields=e.fields,this.pipeline=e.pipeline}).prototype.search=function(e){return this.query((function(t){new C.QueryParser(e,t).parse()}))},C.Index.prototype.query=function(e){for(var t=new C.Query(this.fields),r=Object.create(null),n=Object.create(null),i=Object.create(null),s=Object.create(null),a=Object.create(null),o=0;o<this.fields.length;o++)n[this.fields[o]]=new C.Vector
+   */
+C.Index=function(e){this.invertedIndex=e.invertedIndex,this.fieldVectors=e.fieldVectors,this.tokenSet=e.tokenSet,this.fields=e.fields,this.pipeline=e.pipeline},C.Index.prototype.search=function(e){return this.query((function(t){new C.QueryParser(e,t).parse()}))},C.Index.prototype.query=function(e){for(var t=new C.Query(this.fields),r=Object.create(null),n=Object.create(null),i=Object.create(null),s=Object.create(null),a=Object.create(null),o=0;o<this.fields.length;o++)n[this.fields[o]]=new C.Vector
 for(e.call(t,t),o=0;o<t.clauses.length;o++){var l,u=t.clauses[o],c=C.Set.complete
 l=u.usePipeline?this.pipeline.runString(u.term,{fields:u.fields}):[u.term]
 for(var d=0;d<l.length;d++){var h=l[d]
@@ -7976,11 +7978,11 @@ return{version:C.version,fields:this.fields,fieldVectors:t,invertedIndex:e,pipel
 e.version!=C.version&&C.utils.warn("Version mismatch when loading serialised index. Current version of lunr '"+C.version+"' does not match serialized index '"+e.version+"'")
 for(var l=0;l<n.length;l++){var u=(d=n[l])[0],c=d[1]
 r[u]=new C.Vector(c)}for(l=0;l<s.length;l++){var d,h=(d=s[l])[0],p=d[1]
-a.insert(h),i[h]=p}return a.finish(),t.fields=e.fields,t.fieldVectors=r,t.invertedIndex=i,t.tokenSet=a.root,t.pipeline=o,new C.Index(t)},
+a.insert(h),i[h]=p}return a.finish(),t.fields=e.fields,t.fieldVectors=r,t.invertedIndex=i,t.tokenSet=a.root,t.pipeline=o,new C.Index(t)
 /*!
    * lunr.Builder
    * Copyright (C) 2019 Oliver Nightingale
-   */(C.Builder=function(){this._ref="id",this._fields=Object.create(null),this._documents=Object.create(null),this.invertedIndex=Object.create(null),this.fieldTermFrequencies={},this.fieldLengths={},this.tokenizer=C.tokenizer,this.pipeline=new C.Pipeline,this.searchPipeline=new C.Pipeline,this.documentCount=0,this._b=.75,this._k1=1.2,this.termIndex=0,this.metadataWhitelist=[]}).prototype.ref=function(e){this._ref=e},C.Builder.prototype.field=function(e,t){if(/\//.test(e))throw new RangeError("Field '"+e+"' contains illegal character '/'")
+   */},C.Builder=function(){this._ref="id",this._fields=Object.create(null),this._documents=Object.create(null),this.invertedIndex=Object.create(null),this.fieldTermFrequencies={},this.fieldLengths={},this.tokenizer=C.tokenizer,this.pipeline=new C.Pipeline,this.searchPipeline=new C.Pipeline,this.documentCount=0,this._b=.75,this._k1=1.2,this.termIndex=0,this.metadataWhitelist=[]},C.Builder.prototype.ref=function(e){this._ref=e},C.Builder.prototype.field=function(e,t){if(/\//.test(e))throw new RangeError("Field '"+e+"' contains illegal character '/'")
 this._fields[e]=t||{}},C.Builder.prototype.b=function(e){this._b=e<0?0:e>1?1:e},C.Builder.prototype.k1=function(e){this._k1=e},C.Builder.prototype.add=function(e,t){var r=e[this._ref],n=Object.keys(this._fields)
 this._documents[r]=t||{},this.documentCount+=1
 for(var i=0;i<n.length;i++){var s=n[i],a=this._fields[s].extractor,o=a?a(e):e[s],l=this.tokenizer(o,{fields:[s]}),u=this.pipeline.run(l),c=new C.FieldRef(r,s),d=Object.create(null)
@@ -7996,18 +7998,18 @@ n[a]||(n[a]=0),n[a]+=1,r[a]||(r[a]=0),r[a]+=this.fieldLengths[s]}var o=Object.ke
 for(i=0;i<o.length;i++){var l=o[i]
 r[l]=r[l]/n[l]}this.averageFieldLength=r},C.Builder.prototype.createFieldVectors=function(){for(var e={},t=Object.keys(this.fieldTermFrequencies),r=t.length,n=Object.create(null),i=0;i<r;i++){for(var s=C.FieldRef.fromString(t[i]),a=s.fieldName,o=this.fieldLengths[s],l=new C.Vector,u=this.fieldTermFrequencies[s],c=Object.keys(u),d=c.length,h=this._fields[a].boost||1,p=this._documents[s.docRef].boost||1,f=0;f<d;f++){var m,g,b,v=c[f],y=u[v],_=this.invertedIndex[v]._index
 void 0===n[v]?(m=C.idf(this.invertedIndex[v],this.documentCount),n[v]=m):m=n[v],g=m*((this._k1+1)*y)/(this._k1*(1-this._b+this._b*(o/this.averageFieldLength[a]))+y),g*=h,g*=p,b=Math.round(1e3*g)/1e3,l.insert(_,b)}e[s]=l}this.fieldVectors=e},C.Builder.prototype.createTokenSet=function(){this.tokenSet=C.TokenSet.fromArray(Object.keys(this.invertedIndex).sort())},C.Builder.prototype.build=function(){return this.calculateAverageFieldLengths(),this.createFieldVectors(),this.createTokenSet(),new C.Index({invertedIndex:this.invertedIndex,fieldVectors:this.fieldVectors,tokenSet:this.tokenSet,fields:Object.keys(this._fields),pipeline:this.searchPipeline})},C.Builder.prototype.use=function(e){var t=Array.prototype.slice.call(arguments,1)
-t.unshift(this),e.apply(this,t)},(C.MatchData=function(e,t,r){for(var n=Object.create(null),i=Object.keys(r||{}),s=0;s<i.length;s++){var a=i[s]
-n[a]=r[a].slice()}this.metadata=Object.create(null),void 0!==e&&(this.metadata[e]=Object.create(null),this.metadata[e][t]=n)}).prototype.combine=function(e){for(var t=Object.keys(e.metadata),r=0;r<t.length;r++){var n=t[r],i=Object.keys(e.metadata[n])
+t.unshift(this),e.apply(this,t)},C.MatchData=function(e,t,r){for(var n=Object.create(null),i=Object.keys(r||{}),s=0;s<i.length;s++){var a=i[s]
+n[a]=r[a].slice()}this.metadata=Object.create(null),void 0!==e&&(this.metadata[e]=Object.create(null),this.metadata[e][t]=n)},C.MatchData.prototype.combine=function(e){for(var t=Object.keys(e.metadata),r=0;r<t.length;r++){var n=t[r],i=Object.keys(e.metadata[n])
 null==this.metadata[n]&&(this.metadata[n]=Object.create(null))
 for(var s=0;s<i.length;s++){var a=i[s],o=Object.keys(e.metadata[n][a])
 null==this.metadata[n][a]&&(this.metadata[n][a]=Object.create(null))
 for(var l=0;l<o.length;l++){var u=o[l]
 null==this.metadata[n][a][u]?this.metadata[n][a][u]=e.metadata[n][a][u]:this.metadata[n][a][u]=this.metadata[n][a][u].concat(e.metadata[n][a][u])}}}},C.MatchData.prototype.add=function(e,t,r){if(!(e in this.metadata))return this.metadata[e]=Object.create(null),void(this.metadata[e][t]=r)
 if(t in this.metadata[e])for(var n=Object.keys(r),i=0;i<n.length;i++){var s=n[i]
-s in this.metadata[e][t]?this.metadata[e][t][s]=this.metadata[e][t][s].concat(r[s]):this.metadata[e][t][s]=r[s]}else this.metadata[e][t]=r},(C.Query=function(e){this.clauses=[],this.allFields=e}).wildcard=new String("*"),C.Query.wildcard.NONE=0,C.Query.wildcard.LEADING=1,C.Query.wildcard.TRAILING=2,C.Query.presence={OPTIONAL:1,REQUIRED:2,PROHIBITED:3},C.Query.prototype.clause=function(e){return"fields"in e||(e.fields=this.allFields),"boost"in e||(e.boost=1),"usePipeline"in e||(e.usePipeline=!0),"wildcard"in e||(e.wildcard=C.Query.wildcard.NONE),e.wildcard&C.Query.wildcard.LEADING&&e.term.charAt(0)!=C.Query.wildcard&&(e.term="*"+e.term),e.wildcard&C.Query.wildcard.TRAILING&&e.term.slice(-1)!=C.Query.wildcard&&(e.term=e.term+"*"),"presence"in e||(e.presence=C.Query.presence.OPTIONAL),this.clauses.push(e),this},C.Query.prototype.isNegated=function(){for(var e=0;e<this.clauses.length;e++)if(this.clauses[e].presence!=C.Query.presence.PROHIBITED)return!1
+s in this.metadata[e][t]?this.metadata[e][t][s]=this.metadata[e][t][s].concat(r[s]):this.metadata[e][t][s]=r[s]}else this.metadata[e][t]=r},C.Query=function(e){this.clauses=[],this.allFields=e},C.Query.wildcard=new String("*"),C.Query.wildcard.NONE=0,C.Query.wildcard.LEADING=1,C.Query.wildcard.TRAILING=2,C.Query.presence={OPTIONAL:1,REQUIRED:2,PROHIBITED:3},C.Query.prototype.clause=function(e){return"fields"in e||(e.fields=this.allFields),"boost"in e||(e.boost=1),"usePipeline"in e||(e.usePipeline=!0),"wildcard"in e||(e.wildcard=C.Query.wildcard.NONE),e.wildcard&C.Query.wildcard.LEADING&&e.term.charAt(0)!=C.Query.wildcard&&(e.term="*"+e.term),e.wildcard&C.Query.wildcard.TRAILING&&e.term.slice(-1)!=C.Query.wildcard&&(e.term=e.term+"*"),"presence"in e||(e.presence=C.Query.presence.OPTIONAL),this.clauses.push(e),this},C.Query.prototype.isNegated=function(){for(var e=0;e<this.clauses.length;e++)if(this.clauses[e].presence!=C.Query.presence.PROHIBITED)return!1
 return!0},C.Query.prototype.term=function(e,t){if(Array.isArray(e))return e.forEach((function(e){this.term(e,C.utils.clone(t))}),this),this
 var r=t||{}
-return r.term=e.toString(),this.clause(r),this},(C.QueryParseError=function(e,t,r){this.name="QueryParseError",this.message=e,this.start=t,this.end=r}).prototype=new Error,(C.QueryLexer=function(e){this.lexemes=[],this.str=e,this.length=e.length,this.pos=0,this.start=0,this.escapeCharPositions=[]}).prototype.run=function(){for(var e=C.QueryLexer.lexText;e;)e=e(this)},C.QueryLexer.prototype.sliceString=function(){for(var e=[],t=this.start,r=this.pos,n=0;n<this.escapeCharPositions.length;n++)r=this.escapeCharPositions[n],e.push(this.str.slice(t,r)),t=r+1
+return r.term=e.toString(),this.clause(r),this},C.QueryParseError=function(e,t,r){this.name="QueryParseError",this.message=e,this.start=t,this.end=r},C.QueryParseError.prototype=new Error,C.QueryLexer=function(e){this.lexemes=[],this.str=e,this.length=e.length,this.pos=0,this.start=0,this.escapeCharPositions=[]},C.QueryLexer.prototype.run=function(){for(var e=C.QueryLexer.lexText;e;)e=e(this)},C.QueryLexer.prototype.sliceString=function(){for(var e=[],t=this.start,r=this.pos,n=0;n<this.escapeCharPositions.length;n++)r=this.escapeCharPositions[n],e.push(this.str.slice(t,r)),t=r+1
 return e.push(this.str.slice(t,this.pos)),this.escapeCharPositions.length=0,e.join("")},C.QueryLexer.prototype.emit=function(e){this.lexemes.push({type:e,str:this.sliceString(),start:this.start,end:this.pos}),this.start=this.pos},C.QueryLexer.prototype.escapeCharacter=function(){this.escapeCharPositions.push(this.pos-1),this.pos+=1},C.QueryLexer.prototype.next=function(){if(this.pos>=this.length)return C.QueryLexer.EOS
 var e=this.str.charAt(this.pos)
 return this.pos+=1,e},C.QueryLexer.prototype.width=function(){return this.pos-this.start},C.QueryLexer.prototype.ignore=function(){this.start==this.pos&&(this.pos+=1),this.start=this.pos},C.QueryLexer.prototype.backup=function(){this.pos-=1},C.QueryLexer.prototype.acceptDigitRun=function(){var e,t
@@ -8019,7 +8021,7 @@ if("~"==t)return e.backup(),e.width()>0&&e.emit(C.QueryLexer.TERM),C.QueryLexer.
 if("^"==t)return e.backup(),e.width()>0&&e.emit(C.QueryLexer.TERM),C.QueryLexer.lexBoost
 if("+"==t&&1===e.width())return e.emit(C.QueryLexer.PRESENCE),C.QueryLexer.lexText
 if("-"==t&&1===e.width())return e.emit(C.QueryLexer.PRESENCE),C.QueryLexer.lexText
-if(t.match(C.QueryLexer.termSeparator))return C.QueryLexer.lexTerm}else e.escapeCharacter()}},(C.QueryParser=function(e,t){this.lexer=new C.QueryLexer(e),this.query=t,this.currentClause={},this.lexemeIdx=0}).prototype.parse=function(){this.lexer.run(),this.lexemes=this.lexer.lexemes
+if(t.match(C.QueryLexer.termSeparator))return C.QueryLexer.lexTerm}else e.escapeCharacter()}},C.QueryParser=function(e,t){this.lexer=new C.QueryLexer(e),this.query=t,this.currentClause={},this.lexemeIdx=0},C.QueryParser.prototype.parse=function(){this.lexer.run(),this.lexemes=this.lexer.lexemes
 for(var e=C.QueryParser.parseClause;e;)e=e(this)
 return this.query},C.QueryParser.prototype.peekLexeme=function(){return this.lexemes[this.lexemeIdx]},C.QueryParser.prototype.consumeLexeme=function(){var e=this.peekLexeme()
 return this.lexemeIdx+=1,e},C.QueryParser.prototype.nextClause=function(){var e=this.currentClause
@@ -8035,14 +8037,14 @@ case"+":e.currentClause.presence=C.Query.presence.REQUIRED
 break
 default:var r="unrecognised presence operator'"+t.str+"'"
 throw new C.QueryParseError(r,t.start,t.end)}var n=e.peekLexeme()
-if(null==n)throw new C.QueryParseError(r="expecting term or field, found nothing",t.start,t.end)
+if(null==n)throw r="expecting term or field, found nothing",new C.QueryParseError(r,t.start,t.end)
 switch(n.type){case C.QueryLexer.FIELD:return C.QueryParser.parseField
 case C.QueryLexer.TERM:return C.QueryParser.parseTerm
 default:throw r="expecting term or field, found '"+n.type+"'",new C.QueryParseError(r,n.start,n.end)}}},C.QueryParser.parseField=function(e){var t=e.consumeLexeme()
 if(null!=t){if(-1==e.query.allFields.indexOf(t.str)){var r=e.query.allFields.map((function(e){return"'"+e+"'"})).join(", "),n="unrecognised field '"+t.str+"', possible fields: "+r
 throw new C.QueryParseError(n,t.start,t.end)}e.currentClause.fields=[t.str]
 var i=e.peekLexeme()
-if(null==i)throw new C.QueryParseError(n="expecting term, found nothing",t.start,t.end)
+if(null==i)throw n="expecting term, found nothing",new C.QueryParseError(n,t.start,t.end)
 switch(i.type){case C.QueryLexer.TERM:return C.QueryParser.parseTerm
 default:throw n="expecting term, found '"+i.type+"'",new C.QueryParseError(n,i.start,i.end)}}},C.QueryParser.parseTerm=function(e){var t=e.consumeLexeme()
 if(null!=t){e.currentClause.term=t.str.toLowerCase(),-1!=t.str.indexOf("*")&&(e.currentClause.usePipeline=!1)
@@ -8055,27 +8057,25 @@ case C.QueryLexer.PRESENCE:return e.nextClause(),C.QueryParser.parsePresence
 default:var n="Unexpected lexeme type '"+r.type+"'"
 throw new C.QueryParseError(n,r.start,r.end)}else e.nextClause()}},C.QueryParser.parseEditDistance=function(e){var t=e.consumeLexeme()
 if(null!=t){var r=parseInt(t.str,10)
-if(isNaN(r))throw new C.QueryParseError(i="edit distance must be numeric",t.start,t.end)
-e.currentClause.editDistance=r
-var n=e.peekLexeme()
-if(null!=n)switch(n.type){case C.QueryLexer.TERM:return e.nextClause(),C.QueryParser.parseTerm
+if(isNaN(r)){var n="edit distance must be numeric"
+throw new C.QueryParseError(n,t.start,t.end)}e.currentClause.editDistance=r
+var i=e.peekLexeme()
+if(null!=i)switch(i.type){case C.QueryLexer.TERM:return e.nextClause(),C.QueryParser.parseTerm
 case C.QueryLexer.FIELD:return e.nextClause(),C.QueryParser.parseField
 case C.QueryLexer.EDIT_DISTANCE:return C.QueryParser.parseEditDistance
 case C.QueryLexer.BOOST:return C.QueryParser.parseBoost
 case C.QueryLexer.PRESENCE:return e.nextClause(),C.QueryParser.parsePresence
-default:var i="Unexpected lexeme type '"+n.type+"'"
-throw new C.QueryParseError(i,n.start,n.end)}else e.nextClause()}},C.QueryParser.parseBoost=function(e){var t=e.consumeLexeme()
+default:throw n="Unexpected lexeme type '"+i.type+"'",new C.QueryParseError(n,i.start,i.end)}else e.nextClause()}},C.QueryParser.parseBoost=function(e){var t=e.consumeLexeme()
 if(null!=t){var r=parseInt(t.str,10)
-if(isNaN(r))throw new C.QueryParseError(i="boost must be numeric",t.start,t.end)
-e.currentClause.boost=r
-var n=e.peekLexeme()
-if(null!=n)switch(n.type){case C.QueryLexer.TERM:return e.nextClause(),C.QueryParser.parseTerm
+if(isNaN(r)){var n="boost must be numeric"
+throw new C.QueryParseError(n,t.start,t.end)}e.currentClause.boost=r
+var i=e.peekLexeme()
+if(null!=i)switch(i.type){case C.QueryLexer.TERM:return e.nextClause(),C.QueryParser.parseTerm
 case C.QueryLexer.FIELD:return e.nextClause(),C.QueryParser.parseField
 case C.QueryLexer.EDIT_DISTANCE:return C.QueryParser.parseEditDistance
 case C.QueryLexer.BOOST:return C.QueryParser.parseBoost
 case C.QueryLexer.PRESENCE:return e.nextClause(),C.QueryParser.parsePresence
-default:var i="Unexpected lexeme type '"+n.type+"'"
-throw new C.QueryParseError(i,n.start,n.end)}else e.nextClause()}},void 0===(i="function"==typeof(n=function(){return C})?n.call(t,r,t,e):n)||(e.exports=i)}()},function(e,t,r){!function(t){"use strict"
+default:throw n="Unexpected lexeme type '"+i.type+"'",new C.QueryParseError(n,i.start,i.end)}else e.nextClause()}},void 0===(i="function"==typeof(n=function(){return C})?n.call(t,r,t,e):n)||(e.exports=i)}()},function(e,t,r){!function(t){"use strict"
 var r={newline:/^\n+/,code:/^( {4}[^\n]+\n*)+/,fences:/^ {0,3}(`{3,}|~{3,})([^`~\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[~`]* *(?:\n+|$)|$)/,hr:/^ {0,3}((?:- *){3,}|(?:_ *){3,}|(?:\* *){3,})(?:\n+|$)/,heading:/^ {0,3}(#{1,6}) +([^\n]*?)(?: +#+)? *(?:\n+|$)/,blockquote:/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/,list:/^( {0,3})(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,html:"^ {0,3}(?:<(script|pre|style)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?\\?>\\n*|<![A-Z][\\s\\S]*?>\\n*|<!\\[CDATA\\[[\\s\\S]*?\\]\\]>\\n*|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:\\n{2,}|$)|<(?!script|pre|style)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$)|</(?!script|pre|style)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:\\n{2,}|$))",def:/^ {0,3}\[(label)\]: *\n? *<?([^\s>]+)>?(?:(?: +\n? *| *\n *)(title))? *(?:\n+|$)/,nptable:g,table:g,lheading:/^([^\n]+)\n {0,3}(=+|-+) *(?:\n+|$)/,_paragraph:/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html)[^\n]+)*)/,text:/^[^\n]+/}
 function n(e){this.tokens=[],this.tokens.links=Object.create(null),this.options=e||x.defaults,this.rules=r.normal,this.options.pedantic?this.rules=r.pedantic:this.options.gfm&&(this.rules=r.gfm)}r._label=/(?!\s*\])(?:\\[\[\]]|[^\[\]])+/,r._title=/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/,r.def=h(r.def).replace("label",r._label).replace("title",r._title).getRegex(),r.bullet=/(?:[*+-]|\d{1,9}\.)/,r.item=/^( *)(bull) ?[^\n]*(?:\n(?!\1bull ?)[^\n]*)*/,r.item=h(r.item,"gm").replace(/bull/g,r.bullet).getRegex(),r.list=h(r.list).replace(/bull/g,r.bullet).replace("hr","\\n+(?=\\1?(?:(?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$))").replace("def","\\n+(?="+r.def.source+")").getRegex(),r._tag="address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul",r._comment=/<!--(?!-?>)[\s\S]*?-->/,r.html=h(r.html,"i").replace("comment",r._comment).replace("tag",r._tag).replace("attribute",/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),r.paragraph=h(r._paragraph).replace("hr",r.hr).replace("heading"," {0,3}#{1,6} +").replace("|lheading","").replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}|~{3,})[^`\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|!--)").replace("tag",r._tag).getRegex(),r.blockquote=h(r.blockquote).replace("paragraph",r.paragraph).getRegex(),r.normal=b({},r),r.gfm=b({},r.normal,{nptable:/^ *([^|\n ].*\|.*)\n *([-:]+ *\|[-| :]*)(?:\n((?:.*[^>\n ].*(?:\n|$))*)\n*|$)/,table:/^ *\|(.+)\n *\|?( *[-:]+[-| :]*)(?:\n((?: *[^>\n ].*(?:\n|$))*)\n*|$)/}),r.pedantic=b({},r.normal,{html:h("^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:\"[^\"]*\"|'[^']*'|\\s[^'\"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))").replace("comment",r._comment).replace(/tag/g,"(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^ *(#{1,6}) *([^\n]+?) *(?:#+ *)?(?:\n+|$)/,fences:g,paragraph:h(r.normal._paragraph).replace("hr",r.hr).replace("heading"," *#{1,6} *[^\n]").replace("lheading",r.lheading).replace("blockquote"," {0,3}>").replace("|fences","").replace("|list","").replace("|html","").getRegex()}),n.rules=r,n.lex=function(e,t){return new n(t).lex(e)},n.prototype.lex=function(e){return e=e.replace(/\r\n|\r/g,"\n").replace(/\t/g,"    ").replace(/\u00a0/g," ").replace(/\u2424/g,"\n"),this.token(e,!0)},n.prototype.token=function(e,t){var n,i,s,a,o,l,u,d,h,p,f,m,g,b,_,E
 for(e=e.replace(/^ +$/gm,"");e;)if((s=this.rules.newline.exec(e))&&(e=e.substring(s[0].length),s[0].length>1&&this.tokens.push({type:"space"})),s=this.rules.code.exec(e)){var x=this.tokens[this.tokens.length-1]
