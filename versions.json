@@ -146,5 +146,11 @@
     "name": "updates",
     "sha": "a5d44c44c7301697cd1778dc4a1caf4a547d5dfe",
     "tag": null
+  },
+  "volta": {
+    "path": "versions/volta",
+    "name": "volta",
+    "sha": "b6555c6941109c4bf49e07628d173a4eaf182709",
+    "tag": null
   }
 }
