@@ -105,6 +105,9 @@
     "release-it-lerna-changelog": "^1.0.3",
     "typescript": "^3.7.3"
   },
+  "resolutions": {
+    "broccoli": "3.2.0"
+  },
   "engines": {
     "node": "10.* || >= 12.*"
   },
