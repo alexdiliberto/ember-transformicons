@@ -103,7 +103,7 @@
     "qunit-dom": "^1.0.0",
     "release-it": "^12.4.3",
     "release-it-lerna-changelog": "^1.0.3",
-    "typescript": "^3.7.3"
+    "typescript": "3.7.5"
   },
   "engines": {
     "node": "10.* || >= 12.*"
