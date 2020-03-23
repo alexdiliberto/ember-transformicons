@@ -12812,9 +12812,9 @@ release-it-lerna-changelog@^2.1.0:
     tmp "^0.1.0"
 
 release-it@^13.0.2, release-it@^13.1.1:
-  version "13.1.1"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-13.1.1.tgz#64c9e84cf1049f6261e95ab1427849c61ffd9137"
-  integrity sha512-3JrbRMkUnup+PGtTR78MBjfrgEDd1UBJtW0eZF4MQRMvhv2am1VyYzz5i7Vv1xkomsaxhy06gZVjVFAa+Qn4JA==
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/release-it/-/release-it-13.2.0.tgz#9239339e9f0bf2fcd7aa09131170a0a27d7f82b7"
+  integrity sha512-hmXlig8uS2edrlptzQa1OKqyXRgVyc4qN4jC6FCg7kH/CvtxfZHe2Gxei/BQKkltB7zuTUwKwSH+k4+KP4zSXA==
   dependencies:
     "@iarna/toml" "2.2.3"
     "@octokit/rest" "17.1.0"
