@@ -7,9 +7,9 @@ export default class Router extends AddonDocsRouter {
 }
 
 /* eslint-disable array-callback-return */
-Router.map(function() {
-  docsRoute(this, function() {
-    this.route('transformicons', function() {
+Router.map(function () {
+  docsRoute(this, function () {
+    this.route('transformicons', function () {
       this.route('add');
       this.route('form');
       this.route('grid');

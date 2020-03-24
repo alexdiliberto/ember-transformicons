@@ -4,10 +4,10 @@ import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
 
-module('Integration | Component | t grid', function(hooks) {
+module('Integration | Component | t grid', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     assert.expect(2);
 
     await render(hbs`
@@ -26,7 +26,7 @@ module('Integration | Component | t grid', function(hooks) {
     assert.dom('button').hasText('toggle grid');
   });
 
-  test('it creates a grid transformicon with defaults', async function(assert) {
+  test('it creates a grid transformicon with defaults', async function (assert) {
     assert.expect(6);
 
     await render(hbs`
@@ -42,7 +42,7 @@ module('Integration | Component | t grid', function(hooks) {
     assert.dom('button').hasNoClass('tcon-transform');
   });
 
-  test('it creates a grid transformicon with `isOpen=true`', async function(assert) {
+  test('it creates a grid transformicon with `isOpen=true`', async function (assert) {
     assert.expect(1);
 
     await render(hbs`
@@ -53,7 +53,7 @@ module('Integration | Component | t grid', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('it creates a grid transformicon with a non-default animation `animation="collapse"`', async function(assert) {
+  test('it creates a grid transformicon with a non-default animation `animation="collapse"`', async function (assert) {
     assert.expect(1);
 
     await render(hbs`
@@ -63,7 +63,7 @@ module('Integration | Component | t grid', function(hooks) {
     assert.dom('button').hasClass('tcon-grid--collapse');
   });
 
-  test('user can click on the transformicon', async function(assert) {
+  test('user can click on the transformicon', async function (assert) {
     assert.expect(2);
 
     this.isOpen = false;

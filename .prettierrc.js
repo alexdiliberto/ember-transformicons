@@ -8,5 +8,6 @@ module.exports = {
   bracketSpacing: true,
   endOfLine: 'lf',
   useTabs: false,
-  tabWidth: 2
+  tabWidth: 2,
+  arrowParens: 'always'
 };

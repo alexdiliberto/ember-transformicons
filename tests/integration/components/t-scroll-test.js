@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | t scroll', function(hooks) {
+module('Integration | Component | t scroll', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     assert.expect(2);
 
     await render(hbs`
@@ -25,7 +25,7 @@ module('Integration | Component | t scroll', function(hooks) {
     assert.dom('span').hasText('');
   });
 
-  test('it creates a scroll indicator transformicon with defaults', async function(assert) {
+  test('it creates a scroll indicator transformicon with defaults', async function (assert) {
     assert.expect(5);
 
     await render(hbs`
