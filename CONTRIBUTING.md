@@ -7,14 +7,14 @@ Any help is welcome and appreciated! :+1: :tada:
 ## Installation
 
 * `git clone <repository-url>`
-* `cd my-addon`
-* `yarn`
+* `cd ember-transformicons`
+* `yarn install`
 
 ## Linting
 
 * `yarn lint:hbs`
 * `yarn lint:js`
-* `yarn lint:js -- --fix`
+* `yarn lint:js --fix`
 
 ## Running tests
 
