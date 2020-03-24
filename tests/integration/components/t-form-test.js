@@ -4,10 +4,10 @@ import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
 
-module('Integration | Component | t form', function(hooks) {
+module('Integration | Component | t form', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     assert.expect(2);
 
     await render(hbs`
@@ -26,7 +26,7 @@ module('Integration | Component | t form', function(hooks) {
     assert.dom('button').hasText('toggle search');
   });
 
-  test('it creates a form transformicon with defaults', async function(assert) {
+  test('it creates a form transformicon with defaults', async function (assert) {
     assert.expect(5);
 
     await render(hbs`
@@ -41,7 +41,7 @@ module('Integration | Component | t form', function(hooks) {
     assert.dom('button').hasNoClass('tcon-transform');
   });
 
-  test('it creates a form transformicon with `isSearching=true`', async function(assert) {
+  test('it creates a form transformicon with `isSearching=true`', async function (assert) {
     assert.expect(1);
 
     await render(hbs`
@@ -52,7 +52,7 @@ module('Integration | Component | t form', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('user can click on the transformicon', async function(assert) {
+  test('user can click on the transformicon', async function (assert) {
     assert.expect(2);
 
     this.isSearching = false;

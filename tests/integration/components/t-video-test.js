@@ -4,10 +4,10 @@ import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import { percySnapshot } from 'ember-percy';
 
-module('Integration | Component | t video', function(hooks) {
+module('Integration | Component | t video', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
+  test('it renders', async function (assert) {
     assert.expect(2);
 
     await render(hbs`
@@ -26,7 +26,7 @@ module('Integration | Component | t video', function(hooks) {
     assert.dom('button').hasText('play video');
   });
 
-  test('it creates a video transformicon with defaults', async function(assert) {
+  test('it creates a video transformicon with defaults', async function (assert) {
     assert.expect(6);
 
     await render(hbs`
@@ -42,7 +42,7 @@ module('Integration | Component | t video', function(hooks) {
     assert.dom('button').hasNoClass('tcon-transform');
   });
 
-  test('it creates a video transformicon with `isPlaying=true`', async function(assert) {
+  test('it creates a video transformicon with `isPlaying=true`', async function (assert) {
     assert.expect(1);
 
     await render(hbs`
@@ -53,7 +53,7 @@ module('Integration | Component | t video', function(hooks) {
     assert.dom('button').hasClass('tcon-transform');
   });
 
-  test('user can click on the transformicon', async function(assert) {
+  test('user can click on the transformicon', async function (assert) {
     assert.expect(2);
 
     this.isPlaying = false;
