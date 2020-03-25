@@ -1,3 +1,22 @@
+## v6.0.4 (2020-03-25)
+
+#### :memo: Documentation
+* [#489](https://github.com/alexdiliberto/ember-transformicons/pull/489) update CONTRIBUTING doc ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### :house: Internal
+* [#490](https://github.com/alexdiliberto/ember-transformicons/pull/490) release-it-lerna-changelog: enable `launchEditor` option` ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#488](https://github.com/alexdiliberto/ember-transformicons/pull/488) ember-cli-update v3.17.0 ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#484](https://github.com/alexdiliberto/ember-transformicons/pull/484) build(deps-dev): bump prettier from 1.19.1 to 2.0.2 ([@dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+* [#487](https://github.com/alexdiliberto/ember-transformicons/pull/487) prettier v2.0 format fixes ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#475](https://github.com/alexdiliberto/ember-transformicons/pull/475) pin `typescript@3.7.5` ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#447](https://github.com/alexdiliberto/ember-transformicons/pull/447) bump volta pinned versions ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#408](https://github.com/alexdiliberto/ember-transformicons/pull/408) remove `schedule` trigger event from github actions ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#403](https://github.com/alexdiliberto/ember-transformicons/pull/403) ember-template-lint updates ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### Committers: 2
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v6.0.3 (2019-12-23)
 
 #### :memo: Documentation
