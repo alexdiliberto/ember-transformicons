@@ -50,7 +50,8 @@ Ready to draft a new release:
 
 ```sh
 yarn install
-release-it
+# `source ~/.env` if needed
+yarn release
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
