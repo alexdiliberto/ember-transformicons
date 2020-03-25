@@ -51,7 +51,7 @@ Ready to draft a new release:
 ```sh
 yarn install
 # `source ~/.env` if needed
-yarn release
+npx release-it # unknown issues sometimes when running `yarn release`
 ```
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
