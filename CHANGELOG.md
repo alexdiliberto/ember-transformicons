@@ -1,3 +1,11 @@
+## v6.0.5 (2020-03-25)
+
+#### :bug: Bug Fix
+* [#492](https://github.com/alexdiliberto/ember-transformicons/pull/492) fix duplicate ci builds for tagged releases ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### Committers: 1
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+
 ## v6.0.4 (2020-03-25)
 
 #### :memo: Documentation
