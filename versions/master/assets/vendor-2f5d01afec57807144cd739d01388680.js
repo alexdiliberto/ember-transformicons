@@ -6743,7 +6743,10 @@ if(r){let n=this._extractDefaultExport(r,e)
 if(void 0===n)throw new Error(` Expected to find: '${e.fullName}' within '${r}' but got 'undefined'. Did you forget to 'export default' within '${r}'?`)
 return this.shouldWrapInClassFactory(n,e)&&(n=(0,t.default)(n)),n}},parseName:function(e){if(!0===e.parsedName)return e
 let t,r,n,i=e.split("@")
-if(2===i.length){let e=i[0].split(":")
+if(3===i.length){if(0===i[0].length){t=`@${i[1]}`
+let e=i[2].split(":")
+r=e[0],n=e[1]}else t=`@${i[1]}`,r=i[0].slice(0,-1),n=i[2]
+"template:components"===r&&(n=`components/${n}`,r="template")}else if(2===i.length){let e=i[0].split(":")
 if(2===e.length)0===e[1].length?(r=e[0],n=`@${i[1]}`):(t=e[1],r=e[0],n=i[1])
 else{let e=i[1].split(":")
 t=i[0],r=e[0],n=e[1]}"template"===r&&0===t.lastIndexOf("components/",0)&&(n=`components/${n}`,t=t.slice(11))}else i=e.split(":"),r=i[0],n=i[1]
@@ -6751,7 +6754,7 @@ let s=n,a=Ember.get(this,"namespace")
 return{parsedName:!0,fullName:e,prefix:t||this.prefix({type:r}),type:r,fullNameWithoutType:s,name:n,root:a,resolveMethodName:"resolve"+Ember.String.classify(r)}},pluralizedTypes:null,moduleRegistry:null,makeToString(e,t){return this.namespace.modulePrefix+"@"+t+":"},shouldWrapInClassFactory:()=>!1,init(){this._super(),this.moduleBasedResolver=!0,this._moduleRegistry||(this._moduleRegistry=new r),this._normalizeCache=Object.create(null),this.pluralizedTypes=this.pluralizedTypes||Object.create(null),this.pluralizedTypes.config||(this.pluralizedTypes.config="config"),this._deprecatedPodModulePrefix=!1},normalize(e){return this._normalizeCache[e]||(this._normalizeCache[e]=this._normalize(e))},resolve(e){let t,r=this.parseName(e),n=r.resolveMethodName
 return"function"==typeof this[n]&&(t=this[n](r)),null==t&&(t=this.resolveOther(r)),t},_normalize(e){let t=e.split(":")
 if(t.length>1){let e=t[0]
-return"component"===e||"helper"===e||"template"===e&&0===t[1].indexOf("components/")?e+":"+t[1].replace(/_/g,"-"):e+":"+Ember.String.dasherize(t[1].replace(/\./g,"/"))}return e},pluralize(e){return this.pluralizedTypes[e]||(this.pluralizedTypes[e]=e+"s")},podBasedLookupWithPrefix(e,t){let r=t.fullNameWithoutType
+return"component"===e||"helper"===e||"modifier"===e||"template"===e&&0===t[1].indexOf("components/")?e+":"+t[1].replace(/_/g,"-"):e+":"+Ember.String.dasherize(t[1].replace(/\./g,"/"))}return e},pluralize(e){return this.pluralizedTypes[e]||(this.pluralizedTypes[e]=e+"s")},podBasedLookupWithPrefix(e,t){let r=t.fullNameWithoutType
 return"template"===t.type&&(r=r.replace(/^components\//,"")),e+"/"+r+"/"+t.type},podBasedModuleName(e){let t=this.namespace.podModulePrefix||this.namespace.modulePrefix
 return this.podBasedLookupWithPrefix(t,e)},podBasedComponentsInSubdir(e){let t=this.namespace.podModulePrefix||this.namespace.modulePrefix
 if(t+="/components","component"===e.type||/^components/.test(e.fullNameWithoutType))return this.podBasedLookupWithPrefix(t,e)},resolveEngine(e){let t=e.fullNameWithoutType+"/engine"
