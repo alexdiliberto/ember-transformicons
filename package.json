@@ -42,7 +42,9 @@
     "test:ember": "ember test",
     "test:ember-compatibility": "ember try:each",
     "prepublishOnly": "ember ts:precompile",
-    "postpublish": "ember ts:clean"
+    "postpublish": "ember ts:clean",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "@glimmer/component": "^1.0.0",
@@ -51,7 +53,8 @@
     "ember-cli-htmlbars": "^4.2.3",
     "ember-cli-typescript": "^3.1.2",
     "ember-decorators": "^6.1.1",
-    "ember-truth-helpers": "^2.1.0"
+    "ember-truth-helpers": "^2.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@alexdiliberto/eslint-config": "^4.1.1",
@@ -140,5 +143,6 @@
   "volta": {
     "node": "12.16.1",
     "yarn": "1.22.4"
-  }
+  },
+  "snyk": true
 }
