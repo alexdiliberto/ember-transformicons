@@ -8,9 +8,9 @@
   integrity sha512-IRjJtNwmSfVLplKCOxHfjup1Z7Cq1IgDCvGiKf+6gFGq/eEVfYqwGaEQx+NH1vsQZkCJrg8YMfBKGNUnb+uI+w==
 
 "@alexdiliberto/eslint-config@^4.1.1":
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/@alexdiliberto/eslint-config/-/eslint-config-4.1.5.tgz#760f2538ae8e1233650aefbacfe446c5aac9ba52"
-  integrity sha512-batyiniUG4qVStswsl+AtvyOHLE5eTIrhpNsZPd3IYEwdI4cfV6J3UJNDQFEvzklzQhK5WglRrwsCOicN4p+Rg==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@alexdiliberto/eslint-config/-/eslint-config-4.2.0.tgz#d5ffd5105e36586425216c0d369486e6e88d8eb4"
+  integrity sha512-W9DB3f2MmjNTNXbf3Y1MqrYResQwFJRQQ/0CaIZfRlyozhmN1f42K9BYO37MDLZj4rqWx02rr4d1BgbFh2Bvrg==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
