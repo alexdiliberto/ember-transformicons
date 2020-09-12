@@ -1,5 +1,4 @@
 import Component from '@glimmer/component';
-import { not } from '@ember/object/computed';
 import { setComponentTemplate } from '@ember/component';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -21,7 +20,9 @@ interface IArgs {
   @public
 */
 class TMailComponent extends Component<IArgs> {
-  @not('args.isOpen') notOpen!: boolean;
+  get notOpen() {
+    return !this.args.isOpen;
+  }
 }
 
 export default setComponentTemplate(
