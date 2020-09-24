@@ -2007,9 +2007,9 @@
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
 "@types/qunit@*", "@types/qunit@^2.9.0":
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.9.2.tgz#e9293940599848deda9108e00987737d3b780bcc"
-  integrity sha512-GwQibQ0ciNKJ/5beonZ87AiB+/ZbV4DRVWAH9wMUp+K1zRd67LZLH2hKyxj9we3FWH968CYD2tcN2yCitOYp1g==
+  version "2.9.4"
+  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.9.4.tgz#653ba9bfc0ef40c98578edb7375c0aef1085bcc4"
+  integrity sha512-dywRDyPbgMLeY6zKpZZrkhAl5fgJYuM9HQyURmx0PkE7X5rT6yxEGJt+ZV7DUFDd/MzyXXPzONqoAYziOQVN6Q==
 
 "@types/range-parser@*":
   version "1.2.3"
