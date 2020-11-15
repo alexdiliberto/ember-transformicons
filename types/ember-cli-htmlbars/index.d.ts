@@ -1,1 +1,1 @@
-export function hbs(template: TemplateStringsArray, ...args: any[]): TemplateFactory;
+export function hbs(template: TemplateStringsArray, ...args: any[]): any;
