@@ -150,7 +150,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: Set ENV
         # 'master' or 'v1.2.3'
-        run: echo "::set-env name=ADDON_DOCS_VERSION_PATH::${GITHUB_REF##*/}"
+        run: echo "ADDON_DOCS_VERSION_PATH=${GITHUB_REF##*/}" >> $GITHUB_ENV
       - name: Deploy
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
