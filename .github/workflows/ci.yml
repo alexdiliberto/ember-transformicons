@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Setup Volta
+        uses: volta-cli/action@v1
         with:
           node-version: 10
       - name: Cache Dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
@@ -37,19 +37,19 @@ jobs:
     needs: [install]
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Setup Volta
+        uses: volta-cli/action@v1
         with:
           node-version: 10
       - name: Cache Dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Lint HBS and JS
+      - name: Lint
         run: yarn lint
 
   test-locked-deps:
@@ -58,13 +58,13 @@ jobs:
     needs: [install]
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Setup Volta
+        uses: volta-cli/action@v1
         with:
           node-version: 10
       - name: Cache Dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
@@ -81,9 +81,9 @@ jobs:
     needs: [lint, test-locked-deps]
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Setup Volta
+        uses: volta-cli/action@v1
         with:
           node-version: 10
       - name: Install Dependencies without Lockfile
@@ -110,13 +110,13 @@ jobs:
             continue-on-error: true
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Setup Volta
+        uses: volta-cli/action@v1
         with:
           node-version: 10
       - name: Cache Dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
@@ -136,13 +136,13 @@ jobs:
     if: success() && github.event_name == 'push'
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v1
-      - name: Install Node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Setup Volta
+        uses: volta-cli/action@v1
         with:
           node-version: 10
       - name: Cache Dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
