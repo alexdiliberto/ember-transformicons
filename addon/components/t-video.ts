@@ -1,10 +1,10 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 import { setComponentTemplate } from '@ember/component';
 import { hbs } from 'ember-cli-htmlbars';
 
-interface IArgs {
-  isPlaying?: boolean;
-}
+// interface IArgs {
+//   isPlaying?: boolean;
+// }
 
 /**
   Video Transformicon
@@ -19,8 +19,6 @@ interface IArgs {
   @class TVideoComponent
   @public
 */
-class TVideoComponent extends Component<IArgs> {}
-
 export default setComponentTemplate(
   hbs`
   <button
@@ -33,5 +31,5 @@ export default setComponentTemplate(
     <span class="tcon-visuallyhidden">play video</span>
   </button>
   `,
-  TVideoComponent
+  templateOnly()
 );

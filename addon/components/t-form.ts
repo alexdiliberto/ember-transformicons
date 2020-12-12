@@ -1,10 +1,10 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 import { setComponentTemplate } from '@ember/component';
 import { hbs } from 'ember-cli-htmlbars';
 
-interface IArgs {
-  isSearching?: boolean;
-}
+// interface IArgs {
+//   isSearching?: boolean;
+// }
 
 /**
   Form Transformicon
@@ -19,8 +19,6 @@ interface IArgs {
   @class TFormComponent
   @public
 */
-class TFormComponent extends Component<IArgs> {}
-
 export default setComponentTemplate(
   hbs`
   <button
@@ -33,5 +31,5 @@ export default setComponentTemplate(
     <span class="tcon-visuallyhidden">toggle search</span>
   </button>
   `,
-  TFormComponent
+  templateOnly()
 );

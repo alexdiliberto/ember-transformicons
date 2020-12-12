@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 import { setComponentTemplate } from '@ember/component';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -12,13 +12,11 @@ import { hbs } from 'ember-cli-htmlbars';
   @class TLoaderComponent
   @public
 */
-class TLoaderComponent extends Component {}
-
 export default setComponentTemplate(
   hbs`
   <span aria-label="loading" class="tcon-loader--spinner360" ...attributes>
     <span class="tcon-visuallyhidden">loading</span>
   </span>
   `,
-  TLoaderComponent
+  templateOnly()
 );
