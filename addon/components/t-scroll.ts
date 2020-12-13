@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import templateOnly from '@ember/component/template-only';
 import { setComponentTemplate } from '@ember/component';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -12,8 +12,6 @@ import { hbs } from 'ember-cli-htmlbars';
   @class TScrollComponent
   @public
 */
-class TScrollComponent extends Component {}
-
 export default setComponentTemplate(
   hbs`
   <span
@@ -34,5 +32,5 @@ export default setComponentTemplate(
     </svg>
   </span>
   `,
-  TScrollComponent
+  templateOnly()
 );

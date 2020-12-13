@@ -261,7 +261,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.10.4", "@babel/parser@^7.12.3", "@babel/parser@^7.12.7", "@babel/parser@^7.4.5":
+"@babel/parser@^7.12.3", "@babel/parser@^7.12.7", "@babel/parser@^7.4.5":
   version "7.12.7"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.7.tgz#fee7b39fe809d0e73e5b25eecaf5780ef3d73056"
   integrity sha512-oWR02Ubp4xTLCAqPRiNIuMVgNO5Aif/xpXtabhzW2HWUD47XJsAB4Zd/Rg30+XeQA3juXigV7hlquOTmwqLiwg==
@@ -7726,10 +7726,10 @@ eslint-config-prettier@^7.0.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.0.0.tgz#c1ae4106f74e6c0357f44adb076771d032ac0e97"
   integrity sha512-8Y8lGLVPPZdaNA7JXqnvETVC7IiVRgAP6afQu9gOQRn90YY3otMNh+x7Vr2vMePQntF+5erdSUBqSzCmU/AxaQ==
 
-eslint-plugin-ember@^9.3.0:
-  version "9.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-9.6.0.tgz#607669732094081922660c3be5fc29f3caa3ee51"
-  integrity sha512-MNSXffxPhIiYaVc4eisRPeNoRb19W/2pHWiXwETlhQI9w/2VCyXLKY7c/8gtOCcjuEw4Xd5NiCMqxcNmyq5UzQ==
+eslint-plugin-ember@^10.0.2:
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-10.0.2.tgz#5e81c6baf75ca62fce424c0a422e494cee2d4421"
+  integrity sha512-GKZhLsnvODkAhORlsnT24D451Kl47ykMoqYKktZJR2Q3+3kklcU0Bj8xkqKJj/HVhsBH80FD74yTiYZKavSqFg==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     css-tree "^1.0.0-alpha.39"
