@@ -33,7 +33,7 @@ if(!r||"new"===r.state)return(r=new o(e,[],l,null)).module.exports=t,r.state="fi
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.24.0
+ * @version   3.24.1
  */
 var e,t,r
 mainContext=this,function(){var n,i
@@ -203,7 +203,7 @@ e.TextArea=B,B.toString=()=>"@ember/component/text-area"
 var U,H=(0,r.templateFactory)({id:"ddnfgiDJ",block:'{"symbols":["&default"],"statements":[[6,[37,0],[[27,[32,1]]],null,[["default","else"],[{"statements":[[18,1,null]],"parameters":[]},{"statements":[[1,[32,0,["linkTitle"]]]],"parameters":[]}]]]],"hasEval":false,"upvars":["if"]}',moduleName:"packages/@ember/-internals/glimmer/lib/templates/link-to.hbs"}),q=Object.freeze({toString:()=>"UNDEFINED"}),V=Object.freeze({}),$=I.extend({layout:H,tagName:"a",route:q,model:q,models:q,query:q,"current-when":null,title:null,rel:null,tabindex:null,target:null,activeClass:"active",loadingClass:"loading",disabledClass:"disabled",replace:!1,attributeBindings:["href","title","rel","tabindex","target"],classNameBindings:["active","loading","disabled","transitioningIn","transitioningOut"],eventName:"click",init(){this._super(...arguments)
 var{eventName:e}=this
 this.on(e,this,this._invoke)},_routing:(0,m.inject)("-routing"),_currentRoute:(0,n.alias)("_routing.currentRouteName"),_currentRouterState:(0,n.alias)("_routing.currentState"),_targetRouterState:(0,n.alias)("_routing.targetState"),_isEngine:(0,n.computed)((function(){return void 0!==(0,p.getEngineParent)((0,i.getOwner)(this))})),_engineMountPoint:(0,n.computed)((function(){return(0,i.getOwner)(this).mountPoint})),_route:(0,n.computed)("route","_currentRouterState",(function(){var{route:e}=this
-return this._namespaceRoute(e===q?this._currentRoute:e)})),_models:(0,n.computed)("model","models",(function(){var{model:e,models:t}=this
+return e===q?this._currentRoute:this._namespaceRoute(e)})),_models:(0,n.computed)("model","models",(function(){var{model:e,models:t}=this
 return e!==q?[e]:t!==q?t:[]})),_query:(0,n.computed)("query",(function(){var{query:e}=this
 return e===q?V:(0,t.assign)({},e)})),disabled:(0,n.computed)({get:e=>!1,set(e,t){return this._isDisabled=t,!!t&&this.disabledClass}}),active:(0,n.computed)("activeClass","_active",(function(){return!!this._active&&this.activeClass})),_active:(0,n.computed)("_currentRouterState","_route","_models","_query","loading","current-when",(function(){var{_currentRouterState:e}=this
 return!!e&&this._isActive(e)})),willBeActive:(0,n.computed)("_currentRouterState","_targetRouterState","_route","_models","_query","loading","current-when",(function(){var{_currentRouterState:e,_targetRouterState:t}=this
@@ -3065,7 +3065,7 @@ B.Test=H.Test,B.Test.Adapter=H.Adapter,B.Test.QUnitAdapter=H.QUnitAdapter,B.setu
 var q=B
 e.default=q,n.IS_NODE?n.module.exports=B:r.context.exports.Ember=r.context.exports.Em=B})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.24.0"})),e("node-module/index",["exports"],(function(e){"use strict"
+e.default="3.24.1"})),e("node-module/index",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.require=e.module=e.IS_NODE=void 0
 var t,r,n="object"==typeof module&&"function"==typeof module.require
 e.IS_NODE=n,e.module=t,e.require=r,n?(e.module=t=module,e.require=r=module.require):(e.module=t=null,e.require=r=null)})),e("route-recognizer",["exports"],(function(e){"use strict"
