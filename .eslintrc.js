@@ -7,8 +7,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      legacyDecorators: true
-    }
+      legacyDecorators: true,
+    },
   },
   plugins: ['ember', 'prettier', 'qunit', '@typescript-eslint'],
   extends: [
@@ -16,17 +16,14 @@ module.exports = {
     '@alexdiliberto',
     'plugin:ember/recommended',
     'plugin:qunit/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint'
+    'prettier/@typescript-eslint',
   ],
   env: {
-    browser: true
+    browser: true,
   },
   rules: {
-    // @alexdiliberto
-    camelcase: 'off', // https://github.com/typescript-eslint/typescript-eslint/blob/v2.6.1/packages/eslint-plugin/src/configs/recommended.json#L7
-    'no-unused-vars': 'off', // https://github.com/typescript-eslint/typescript-eslint/blob/v2.6.1/packages/eslint-plugin/src/configs/recommended.json#L25
-
     // qunit
     'qunit/no-identical-names': 'warn',
 
@@ -34,7 +31,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
     // prettier
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
   },
   overrides: [
     // node files
@@ -49,18 +46,25 @@ module.exports = {
         'testem.js',
         'blueprints/*/index.js',
         'config/**/*.js',
-        'tests/dummy/config/**/*.js'
+        'tests/dummy/config/**/*.js',
       ],
       excludedFiles: ['addon/**', 'addon-test-support/**', 'app/**', 'tests/dummy/app/**'],
       parserOptions: {
-        sourceType: 'script'
+        sourceType: 'script',
       },
       env: {
         browser: false,
-        node: true
+        node: true,
       },
       plugins: ['node'],
-      extends: ['plugin:node/recommended']
-    }
-  ]
+      extends: ['plugin:node/recommended'],
+      rules: {
+        // @alexdiliberto
+        camelcase: 'off',
+
+        // typescript
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 };

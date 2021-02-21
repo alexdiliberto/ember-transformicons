@@ -5,7 +5,7 @@ module.exports = {
 
   rules: {
     'attribute-indentation': {
-      'process-elements': true
-    }
-  }
+      'process-elements': true,
+    },
+  },
 };

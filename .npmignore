@@ -10,6 +10,7 @@
 /.editorconfig
 /.ember-cli.js
 /.env*
+/.eslintcache
 /.eslintignore
 /.eslintrc.js
 /.git/

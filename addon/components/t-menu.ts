@@ -42,7 +42,7 @@ class TMenuComponent extends Component<IArgs> {
     'x-cross': 'tcon-menu--xcross',
     'arrow-up': 'tcon-menu--arrow tcon-menu--arrowup',
     'arrow-360-left': 'tcon-menu--arrow tcon-menu--arrow360left',
-    'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft'
+    'arrow-left': 'tcon-menu--arrow tcon-menu--arrowleft',
   };
 }
 
