@@ -58,6 +58,13 @@ module.exports = {
       },
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
+      rules: {
+        // @alexdiliberto
+        camelcase: 'off',
+
+        // typescript
+        '@typescript-eslint/no-var-requires': 'off',
+      },
     },
   ],
 };
