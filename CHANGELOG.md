@@ -1,3 +1,15 @@
+## v6.0.8 (2021-02-21)
+
+#### :house: Internal
+* [#820](https://github.com/alexdiliberto/ember-transformicons/pull/820) replace eslint plugin `@alexdiliberto` -> `unicorn/recommended` ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#819](https://github.com/alexdiliberto/ember-transformicons/pull/819) volta + cli update + prettier+ eslint ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#730](https://github.com/alexdiliberto/ember-transformicons/pull/730) update to `actions/checkout@v2` and use Volta in CI ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#728](https://github.com/alexdiliberto/ember-transformicons/pull/728) refactor deprecated `set-env` github action command ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### Committers: 2
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v6.0.7 (2020-11-15)
 
 ## v6.0.6 (2020-11-15)
