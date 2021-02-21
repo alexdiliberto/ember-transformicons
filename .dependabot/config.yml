@@ -15,4 +15,3 @@ update_configs:
           dependency_name: "ember-cli"
     default_labels:
       - "dependencies"
-      - "internal"
