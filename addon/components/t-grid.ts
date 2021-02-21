@@ -34,7 +34,7 @@ class TGridComponent extends Component<IArgs> {
   animationTypeTable: IAnimationTypeTable = {
     default: 'tcon-grid--rearrange',
     rearrange: 'tcon-grid--rearrange',
-    collapse: 'tcon-grid--collapse'
+    collapse: 'tcon-grid--collapse',
   };
 }
 

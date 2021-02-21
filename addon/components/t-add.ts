@@ -34,7 +34,7 @@ class TAddComponent extends Component<IArgs> {
   animationTypeTable: IAnimationTypeTable = {
     default: 'tcon-plus--minus',
     minus: 'tcon-plus--minus',
-    check: 'tcon-plus--check'
+    check: 'tcon-plus--check',
   };
 }
 

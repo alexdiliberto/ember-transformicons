@@ -40,7 +40,7 @@ class TRemoveComponent extends Component<IArgs> {
     'chevron-left': 'tcon-remove--chevron-left',
     'chevron-right': 'tcon-remove--chevron-right',
     'chevron-down': 'tcon-remove--chevron-down',
-    'chevron-up': 'tcon-remove--chevron-up'
+    'chevron-up': 'tcon-remove--chevron-up',
   };
 }
 

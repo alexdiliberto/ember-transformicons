@@ -9,5 +9,5 @@ module.exports = {
   endOfLine: 'lf',
   useTabs: false,
   tabWidth: 2,
-  arrowParens: 'always'
+  arrowParens: 'always',
 };
