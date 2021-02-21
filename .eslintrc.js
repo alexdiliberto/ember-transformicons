@@ -10,12 +10,12 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ['ember', 'prettier', 'qunit', '@typescript-eslint'],
+  plugins: ['ember', 'prettier', 'qunit', 'unicorn', '@typescript-eslint'],
   extends: [
     'eslint:recommended',
-    '@alexdiliberto',
     'plugin:ember/recommended',
     'plugin:qunit/recommended',
+    'plugin:unicorn/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
@@ -26,6 +26,18 @@ module.exports = {
   rules: {
     // qunit
     'qunit/no-identical-names': 'warn',
+
+    // unicorn
+    'unicorn/prefer-reflect-apply': 'off',
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        replacements: {
+          args: false,
+          docs: false,
+        },
+      },
+    ],
 
     // typescript
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
