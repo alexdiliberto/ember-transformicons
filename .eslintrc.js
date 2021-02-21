@@ -16,6 +16,7 @@ module.exports = {
     '@alexdiliberto',
     'plugin:ember/recommended',
     'plugin:qunit/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint'
   ],
