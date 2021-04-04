@@ -162,10 +162,12 @@
     }
   },
   "changelog": {
-    "ignoreCommitters": ["dependabot"]
+    "ignoreCommitters": [
+      "dependabot"
+    ]
   },
   "volta": {
-    "node": "12.20.2",
+    "node": "12.22.0",
     "yarn": "1.22.10"
   }
 }
