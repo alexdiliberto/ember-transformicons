@@ -1,0 +1,17 @@
+# https://github.com/ahmadnassri/action-dependabot-auto-merge
+name: Dependabot Auto Merge
+
+on:
+  pull_request:
+
+jobs:
+  auto-merge:
+    name: Merge
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'dependencies')
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor
+          github-token: ${{ secrets.DEPENDABOT_AUTO_MERGE }}
