@@ -1,3 +1,15 @@
+## v6.1.0 (2021-05-19)
+
+#### :house: Internal
+* [#939](https://github.com/alexdiliberto/ember-transformicons/pull/939) update child dep ember-modal-dialog to fix issue with latest ember ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#938](https://github.com/alexdiliberto/ember-transformicons/pull/938) CLI Update + GH Action: Dependabot Auto Merge + Types ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#884](https://github.com/alexdiliberto/ember-transformicons/pull/884) volta + dedupe + cli ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#883](https://github.com/alexdiliberto/ember-transformicons/pull/883) volta + dedupe ([@alexdiliberto](https://github.com/alexdiliberto))
+* [#821](https://github.com/alexdiliberto/ember-transformicons/pull/821) dependabot changelog committer removal+ dependabot default label removal ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### Committers: 1
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+
 ## v6.0.8 (2021-02-21)
 
 #### :house: Internal
