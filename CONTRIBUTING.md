@@ -12,9 +12,8 @@ Any help is welcome and appreciated! :+1: :tada:
 
 ## Linting
 
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
+* `yarn lint`
+* `yarn lint:fix`
 
 ## Running tests
 
