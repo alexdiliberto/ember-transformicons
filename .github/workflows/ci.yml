@@ -105,6 +105,8 @@ jobs:
           - ember-canary
           - ember-default-with-jquery
           - ember-classic
+          - embroider-safe
+          - embroider-optimized
         include:
           - scenario: ember-canary
             continue-on-error: true
