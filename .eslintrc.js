@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -28,6 +26,7 @@ module.exports = {
     'qunit/no-identical-names': 'warn',
 
     // unicorn
+    'unicorn/prefer-module': 'off',
     'unicorn/prefer-reflect-apply': 'off',
     'unicorn/prevent-abbreviations': [
       'error',
