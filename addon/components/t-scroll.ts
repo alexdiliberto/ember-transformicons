@@ -1,4 +1,4 @@
-import templateOnly from '@ember/component/template-only';
+import templateOnlyComponent from '@ember/component/template-only';
 import { setComponentTemplate } from '@ember/component';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -32,5 +32,5 @@ export default setComponentTemplate(
     </svg>
   </span>
   `,
-  templateOnly()
+  templateOnlyComponent()
 );
