@@ -1,3 +1,19 @@
+Version 9 of Highlight.js has reached EOL and is no longer supported.
+Please upgrade or ask whatever dependency you are using to upgrade.
+https://github.com/highlightjs/highlight.js/issues/2877
+
+## v7.0.0 (2021-05-31)
+
+#### :boom: Breaking Change
+* [#967](https://github.com/alexdiliberto/ember-transformicons/pull/967) Node 14 updates ([@alexdiliberto](https://github.com/alexdiliberto))
+
+#### :house: Internal
+* [#953](https://github.com/alexdiliberto/ember-transformicons/pull/953) Configure Renovate ([@renovate[bot]](https://github.com/apps/renovate))
+
+#### Committers: 2
+- Alex DiLiberto ([@alexdiliberto](https://github.com/alexdiliberto))
+- [@renovate[bot]](https://github.com/apps/renovate)
+
 ## v6.1.0 (2021-05-19)
 
 #### :house: Internal
