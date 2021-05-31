@@ -34,6 +34,8 @@ Deploys are automated using Github Actions. If you need to manually deploy, run 
 yarn ember deploy production
 ```
 
+**NOTE:** CI is currently having issues doing an automated deployments, you will need to manually run a deploy `yarn ember deploy production` after publishing a new release
+
 ## Release
 
 When reviewing merged PR's the labels to be used are:
