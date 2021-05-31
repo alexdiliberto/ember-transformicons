@@ -20,7 +20,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
-          node-version: 10
+          node-version: 12
       - name: Cache Dependencies
         uses: actions/cache@v2
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
-          node-version: 10
+          node-version: 12
       - name: Cache Dependencies
         uses: actions/cache@v2
         with:
@@ -62,7 +62,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
-          node-version: 10
+          node-version: 12
       - name: Cache Dependencies
         uses: actions/cache@v2
         with:
@@ -85,7 +85,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
-          node-version: 10
+          node-version: 12
       - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
       - name: Browser Tests
@@ -116,7 +116,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
-          node-version: 10
+          node-version: 12
       - name: Cache Dependencies
         uses: actions/cache@v2
         with:
@@ -142,7 +142,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
-          node-version: 10
+          node-version: 12
       - name: Cache Dependencies
         uses: actions/cache@v2
         with:
