@@ -33,7 +33,7 @@ if(!r||"new"===r.state)return(r=new a(e,[],l,null)).module.exports=t,r.state="fi
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.27.4
+ * @version   3.27.5
  */
 var e,t;(function(){var r="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===r)throw new Error("unable to locate global object")
@@ -560,7 +560,7 @@ function Mr(e){return null==e}function Cr(e){return!Mr(e)}function Nr(e){return"
 class Ir extends Le{constructor(){super(...arguments),this.modernized=this.shouldModernize(),this.currentRouteCache=(0,l.createCache)((()=>((0,l.consumeTag)((0,l.tagFor)(this.routing,"currentState")),(0,l.untrack)((()=>this.routing.currentRouteName)))))}static toString(){return"LinkTo"}validateArguments(){super.validateArguments()}get class(){var e="ember-view"
 return this.isActive?(e+=this.classFor("active"),!1===this.willBeActive&&(e+=" ember-transitioning-out")):this.willBeActive&&(e+=" ember-transitioning-in"),this.isLoading&&(e+=this.classFor("loading")),this.isDisabled&&(e+=this.classFor("disabled")),e}get href(){if(this.isLoading)return"#"
 var{routing:e,route:t,models:r,query:n}=this
-return(0,l.consumeTag)((0,l.tagFor)(e,"currentState")),e.generateURL(t,r,n)}click(e){if((0,u.isSimpleClick)(e)){var t=e.target
+return(0,l.consumeTag)((0,l.tagFor)(e,"currentState")),e.generateURL(t,r,n)}click(e){if((0,u.isSimpleClick)(e)){var t=e.currentTarget
 if((""===t.target||"_self"===t.target)&&(this.preventDefault(e),!this.isDisabled&&!this.isLoading)){var{routing:r,route:n,models:i,query:o,replace:s}=this,a={routeName:n,queryParams:o,transition:void 0};(0,p.flaggedInstrument)("interaction.link-to",a,(()=>{a.transition=r.transitionTo(n,i,o,s)}))}}}get route(){if("route"in this.args.named){var e=this.named("route")
 return e&&this.namespaceRoute(e)}return this.currentRoute}get currentRoute(){return(0,l.getValue)(this.currentRouteCache)}get models(){if("models"in this.args.named){var e=this.named("models")
 return e}return"model"in this.args.named?[this.named("model")]:jr}get query(){if("query"in this.args.named){var e=this.named("query")
@@ -3264,7 +3264,7 @@ return n.Adapter=i,n.QUnitAdapter=o,Object.defineProperty(B,"Test",{configurable
 var V=B
 t.default=V})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.27.4"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.27.5"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function r(){var e=t(null)
