@@ -2167,7 +2167,7 @@
   resolved "https://registry.yarnpkg.com/@types/ember__error/-/ember__error-3.16.1.tgz#752d977f4ee35d4fa66bcfeebae6e85240fc62a6"
   integrity sha512-bnB58krc18B8qgSMsRBbrVbNb4msyb8pMzS9Yo3brw/bRjuPb1ONUrjieAVHeespXlXNJOusvvX/pji641iCPQ==
 
-"@types/ember__object@*", "@types/ember__object@^3.12.3":
+"@types/ember__object@*", "@types/ember__object@^3.12.5":
   version "3.12.5"
   resolved "https://registry.yarnpkg.com/@types/ember__object/-/ember__object-3.12.5.tgz#f3d5ea5e410d52b3e837267e411d72d7469eb844"
   integrity sha512-IToStKZ6bNfkiqjhpnpf24NADNIqrSd3pmpc0ktRilrMZPoHyexcXW6zyGENtpFJE7O7dVjtPh/MzUYYH0urww==
@@ -2180,7 +2180,7 @@
   resolved "https://registry.yarnpkg.com/@types/ember__polyfills/-/ember__polyfills-3.12.1.tgz#aed838e35a3e8670d247333d4c7ea2c2f7b3c43e"
   integrity sha512-Xw9RxFizB8guT6YGg3VNi5tjbzAjqk+bLtAJ1oVl2I1FylKrRFh0bwobxT2K0BF/i0QFEYlqckHpN/OoCpkvkA==
 
-"@types/ember__routing@*", "@types/ember__routing@^3.16.9":
+"@types/ember__routing@*", "@types/ember__routing@^3.16.14":
   version "3.16.14"
   resolved "https://registry.yarnpkg.com/@types/ember__routing/-/ember__routing-3.16.14.tgz#11ba8aa08db7eca331b26c36a2062c6335dd098e"
   integrity sha512-i7eg9+4ZeEwNE/rC1An91pc2uHp7e6l9lxRDgZIkkZJRjFhvH1zHdAs//FAysyIkGn+Y0xerJd7OyUxwaWrNTQ==
