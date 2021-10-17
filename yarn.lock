@@ -7845,10 +7845,10 @@ ember-cli-version-checker@^5.1.0, ember-cli-version-checker@^5.1.1, ember-cli-ve
     semver "^7.3.4"
     silent-error "^1.1.1"
 
-ember-cli@~3.27.0:
-  version "3.27.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.27.0.tgz#8ccf9db51d7b462f86210b853d086a4543605c34"
-  integrity sha512-vFLPFkplXn5v005fattHdOcs5AbSp7RG4w1wpHDWHzOSYpl2Dr+5zzZtqLS7V5IVaLf3XK4l24XwhSW9HpMfsQ==
+ember-cli@~3.28.2:
+  version "3.28.2"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.28.2.tgz#1d23337cab4222828916deef65d7fbc380b55bfa"
+  integrity sha512-TZ6Q3e1OerrLrmEUvSQgV2ubffvydV3gXE1dYnY2WKC7/BEpiN6ymfY0msQfo/Ml0xPDL3vN/9avTVWMeqkWOQ==
   dependencies:
     "@babel/core" "^7.13.8"
     "@babel/plugin-transform-modules-amd" "^7.12.1"
@@ -7864,7 +7864,7 @@ ember-cli@~3.27.0:
     broccoli-config-loader "^1.0.1"
     broccoli-config-replace "^1.1.2"
     broccoli-debug "^0.6.5"
-    broccoli-funnel "^2.0.2"
+    broccoli-funnel "^3.0.5"
     broccoli-funnel-reducer "^1.0.0"
     broccoli-merge-trees "^3.0.2"
     broccoli-middleware "^2.1.1"
@@ -7930,7 +7930,7 @@ ember-cli@~3.27.0:
     sane "^4.1.0"
     semver "^7.3.4"
     silent-error "^1.1.1"
-    sort-package-json "^1.48.0"
+    sort-package-json "^1.49.0"
     symlink-or-copy "^1.3.1"
     temp "0.9.4"
     testem "^3.2.0"
@@ -7939,7 +7939,7 @@ ember-cli@~3.27.0:
     uuid "^8.3.2"
     walk-sync "^2.2.0"
     watch-detector "^1.0.0"
-    workerpool "^6.0.3"
+    workerpool "^6.1.4"
     yam "^1.0.0"
 
 ember-code-snippet@^3.0.0:
@@ -15715,10 +15715,10 @@ sort-object-keys@^1.1.3:
   resolved "https://registry.yarnpkg.com/sort-object-keys/-/sort-object-keys-1.1.3.tgz#bff833fe85cab147b34742e45863453c1e190b45"
   integrity sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==
 
-sort-package-json@^1.48.0:
-  version "1.49.0"
-  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.49.0.tgz#82845ab598501bb35875f326e4768a5ab5f15335"
-  integrity sha512-3YuqFGThwc9X0TZLYohOUJJ/P6uJIVcTeuJOc6ZWw4f1fHpTHIfVysKer4qXtrZ2zvwwU2aEcb555Bo+2fwIgQ==
+sort-package-json@^1.49.0:
+  version "1.52.0"
+  resolved "https://registry.yarnpkg.com/sort-package-json/-/sort-package-json-1.52.0.tgz#f960fe7cfae3120a4ce1b9eed7e010ac4bec998e"
+  integrity sha512-TsKDXgH3kPsaSrjAszQgg+n2/FDYdPrBrXD4YxMxExpogsi8LCek0YzK/jZ70i5Gi53WcpV+mVzvb5CHB5LpZw==
   dependencies:
     detect-indent "^6.0.0"
     detect-newline "3.1.0"
@@ -17535,7 +17535,7 @@ workerpool@^3.1.1:
     object-assign "4.1.1"
     rsvp "^4.8.4"
 
-workerpool@^6.0.0, workerpool@^6.0.2, workerpool@^6.0.3:
+workerpool@^6.0.0, workerpool@^6.0.2:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-6.0.3.tgz#3f80ba4d914fe7bb8d933628c26e5d7ff820c703"
   integrity sha512-meU8ZzO+ipcx/njxtKUcbu2K95085q5WYDo8fR6PMW3hCY4driteIsNsEowYV7dzOtvq0HotUKsReJkK8gKXgg==
