@@ -33,7 +33,7 @@ if(!r||"new"===r.state)return(r=new o(e,[],l,null)).module.exports=t,r.state="fi
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.28.4
+ * @version   3.28.5
  */
 var e,t;(function(){var r="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===r)throw new Error("unable to locate global object")
@@ -98,7 +98,7 @@ return void 0!==r&&c(e,r,s),void 0!==n&&c(e,n,s),s}(e,n.getTypeInjections(i),n.g
 i.destroy&&i.destroy()}}function p(e){e.cache=(0,r.dictionary)(null),e.factoryManagerCache=(0,r.dictionary)(null)}e.Container=s
 var f=(0,r.symbol)("INIT_FACTORY")
 function m(e,t){e[f]=t}e.INIT_FACTORY=f
-class b{constructor(e,t,n,i){this.container=e,this.owner=e.owner,this.class=t,this.fullName=n,this.normalizedName=i,this.madeToString=void 0,this.injections=void 0,m(this,this),t&&(r.HAS_NATIVE_SYMBOL||f in t)&&m(t,this)}toString(){return void 0===this.madeToString&&(this.madeToString=this.container.registry.makeToString(this.class,this.fullName)),this.madeToString}create(e){var{container:t}=this
+class b{constructor(e,t,n,i){this.container=e,this.owner=e.owner,this.class=t,this.fullName=n,this.normalizedName=i,this.madeToString=void 0,this.injections=void 0,m(this,this),o(e,n)&&(r.HAS_NATIVE_SYMBOL||f in t)&&m(t,this)}toString(){return void 0===this.madeToString&&(this.madeToString=this.container.registry.makeToString(this.class,this.fullName)),this.madeToString}create(e){var{container:t}=this
 if(t.isDestroyed)throw new Error(`Can not create new instances after the owner has been destroyed (you attempted to create ${this.fullName})`)
 var r=this.injections
 if(void 0===r){var{injections:n,isDynamic:s}=d(this.container,this.normalizedName)
@@ -3254,7 +3254,7 @@ return n.Adapter=i,n.QUnitAdapter=s,Object.defineProperty(B,"Test",{configurable
 var V=B
 t.default=V})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.28.4"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.28.5"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function r(){var e=t(null)
