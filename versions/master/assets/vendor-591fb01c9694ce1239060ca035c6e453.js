@@ -33,7 +33,7 @@ if(!r||"new"===r.state)return(r=new o(e,[],l,null)).module.exports=t,r.state="fi
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.28.5
+ * @version   3.28.6
  */
 var e,t;(function(){var r="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===r)throw new Error("unable to locate global object")
@@ -1146,7 +1146,7 @@ var r=this._routerMicrolib[e](t||"/")
 return T(r,this),r}transitionTo(...e){if((0,d.resemblesURL)(e[0]))return this._doURLTransition("transitionTo",e[0])
 var{routeName:t,models:r,queryParams:n}=(0,d.extractRouteArgs)(e)
 return this._doTransition(t,r,n)}intermediateTransitionTo(e,...t){this._routerMicrolib.intermediateTransitionTo(e,...t),j(this)}replaceWith(...e){return this.transitionTo(...e).method("replace")}generate(e,...t){var r=this._routerMicrolib.generate(e,...t)
-return this.location.formatURL(r)}isActive(e){return this._routerMicrolib.isActive(e)}isActiveIntent(e,t,r){return this.currentState.isActiveIntent(e,t,r)}send(e,...t){this._routerMicrolib.trigger(e,...t)}hasRoute(e){return this._routerMicrolib.hasRoute(e)}reset(){this._didSetupRouter=!1,this._initialTransitionStarted=!1,this._routerMicrolib&&this._routerMicrolib.reset()}willDestroy(){this._toplevelView&&(this._toplevelView.destroy(),this._toplevelView=null),this._super(...arguments),this.reset()
+return this.location.formatURL(r)}isActive(e){return this._routerMicrolib.isActive(e)}isActiveIntent(e,t,r){return this.currentState.isActiveIntent(e,t,r)}send(e,...t){this._routerMicrolib.trigger(e,...t)}hasRoute(e){return this._routerMicrolib.hasRoute(e)}reset(){this._didSetupRouter=!1,this._initialTransitionStarted=!1,this._routerMicrolib&&this._routerMicrolib.reset()}willDestroy(){this._toplevelView&&(this._toplevelView.destroy(),this._toplevelView=null),super.willDestroy(),this.reset()
 var e=this._engineInstances
 for(var t in e)for(var r in e[t])(0,u.run)(e[t][r],"destroy")}_activeQPChanged(e,t){this._queuedQPChanges[e]=t,(0,u.once)(this,this._fireQueryParamTransition)}_updatingQPChanged(e){this._qpUpdates.add(e)}_fireQueryParamTransition(){this.transitionTo({queryParams:this._queuedQPChanges}),this._resetQueuedQueryParameterChanges()}_setupLocation(){var e=this.location,t=this.rootURL,i=(0,n.getOwner)(this)
 if("string"==typeof e){var s=i.lookup("location:"+e)
@@ -3254,7 +3254,7 @@ return n.Adapter=i,n.QUnitAdapter=s,Object.defineProperty(B,"Test",{configurable
 var V=B
 t.default=V})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.28.5"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.28.6"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function r(){var e=t(null)
