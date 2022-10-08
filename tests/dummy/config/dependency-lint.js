@@ -7,6 +7,7 @@ module.exports = {
     '@ember/render-modifiers': '*',
     '@embroider/util': '*',
     '@glimmer/component': '*',
+    '@glimmer/tracking': '*',
     'ember-test-waiters': '*',
     'ember-truth-helpers': '*',
   },
