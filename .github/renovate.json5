@@ -1,45 +1,30 @@
-// Docs:
-// https://docs.renovatebot.com/configuration-options/
 {
-  "extends": [
-    "config:base"
-  ],
-  "labels": ["dependencies"],
-  "automerge": true,
-  "rangeStrategy": "bump",
-  "packageRules": [
-    ////////////////////////////////////////
-    // Grouping namespaced packages together
-    //
-    // This reduces overall PR count
-    //
-    //  SEE: https://github.com/NullVoxPopuli/ember-statechart-component/blob/v2.3.4/.github/renovate.json5
-    ////////////////////////////////////////
+  extends: ["config:recommended"],
+  labels: ["dependencies"],
+  automerge: true,
+  rangeStrategy: "bump",
+  packageRules: [
     {
-      "groupName": "Type Definitions",
-      "packagePatterns": ["^@types\/*"],
-      "schedule": ["after 9pm on sunday"],
+      groupName: "Type Definitions",
+      schedule: ["after 9pm on sunday"],
+      matchPackageNames: ["/^@types/*/"],
     },
     {
-      "groupName": "Lint Dependencies",
-      "schedule": ["after 9pm on sunday"],
-      "packageNames": [
+      groupName: "Lint Dependencies",
+      schedule: ["after 9pm on sunday"],
+      matchPackageNames: [
         "eslint",
         "ember-template-lint",
         "ember-cli-dependency-lint",
-        "prettier"
+        "prettier",
+        "/eslint-plugin-.*/",
+        "/eslint-config-.*/",
+        "/.*typescript-eslint.*/",
       ],
-      "packagePatterns": [
-        "eslint-plugin-.*",
-        "eslint-config-.*",
-        ".*typescript-eslint.*",
-      ]
     },
-    // These are dependencies that come default when
-    // generating a new ember addon
     {
-      "groupName": "Framework Dependencies",
-      "packageNames": [
+      groupName: "Framework Dependencies",
+      matchPackageNames: [
         "@ember/optional-features",
         "@glimmer/component",
         "@glimmer/tracking",
@@ -49,32 +34,32 @@
         "ember-maybe-import-regenerator",
         "ember-resolver",
         "ember-source",
-        "ember-cli-page-title"
-      ]
+        "ember-cli-page-title",
+      ],
     },
     {
-      "groupName": "CLI Dependencies",
-      "packageNames": [
+      groupName: "CLI Dependencies",
+      matchPackageNames: [
         "broccoli-asset-rev",
         "ember-cli",
         "ember-auto-import",
         "ember-cli-dependency-checker",
         "ember-cli-inject-live-reload",
         "ember-cli-sri",
-        "ember-cli-terser"
-      ]
+        "ember-cli-terser",
+      ],
     },
     {
-      "groupName": "Testing Dependencies",
-      "schedule": ["after 9pm on sunday"],
-      "packageNames": [
+      groupName: "Testing Dependencies",
+      schedule: ["after 9pm on sunday"],
+      matchPackageNames: [
         "qunit-dom",
         "ember-try",
         "ember-source-channel-url",
         "ember-qunit",
         "qunit",
-        "npm-run-all"
-      ]
-    }
-  ]
+        "npm-run-all",
+      ],
+    },
+  ],
 }
