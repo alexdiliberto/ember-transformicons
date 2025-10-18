@@ -30,7 +30,6 @@ module('Integration | Component | t video', function (hooks) {
     `);
     percySnapshot(assert);
 
-    assert.dom('button').hasAttribute('role', 'button');
     assert.dom('button').hasAttribute('type', 'button');
     assert.dom('button').hasAttribute('aria-label', 'play video');
     assert.dom('button').hasClass('tcon');

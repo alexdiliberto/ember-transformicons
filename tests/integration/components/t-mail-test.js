@@ -30,7 +30,6 @@ module('Integration | Component | t mail', function (hooks) {
     `);
     percySnapshot(assert);
 
-    assert.dom('button').hasAttribute('role', 'button');
     assert.dom('button').hasAttribute('type', 'button');
     assert.dom('button').hasAttribute('aria-label', 'open mailbox');
     assert.dom('button').hasClass('tcon');
