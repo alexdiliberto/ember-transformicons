@@ -23,7 +23,6 @@ export default setComponentTemplate(
   hbs`
   <button
     aria-label="play video"
-    role="button"
     type="button"
     class="tcon tcon-vid--play {{if @isPlaying "tcon-transform"}}" 
     ...attributes

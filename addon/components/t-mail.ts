@@ -29,7 +29,6 @@ export default setComponentTemplate(
   hbs`
   <button
     aria-label="open mailbox"
-    role="button"
     type="button"
     class="tcon tcon-mail--envelope {{if this.notOpen "tcon-transform"}}"
     ...attributes
