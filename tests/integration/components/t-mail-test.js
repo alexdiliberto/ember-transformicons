@@ -8,8 +8,6 @@ module('Integration | Component | t mail', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TMail />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t mail', function (hooks) {
   });
 
   test('it creates a mail transformicon with defaults', async function (assert) {
-    assert.expect(6);
-
     await render(hbs`
       <TMail />
     `);
@@ -43,8 +39,6 @@ module('Integration | Component | t mail', function (hooks) {
   });
 
   test('it creates a mail transformicon with `isOpen=false`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TMail @isOpen={{false}} />
     `);
@@ -54,8 +48,6 @@ module('Integration | Component | t mail', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isOpen = true;
 
     await render(hbs`

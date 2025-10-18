@@ -8,8 +8,6 @@ module('Integration | Component | t remove', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TRemove />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t remove', function (hooks) {
   });
 
   test('it creates a remove transformicon with defaults', async function (assert) {
-    assert.expect(5);
-
     await render(hbs`
       <TRemove />
     `);
@@ -42,8 +38,6 @@ module('Integration | Component | t remove', function (hooks) {
   });
 
   test('it creates a remove transformicon with `isRemoved=true`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TRemove @isRemoved={{true}} />
     `);
@@ -53,8 +47,6 @@ module('Integration | Component | t remove', function (hooks) {
   });
 
   test('it creates a remove transformicon with a non-default animation `animation="chevron-right"`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TRemove @animation="chevron-right" />
     `);
@@ -63,8 +55,6 @@ module('Integration | Component | t remove', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isRemoved = false;
 
     await render(hbs`

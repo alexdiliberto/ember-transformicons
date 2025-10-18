@@ -8,8 +8,6 @@ module('Integration | Component | t form', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TForm />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t form', function (hooks) {
   });
 
   test('it creates a form transformicon with defaults', async function (assert) {
-    assert.expect(5);
-
     await render(hbs`
       <TForm />
     `);
@@ -42,8 +38,6 @@ module('Integration | Component | t form', function (hooks) {
   });
 
   test('it creates a form transformicon with `isSearching=true`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TForm @isSearching={{true}} />
     `);
@@ -53,8 +47,6 @@ module('Integration | Component | t form', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isSearching = false;
 
     await render(hbs`

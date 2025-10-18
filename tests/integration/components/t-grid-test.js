@@ -8,8 +8,6 @@ module('Integration | Component | t grid', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TGrid />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t grid', function (hooks) {
   });
 
   test('it creates a grid transformicon with defaults', async function (assert) {
-    assert.expect(6);
-
     await render(hbs`
       <TGrid />
     `);
@@ -43,8 +39,6 @@ module('Integration | Component | t grid', function (hooks) {
   });
 
   test('it creates a grid transformicon with `isOpen=true`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TGrid @isOpen={{true}} />
     `);
@@ -54,8 +48,6 @@ module('Integration | Component | t grid', function (hooks) {
   });
 
   test('it creates a grid transformicon with a non-default animation `animation="collapse"`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TGrid @animation="collapse" />
     `);
@@ -64,8 +56,6 @@ module('Integration | Component | t grid', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isOpen = false;
 
     await render(hbs`

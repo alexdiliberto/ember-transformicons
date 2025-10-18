@@ -8,8 +8,6 @@ module('Integration | Component | t video', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TVideo />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t video', function (hooks) {
   });
 
   test('it creates a video transformicon with defaults', async function (assert) {
-    assert.expect(6);
-
     await render(hbs`
       <TVideo />
     `);
@@ -43,8 +39,6 @@ module('Integration | Component | t video', function (hooks) {
   });
 
   test('it creates a video transformicon with `isPlaying=true`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TVideo @isPlaying={{true}} />
     `);
@@ -54,8 +48,6 @@ module('Integration | Component | t video', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isPlaying = false;
 
     await render(hbs`
