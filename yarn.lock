@@ -1150,7 +1150,7 @@
     ember-cli-babel "^7.26.11"
     ember-modifier-manager-polyfill "^1.2.0"
 
-"@ember/test-helpers@*":
+"@ember/test-helpers@*", "@ember/test-helpers@^5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-5.3.0.tgz#7b101e5cd040ea1e8170d7530e983a433f60ed1b"
   integrity sha512-CG3Iiap0vbrjtOzRg4cN0fd7fMUVhFK5gURkc8yQGJtKT3LwXLLtCLkMG/A55sMTIYHlYRETuJXqv9slO90RKw==
@@ -1161,20 +1161,6 @@
     "@simple-dom/interface" "^1.4.0"
     decorator-transforms "^2.0.0"
     dom-element-descriptors "^0.5.0"
-
-"@ember/test-helpers@^2.7.0":
-  version "2.9.6"
-  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-2.9.6.tgz#42b08eb6cd6d631bdee042acc42af6f97c1393c9"
-  integrity sha512-wUBB8e5nF24XSkl0TlRhHLs+WSf6yHimxDzo7L+a5n7mN5/omEdRkXMlm1qEp8N4+GNWfJKPHg9JTTm+9DA6uw==
-  dependencies:
-    "@ember/test-waiters" "^3.0.0"
-    "@embroider/macros" "^1.10.0"
-    "@embroider/util" "^1.9.0"
-    broccoli-debug "^0.6.5"
-    broccoli-funnel "^3.0.8"
-    ember-cli-babel "^7.26.11"
-    ember-cli-htmlbars "^6.1.1"
-    ember-destroyable-polyfill "^2.0.3"
 
 "@ember/test-waiters@^3.0.0", "@ember/test-waiters@^3.1.0":
   version "3.1.0"
@@ -1277,7 +1263,7 @@
     lodash "^4.17.21"
     resolve "^1.20.0"
 
-"@embroider/util@^1.13.2", "@embroider/util@^1.9.0":
+"@embroider/util@^1.13.2":
   version "1.13.4"
   resolved "https://registry.yarnpkg.com/@embroider/util/-/util-1.13.4.tgz#d1faf26389bc9be8e363bf442e6798ccbe5dbff8"
   integrity sha512-TqA0SNQarSJUdYGv+39MBCHkiuxhr2u0iKJP/JnDmQkCiVhvuFWy3P3n5sI26fVrVwG3DJLfxE2XVnB37udFOA==
@@ -7574,7 +7560,7 @@ ember-cli-htmlbars@^5.0.0, ember-cli-htmlbars@^5.3.1, ember-cli-htmlbars@^5.7.1:
     strip-bom "^4.0.0"
     walk-sync "^2.2.0"
 
-ember-cli-htmlbars@^6.0.1, ember-cli-htmlbars@^6.1.0, ember-cli-htmlbars@^6.1.1, ember-cli-htmlbars@^6.2.0, ember-cli-htmlbars@^6.3.0:
+ember-cli-htmlbars@^6.0.1, ember-cli-htmlbars@^6.1.0, ember-cli-htmlbars@^6.2.0, ember-cli-htmlbars@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.3.0.tgz#ac85f2bbd09788992ab7f9ca832cd044fb8e5798"
   integrity sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==
