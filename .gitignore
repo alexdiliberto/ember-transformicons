@@ -28,9 +28,12 @@
 /package-lock.json.ember-try
 /yarn.lock.ember-try
 
-# sublime text
-/*.sublime-workspace
-/*.sublime-project
+# broccoli-debug
+/DEBUG/
 
 # broccoli concat analyzer
 /concat-stats-for
+
+# sublime text
+/*.sublime-workspace
+/*.sublime-project

@@ -8,8 +8,8 @@ on:
   pull_request: {}
 
 concurrency:
-   group: ci-${{ github.head_ref || github.ref }}
-   cancel-in-progress: true
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   install:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
@@ -59,7 +59,7 @@ jobs:
     needs: [install]
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:
@@ -104,16 +104,15 @@ jobs:
           - ember-release
           - ember-beta
           - ember-canary
-          - ember-default-with-jquery
           - ember-classic
-          # - embroider-safe
-          # - embroider-optimized
+          - embroider-safe
+          - embroider-optimized
         include:
           - scenario: ember-canary
             continue-on-error: true
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
         uses: volta-cli/action@v1
         with:

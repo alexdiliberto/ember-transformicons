@@ -55,4 +55,4 @@ yarn install
 npx release-it # unknown issues sometimes when running `yarn release`
 ```
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+For more information on using ember-cli, visit [https://cli.emberjs.com/release/](https://cli.emberjs.com/release/).
