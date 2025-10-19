@@ -42,7 +42,7 @@
     "start": "ember serve",
     "start:inspect": "node --inspect-brk yarn start",
     "test": "npm-run-all lint test:*",
-    "test:ember": "ADDON_DOCS_DISABLED=true ember test",
+    "test:ember": "ember test",
     "test:ember-compatibility": "ember try:each",
     "prepack": "ember ts:precompile",
     "postpack": "ember ts:clean"
@@ -89,7 +89,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-concat-analyser": "^5.0.0",
     "ember-cli": "~4.4.0",
-    "ember-cli-addon-docs": "^6.0.2",
+    "ember-cli-addon-docs": "^7.2.2",
     "ember-cli-addon-docs-yuidoc": "^1.0.0",
     "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-dependency-lint": "^2.0.1",
