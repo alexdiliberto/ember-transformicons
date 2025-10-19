@@ -1,14 +1,15 @@
 name: CI
 
 on:
-  pull_request:
   push:
-    # filtering branches here prevents duplicate builds from pull_request and push
     branches:
+      - main
       - master
+  pull_request: {}
 
-env:
-  CI: true
+concurrency:
+   group: ci-${{ github.head_ref || github.ref }}
+   cancel-in-progress: true
 
 jobs:
   install:
@@ -98,8 +99,8 @@ jobs:
     strategy:
       matrix:
         scenario:
-          - ember-lts-3.20
           - ember-lts-3.24
+          - ember-lts-3.28
           - ember-release
           - ember-beta
           - ember-canary
