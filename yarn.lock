@@ -1150,7 +1150,7 @@
     ember-cli-babel "^7.26.11"
     ember-modifier-manager-polyfill "^1.2.0"
 
-"@ember/test-helpers@*", "@ember/test-helpers@^5.3.0":
+"@ember/test-helpers@^5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-5.3.0.tgz#7b101e5cd040ea1e8170d7530e983a433f60ed1b"
   integrity sha512-CG3Iiap0vbrjtOzRg4cN0fd7fMUVhFK5gURkc8yQGJtKT3LwXLLtCLkMG/A55sMTIYHlYRETuJXqv9slO90RKw==
@@ -2507,13 +2507,6 @@
   version "3.16.7"
   resolved "https://registry.yarnpkg.com/@types/ember__template/-/ember__template-3.16.7.tgz#3e7dd9a82b4c3bab684bcfe8ec87fc246e557edf"
   integrity sha512-Mj3BzTzXKrS2cX9rkUpsqnyCNnVUUJh6juhuJW9KleJNtrUdfGPPGkOonn+oXFKcWfxiRB15jx8Ypi668vDDQw==
-
-"@types/ember__test-helpers@^2.9.3":
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/@types/ember__test-helpers/-/ember__test-helpers-2.9.3.tgz#88eebb1336575d970f01fb098953a4a9d271c677"
-  integrity sha512-GTucagS2Yqla9EkCe478DvF0n3SYaiJMf4v27SKw0DNm3JRoDGxfHp5guIKfoyeLH8yASl3RtsBwD5jNwM4qmw==
-  dependencies:
-    "@ember/test-helpers" "*"
 
 "@types/ember__test@*":
   version "4.0.6"
@@ -17269,10 +17262,10 @@ typescript-memoize@^1.0.0-alpha.3, typescript-memoize@^1.0.1:
   resolved "https://registry.yarnpkg.com/typescript-memoize/-/typescript-memoize-1.1.1.tgz#02737495d5df6ebf72c07ba0d002e8f4cf5ccfa0"
   integrity sha512-GQ90TcKpIH4XxYTI2F98yEQYZgjNMOGPpOgdjIBhaLaWji5HPWlRnZ4AeA1hfBxtY7bCGDJsqDDHk/KaHOl5bA==
 
-typescript@^4.5.4:
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
-  integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
+typescript@^5.6.3:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
+  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
 uc.micro@^1.0.0, uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
