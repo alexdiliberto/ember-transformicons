@@ -15,13 +15,11 @@ Transformicons for Ember applications
 
 ![ember-transformicons demo gif][demo-gif]
 
-
 ## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
-* Node.js v12 or above
-
+- Ember.js v5.8 or above
+- Ember CLI v5.8 or above
+- Node.js v20 or above
 
 ## Installation
 
@@ -29,16 +27,13 @@ Transformicons for Ember applications
 ember install ember-transformicons
 ```
 
-
 ## Usage
 
 Simply use the provided Transformicon components in any of your Ember applications
 
-
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
-
 
 ## License
 
