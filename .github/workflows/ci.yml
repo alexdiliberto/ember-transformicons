@@ -146,9 +146,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --non-interactive
-      - name: "Scenario: ${{ matrix.scenario }}"
-        run: yarn ember try:one ${{ matrix.scenario }}
-        continue-on-error: ${{ matrix['continue-on-error'] == true }}
+      - name: "Scenario: ${{ matrix.try-scenario }}"
+        run: yarn ember try:one ${{ matrix.try-scenario }}
 
   # https://github.com/ember-learn/ember-cli-addon-docs/issues/437
   deploy-prod:
