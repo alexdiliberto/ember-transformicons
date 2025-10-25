@@ -46,18 +46,15 @@
     "start:inspect": "node --inspect-brk yarn start",
     "test": "concurrently \"yarn:lint\" \"yarn:test:*\" --names \"lint,test:\" --prefixColors auto",
     "test:ember": "ember test",
-    "test:ember-compatibility": "ember try:each",
-    "prepack": "ember ts:precompile",
-    "postpack": "ember ts:clean"
+    "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
     "@ember/string": "^3.0.0",
-    "@glimmer/component": "^2.0.0",
+    "@glimmer/component": "1.1.2",
     "ember-auto-import": "^2.11.1",
     "ember-cli-babel": "8.2.0",
     "ember-cli-htmlbars": "^6.3.0",
-    "ember-cli-typescript": "^4.2.1",
     "ember-decorators": "^6.1.1",
     "ember-template-imports": "^4.3.0",
     "ember-truth-helpers": "^3.0.0"
@@ -68,6 +65,7 @@
     "@ember/edition-utils": "^1.2.0",
     "@ember/optional-features": "^2.2.0",
     "@ember/test-helpers": "^5.3.0",
+    "@ember/test-waiters": "^4.1.1",
     "@embroider/macros": "^1.19.1",
     "@embroider/test-setup": "^4.0.0",
     "@eslint/js": "^9.37.0",
@@ -99,7 +97,7 @@
     "broccoli-concat-analyser": "^5.0.0",
     "concurrently": "^9.2.1",
     "ember-cli": "~6.8.0",
-    "ember-cli-addon-docs": "^7.2.2",
+    "ember-cli-addon-docs": "^8.0.8",
     "ember-cli-addon-docs-yuidoc": "^1.1.0",
     "ember-cli-clean-css": "^3.0.0",
     "ember-cli-dependency-checker": "^3.3.3",
@@ -113,7 +111,6 @@
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
-    "ember-cli-typescript-blueprints": "^3.0.0",
     "ember-data": "^5.7.0",
     "ember-load-initializers": "^3.0.1",
     "ember-open-browser": "^1.0.0",
@@ -181,6 +178,9 @@
     "ignoreCommitters": [
       "dependabot"
     ]
+  },
+  "resolutions": {
+    "@glimmer/component": "1.1.2"
   },
   "volta": {
     "node": "20.19.0",
