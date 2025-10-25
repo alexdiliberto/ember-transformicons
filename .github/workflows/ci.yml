@@ -21,9 +21,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
         with:
-          node-version: 20
+          node-version: '20.19.0'
+          yarn-version: '1.22.22'
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
@@ -32,7 +33,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install Dependencies
-        run: yarn install --non-interactive
+        run: yarn install --frozen-lockfile --non-interactive
+      - name: Verify Dependency Resolutions
+        run: |
+          yarn why @babel/traverse
+          yarn why ember-cli-babel
 
   lint:
     name: Lint
@@ -43,9 +48,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
         with:
-          node-version: 20
+          node-version: '20.19.0'
+          yarn-version: '1.22.22'
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
@@ -66,9 +72,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
         with:
-          node-version: 20
+          node-version: '20.19.0'
+          yarn-version: '1.22.22'
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
@@ -91,9 +98,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
         with:
-          node-version: 20
+          node-version: '20.19.0'
+          yarn-version: '1.22.22'
       - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
       - name: Browser Tests
@@ -120,9 +128,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
         with:
-          node-version: 20
+          node-version: '20.19.0'
+          yarn-version: '1.22.22'
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
@@ -146,9 +155,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
         with:
-          node-version: 20
+          node-version: '20.19.0'
+          yarn-version: '1.22.22'
       - name: Cache Dependencies
         uses: actions/cache@v4
         with:
