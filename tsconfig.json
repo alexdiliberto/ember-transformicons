@@ -21,32 +21,15 @@
     "module": "es6",
     "experimentalDecorators": true,
     "skipLibCheck": true, // https://github.com/typed-ember/ember-cli-typescript/issues/1029
-    "types": [
-      "qunit"
-    ],
+    "types": ["qunit"],
     "paths": {
-      "dummy/tests/*": [
-        "tests/*"
-      ],
-      "dummy/*": [
-        "tests/dummy/app/*",
-        "app/*"
-      ],
-      "ember-transformicons": [
-        "addon"
-      ],
-      "ember-transformicons/*": [
-        "addon/*"
-      ],
-      "ember-transformicons/test-support": [
-        "addon-test-support"
-      ],
-      "ember-transformicons/test-support/*": [
-        "addon-test-support/*"
-      ],
-      "*": [
-        "types/*"
-      ]
+      "dummy/tests/*": ["tests/*"],
+      "dummy/*": ["tests/dummy/app/*", "app/*"],
+      "ember-transformicons": ["addon"],
+      "ember-transformicons/*": ["addon/*"],
+      "ember-transformicons/test-support": ["addon-test-support"],
+      "ember-transformicons/test-support/*": ["addon-test-support/*"],
+      "*": ["types/*"]
     }
   },
   "include": [

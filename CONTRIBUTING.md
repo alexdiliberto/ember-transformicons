@@ -40,11 +40,11 @@ yarn ember deploy production
 
 When reviewing merged PR's the labels to be used are:
 
-* breaking - Used when the PR is considered a breaking change.
-* enhancement - Used when the PR adds a new feature or enhancement.
-* bug - Used when the PR fixes a bug included in a previous release.
-* documentation - Used when the PR adds or updates documentation.
-* internal - Used for internal changes that still require a mention in the
+- breaking - Used when the PR is considered a breaking change.
+- enhancement - Used when the PR adds a new feature or enhancement.
+- bug - Used when the PR fixes a bug included in a previous release.
+- documentation - Used when the PR adds or updates documentation.
+- internal - Used for internal changes that still require a mention in the
   changelog/release notes.
 
 Ready to draft a new release:

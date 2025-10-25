@@ -1,126 +1,78 @@
-/**
- * Debugging:
- *   https://eslint.org/docs/latest/use/configure/debug
- *  ----------------------------------------------------
- *
- *   Print a file's calculated configuration
- *
- *     npx eslint --print-config path/to/file.js
- *
- *   Inspecting the config
- *
- *     npx eslint --inspect-config
- *
- */
-import globals from 'globals';
+// eslint.config.mjs
 import js from '@eslint/js';
-
-import ember from 'eslint-plugin-ember/recommended';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import globals from 'globals';
+import ember from 'eslint-plugin-ember';
 import qunit from 'eslint-plugin-qunit';
-import n from 'eslint-plugin-n';
-
-import babelParser from '@babel/eslint-parser';
-
-const esmParserOptions = {
-  ecmaFeatures: { modules: true },
-  ecmaVersion: 'latest',
-  requireConfigFile: false,
-  babelOptions: {
-    plugins: [
-      ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
-    ],
-  },
-};
+import tsParser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
-  js.configs.recommended,
-  eslintConfigPrettier,
-  ember.configs.base,
-  ember.configs.gjs,
-  /**
-   * Ignores must be in their own object
-   * https://eslint.org/docs/latest/use/configure/ignore
-   */
+  // Ignore built & vendor artifacts
   {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+    ignores: [
+      'dist/**',
+      'tmp/**',
+      'coverage/**',
+      'vendor/**',
+      'types/**', // generated or legacy .d.ts you don't want to lint
+      'concat-stats-for/**',
+      // node_modules is ignored by default
+    ],
   },
-  /**
-   * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
-   */
+
+  // Base JS
   {
-    linterOptions: {
-      reportUnusedDisableDirectives: 'error',
-    },
-  },
-  {
-    files: ['**/*.js'],
+    ...js.configs.recommended,
+    files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     languageOptions: {
-      parser: babelParser,
-    },
-  },
-  {
-    files: ['**/*.{js,gjs}'],
-    languageOptions: {
-      parserOptions: esmParserOptions,
+      ecmaVersion: 2022,
+      sourceType: 'module',
       globals: {
         ...globals.browser,
+        ...globals.node,
       },
     },
-  },
-  {
-    ...qunit.configs.recommended,
-    files: ['tests/**/*-test.{js,gjs}'],
     plugins: {
+      ember,
       qunit,
     },
-  },
-  /**
-   * CJS node files
-   */
-  {
-    ...n.configs['flat/recommended-script'],
-    files: [
-      '**/*.cjs',
-      'config/**/*.js',
-      'tests/dummy/config/**/*.js',
-      'testem.js',
-      'testem*.js',
-      'index.js',
-      '.prettierrc.js',
-      '.stylelintrc.js',
-      '.template-lintrc.js',
-      'ember-cli-build.js',
-    ],
-    plugins: {
-      n,
+    rules: {
+      ...ember.configs.recommended.rules,
+      ...qunit.configs.recommended.rules,
     },
+  },
 
+  // TypeScript (addon components etc.)
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.d.ts'],
     languageOptions: {
-      sourceType: 'script',
-      ecmaVersion: 'latest',
+      parser: tsParser,
+      parserOptions: {
+        // No need for project: tsconfig.json here; faster & sufficient for linting
+        ecmaVersion: 2022,
+        sourceType: 'module',
+      },
       globals: {
+        ...globals.browser,
         ...globals.node,
       },
     },
-  },
-  /**
-   * ESM node files
-   */
-  {
-    ...n.configs['flat/recommended-module'],
-    files: ['**/*.mjs'],
     plugins: {
-      n,
+      '@typescript-eslint': tsPlugin,
+      ember,
+      qunit,
     },
+    rules: {
+      // Use NON type-aware recommended rules:
+      ...tsPlugin.configs.recommended.rules,
 
-    languageOptions: {
-      sourceType: 'module',
-      ecmaVersion: 'latest',
-      parserOptions: esmParserOptions,
-      globals: {
-        ...globals.node,
-      },
+      // Relax a few noisy TS rules for .d.ts / Ember patterns:
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
+
+      // Keep Ember/QUnit goodness for TS files too:
+      ...ember.configs.recommended.rules,
+      ...qunit.configs.recommended.rules,
     },
   },
 ];

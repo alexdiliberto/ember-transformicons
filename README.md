@@ -39,5 +39,4 @@ See the [Contributing](CONTRIBUTING.md) guide for details.
 
 This project is licensed under the [MIT License](LICENSE.md).
 
-
 [demo-gif]: https://raw.githubusercontent.com/alexdiliberto/ember-transformicons/master/demo.gif

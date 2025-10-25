@@ -8,7 +8,7 @@ plugins:
   csslint:
     enabled: true
 exclude_patterns:
-- "config/**"
-- "node_modules/**"
-- "vendor/**"
-- "*.lock"
+  - "config/**"
+  - "node_modules/**"
+  - "vendor/**"
+  - "*.lock"
