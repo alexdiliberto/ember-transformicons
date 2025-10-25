@@ -23,7 +23,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
         with:
-          node-version: '20.19.0'
+          node-version: '20.19.5'
           yarn-version: '1.22.22'
       - name: Yarn Cache
         uses: actions/cache@v4
@@ -50,7 +50,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
         with:
-          node-version: '20.19.0'
+          node-version: '20.19.5'
           yarn-version: '1.22.22'
       - name: Yarn Cache
         uses: actions/cache@v4
@@ -76,7 +76,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
         with:
-          node-version: '20.19.0'
+          node-version: '20.19.5'
           yarn-version: '1.22.22'
       - name: Yarn Cache
         uses: actions/cache@v4
@@ -105,7 +105,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
         with:
-          node-version: '20.19.0'
+          node-version: '20.19.5'
           yarn-version: '1.22.22'
       - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
@@ -135,7 +135,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
         with:
-          node-version: '20.19.0'
+          node-version: '20.19.5'
           yarn-version: '1.22.22'
       - name: Yarn Cache
         uses: actions/cache@v4
@@ -147,6 +147,8 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: "Scenario: ${{ matrix.try-scenario }}"
+        env:
+          BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
 
   # https://github.com/ember-learn/ember-cli-addon-docs/issues/437
@@ -163,7 +165,7 @@ jobs:
       - name: Setup Volta
         uses: volta-cli/action@v4
         with:
-          node-version: '20.19.0'
+          node-version: '20.19.5'
           yarn-version: '1.22.22'
       - name: Yarn Cache
         uses: actions/cache@v4
