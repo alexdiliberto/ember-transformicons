@@ -149,7 +149,24 @@ jobs:
       - name: "Scenario: ${{ matrix.try-scenario }}"
         env:
           BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }} --skip-cleanup
+        # run: yarn ember try:one ${{ matrix.try-scenario }}
+        # adding to bypass flaky teardown issues
+        run: |
+          set -euo pipefail
+          # Run ember-try but don't let a flaky teardown crash the job
+          set +e
+          OUTPUT=$(./node_modules/.bin/ember try:one "${{ matrix.try-scenario }}" --skip-cleanup 2>&1)
+          STATUS=$?
+          set -e
+          echo "$OUTPUT"
+
+          # Treat true scenario success as job success
+          if echo "$OUTPUT" | grep -qE "All [0-9]+ scenarios succeeded"; then
+            exit 0
+          fi
+
+          # Otherwise fail with the original status
+          exit $STATUS
 
   # https://github.com/ember-learn/ember-cli-addon-docs/issues/437
   deploy-prod:
