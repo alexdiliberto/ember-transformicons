@@ -25,19 +25,19 @@ jobs:
         with:
           node-version: '20.19.0'
           yarn-version: '1.22.22'
-      - name: Cache Dependencies
+      - name: Yarn Cache
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: Verify Dependency Resolutions
         run: |
-          yarn why @babel/traverse
           yarn why ember-cli-babel
+          yarn why @babel/traverse
 
   lint:
     name: Lint
@@ -52,13 +52,15 @@ jobs:
         with:
           node-version: '20.19.0'
           yarn-version: '1.22.22'
-      - name: Cache Dependencies
+      - name: Yarn Cache
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Lint
         run: yarn lint
 
@@ -76,16 +78,19 @@ jobs:
         with:
           node-version: '20.19.0'
           yarn-version: '1.22.22'
-      - name: Cache Dependencies
+      - name: Yarn Cache
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Browser Tests
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
         run: yarn test:ember
 
   test-floating-deps:
@@ -105,6 +110,8 @@ jobs:
       - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
       - name: Browser Tests
+        env:
+          BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
         run: yarn test:ember
 
   test-ember-try:
@@ -132,13 +139,15 @@ jobs:
         with:
           node-version: '20.19.0'
           yarn-version: '1.22.22'
-      - name: Cache Dependencies
+      - name: Yarn Cache
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
       - name: "Scenario: ${{ matrix.scenario }}"
         run: yarn ember try:one ${{ matrix.scenario }}
         continue-on-error: ${{ matrix['continue-on-error'] == true }}
@@ -159,13 +168,15 @@ jobs:
         with:
           node-version: '20.19.0'
           yarn-version: '1.22.22'
-      - name: Cache Dependencies
+      - name: Yarn Cache
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Set ENV
         # 'master' or 'v1.2.3'
         run: echo "ADDON_DOCS_VERSION_PATH=${GITHUB_REF##*/}" >> $GITHUB_ENV
