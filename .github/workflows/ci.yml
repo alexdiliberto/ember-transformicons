@@ -119,6 +119,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test-locked-deps]
     strategy:
+      fail-fast: false
       matrix:
         try-scenario:
           - ember-lts-5.8
@@ -128,9 +129,6 @@ jobs:
           - ember-canary
           - embroider-safe
           - embroider-optimized
-        include:
-          - scenario: ember-canary
-            continue-on-error: true
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
