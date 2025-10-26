@@ -90,7 +90,6 @@ jobs:
       - name: Browser Tests
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
         run: yarn test:ember
 
   test-floating-deps:
@@ -110,8 +109,6 @@ jobs:
       - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
       - name: Browser Tests
-        env:
-          BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
         run: yarn test:ember
 
   test-ember-try:
@@ -148,8 +145,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --non-interactive
       - name: "Scenario: ${{ matrix.try-scenario }}"
-        env:
-          BROCCOLI_PERSISTENT_FILTER_PARALLEL: 'false'
         # run: yarn ember try:one ${{ matrix.try-scenario }}
         # adding to bypass flaky teardown issues
         run: |
