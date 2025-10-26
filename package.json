@@ -90,7 +90,7 @@
     "@types/ember__utils": "^3.16.2",
     "@types/htmlbars-inline-precompile": "^1.0.1",
     "@types/qunit": "^2.19.13",
-    "@types/rsvp": "^4.0.4",
+    "@types/rsvp": "^4.0.6",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "broccoli-asset-rev": "^3.0.0",
