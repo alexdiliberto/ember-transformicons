@@ -83,10 +83,11 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --non-interactive
-      - name: Browser Tests
+      - name: Browser Tests with Percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: yarn test:ember
+          PERCY_LOGLEVEL: debug
+        run: npx percy exec -- yarn test:ember
 
   test-floating-deps:
     name: Floating Dependencies
