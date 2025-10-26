@@ -34,10 +34,6 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --non-interactive
-      - name: Verify Dependency Resolutions
-        run: |
-          yarn why ember-cli-babel
-          yarn why @babel/traverse
 
   lint:
     name: Lint
