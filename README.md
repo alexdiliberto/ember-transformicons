@@ -10,6 +10,15 @@ ember-transformicons
 
 [![Percy.io](https://percy.io/static/images/percy-badge.svg)](https://percy.io/alexdiliberto/ember-transformicons)
 
+> **Deprecated:** This addon is no longer actively maintained and may not be compatible with newer Ember versions.
+> 
+> It is being kept available for existing users, but I am not planning new features or routine dependency updates.
+> 
+> - Bugs and security fixes may not be addressed
+> - Pull requests may not be reviewed promptly
+> - Consider forking if you need ongoing support
+
+
 Transformicons for Ember applications
 
 [Docs](https://alexdiliberto.com/ember-transformicons/)
