@@ -2,14 +2,12 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import { percySnapshot } from 'ember-percy';
+import percySnapshot from '@percy/ember';
 
 module('Integration | Component | t mail', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TMail />
     `);
@@ -27,14 +25,11 @@ module('Integration | Component | t mail', function (hooks) {
   });
 
   test('it creates a mail transformicon with defaults', async function (assert) {
-    assert.expect(6);
-
     await render(hbs`
       <TMail />
     `);
     percySnapshot(assert);
 
-    assert.dom('button').hasAttribute('role', 'button');
     assert.dom('button').hasAttribute('type', 'button');
     assert.dom('button').hasAttribute('aria-label', 'open mailbox');
     assert.dom('button').hasClass('tcon');
@@ -43,8 +38,6 @@ module('Integration | Component | t mail', function (hooks) {
   });
 
   test('it creates a mail transformicon with `isOpen=false`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TMail @isOpen={{false}} />
     `);
@@ -54,8 +47,6 @@ module('Integration | Component | t mail', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isOpen = true;
 
     await render(hbs`

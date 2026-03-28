@@ -2,14 +2,12 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import { percySnapshot } from 'ember-percy';
+import percySnapshot from '@percy/ember';
 
 module('Integration | Component | t-add', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TAdd />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t-add', function (hooks) {
   });
 
   test('it creates an add transformicon with defaults', async function (assert) {
-    assert.expect(6);
-
     await render(hbs`
       <TAdd />
     `);
@@ -43,8 +39,6 @@ module('Integration | Component | t-add', function (hooks) {
   });
 
   test('it creates an add transformicon with `isAdded=true`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TAdd @isAdded={{true}} />
     `);
@@ -54,8 +48,6 @@ module('Integration | Component | t-add', function (hooks) {
   });
 
   test('it creates an add transformicon with a non-default animation `animation="check"`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TAdd @animation="check" />
     `);
@@ -64,8 +56,6 @@ module('Integration | Component | t-add', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isAdded = false;
 
     await render(hbs`

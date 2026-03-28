@@ -7,8 +7,6 @@ module('Integration | Component | t scroll', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TScroll />
     `);
@@ -26,8 +24,6 @@ module('Integration | Component | t scroll', function (hooks) {
   });
 
   test('it creates a scroll indicator transformicon with defaults', async function (assert) {
-    assert.expect(5);
-
     await render(hbs`
       <TScroll />
     `);

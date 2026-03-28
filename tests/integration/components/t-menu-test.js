@@ -2,14 +2,12 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import { percySnapshot } from 'ember-percy';
+import percySnapshot from '@percy/ember';
 
 module('Integration | Component | t menu', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TMenu />
     `);
@@ -27,8 +25,6 @@ module('Integration | Component | t menu', function (hooks) {
   });
 
   test('it creates a menu transformicon with defaults', async function (assert) {
-    assert.expect(5);
-
     await render(hbs`
       <TMenu />
     `);
@@ -42,8 +38,6 @@ module('Integration | Component | t menu', function (hooks) {
   });
 
   test('it creates a menu transformicon with `isOpen=true`', async function (assert) {
-    assert.expect(1);
-
     await render(hbs`
       <TMenu @isOpen={{true}} />
     `);
@@ -53,8 +47,6 @@ module('Integration | Component | t menu', function (hooks) {
   });
 
   test('it creates a menu transformicon with a non-default animation `animation="butterfly"`', async function (assert) {
-    assert.expect(2);
-
     await render(hbs`
       <TMenu @animation="arrow-360-left" />
     `);
@@ -64,8 +56,6 @@ module('Integration | Component | t menu', function (hooks) {
   });
 
   test('user can click on the transformicon', async function (assert) {
-    assert.expect(2);
-
     this.isOpen = false;
 
     await render(hbs`

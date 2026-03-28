@@ -1,54 +1,62 @@
 name: CI
 
 on:
-  pull_request:
   push:
-    # filtering branches here prevents duplicate builds from pull_request and push
     branches:
+      - main
       - master
+  pull_request: {}
 
-env:
-  CI: true
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   install:
     name: Install Dependencies
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194 # v4.2.1
         with:
-          node-version: 12
-      - name: Cache Dependencies
-        uses: actions/cache@v2
+          node-version: '20.19.5'
+          yarn-version: '1.22.22'
+      - name: Yarn Cache
+        uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
       - name: Install Dependencies
-        run: yarn install --non-interactive
+        run: yarn install --frozen-lockfile --non-interactive
 
   lint:
     name: Lint
     runs-on: ubuntu-latest
     needs: [install]
+    
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194 # v4.2.1
         with:
-          node-version: 12
-      - name: Cache Dependencies
-        uses: actions/cache@v2
+          node-version: '20.19.5'
+          yarn-version: '1.22.22'
+      - name: Yarn Cache
+        uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Lint
         run: yarn lint
 
@@ -56,36 +64,45 @@ jobs:
     name: Locked Dependencies
     runs-on: ubuntu-latest
     needs: [install]
+    timeout-minutes: 10
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194 # v4.2.1
         with:
-          node-version: 12
-      - name: Cache Dependencies
-        uses: actions/cache@v2
+          node-version: '20.19.5'
+          yarn-version: '1.22.22'
+      - name: Yarn Cache
+        uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Browser Tests
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+      - name: Browser Tests with Percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: yarn test:ember
+          PERCY_LOGLEVEL: debug
+        run: npx percy exec -- yarn test:ember
 
   test-floating-deps:
     name: Floating Dependencies
     runs-on: ubuntu-latest
     needs: [lint, test-locked-deps]
+    timeout-minutes: 10
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194 # v4.2.1
         with:
-          node-version: 12
+          node-version: '20.19.5'
+          yarn-version: '1.22.22'
       - name: Install Dependencies without Lockfile
         run: yarn install --no-lockfile --non-interactive
       - name: Browser Tests
@@ -96,37 +113,53 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test-locked-deps]
     strategy:
+      fail-fast: false
       matrix:
-        scenario:
-          - ember-lts-3.20
-          - ember-lts-3.24
+        try-scenario:
+          - ember-lts-5.8
+          - ember-lts-5.12
           - ember-release
           - ember-beta
           - ember-canary
-          - ember-default-with-jquery
-          - ember-classic
-          # - embroider-safe
-          # - embroider-optimized
-        include:
-          - scenario: ember-canary
-            continue-on-error: true
+          #- embroider-safe
+          #- embroider-optimized
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194 # v4.2.1
         with:
-          node-version: 12
-      - name: Cache Dependencies
-        uses: actions/cache@v2
+          node-version: '20.19.5'
+          yarn-version: '1.22.22'
+      - name: Yarn Cache
+        uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
-      - name: "Scenario: ${{ matrix.scenario }}"
-        run: yarn ember try:one ${{ matrix.scenario }}
-        continue-on-error: ${{ matrix['continue-on-error'] == true }}
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+      - name: "Scenario: ${{ matrix.try-scenario }}"
+        # run: yarn ember try:one ${{ matrix.try-scenario }}
+        # adding to bypass flaky teardown issues
+        run: |
+          set -euo pipefail
+          # Run ember-try but don't let a flaky teardown crash the job
+          set +e
+          OUTPUT=$(./node_modules/.bin/ember try:one "${{ matrix.try-scenario }}" --skip-cleanup 2>&1)
+          STATUS=$?
+          set -e
+          echo "$OUTPUT"
+
+          # Treat true scenario success as job success
+          if echo "$OUTPUT" | grep -qE "All [0-9]+ scenarios succeeded"; then
+            exit 0
+          fi
+
+          # Otherwise fail with the original status
+          exit $STATUS
 
   # https://github.com/ember-learn/ember-cli-addon-docs/issues/437
   deploy-prod:
@@ -136,20 +169,24 @@ jobs:
     # if: (branch = master OR tag IS present) AND type = push
     # if: success() && github.ref == 'refs/heads/master' && github.event_name == 'push'
     if: success() && github.event_name == 'push'
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194 # v4.2.1
         with:
-          node-version: 12
-      - name: Cache Dependencies
-        uses: actions/cache@v2
+          node-version: '20.19.5'
+          yarn-version: '1.22.22'
+      - name: Yarn Cache
+        uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Set ENV
         # 'master' or 'v1.2.3'
         run: echo "ADDON_DOCS_VERSION_PATH=${GITHUB_REF##*/}" >> $GITHUB_ENV

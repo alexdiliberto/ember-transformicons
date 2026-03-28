@@ -6,7 +6,6 @@ export default class Router extends AddonDocsRouter {
   rootURL = config.rootURL;
 }
 
-/* eslint-disable array-callback-return */
 Router.map(function () {
   docsRoute(this, function () {
     this.route('transformicons', function () {
